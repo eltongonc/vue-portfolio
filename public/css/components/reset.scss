@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    font-weight: 300
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    padding-left: 0
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    border: none;
+}
+
+*:focus {
+    outline: $red-accent;
+    background-color: $red-accent;
+    color: white;
+    border: 0;
+    transition: .3s;
+}

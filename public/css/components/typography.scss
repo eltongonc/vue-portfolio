@@ -1,0 +1,39 @@
+body {
+    font-size: 100%;
+    line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark-fonts;
+}
+
+
+p,
+li,
+span,
+figcaption {
+	margin-top: 1em;
+	margin-bottom: 1em;
+    color: $light-fonts;
+    font-family: 'Lato', sans-serif;
+}
+
+p,
+a {
+    font-size: 1.3em;
+}
+
+
+h1 {
+    font-size: 3em;
+    color: $red-accent;
+}

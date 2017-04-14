@@ -2,24 +2,27 @@ var gulp = require('gulp'),
   nodemon = require('gulp-nodemon'),
   plumber = require('gulp-plumber'),
   livereload = require('gulp-livereload'),
-  sass = require('gulp-sass');
+  sass = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer');
+
 
 gulp.task('sass', function () {
   gulp.src('./public/css/*.scss')
     .pipe(plumber())
     .pipe(sass())
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./public/css/'))
     .pipe(livereload());
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./public/css/*.scss', ['sass']);
+  gulp.watch('./public/css/**/*.scss', ['sass']);
 });
 
 gulp.task('develop', function () {
   livereload.listen();
   nodemon({
-    script: 'bin/www',
+    script: 'app.js',
     ext: 'js handlebars coffee',
     stdout: false
   }).on('readable', function () {

@@ -1,3 +1,41 @@
 @import "./components/vars";
+@import "./components/reset";
+@import "./components/typography";
 @import "./components/header";
 @import "./components/aside";
+@import "./components/footer";
+
+/*====Algemeen=====*/
+body {
+    margin: 0;
+    padding: 1em;
+
+    ul:nth-child(2){
+
+        li{
+            border-top: solid;
+            border-bottom: solid;
+            box-sizing: border-box;
+            a{
+                padding: 0.5em 1em;
+                width: 100%;
+                display: block;
+            }
+            a::after {
+                content: "+";
+                float: right;
+            }
+        }
+    }
+}
+
+section p {
+    max-width: 20em;
+}
+
+[href*="com"], nav li a{
+    border: solid $red-accent;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: .3em;
+}
