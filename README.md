@@ -10,5 +10,6 @@
 
 **Components**
 - [ ] Create a `header` with the logo and links to the pages
+- [ ] Gooey effect `nav`
 - [ ] Create `blocks` for the works overview page
 - [ ] Create a footer with additional info

@@ -27,15 +27,101 @@ body {
             }
         }
     }
+    section.blog-overview {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    article.item {
+        box-shadow: 0 0 .1em $red-accent;
+        @media (min-width: 50em){
+            width: 25em;
+        }
+    }
+
+    article {
+        position: relative;
+        margin: 1em 0;
+        h1 {
+            margin-top: 1.5em;
+            margin-bottom: .5em;
+            text-align: center;
+        }
+        a.link::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: '';
+        }
+        figure {
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+                width: 100%;
+                img {
+                    max-width: 100%;
+                }
+        }
+        figcaption {
+            padding: 1em;
+            margin: 0;
+        }
+        footer {
+            border-top: .1em solid white
+        }
+        footer p {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+
+        }
+        time {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            background-color: $red-accent;
+            padding: .3em;
+            border-radius: .3em;
+            span {
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+
+
 }
 
+section .content {
+    time {
+        top: 1em;
+        left: 0;
+    }
+    header {
+        border: none;
+    }
+}
 section p {
     max-width: 20em;
 }
 
-[href*="com"], nav li a{
-    border: solid $red-accent;
+article a {
+    border: .1em solid $red-accent;
     display: inline-block;
     padding: 0.5em 1em;
     border-radius: .3em;
+}
+
+// single blog page
+section figure {
+    height: 10em;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
+    }
 }

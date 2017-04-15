@@ -13,10 +13,13 @@ ol {
     padding-left: 0
 }
 
-figure img {
-    width: 100%;
-    height: auto;
+figure {
+    margin: 0;
 }
+figcaption {
+    margin: 0;
+}
+
 
 button {
     border: none;

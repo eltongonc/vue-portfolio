@@ -3,20 +3,26 @@
 ***/
 footer {
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
     font-weight: 700;
     padding: 1em;
-    
+
     a{
         text-decoration: none;
         color: #663231;
         margin-right: 2em;
+        text-decoration: underline;
     }
     h3{
         color: #663231;
     }
     i.fa{
         font-size: 2.4em;
+    }
+
+    nav {
+        width: 100%;
     }
 }
 

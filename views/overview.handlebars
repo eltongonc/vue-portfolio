@@ -1,0 +1,24 @@
+<main>
+    <h1>This page is my playground</h1>
+    <p>Here you'll find a collection of blogposts and unfinished work</p>
+    <section class="blog-overview">
+
+        {{#each list}}
+            <article class="item">
+                <figure>
+                    <img src="https://unsplash.it/1080/1920?random" alt="" title="{{title}}" />
+                </figure>
+                <figcaption>
+                    <h2>{{{title}}}</h2>
+                    <a href="{{link}}" class="link">View</a>
+                </figcaption>
+                <footer class="do-blog-post-date">
+                    <time datetime="{{{date.full}}}">
+                        <span class="do-post-date">{{date.day}}</span>
+                        <span class="do-post-month">{{date.month}}</span>
+                    </time>
+                </footer>
+            </article>
+        {{/each}}
+    </section>
+</main>
