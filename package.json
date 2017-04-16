@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "gulp",
+    "lint": "eslint app.js",
     "test": "mocha --recursive test",
     "test:coverage": "nyc npm test",
     "test:unit": "mocha --recursive test/middleware test/models test/routes",
@@ -19,8 +20,11 @@
     "express-handlebars": "^3.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.2",
     "chai": "^3.5.0",
     "debug": "^2.2.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-livereload": "^3.8.0",

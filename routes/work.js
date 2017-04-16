@@ -6,7 +6,7 @@ var list = require("../allWork");
 ** Work page.
 *****************/
 router.get('/', function(req, res) {
-  res.render('overview', { list });
+  res.render('overview', { pageTitle: "Work", list });
 });
 router.get('/:project', function(req, res) {
   res.render('project', { title: 'Work' });

@@ -8,7 +8,7 @@ var list = require("../blogposts.js");
 *****************/
 
 router.get('/', function(req, res) {
-  res.render('overview', {list});
+  res.render('overview', {pageTitle: "This page is my playground",list});
 });
 router.get('/:post', function(req, res) {
     var index = req.params.post - 1;
