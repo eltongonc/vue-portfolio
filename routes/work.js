@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var list = require("../allWork");
+var list = require("../allwork");
 
 /****************
 ** Work page.

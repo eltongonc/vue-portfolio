@@ -7,7 +7,7 @@ module.exports = [
             month: "feb",
             year: 2017,
             full: "2017-02-07T16:00",
-        },
+        }, 
         image: "http://eltongoncalves.nl/werk/medialab/background.png",
         content: "<p>Voor MediaLab heb ik een redesign gemaakt voor hun huidige supportpagina. Deze pagina heb ik ontworpen en gecodeerd. De supportpagina is een aparte sub-domein die alle vragen van de bezoekers beantwoordt. De supportpagina was toe aan nieuwe uiterlijk. Het pastte niet bij de huisstijl van MediaLab en had een standaard look and feel.</p><p>Opdracht Mijn taak was het observeren van de huidige website, onderzoek doen naar design patterns die de website zou kunnen verbeteren, implementeren van de gevonden design patterns en tot slot presenteren aan MediaLab.</p>",
         author: "Elton Gonçalves Gomes",
