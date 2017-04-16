@@ -1,33 +1,40 @@
 (function(){
     var header = {
         element:document.querySelector('header ul'),
-        listItems: function(){
-            var button = document.querySelector('ul button') || document.createElement("button");
+        createToggle: function(toggleEvent){
+            var button = document.querySelector('header ul button') || document.createElement("button");
 
             button.innerHTML="Menu"; button.classList.add("toggle");
+            this.element.insertAdjacentElement("afterbegin", button);
+
+            button.addEventListener(toggleEvent);
+
+            return button;
+        },
+        listItems: function(){
             // Make it Gooey
             this.element.classList.add("blobs");
-            this.element.insertAdjacentElement("afterbegin", button);
 
             var blobs = document.querySelectorAll('header ul > *');
             for (var i = 0; i < blobs.length; i++) {
                 blobs[i].classList.add("blob");
             }
-            return {button,blobs};
+            return blobs;
         }
     };
 
 
-    header.listItems().button.addEventListener('click', function(){
+    header.createToggle(function(){
         var menuButton = this;
         menuButton.innerHTML === "Menu" ? menuButton.innerHTML = "X": menuButton.innerHTML = "Menu"
         // Gooey effect menu
-        var blobs = header.listItems().blobs;
+        var blobs = header.listItems();
         for (i = 0; i < blobs.length; i++) {
             console.log("transition"+i);
                 blobs[i].classList.toggle("transition"+i);
         }
     });
+
 }());
 
 
