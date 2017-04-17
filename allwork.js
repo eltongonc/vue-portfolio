@@ -15,15 +15,15 @@ module.exports = [
     },
     {
         id: 2,
-        title: "Does UX equal Frontend development?",
+        title: "Daskas",
         date: {
             day: "07",
             month: "feb",
             year: "2017",
             full: "2017-02-07T16:00",
         },
-        image: "images/blog-single-img.jpg",
-        content: "<p>Enthusiastically impact plug-and-play value afters market models. Competently formulate flexible processes without meto repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of weinnovation.Seamlessly leverage other’s flexible resources an without customer directed methodologies. Globally impact but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look.</p><p>Beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire. There are many variations of but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look and a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the a to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of beandful of model sentence structures, to generate Lorem Ipsum which.</p>",
+        image: "http://eltongoncalves.nl/werk/daskas/daskas-thumb.jpg",
+        content: "<p>In een groep van vier heb ik mogen werken aan een webwinkel voor Daskas. Tijdens dit project heb ik mij bezig gehouden met de frontend en backend kant van de website. Mijn team en ik hebben gebruik gemaakt van OpenCart.</p><p>Voor dit project zijn wij op zoek gegaan naar een winkel in Amsterdam die wij graag zouden willen helpen bij het verbeteren van hun webshop. We maken voor het bedrijf een nieuwe website die volgens ons de klandizie van de winkel op een positieve manier zal bevorderen. De gebruikers van de Daskas website zijn niet geïntrigeerd genoeg om op de website te blijven. Ze doen weinig tot geen aankopen omdat de site te onoverzichtelijk is en niet aantrekkelijk oogt.</p><h2>Eindresultaat</h2><p>De website heeft twee hoofdconcepten:</p><h3>Concept 1</h3><p>Skeuomorphism: We maken gebruik van skeuomorfism, dit houdt in dat de webshop er uit ziet als een vitrine kast in de winkel, of planken met spullen er op. Dit geeft een beleving alsof je echt een beetje in de winkel bent. Dit geeft de sfeer van de winkel weer waardoor het sneller vertrouwd zal aanvoelen. Ieder artikel staat op een plank en stelt een categorie voor waarmee je kan navigeren naar die categorie, met leuke animaties natuurlijk!</p><h3>Concept 2</h3><p>Cadeau Generator: Het helpen bij de keuzes van cadeau’s is ook iets waar Daskas mee kan uitblinken. Voornamelijk uit het doelgroep onderzoek is gebleken dat de gebruikers vaak niet weten wat ze moeten/ willen kopen voor een ander en daardoor vaak doelloos on- en offline zoeken naar een leuk cadeau. Gebruikers vullen de cadeau generator in en krijgen een passend cadeau met een persoonlijk gegenereerd verhaal. Eind februari gaat de site officieel online!</p>",
         author: "Elton Gonçalves Gomes",
         link: function(){return "/work/"+this.title.toLowerCase().replace(" ","-");}
     },

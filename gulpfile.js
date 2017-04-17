@@ -4,11 +4,9 @@ var gulp = require("gulp"),
     livereload = require("gulp-livereload"),
     sass = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
-    eslint = require("gulp-eslint"),
-    git = require("gulp-git");
+    eslint = require("gulp-eslint");
 
 var esConfig = require("./.eslintrc.js");
-
 
 
 gulp.task("sass", function () {
@@ -41,7 +39,7 @@ gulp.task("develop", function () {
     });
 });
 
-gulp.task("lint", () => {
+gulp.task("lint", function() {
     return gulp.src(["**/*.js","!node_modules/**"])
         .pipe(eslint(esConfig))
         // eslint.format() outputs the lint results to the console.

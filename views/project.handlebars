@@ -1,11 +1,27 @@
     <section>
-        <article>
-            <h1>Data visualization</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p> aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </article>
+            <article>
+                <figure>
+                    <img src="{{image}}" alt="Blog Single Image">
 
-        <footer>
+                    <figcaption class="do-post-format-icon">
+                        <i class="fa fa-quote-right"></i>
+                    </figcaption>
+                </figure>
+
+                <section class="content">
+                    <header>
+                        <time datetime="{{{date.full}}}">
+                            <span class="do-post-date">{{date.day}}</span>
+                            <span class="do-post-month">{{date.month}}</span>
+                        </time>
+                        <h1>{{{title}}}</h1>
+                    </header>
+
+                    {{{content}}}
+                    <a href="www.daskas.nl" class="do-btn-round-outline">View</a>
+                </section>
+            </article>
+        <!-- <footer>
             <ul>
                 <li>
                     Projects
@@ -25,9 +41,5 @@
                 </li>
             </ul>
         </footer>
-        <figure>
-            <img src="/img/data-vis.png" alt="" width="600">
-            <figcaption>Data visualization</figcaption>
-        </figure>
-        <footer></footer>
+        <footer></footer> -->
     </section>

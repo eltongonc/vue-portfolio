@@ -8,7 +8,10 @@ var exphbs  = require("express-handlebars");
 
 var routes = require("./routes/index");
 
-var app = express();
+var app = express(),
+// port is in single quotes to trigger the esLinter
+// so I wont forget to change it to 80 for Digital Oceon
+    port = 80;
 
 // view engine setup
 app.engine("handlebars", exphbs({
@@ -46,6 +49,5 @@ app.use(function(req, res) {
 });
 
 
-app.set("port", 3000);
 
-app.listen(app.get("port"));
+app.listen(port);

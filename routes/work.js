@@ -11,7 +11,10 @@ router.get("/", function(req, res) {
     res.render("overview", { pageTitle: "Work", list });
 });
 router.get("/:project", function(req, res) {
-    res.render("project", { title: "Work" });
+    var work = list.filter(function(item){
+        return item.link() === req.originalUrl;
+    });
+    res.render("project", work[0]);
 });
 
 module.exports = router;

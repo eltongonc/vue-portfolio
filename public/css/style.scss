@@ -47,6 +47,7 @@ body {
             margin-top: 1.5em;
             margin-bottom: .5em;
             text-align: center;
+            width: 100%;
         }
         a.link::after {
             position: absolute;
@@ -123,5 +124,31 @@ section figure {
     img {
         width: 100%;
         height: auto;
+    }
+}
+
+
+// Home content
+.home {
+    section, ul {
+        height: 100vh;
+    }
+    section:last-child ul {
+        display: flex;
+        flex-direction: column;
+    }
+    li {
+        margin: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.1em;
+        &:nth-of-type(odd) {
+            border: 0.1em solid $green-accent;
+        }
+        &:nth-of-type(even) {
+            border:0.1em solid $red-accent;
+        }
     }
 }

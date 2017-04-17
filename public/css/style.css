@@ -110,8 +110,7 @@ header {
       background-color: #c97777; }
     header .profile img {
       height: 100%;
-      position: relative;
-      right: 35%; }
+      position: relative; }
   header .logo {
     height: 100%;
     float: right; }
@@ -245,7 +244,8 @@ body {
     body article h1 {
       margin-top: 1.5em;
       margin-bottom: .5em;
-      text-align: center; }
+      text-align: center;
+      width: 100%; }
     body article a.link::after {
       position: absolute;
       top: 0;
@@ -303,3 +303,33 @@ section figure {
   section figure img {
     width: 100%;
     height: auto; }
+
+.home section, .home ul {
+  height: 100vh; }
+
+.home section:last-child ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.home li {
+  margin: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.1em; }
+  .home li:nth-of-type(odd) {
+    border: 0.1em solid #95cfc5; }
+  .home li:nth-of-type(even) {
+    border: 0.1em solid #c97777; }
