@@ -4,7 +4,8 @@ var gulp = require("gulp"),
     livereload = require("gulp-livereload"),
     sass = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
-    eslint = require("gulp-eslint");
+    eslint = require("gulp-eslint"),
+    git = require('gulp-git');
 
 var esConfig = require("./.eslintrc.js");
 
@@ -40,17 +41,15 @@ gulp.task("develop", function () {
     });
 });
 
-
-
 gulp.task("lint", () => {
     return gulp.src(["**/*.js","!node_modules/**"])
         .pipe(eslint(esConfig))
         // eslint.format() outputs the lint results to the console.
         // Alternatively use eslint.formatEach() (see Docs).
-        .pipe(eslint.format());
+        .pipe(eslint.format())
         // To have the process exit with an error code (1) on
         // lint error, return the stream and pipe to failAfterError last.
-		// if fixed, write the file to dest
+        .pipe(eslint.failAfterError());
 });
 
 gulp.task("default", [
@@ -58,3 +57,16 @@ gulp.task("default", [
     "develop",
     "watch"
 ]);
+
+
+// Run git add
+// src is the file(s) to add (or ./*)
+gulp.task('add', function(){
+    return gulp.src('./*')
+        .pipe(git.add());
+});
+
+gulp.task('commit', function(){
+    return gulp.src('./*')
+        .pipe(git.commit());
+});
