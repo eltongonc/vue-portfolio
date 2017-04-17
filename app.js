@@ -27,7 +27,6 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-
 // Create all routes
 for (var x in routes) {
     app.use(x, routes[x]);
@@ -47,8 +46,6 @@ app.use(function(req, res) {
 });
 
 
-app.set("port", 80);
+app.set("port", 3000);
 
-app.listen(app.get("port"), function() {
-    console.log("Express server listening on port " + this.address().port);
-});
+app.listen(app.get("port"));

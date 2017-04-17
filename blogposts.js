@@ -3,9 +3,9 @@ module.exports = [
         id: 1,
         title: "Visiting a company <span>Momkai</span>",
         date: {
-            day: 07,
+            day: "07",
             month: "feb",
-            year: 2017,
+            year: "2017",
             full: "2017-02-07T16:00",
         },
         image: "images/blog-single-img.jpg",
@@ -17,9 +17,9 @@ module.exports = [
         id: 2,
         title: "Does UX equal Frontend development?",
         date: {
-            day: 07,
+            day: "07",
             month: "feb",
-            year: 2017,
+            year: "2017",
             full: "2017-02-07T16:00",
         },
         image: "images/blog-single-img.jpg",

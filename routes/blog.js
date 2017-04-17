@@ -1,16 +1,17 @@
-var express = require('express');
+var express = require("express");
+
+var list = require("../blogposts.js"); // this belongs in a database
+
 var router = express.Router();
-// this belongs in a database
-var list = require("../blogposts.js");
 
 /****************
 ** Blog page.
 *****************/
-
-router.get('/', function(req, res) {
-  res.render('overview', {pageTitle: "This page is my playground",list});
+router.get("/", function(req, res) {
+    res.render("overview", {pageTitle: "This page is my playground",list});
 });
-router.get('/:post', function(req, res) {
+
+router.get("/:post", function(req, res) {
     var index = req.params.post - 1;
     var post = {
         title: list[index].title,
@@ -20,7 +21,7 @@ router.get('/:post', function(req, res) {
         content: list[index].content,
         image: "https://unsplash.it/1080/1920?random"
     };
-  res.render('blog-post', post);
+    res.render("blog-post", post);
 });
 
 
