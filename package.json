@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "gulp",
-    "lint": "eslint app.js",
+    "lint": "gulp lint",
     "test": "mocha --recursive test",
     "test:coverage": "nyc npm test",
     "test:unit": "mocha --recursive test/middleware test/models test/routes",

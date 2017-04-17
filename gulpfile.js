@@ -5,7 +5,7 @@ var gulp = require("gulp"),
     sass = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
     eslint = require("gulp-eslint"),
-    git = require('gulp-git');
+    git = require("gulp-git");
 
 var esConfig = require("./.eslintrc.js");
 
@@ -57,16 +57,3 @@ gulp.task("default", [
     "develop",
     "watch"
 ]);
-
-
-// Run git add
-// src is the file(s) to add (or ./*)
-gulp.task('add', function(){
-    return gulp.src('./*')
-        .pipe(git.add());
-});
-
-gulp.task('commit', function(){
-    return gulp.src('./*')
-        .pipe(git.commit());
-});
