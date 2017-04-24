@@ -12,7 +12,9 @@
     "test:unit": "mocha --recursive test/middleware test/models test/routes",
     "test:integration": "mocha --recursive test/integration"
   },
-  "pre-commit": [ "lint" ],
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
     "express": "^4.13.3",
     "serve-favicon": "^2.3.0",

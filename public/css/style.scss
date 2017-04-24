@@ -8,7 +8,9 @@
 /*====Algemeen=====*/
 body {
     margin: 0;
-    padding: 1em;
+    padding: .3em;
+    background-color: $green-accent;
+    background-image: linear-gradient($green-accent, $red-accent);
 
     ul:nth-child(2){
 
@@ -27,13 +29,13 @@ body {
             }
         }
     }
-    section.blog-overview {
+    .blog-overview {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
     }
 
-    article.item {
+    .item {
         box-shadow: 0 0 .1em $red-accent;
         @media (min-width: 50em){
             width: 25em;
@@ -129,9 +131,17 @@ section figure {
 
 
 // Home content
+main {
+    background-color: white;
+    border-radius: .4em;
+    padding: 1em;
+}
 .home {
     section, ul {
         height: 100vh;
+        @media (min-width: 50em){
+            flex-wrap: wrap;
+        }
     }
     section:last-child ul {
         display: flex;
@@ -139,16 +149,23 @@ section figure {
     }
     li {
         margin: 0;
-        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 0.1em;
-        &:nth-of-type(odd) {
-            border: 0.1em solid $green-accent;
+        height: 25%;
+        margin-bottom: .5em;
+        @media (min-width: 50em){
+            &.item:nth-of-type(3) {
+                order: 1;
+                height: calc(75% + 0.5em *2);
+            }
         }
-        &:nth-of-type(even) {
-            border:0.1em solid $red-accent;
-        }
+        // &:nth-of-type(odd) {
+        //     border: 0.1em solid $green-accent;
+        // }
+        // &:nth-of-type(even) {
+        //     border:0.1em solid $red-accent;
+        // }
     }
 }
