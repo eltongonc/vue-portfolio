@@ -1,13 +1,16 @@
 /***
 ** Footer
 ***/
-footer {
+body > footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     font-weight: 700;
     padding: 1em;
     background-color: white;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0.1em $light-fonts;
+
 
     a{
         text-decoration: none;

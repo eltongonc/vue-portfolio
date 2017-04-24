@@ -135,6 +135,9 @@ main {
     background-color: white;
     border-radius: .4em;
     padding: 1em;
+    box-shadow: 0 0 1em 0.1em $light-fonts;
+    margin-bottom: 1em;
+
 }
 .home {
     section, ul {
@@ -156,16 +159,62 @@ main {
         height: 25%;
         margin-bottom: .5em;
         @media (min-width: 50em){
+            @media (min-width: 50em){
+                width: 50%;
+            }
             &.item:nth-of-type(3) {
                 order: 1;
                 height: calc(75% + 0.5em *2);
             }
         }
-        // &:nth-of-type(odd) {
-        //     border: 0.1em solid $green-accent;
-        // }
-        // &:nth-of-type(even) {
-        //     border:0.1em solid $red-accent;
-        // }
+        &.item:first-child {
+            background: url(http://eltongoncalves.nl/img/Banners/frontend_small.jpg);
+            background-size: cover;
+            border-radius: .3em .3em 0 0;
+            @media (min-width: 50em){
+                border-radius: .3em 0 0 0;
+            }
+            a {
+                color: $green-accent;
+            }
+        }
+        &.item:nth-of-type(2) {
+            background: url(http://eltongoncalves.nl/img/Banners/cookie_small.jpg);
+            background-size: 100 ;
+            background-size: cover;
+            a {
+                color: $red-accent;
+            }
+        }
+        &.item:nth-of-type(3) {
+            background: url(http://eltongoncalves.nl/img/Banners/strawberry-small.jpg);
+            background-size: 100 ;
+            background-size: cover;
+            @media (min-width: 50em){
+                border-radius: 0 .3em .3em 0;
+            }
+            a {
+                color: $red-accent;
+            }
+        }
+        &.item:nth-of-type(4) {
+            background: url(http://eltongoncalves.nl/img/Banners/gamer_small.jpg);
+            background-size: 100 ;
+            background-size: cover;
+            @media (min-width: 50em){
+                border-radius: 0 0 0 .3em;
+            }
+            a {
+                color: $red-accent;
+            }
+        }
+
+        &.item:last-child {
+            border-radius: 0 0 .3em .3em;
+            a {
+                color: $red-accent;
+            }
+        }
+
     }
 }
