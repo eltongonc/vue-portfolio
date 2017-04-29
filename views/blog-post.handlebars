@@ -1,32 +1,34 @@
-<section class="blogposts">
-    <!-- BLOG SINGLE CONTENT -->
-    <article>
-        <figure>
-            <img src="{{image}}" alt="Blog Single Image">
+<main>
+    <section class="blogposts">
+        <!-- BLOG SINGLE CONTENT -->
+        <article>
+            <figure>
+                <img src="{{image}}" alt="Blog Single Image">
 
-            <figcaption class="do-post-format-icon">
-                <i class="fa fa-quote-right"></i>
-            </figcaption>
-        </figure>
+                <figcaption class="do-post-format-icon">
+                    <i class="fa fa-quote-right"></i>
+                </figcaption>
+            </figure>
 
-        <section class="content">
-            <!--  POST TITLE -->
-            <header>
-                <time datetime="{{{fullDate}}}">
-                    <span class="do-post-date">{{day}}</span>
-                    <span class="do-post-month">{{month}}</span>
-                </time>
-                <h1>{{{title}}}</h1>
-                {{{author}}}
-            </header>
-            <!--  POST TITLE END-->
+            <section class="content">
+                <!--  POST TITLE -->
+                <section>
+                    <time datetime="{{{fullDate}}}">
+                        <span class="do-post-date">{{day}}</span>
+                        <span class="do-post-month">{{month}}</span>
+                    </time>
+                    <h1>{{{title}}}</h1>
+                    {{{author}}}
+                </section>
+                <!--  POST TITLE END-->
 
-            <!--  POST TEXT -->
-            {{{content}}}
-            <a href="#.com" class="do-btn-round-outline">SHARE</a>
-            <!--  POST TEXT END -->
-        </section>
-    </article>
-    {{>comment}}
-    <!-- BLOG SINGLE CONTENT END -->
-</section>
+                <!--  POST TEXT -->
+                {{{content}}}
+                <a href="#.com" class="do-btn-round-outline">SHARE</a>
+                <!--  POST TEXT END -->
+            </section>
+        </article>
+        {{>comment}}
+        <!-- BLOG SINGLE CONTENT END -->
+    </section>
+</main>

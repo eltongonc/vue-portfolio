@@ -1,6 +1,26 @@
 <main class="home">
     <h1>Hi! I'm Elton, I love to code</h1>
     <section>
+		<div class="slideshow-container">
+		   	{{#each work}}
+				<div class="mySlides fade" >
+				    <img src="{{image}}" style="width:100%">
+				    <a href="{{link}}">{{title}}</a>
+				</div>
+	    	{{/each}}
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<div style="text-align:center">
+			{{#each work}}
+				<span class="dot" onclick="currentSlide({{id}})"></span> 
+			{{/each}}
+		</div>
+
+ 
         <ul>
             <li class="item"><a href="/about">I'm A frontend developer</a></li>
             <li class="item"><a href="/blog">My blog</a></li>

@@ -8,7 +8,7 @@ var router = express.Router();
 ** Blog page.
 *****************/
 router.get("/", function(req, res) {
-    res.render("overview", {pageTitle: "This page is my playground",list});
+    res.render("overview", {pageTitle: "This page is my playground",list, blog_active : true });
 });
 
 router.get("/:post", function(req, res) {

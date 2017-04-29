@@ -10,7 +10,7 @@ var routes = require("./routes/index");
 
 var app = express(),
 // port is in single quotes to trigger the esLinter
-// so I wont forget to change it to 80 for Digital Oceon
+// so I wont forget to change it to 80 for Digital Ocean
     port = 80;
 
 // view engine setup

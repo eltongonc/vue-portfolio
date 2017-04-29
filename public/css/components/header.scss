@@ -90,7 +90,7 @@ header {
                     border-bottom: .3em solid white;
                     transition: .3s;
                 }
-                a:hover {
+                a:hover, &.active a {
                     border-bottom: .3em solid $red-accent
                 }
             }
@@ -101,59 +101,3 @@ header {
     }
 }
 
-// header.off-screen nav {
-//     height: 0;
-//     overflow: hidden;
-// }
-
-.blobs{
-    filter:url('#goo');
-    position:absolute;
-    width: 100%;
-    top: 40%;
-}
-
-$dist-x:4.5em;
-$dist-y:4.5em;
-
-
-.blob{
-    position: absolute;
-    background: $green-accent;
-    color: white;
-    left: 15%;
-    top: 60%;
-    border-radius: 100%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 5.2em;
-    height: 5.2em;
-    transition: cubic-bezier(0.770, 0.000, 0.175, 1.000) 1s;
-    a {
-        line-height:100px;
-        text-align:center;
-        color:white;
-    }
-    &.toggle {
-        z-index: 1
-    }
-}
-
-.transition0 {
-    transform: scale(.5) translate(0,-4.5em)
-}
-
-.transition1 {
-    transform: scale(.8) translate(0em,4.5em);
-}
-
-.transition2 {
-    transform: scale(.8) translate(5em,4.5em);
-}
-
-.transition3 {
-    transform: scale(.8) translate(10em,4.5em);
-}
-.transition4 {
-    transform: scale(.8) translate(15em,4.5em);
-}

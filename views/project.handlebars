@@ -1,3 +1,4 @@
+<main>
     <section>
             <article>
                 <figure>
@@ -9,16 +10,16 @@
                 </figure>
 
                 <section class="content">
-                    <header>
+                    <section>
                         <time datetime="{{{date.full}}}">
                             <span class="do-post-date">{{date.day}}</span>
                             <span class="do-post-month">{{date.month}}</span>
                         </time>
                         <h1>{{{title}}}</h1>
-                    </header>
+                    </section>
 
                     {{{content}}}
-                    <a href="www.daskas.nl" class="do-btn-round-outline">View</a>
+                    <a href="{{externalLink}}">View</a>
                 </section>
             </article>
         <!-- <footer>
@@ -43,3 +44,4 @@
         </footer>
         <footer></footer> -->
     </section>
+</main>
