@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "gulp",
+    "dev:live": "ngrok http 3000",
     "lint": "gulp lint",
     "test": "mocha --recursive test",
     "test:coverage": "nyc npm test",
@@ -38,6 +39,7 @@
     "gulp-plumber": "^1.0.0",
     "gulp-sass": "^3.0.0",
     "mocha": "^3.0.2",
+    "ngrok": "^2.2.7",
     "nyc": "^10.0.0",
     "pre-commit": "^1.2.2",
     "supertest": "^2.0.0"

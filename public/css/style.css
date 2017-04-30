@@ -20,8 +20,8 @@ button {
   border: none; }
 
 *:focus {
-  outline: #c97777;
-  background-color: #c97777;
+  outline: #A4031F;
+  background-color: #A4031F;
   color: white;
   border: 0;
   -webkit-transition: .3s;
@@ -62,7 +62,7 @@ button {
 
 h1 {
   font-size: 2.5em;
-  color: #c97777;
+  color: #A4031F;
   margin: 0; }
 
 /*****************
@@ -112,7 +112,7 @@ header {
     header .profile div::after {
       top: 0;
       left: 0;
-      background-color: #c97777; }
+      background-color: #A4031F; }
     header .profile img {
       height: 100%;
       position: relative; }
@@ -145,7 +145,7 @@ header {
           -webkit-transition: .3s;
           transition: .3s; }
         header nav ul li a:hover, header nav ul li.active a {
-          border-bottom: 0.3em solid #c97777; }
+          border-bottom: 0.3em solid #A4031F; }
   header svg {
     display: none; }
 
@@ -195,8 +195,8 @@ body {
   margin: 0;
   padding: .3em;
   background-color: #95cfc5;
-  background-image: -webkit-linear-gradient(#95cfc5, #c97777);
-  background-image: linear-gradient(#95cfc5, #c97777); }
+  background-image: -webkit-linear-gradient(#95cfc5, #A4031F);
+  background-image: linear-gradient(#95cfc5, #A4031F); }
   body ul:nth-child(2) li {
     border-top: solid;
     border-bottom: solid;
@@ -217,7 +217,7 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   body .item {
-    box-shadow: 0 0 0.1em #c97777; }
+    box-shadow: 0 0 0.1em #A4031F; }
     @media (min-width: 50em) {
       body .item {
         width: 25em; } }
@@ -259,7 +259,7 @@ body {
       position: absolute;
       top: 1em;
       left: 1em;
-      background-color: #c97777;
+      background-color: #A4031F;
       padding: .3em;
       border-radius: .3em; }
       body article time span {
@@ -277,7 +277,7 @@ section p {
   max-width: 20em; }
 
 article a {
-  border: 0.1em solid #c97777;
+  border: 0.1em solid #A4031F;
   display: inline-block;
   padding: 0.5em 1em;
   border-radius: .3em; }
@@ -338,24 +338,24 @@ main {
     background-size: 100;
     background-size: cover; }
     .home li.item:nth-of-type(2) a {
-      color: #c97777; }
+      color: #A4031F; }
   .home li.item:nth-of-type(3) {
     background: url(http://eltongoncalves.nl/img/Banners/strawberry-small.jpg);
     background-size: 100;
     background-size: cover; }
     .home li.item:nth-of-type(3) a {
-      color: #c97777; }
+      color: #A4031F; }
   .home li.item:nth-of-type(4) {
     background: url(http://eltongoncalves.nl/img/Banners/gamer_small.jpg);
     background-size: 100;
     background-size: cover; }
     .home li.item:nth-of-type(4) a {
-      color: #c97777; }
+      color: #A4031F; }
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
-  height: 20em;
+  max-height: 20em;
   overflow: hidden;
   position: relative;
   margin: auto;
