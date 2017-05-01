@@ -1,0 +1,18 @@
+<main>
+    <h1>{{pageTitle}}</h1>
+    <p>Here you'll find a collection of blogposts and unfinished work</p>
+    <section class="blog-overview">
+
+        {{#each list}}
+            <article class="item">
+                <figure>
+                    <img src="https://unsplash.it/288/166?random" alt="" title="{{title}}" />
+                </figure>
+                <figcaption>
+                    <h2>{{{title}}}</h2>
+                    <a href="{{link}}" class="link">View</a>
+                </figcaption>
+            </article>
+        {{/each}}
+    </section>
+</main>

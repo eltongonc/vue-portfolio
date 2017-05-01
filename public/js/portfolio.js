@@ -1,4 +1,22 @@
 /************
+** menu 
+*************/
+var menu = document.querySelector('a[href="#navigation"]');
+menu.addEventListener('click', function(e){
+    e.preventDefault();
+    var subNav = document.createElement('ul');
+    subNav.className = "sub-nav";
+    subNav.innerHTML = `
+            <li><a href="/work">Work</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact Me</a></li>
+    `
+    console.dir(menu.children[0])
+    console.dir(subNav);
+    menu.parentNode.appendChild(subNav);
+});
+/************
 ** Slideshow 
 *************/
 var slideIndex = 1;

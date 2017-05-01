@@ -12,23 +12,6 @@ body {
     background-color: $green-accent;
     background-image: linear-gradient($green-accent, $red-accent);
 
-    ul:nth-child(2){
-
-        li{
-            border-top: solid;
-            border-bottom: solid;
-            box-sizing: border-box;
-            a{
-                padding: 0.5em 1em;
-                width: 100%;
-                display: block;
-            }
-            a::after {
-                content: "+";
-                float: right;
-            }
-        }
-    }
     .blog-overview {
         display: flex;
         justify-content: space-around;
@@ -36,7 +19,16 @@ body {
     }
 
     .item {
+        position: relative;
         box-shadow: 0 0 .1em $red-accent;
+        a::after {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            position:absolute;
+        };
         @media (min-width: 50em){
             width: 25em;
         }
@@ -124,7 +116,7 @@ article a {
 
 // single blog page
 section figure {
-    height: 10em;
+    /*height: 20em;*/
     overflow: hidden;
     img {
         width: 100%;
