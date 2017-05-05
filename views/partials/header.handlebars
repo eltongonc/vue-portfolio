@@ -3,30 +3,36 @@
     <a href="/">
         <h1>Elton</h1>
     </a>
-    <!-- <div class="profile">
-        <div>
-                <img src="/img/profiel3.jpg" alt="Profile Elton">
-        </div>
-    </div> -->
+
     <div class="mobile-menu">
         <a href="#navigation">Menu</a>
     </div>
+
     <nav >
         <ul>
+            <li><a href="#page">Scroll to top</a></li>
             <li class="{{#if work_active}}active{{/if}}"><a href="/work">Work</a></li>
             <li class="{{#if blog_active}}active{{/if}}"><a href="/blog">Blog</a></li>
             <li class="{{#if about_active}}active{{/if}}"><a href="/about">About</a></li>
             <li class="{{#if contact_active}}active{{/if}}"><a href="/contact">Contact Me</a></li>
         </ul>
     </nav>
-    <!-- Gooey nav effect -->
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-            <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                <feBlend in="SourceGraphic" in2="goo" />
-            </filter>
-        </defs>
-    </svg> -->
+    <!-- Slideshow -->
+   <div class="slideshow-container">
+        {{#each work}}
+            <div class="mySlides fade" >
+                <img src="{{image}}" style="width:150%">
+                <a href="{{link}}">{{title}}</a>
+            </div>
+        {{/each}}
+        <div style="text-align:center">
+            {{#each work}}
+                <span class="dot" onclick="currentSlide({{id}})"></span> 
+            {{/each}}
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- <br> -->
+    </div>
 </header>

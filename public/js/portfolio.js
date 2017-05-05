@@ -16,6 +16,24 @@ menu.addEventListener('click', function(e){
     console.dir(subNav);
     menu.parentNode.appendChild(subNav);
 });
+/****************
+** sticky header 
+****************/
+var header = document.querySelector('header');
+var navItems = document.querySelector('nav ul li');
+    navItems.classList.add('hidden');
+
+window.addEventListener('scroll', function(){
+  var headerOffsett = window.scrollY >= 30;
+  if(headerOffsett){
+    header.classList.add('sticky'),
+    navItems.classList.remove('hidden');
+  }else{
+    header.classList.remove('sticky');
+    navItems.classList.add('hidden');
+  }
+})
+
 /************
 ** Slideshow 
 *************/
@@ -31,21 +49,24 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1} 
   if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
+  for (var i = 0; i < slides.length; i++) {
       slides[i].style.display = "none"; 
   }
-  for (i = 0; i < dots.length; i++) {
+  for (var i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
 
+
+/************
+** Gooey menu 
+*************/
 (function(){
     var header = {
         element:document.querySelector("header ul"),
