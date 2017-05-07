@@ -13,7 +13,6 @@ header {
     align-items: center;
     margin-bottom: 1em;
     border-radius: .3em;
-    z-index: 0;
     transition: .1s;
     &.sticky{
         position: fixed;
@@ -79,7 +78,7 @@ header {
     a,h1 {
         color: white;
         text-shadow:
-            -.5px -.5px 0 $green-accent,  
+            -.5px -.5px 0 $green-accent,
             .5px -.5px 0 $green-accent,
             -.5px .5px 0 $green-accent,
             .5px .5px 0 $green-accent;
@@ -126,11 +125,11 @@ header .mobile-menu {
         position: absolute;
         width: 10em;
         border-radius: .3em;
-        background: $red-accent;
-        top: 1.3em; 
+        background: $primary-color;
+        top: 1.3em;
         right: 0;
         padding: .5em;
-        z-index: 1;
+        z-index: 9;
         a {
             color: white;
             display: block;
@@ -151,7 +150,7 @@ header .mobile-menu {
         height: 1em;
         position: absolute;
         top: 0;
-        background: #607D8B;
+        background: $primary-color;
         right: 0.9em;
         top: -.3em;
         transform: rotate(45deg);
@@ -245,13 +244,11 @@ header .mobile-menu {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
-
-

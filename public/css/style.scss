@@ -5,85 +5,69 @@
 @import "./components/aside";
 @import "./components/footer";
 
-/*====Algemeen=====*/
+/**********
+** General
+**********/
 body {
     margin: 0;
     padding: .3em;
     background-color: $green-accent;
     background-image: linear-gradient($green-accent, $red-accent);
 
-    .blog-overview {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .item {
-        position: relative;
-        box-shadow: 0 0 .1em $red-accent;
-        a::after {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            content: "";
-            position:absolute;
-        };
-        @media (min-width: 50em){
-            width: 25em;
-        }
-    }
-
     article {
         position: relative;
         margin: 1em 0;
         &.item {
             width: 20em;
+            margin: .4em;
+        }
+        h2 {
+            color: $primary-color;
         }
         h1 {
-            margin-top: 1.5em;
-            margin-bottom: .5em;
-            text-align: center;
             width: 100%;
+            margin-top: 1.5em;
+            text-align: center;
+            margin-bottom: .5em;
         }
         a.link::after {
-            position: absolute;
             top: 0;
             left: 0;
-            bottom: 0;
             right: 0;
+            bottom: 0;
             content: '';
+            position: absolute;
         }
         figure {
-                position: relative;
-                overflow: hidden;
-                text-align: center;
-                width: 100%;
-                img {
-                    max-width: 100%;
-                }
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            img {
+                max-width: 100%;
+            }
         }
         figcaption {
-            padding: 1em;
             margin: 0;
+            padding: 1em;
         }
         footer {
             border-top: .1em solid white
         }
         footer p {
-            font-family: 'Open Sans Condensed', sans-serif;
+            margin: 0;
             font-weight: bold;
             text-transform: uppercase;
-            margin: 0;
+            font-family: 'Open Sans Condensed', sans-serif;
 
         }
         time {
-            position: absolute;
             top: 1em;
             left: 1em;
-            background-color: $red-accent;
             padding: .3em;
+            position: absolute;
             border-radius: .3em;
+            background-color: $primary-color;
             span {
                 color: white;
                 text-align: center;
@@ -91,13 +75,16 @@ body {
         }
     }
 
+    address {
+        margin: 1em 0;
+    }
 
 }
 
 section .content {
     time {
-        top: 1em;
         left: 0;
+        top: 1em;
     }
     header {
         border: none;
@@ -109,10 +96,35 @@ section p {
 }
 
 article a {
-    border: .1em solid $red-accent;
-    display: inline-block;
+    color: white;
     padding: 0.5em 1em;
     border-radius: .3em;
+    display: inline-block;
+    background-color: $primary-color;
+}
+
+/*****************
+** Blog
+*****************/
+.blog-overview {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    position: relative;
+    box-shadow: 0 0 .1em $red-accent;
+    a::after {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        position: absolute;
+    };
+    @media (min-width: 50em){
+        width: 25em;
+    }
 }
 
 // single blog page
@@ -126,72 +138,74 @@ section figure {
 }
 
 
-// Home content
+/***************
+** Home content
+****************/
 main {
-    background-color: white;
-    border-radius: .4em;
     padding: 1em;
-    box-shadow: 0 0 1em 0.1em $light-fonts;
-    margin-bottom: 1em;
     margin-top: 10em;
     position: relative;
+    margin-bottom: 1em;
+    border-radius: .4em;
+    background-color: white;
+    box-shadow: 0 0 1em 0.1em $light-fonts;
 }
-.home {
+#home {
     section{
         flex-wrap: wrap;
     }
     section:last-child ul {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     li {
         margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 0.1em;
-        height: 13em;
-        width: 16em;
+        width: 14em;
         margin: .5em;
+        height: 14em;
+        display: flex;
+        align-items: center;
         border-radius: .3em;
-        &.item:first-child {
-            background: url(http://eltongoncalves.nl/img/Banners/frontend_small.jpg);
-            background-size: cover;
-            @media (min-width: 50em){
-                border-radius: .3em 0 0 0;
-            }
-            a {
-                color: $green-accent;
-            }
-        }
-        &.item:nth-of-type(2) {
-            background: url(http://eltongoncalves.nl/img/Banners/cookie_small.jpg);
-            background-size: 100 ;
-            background-size: cover;
-            a {
-                color: $red-accent;
-            }
-        }
-        &.item:nth-of-type(3) {
-            background: url(http://eltongoncalves.nl/img/Banners/strawberry-small.jpg);
-            background-size: 100 ;
-            background-size: cover;
-            a {
-                color: $red-accent;
-            }
-        }
-        &.item:nth-of-type(4) {
-            background: url(http://eltongoncalves.nl/img/Banners/gamer_small.jpg);
-            background-size: 100 ;
-            background-size: cover;
-            a {
-                color: $red-accent;
-            }
+        margin-bottom: 0.1em;
+        justify-content: center;
+        &.item {
+            border: .1em solid $green-accent;
+            a {text-align: center;}
         }
     }
 }
 
+/***************
+** About
+****************/
+#about {
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    figure {
+        height: 24em;
+        min-width: 87%;
+        overflow: hidden;
+        position: relative;
+        border-radius: .3em;
+
+        img {
+            position: absolute;
+        }
+    }
+    p, ul {
+        margin: auto;
+        max-width: 50%;
+    }
+}
+
+/***************
+** Helpers
+****************/
 .hidden {
   display: none;
 }

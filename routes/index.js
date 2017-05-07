@@ -1,5 +1,6 @@
 var index = require("./home"),
     about = require("./about"),
+    api = require("./api"),
     work = require("./work"),
     contact = require("./contact"),
     blog = require("./blog");
@@ -7,6 +8,7 @@ var index = require("./home"),
 
 module.exports = {
     "/": index,
+    "/api": api,
     "/about": about,
     "/work": work,
     "/contact": contact,

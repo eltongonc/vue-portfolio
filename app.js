@@ -5,14 +5,11 @@ var logger = require("morgan");
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var exphbs  = require("express-handlebars");
-var env = require("dotenv");
+var env = require("dotenv").config();
 
 var routes = require("./routes/index");
 
-env.config();
 var app = express(),
-// port is in single quotes to trigger the esLinter
-// so I wont forget to change it to 80 for Digital Ocean
     port = process.env.PORT || 80;
 
 // view engine setup
