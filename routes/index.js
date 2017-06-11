@@ -8,7 +8,7 @@ var index = require("./home"),
 
 module.exports = {
     "/": index,
-    "/api": api,
+    // "/api": api,
     "/about": about,
     "/work": work,
     "/contact": contact,

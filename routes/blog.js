@@ -8,13 +8,15 @@ var router = express.Router();
 ** Blog page.
 *****************/
 router.get("/", function(req, res) {
-    res.render("blog-overview", {pageTitle: "This page is my playground",list, blog_active : true });
+    res.render("blog-overview", {title: "Blog", pageTitle: "This page is my playground",list, blog_active : true });
 });
 
 router.get("/:post", function(req, res) {
     var index = req.params.post - 1;
     var post = {
-        title: list[index].title,
+        title: "Blog",
+        blog_active : true,
+        pageTitle: list[index].title,
         day: list[index].date.day,
         month: list[index].date.month,
         fullDate: list[index].date.full,

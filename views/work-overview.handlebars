@@ -1,8 +1,14 @@
-<main>
+<main id="work-overview">
     <h1>{{pageTitle}}</h1>
     <p>Here is a list of some works I have made</p>
-    <section class="blog-overview">
-
+    <nav>
+      <ul>
+        <li><a href="#all">All</a></li>
+        <li><a href="#visual">Visual</a></li>
+        <li><a href="#code">Code</a></li>
+      </ul>
+    </nav>
+    <section class="card-overview">
         {{#each list}}
             <article class="item">
                 <figure>

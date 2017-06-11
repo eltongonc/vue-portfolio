@@ -1,7 +1,6 @@
 <header>
-    <!-- <img src="/img/logo2.png" alt=""> -->
     <a href="/">
-        <h1>Elton</h1>
+        <h1>Elton Gonçalves Gomes</h1>
     </a>
 
     <div class="mobile-menu">
@@ -10,29 +9,11 @@
 
     <nav >
         <ul>
-            <li><a href="#page">Scroll to top</a></li>
+            <li><a href="#page">&#171;</a></li>
+            <li class="{{#if home_active}}active{{/if}}"><a href="/">Home</a></li>
+            <li class="{{#if about_active}}active{{/if}}"><a href="/about">About</a></li>
             <li class="{{#if work_active}}active{{/if}}"><a href="/work">Work</a></li>
             <li class="{{#if blog_active}}active{{/if}}"><a href="/blog">Blog</a></li>
-            <li class="{{#if about_active}}active{{/if}}"><a href="/about">About</a></li>
-            <li class="{{#if contact_active}}active{{/if}}"><a href="/contact">Contact Me</a></li>
         </ul>
     </nav>
-    <!-- Slideshow -->
-   <div class="slideshow-container">
-        {{#each work}}
-            <div class="mySlides fade" >
-                <img src="{{image}}" style="width:150%">
-                <a href="{{link}}">{{title}}</a>
-            </div>
-        {{/each}}
-        <div style="text-align:center">
-            {{#each work}}
-                <span class="dot" onclick="currentSlide({{id}})"></span> 
-            {{/each}}
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        <!-- <br> -->
-    </div>
 </header>

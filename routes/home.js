@@ -8,7 +8,7 @@ var router = express.Router();
 ** Home page.
 *****************/
 router.get("/", function(req, res) {
-    res.render("index", { title: "Home", work: allWork });
+    res.render("index", { title: "Home", work: allWork, home_active: true });
 });
 
 module.exports = router;

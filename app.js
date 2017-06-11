@@ -9,8 +9,14 @@ var env = require("dotenv").config();
 
 var routes = require("./routes/index");
 
+process.env.PORT = 3000
+
 var app = express(),
     port = process.env.PORT || 80;
+
+var env = process.env.NODE_ENV || 'development';
+app.locals.ENV = env;
+app.locals.ENV_DEVELOPMENT = env == 'development';
 
 // view engine setup
 app.engine("handlebars", exphbs({

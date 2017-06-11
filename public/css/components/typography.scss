@@ -13,7 +13,6 @@ a {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    color: $dark-fonts;
 }
 
 
@@ -23,8 +22,9 @@ span,
 figcaption {
 	margin-top: 1em;
 	margin-bottom: 1em;
-    color: $light-fonts;
+    color: #333;
     font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
 }
 
 p,
@@ -40,7 +40,6 @@ button {
 
 h1 {
     font-size: 2.5em;
-    color: $primary-color;
     margin: 0;
 }
 

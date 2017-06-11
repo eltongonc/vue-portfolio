@@ -12,13 +12,16 @@
     <meta name="revisit-after" content="3 month" />
     <title>Elton Gonçalves Gomes | Front End Developer</title>
 
+    {{#if ENV_DEVELOPMENT}}
+      <script src="http://localhost:35729/livereload.js"></script>
+    {{/if}}
 
     <!-- Custom fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Open+Sans+Condensed:700" rel="stylesheet">
     <!-- Custom style -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body id="page">
+<body id="{{title}}">
     {{> header}}
 
     {{{body}}}

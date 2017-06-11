@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    // box-sizing: border-box;
     list-style: none;
     font-weight: 300
 }
@@ -26,8 +26,8 @@ button {
 }
 
 *:focus {
-    outline: $red-accent;
-    background-color: $red-accent;
+    outline: $red;
+    background-color: $red;
     color: white;
     border: 0;
     transition: .3s;

@@ -8,7 +8,7 @@ var router = express.Router();
 ** Work page.
 *****************/
 router.get("/", function(req, res) {
-    res.render("work-overview", { pageTitle: "Work", list, work_active : true, work: list });
+    res.render("work-overview", { title: "Work",pageTitle: "Work", list, work_active : true, work: list });
 });
 
 router.get("/:project", function(req, res) {
