@@ -3,14 +3,14 @@
     <p>Here is a list of some works I have made</p>
     <nav>
       <ul>
-        <li><a href="#all">All</a></li>
+        <li class="selected"><a href="#all">All</a></li>
         <li><a href="#visual">Visual</a></li>
         <li><a href="#code">Code</a></li>
       </ul>
     </nav>
     <section class="card-overview">
         {{#each list}}
-            <article class="item">
+            <article class="card">
                 <figure>
                     <img src="{{image}}" alt="" title="{{title}}" />
                 </figure>

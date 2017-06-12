@@ -11,10 +11,10 @@ header {
         position: fixed;
         top: 0;
         width: 100%;
-        background: $red;
+        background: white;
         z-index: 99;
         a {color: $red;}
-        h1 {color: white}
+        h1 {color: $red}
   }
 
   nav ul {
@@ -64,14 +64,13 @@ header {
       }
     }
   }
+  [href="#page"] {
+    transform: rotate(90deg);
+    position: relative;
+    bottom: .5em;
+    right: 0.5em
+  }
 }
-[href="#page"] {
-  transform: rotate(90deg);
-  position: relative;
-  bottom: .5em;
-  right: 0.5em
-}
-
 
 .mobile-menu {
     position: relative;

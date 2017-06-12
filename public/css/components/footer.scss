@@ -1,6 +1,7 @@
 /***
 ** Footer
 ***/
+
 body > footer {
     display: flex;
     flex-wrap: wrap;
@@ -8,37 +9,83 @@ body > footer {
     font-weight: 700;
     padding: 1em;
     background-color: white;
-    border-radius: 0.3em;
-    box-shadow: 0 0 1em 0.1em $light-fonts;
-
-
-    a{
-        text-decoration: none;
-        color: #663231;
-        margin-right: 2em;
-        text-decoration: underline;
-    }
-    h3{
-        color: #663231;
-    }
-    i.fa{
-        font-size: 2.4em;
-    }
-
-    nav {
-        width: 100%;
-    }
+    background: $red;
     h4 {
-        width: 100%;
+      width: 100%;
         text-align: center;
         padding: 1em 0;
-        border-top: .1em solid #ededed;
+        color: white;
+    }
+    .social {
+      h4, span {
+        display: none;
+      }
+
+      ul li {
+        width: 3em;
+      }
+      img {
+        width: 100%;
+      }
+      a {
+        padding: .5em;
+      }
+    }
+    ul {
+      padding: 0;
+      text-align: center;
+      margin: 0;
+      li {
+        margin: .3em;
+        width: 100%;
+        display: inline-block;
+        background-color: rgba($grey, 0.5);
+        a {
+          padding: 1em 1.5em;
+          transition: .1s;
+          color: $red;
+          display: block;
+          max-width: 100%;
+        }
+        &:hover, &.active  {
+          background-color: rgba($green, 0.5);
+        }
+      }
+    }
+    @media(min-width:50em) {
+      display: flex;
+      justify-content: space-between;
+      nav {
+        display: none;
+      }
+      h4 {
+        width: auto;
+        display: inline;
+      }
+      .social {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        >* {
+          margin-right: 1em;
+        }
+        span {
+          display: block;
+        }
+        img {
+          width: 2em;
+        }
+      }
+        .social h4 {
+          display: block;
+          font-family: $font-decor;
+          text-transform: capitalize;
+          font-weight: lighter;
+        }
     }
 }
 
-
-@media(max-width:50em) {
-    footer, footer section {
-        height: auto;
-    }
+.to_top {
+  display: inline-block;
+    transform: rotate(90deg);
 }

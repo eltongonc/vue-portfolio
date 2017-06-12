@@ -1,0 +1,105 @@
+/*****************
+** Cards
+*****************/
+article {
+    position: relative;
+    margin: 1em 0;
+    &.card {
+        width: 20em;
+        margin-top: 0;
+        margin-right: 1em ;
+        margin-bottom: 4em;
+    }
+    h2 {
+        color: $red;
+    }
+    h1 {
+        width: 100%;
+        margin-top: 1.5em;
+        text-align: center;
+        margin-bottom: .5em;
+    }
+    a.link::after {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        position: absolute;
+    }
+    figure {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+    figcaption {
+        margin: 0;
+    }
+    footer {
+        border-top: .1em solid white
+    }
+    footer p {
+        margin: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: $font-thin;
+
+    }
+    time {
+        top: 1em;
+        left: 1em;
+        padding: .3em;
+        position: absolute;
+        border-radius: .3em;
+        background-color: $red;
+        span {
+            color: white;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+section .content {
+  time {
+      left: 0;
+      top: 1em;
+  }
+  header {
+      border: none;
+  }
+}
+
+article a {
+color: white;
+padding: 0.5em 1em;
+display: inline-block;
+background-color: $green;
+}
+
+.card-overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    a::after {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        position: absolute;
+    };
+    @media (min-width: 80em){
+        width: 25em;
+    }
+}

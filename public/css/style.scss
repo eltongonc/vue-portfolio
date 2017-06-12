@@ -13,7 +13,8 @@ $font-decor: 'Courgette', cursive;
 // @import "./components/typography";
 @import "./components/header";
 // @import "./components/aside";
-// @import "./components/footer";
+@import "./components/footer";
+@import "./components/card";
 //
 /**********
 ** General
@@ -34,7 +35,7 @@ h4,
 h5,
 h6 {
   text-transform: uppercase;
-  font-family: $font-thin;
+  font-family: $font-regular;
   margin: 0;
 }
 
@@ -56,7 +57,7 @@ figure {
 **********/
 main {
   padding: 1em 2em;
-
+  min-height: 78.7vh;//sticky footer fix
   >h1 {
     background-color: rgba($green, 0.5);
     padding: .5em 1em;
@@ -65,7 +66,7 @@ main {
 }
 
 /***************
-** home content
+** home page
 ***************/
 .banner {
   padding: 10em 5em;
@@ -75,221 +76,110 @@ main {
   top: 0; left: 0;
   z-index: -1;
 }
-#Home {
+.Home {
   header {
     background-color: transparent;
     h1 {
       opacity: 0;
     }
+    &.sticky{
+          background: white;
+          h1 {opacity: 1}
+    }
   }
+
   .recent_work {
     margin-top: 20em;
+    h2 {
+      padding: .7em 0;
+      color: $red;
+    }
   }
+  header.sticky + main .recent_work {
+      margin-top: 25em;
+  }
+
   h1 {
     color: white;
     display: inline-block;
   }
 }
-// body {
-//     margin: 0;
-//     // padding: .3em;
-//     // background-color: $green-accent;
-//     // background-image: linear-gradient($green-accent, $red-accent);
-// //
-//     .banner {
-//       height: 50vh;
-//       background: url("https://bmpowered.bankmobile.com/wp-content/uploads/2017/04/crew-88128.jpg")
-//     }
 
-//
-// // /*****************
-// // ** Cards
-// // *****************/
-article {
-    position: relative;
-    margin: 1em 0;
-    &.item {
-        width: 20em;
-        margin: .4em;
+/***************
+** about page
+***************/
+#about {
+    display: flex;
+    margin-bottom: 4em;
+    img {
+      margin-bottom: 2em;
     }
-    h2 {
-        color: $red;
+    .description {
+      padding: 0 2em;
     }
-    h1 {
-        width: 100%;
-        margin-top: 1.5em;
-        text-align: center;
-        margin-bottom: .5em;
+    section:first-child {
+        margin: 1em 0;
     }
-    a.link::after {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        position: absolute;
+    h4 {
+      font-weight: normal;
     }
-    figure {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-        img {
-            max-width: 100%;
-        }
-    }
-    figcaption {
-        margin: 0;
-        padding: 1em;
-    }
-    footer {
-        border-top: .1em solid white
-    }
-    footer p {
-        margin: 0;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-family: $font-thin;
-
-    }
-    time {
-        top: 1em;
-        left: 1em;
-        padding: .3em;
-        position: absolute;
-        border-radius: .3em;
-        background-color: $red;
-        span {
-            color: white;
-            text-align: center;
-        }
+    ul {
+      padding-left: 0;
+      li a {
+        color: $green;
+      }
     }
 }
-
-address {
-    margin: 1em 0;
-}
-
-
-section .content {
-time {
-    left: 0;
-    top: 1em;
-}
-header {
-    border: none;
-}
-}
-
-section p {
-max-width: 20em;
-}
-
-article a {
-color: white;
-padding: 0.5em 1em;
-border-radius: .3em;
-display: inline-block;
-background-color: $red;
-}
-.card-overview {
+#skills {
+  ul {
+    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
-}
-
-.card {
-    position: relative;
-    a::after {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: "";
-        position: absolute;
-    };
-    @media (min-width: 50em){
-        width: 25em;
+    &:first-child {
+      justify-content: flex-start;
     }
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+  li {
+    background-color: $red;
+    color: white;
+    display: inline-block;
+    padding: 1.9em;
+    width: 5em;
+    text-align: center;
+    margin: .5em;
+  }
 }
 
 
-// //
-// // // single blog page
-// // section figure {
-// //     /*height: 20em;*/
-// //     overflow: hidden;
-// //     img {
-// //         width: 100%;
-// //         height: auto;
-// //     }
-// // }
-// //
-// //
-// // /***************
-// // ** Home content
-// // ****************/
-// // main {
-// //     padding: 1em;
-// //     margin-top: 10em;
-// //     position: relative;
-// //     margin-bottom: 1em;
-// //     border-radius: .4em;
-// //     background-color: white;
-// //     box-shadow: 0 0 1em 0.1em $light-fonts;
-// // }
-// // #home {
-// //     section{
-// //         flex-wrap: wrap;
-// //     }
-// //     section:last-child ul {
-// //         display: flex;
-// //         flex-wrap: wrap;
-// //         justify-content: space-between;
-// //     }
-// //     li {
-// //         margin: 0;
-// //         width: 14em;
-// //         margin: .5em;
-// //         height: 14em;
-// //         display: flex;
-// //         align-items: center;
-// //         border-radius: .3em;
-// //         margin-bottom: 0.1em;
-// //         justify-content: center;
-// //         &.item {
-// //             border: .1em solid $green-accent;
-// //             a {text-align: center;}
-// //         }
-// //     }
-// // }
-// //
-// // /***************
-// // ** About
-// // ****************/
-// // #about {
-// //     section {
-// //         display: flex;
-// //         flex-wrap: wrap;
-// //         justify-content: center;
-// //     }
-// //
-// //     figure {
-// //         height: 24em;
-// //         min-width: 87%;
-// //         overflow: hidden;
-// //         position: relative;
-// //         border-radius: .3em;
-// //
-// //         img {
-// //             position: absolute;
-// //         }
-// //     }
-// //     p, ul {
-// //         margin: auto;
-// //         max-width: 50%;
-// //     }
-// // }
-//
+/***************
+** work page
+****************/
+#work-overview {
+  ul{
+    display: flex;
+    justify-content: center;
+    li {
+      padding: 0.5em 1em;
+      margin: .5em;
+      background-color: rgba($grey, 0.7);
+      &.selected {
+        background-color: rgba($red, 0.7);
+        a { color: white}
+      }
+    }
+    a {
+      color: $red;
+      font-weight: bold;
+      &:hover, &:active {
+        color: $grey;
+      }
+    }
+  }
+}
+
 /***************
 ** Helpers
 ****************/
