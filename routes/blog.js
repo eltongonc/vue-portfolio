@@ -14,14 +14,15 @@ router.get("/", function(req, res) {
 router.get("/:post", function(req, res) {
     var index = req.params.post - 1;
     var post = {
-        title: "Blog",
+		pageTitle: "Blog",
         blog_active : true,
-        pageTitle: list[index].title,
+		title: list[index].title,
         day: list[index].date.day,
         month: list[index].date.month,
         fullDate: list[index].date.full,
         content: list[index].content,
-        image: "https://unsplash.it/1080/1920?random"
+        image: "https://unsplash.it/1080/1920?random",
+		author: list[index].author
     };
     res.render("blog-post", post);
 });

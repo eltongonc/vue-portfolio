@@ -25,5 +25,6 @@ module.exports = {
         "semi": [
             "error"
         ]
-    }
+    },
+	"fix": true
 };
