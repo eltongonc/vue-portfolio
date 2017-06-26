@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "main": "app.js",
+  "email": "eltongonc@gmail.com",
   "scripts": {
     "start": "node app.js",
     "dev": "gulp",
@@ -45,5 +46,6 @@
     "nyc": "^10.0.0",
     "pre-commit": "^1.2.2",
     "supertest": "^2.0.0"
-  }
+},
+"author": "Elton Gonçalves Gomes"
 }
