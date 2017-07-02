@@ -1,14 +1,4 @@
 /************
-** animations
-*************/
-TweenMax.to('.transition', 1, {
-	left: 0,
-	width: "200px",
-	height: "10px",
-	background: "red"
-});
-
-/************
 ** colors
 *************/
 var primaryColor= "#ebebeb";
@@ -20,29 +10,27 @@ var lightFonts= "#7e8c93";
 /****************
 ** sticky header
 ****************/
-var header = document.querySelector('header');
-var navItems = document.querySelector('nav ul li');
-    navItems.classList.add('hidden');
-
-window.addEventListener('scroll', function(){
-    var headerOffsett = window.scrollY >= 50;
-	console.log(headerOffsett);
-    // hide the slideshow header if it's present
-    if (headerOffsett && header.children[2] && header.children[2].className === 'slideshow-container') {
-        header.children[2].classList.add('hidden');
-    }
-    // make the header fixed
-    if(headerOffsett){
-        header.classList.add('sticky');
-        navItems.classList.remove('hidden');
-    }
-	else{
-        header.classList.remove('sticky');
-        navItems.classList.add('hidden');
-        console.log(header.children[2]);
-        header.children[2].classList.remove('hidden');
-    }
-});
+// var header = document.querySelector('header');
+// var navItems = document.querySelector('nav ul li');
+//     navItems.classList.add('hidden');
+//
+// window.addEventListener('scroll', function(){
+//     var headerOffsett = window.scrollY >= 30;
+//     // hide the slideshow header if it's present
+//     if (headerOffsett && header.children[2] && header.children[2].className === 'slideshow-container') {
+//         header.children[2].classList.add('hidden');
+//     }
+//     // make the header fixed
+//     if(headerOffsett){
+//         header.classList.add('sticky');
+//         navItems.classList.remove('hidden');
+//     }else{
+//         header.classList.remove('sticky');
+//         navItems.classList.add('hidden');
+//         console.log(header.children[2]);
+//         header.children[2].classList.remove('hidden');
+//     }
+// });
 
 /*************
 ** nav button

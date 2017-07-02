@@ -2,71 +2,100 @@
 ** header
 **********/
 header {
-	height: 10%;
-	display: flex;
-	justify-content: space-between;
-	border-bottom: 1px solid rgba($red,0.1);
-	&.sticky{
-		  position: fixed;
-		  top: 0;
-		  width: 100%;
-		  z-index: 99;
-		  a {color: $red;}
-	}
-	nav {
-		display: block;
-		overflow: hidden;
-		width: 100%;
-		display: flex;
-		justify-content: flex-end;
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100%;
-		width: 100%;
-		transition: width .3s ease-in;
-		background-color: $red;
-		transform: rotate(45deg);
-		&.offscreen {
-			top: 0;
-			right: 0;
-			visibility: hidden;
-			opacity: 0;
-			height: 0;
-			width: 0;
-		}
-	}
+  background-color: $red;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  box-sizing: border-box;
+  &.sticky{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: white;
+        z-index: 99;
+        a {color: $red;}
+        h1 {color: $red}
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  nav {
+    height: 100%;
+    transition: 1s;
+    button {
+      display: none;
+    }
+    ul {
+      text-align: center;
+      margin: 0;
+      li {
+        margin-right: .3em;
+        display: inline-block;
+        background-color: rgba($grey, 0.7);
+        a {
+          font-weight: bold;
+          height: 100%;
+          padding: 0.5em 1em;
+          transition: .1s;
+          color: $red;
+          display: inline-block;
+          width: 3em;
+        }
+        &:hover, &.active  {
+          background-color: rgba($green, 0.7);
+        }
+      }
+    }
+    // mobile
+    @media (max-width: 50em){
+      position: absolute;
+      top: 9.9em;
+      right: 0;
+      width: 50%;
+	  background: $red;
+	  z-index: 999;
+
 	ul {
-		transform: rotate(-45deg);
 		display: flex;
 		flex-direction: column;
-		width: inherit;
-		height: inherit;
-		align-items: center;
-		justify-content: center;
-	}
-	li {
-		display: inline-block;
-		a {
-			font-size: 3em;
-			font-size: bold;
-			width: 100%;
-			text-align: center;
-			color: $grey;
+		justify-content: space-around;
+		height: 30%;
+		li:first-child{
+			display: none;
 		}
-	}
-	@media (max-width: 50em) {
-		>h1 {
-			height: 1.5em;
-			overflow: hidden;
-		}
-	}
-}
+		li {
 
+			background-color: rgba($grey, 1);
+		}
+		li a {
+			width: 100%;
+			height: 2em;
+			opacity: 1;
+		}
+	}
+
+      &.offscreen {
+        // right: -999px;
+        width: 0;
+		height: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+  [href="#page"] {
+    transform: rotate(90deg);
+    position: relative;
+    bottom: .5em;
+    right: 0.5em
+  }
+}
 
 .mobile-menu {
     position: relative;
-	z-index: 999;
     background-color: rgba($grey, 0.7);
     font-weight: bold;
     height: 100%;

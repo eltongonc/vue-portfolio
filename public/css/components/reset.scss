@@ -1,0 +1,33 @@
+* {
+    // box-sizing: border-box;
+    font-weight: 300
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    padding-left: 0
+}
+
+figure {
+    margin: 0;
+}
+figcaption {
+    margin: 0;
+}
+
+
+button {
+    border: none;
+}
+
+*:focus {
+    outline: $red;
+    background-color: $red;
+    color: white;
+    border: 0;
+    transition: .3s;
+}

@@ -1,0 +1,48 @@
+body {
+    font-size: 100%;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+p,
+li,
+span,
+figcaption {
+	margin-top: 1em;
+	margin-bottom: 1em;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+}
+
+p,
+a:not(header a) {
+    font-size: 1.3em;
+}
+
+header a,
+button {
+    font-size: 1em;
+}
+
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+address {
+    font-style: normal;
+}

@@ -1,6 +1,6 @@
 $red: #663231;
 $green: #97dcac;
-$grey: #E5DCC3;
+$grey: #dff0e9;
 
 
 @import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans+Condensed:300|Open+Sans:400,800');
@@ -8,28 +8,24 @@ $font-regular: 'Open Sans', sans-serif;
 $font-thin: 'Open Sans Condensed', sans-serif;
 $font-decor: 'Courgette', cursive;
 
+@import "./components/vars";
 // @import "./components/reset";
+// @import "./components/typography";
+@import "./components/header";
+// @import "./components/aside";
+@import "./components/footer";
+@import "./components/card";
 //
 /**********
 ** General
 **********/
-* {
-	box-sizing: border-box;
-}
-html,
 body {
-	height: 100%;
-}
-body {
-	background-color: $grey;
-	font-family: $font-regular;
-	margin: 0;
-	padding: 2em;
-	box-sizing: border-box;
+  font-family: $font-regular;
+  margin: 0;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 h1,
@@ -38,96 +34,161 @@ h3,
 h4,
 h5,
 h6 {
-	text-transform: uppercase;
-	font-family: $font-regular;
-	margin: 0;
+  text-transform: uppercase;
+  font-family: $font-regular;
+  margin: 0;
 }
 
-p {
-	color: #333;
-}
 header, footer {
-	a {
-		color: $red;
-	}
+  a {
+    color: white;
+  }
 }
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+  list-style: none;
 }
 
 figure {
-	margin: 0;
+  margin: 0;
 }
-
 /**********
-** colors
+** page header
 **********/
-
-/**********
-** layout
-**********/
-
-
-
-@import "./components/header.scss";
-
 main {
-	position: relative;
-	height: 90%;
-	margin-top: 1em;
-	padding-left: 1em;
-	padding-top: 4em;
+  padding: 1em 2em;
+  min-height: 78.7vh;//sticky footer fix
+  >h1 {
+    background-color: rgba($green, 0.5);
+    padding: .5em 1em;
+    color: $red
+  }
+}
 
-	article {
-		padding-left: 7em;
-		height: 50%;
-		width: 99%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		border: solid white;
-	}
-	h1 {
-		box-sizing: border-box;
-		font-size: 5em;
-		color: $red;
-		text-transform: none;
-	}
+/***************
+** home page
+***************/
+.banner {
+  padding: 10em 5em;
+  background-image: url("https://bmpowered.bankmobile.com/wp-content/uploads/2017/04/crew-88128.jpg");
+  width: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -1;
+}
+.Home {
+  header {
+    background-color: transparent;
+    h1 {
+      opacity: 0;
+    }
+    &.sticky{
+          background: white;
+          h1 {opacity: 1}
+    }
+  }
 
-	section {
-		background: black;
-		background-image: url("/img/profiel%20(2).jpg");
-		background-size: cover;
-		background-size: 50% 100%;
-		background-repeat: no-repeat;
-		background-position: right;
-		position: absolute;
-		top: 6%;
-		left: 0;
-		width: 100%;
-		height: 50%;
-		z-index: -1;
-		overflow: hidden;
+  .recent_work {
+    margin-top: 20em;
+    h2 {
+      padding: .7em 0;
+      color: $red;
+    }
+  }
+  header.sticky + main .recent_work {
+      margin-top: 25em;
+  }
 
-		div {
-			display: block;
-			background:$grey;
-			width: 75%;
-			height: 150%;
-			transform: rotate(45deg);
-		}
-	}
+  h1 {
+    color: white;
+    display: inline-block;
+  }
+}
+
+/***************
+** about page
+***************/
+#about {
+    display: flex;
+    margin-bottom: 4em;
+    img {
+      margin-bottom: 2em;
+    }
+    .description {
+      padding: 0 2em;
+    }
+    section:first-child {
+        margin: 1em 0;
+    }
+    h4 {
+      font-weight: normal;
+    }
+    ul {
+      padding-left: 0;
+      li a {
+        color: $green;
+      }
+    }
+}
+#skills {
+  ul {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    &:first-child {
+      justify-content: flex-start;
+    }
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+  li {
+    background-color: $red;
+    color: white;
+    display: inline-block;
+    padding: 1.9em;
+    width: 5em;
+    text-align: center;
+    margin: .5em;
+  }
 }
 
 
-@import "./components/footer.scss";
+/***************
+** work page
+****************/
+#work-overview {
+  ul{
+    display: flex;
+    justify-content: center;
+    li {
+      padding: 0.5em 1em;
+      margin: .5em;
+      background-color: rgba($grey, 0.7);
+      &.selected {
+        background-color: rgba($red, 0.7);
+        a { color: white}
+      }
+    }
+    a {
+      color: $red;
+      font-weight: bold;
+      &:hover, &:active {
+        color: $grey;
+      }
+    }
+  }
+}
 
-/**********
-** helpers
-**********/
+
+/***************
+** blog page
+****************/
+
+
+/***************
+** Helpers
+****************/
 .hidden {
-	display: none;
+  display: none;
 }
