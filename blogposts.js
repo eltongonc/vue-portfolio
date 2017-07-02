@@ -436,7 +436,7 @@ module.exports = [
 		Screen reader hardware are very pricy</p>
 
 		<h3>Who is it for</h3>
-		<p>Screen readers aren’t just for blind people. They are used by partially impaired.
+		<p>Screen readers aren’t just for blind people. They are used by partially impaired .
 		People with autism, dyslexia also use screen readers to help them focus.</p>
 
 		<h3>When does it</h3>
