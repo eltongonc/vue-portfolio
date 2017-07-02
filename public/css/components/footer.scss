@@ -8,50 +8,44 @@ body > footer {
     justify-content: center;
     font-weight: 700;
     padding: 1em;
-    background-color: white;
-    background: $red;
     h4 {
       width: 100%;
         text-align: center;
         padding: 1em 0;
         color: white;
     }
-    .social {
-      h4, span {
-        display: none;
-      }
-
-      ul li {
-        width: 3em;
-      }
-      img {
-        width: 100%;
-      }
-      a {
-        padding: .5em;
-      }
-    }
-    ul {
-      padding: 0;
-      text-align: center;
-      margin: 0;
-      li {
-        margin: .3em;
+    ul li {
+        margin: .3em 0;
         width: 100%;
         display: inline-block;
-        background-color: rgba($grey, 0.5);
+		background-color: rgba($red,0.1);
         a {
-          padding: 1em 1.5em;
-          transition: .1s;
-          color: $red;
           display: block;
-          max-width: 100%;
+		  padding: 1em;
         }
         &:hover, &.active  {
           background-color: rgba($green, 0.5);
         }
       }
-    }
+	  .social {
+		  li {
+			  background: none;
+		  }
+		  h4, span {
+			  display: none;
+		  }
+
+		  ul li {
+			  width: 3em;
+		  }
+		  img {
+			  width: 100%;
+		  }
+		    a {
+		      padding: .5em;
+		    }
+	  }
+
     @media(min-width:50em) {
       display: flex;
       justify-content: space-between;
@@ -83,6 +77,26 @@ body > footer {
           font-weight: lighter;
         }
     }
+
+	// height: 10%;
+// 	display: flex;
+// 	justify-content: space-between;
+	border-top: 1px solid rgba($red,0.1);
+// 	> * {
+// 		flex-grow: 1.5;
+// 	}
+// 	nav {
+// 		width: 100%;
+// 		display: flex;
+// 		justify-content: flex-end;
+// 	}
+// 	ul {
+// 		padding: 0;
+// 	}
+// 	li {
+// 		display: inline-block;
+// 		width: 5em;
+// 	}
 }
 
 .to_top {

@@ -13,13 +13,17 @@ gulp.task("sass", function () {
     gulp.src("./public/css/*.scss")
         .pipe(plumber())
         .pipe(sass())
-        .pipe(autoprefixer())
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
         .pipe(gulp.dest("./public/css/"))
         .pipe(livereload());
 });
 
 gulp.task("watch", function() {
     gulp.watch("./public/css/**/*.scss", ["sass"]);
+	gulp.watch('./public/sass/components/*.scss', ['sass']);
 });
 
 gulp.task("develop", function () {
