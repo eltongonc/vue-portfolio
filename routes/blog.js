@@ -21,7 +21,7 @@ router.get("/:post", function(req, res) {
         month: list[index].date.month,
         fullDate: list[index].date.full,
         content: list[index].content,
-        image: "https://unsplash.it/1080/1920?random",
+        image: list[index].image,
 		author: list[index].author
     };
     res.render("blog-post", post);

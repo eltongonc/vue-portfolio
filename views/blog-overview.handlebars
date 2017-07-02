@@ -1,22 +1,25 @@
 <main>
     <h1>{{pageTitle}}</h1>
-    <p>Here you'll find a collection of blogposts and unfinished work</p>
     <section class="card-overview">
         {{#each list}}
             <article class="card">
-                <figure>
-                    <img src="https://unsplash.it/288/166?random" alt="" title="{{title}}" />
-                </figure>
-                <figcaption>
-                    <h2>{{{title}}}</h2>
-                    <a href="{{link}}" class="link">View</a>
-                </figcaption>
-                <footer class="do-blog-post-date">
-                    <time datetime="{{{date.full}}}">
-                        <span class="do-post-date">{{date.day}}</span>
-                        <span class="do-post-month">{{date.month}}</span>
-                    </time>
-                </footer>
+					<figure>
+						{{#if image}}
+						<img src="{{image}}" alt="" title="{{title}}" />
+						{{/if }}
+					</figure>
+					<figcaption>
+						<h2>{{{title}}}</h2>
+						<a href="{{link}}" class="link">View</a>
+					</figcaption>
+				{{#if image}}
+	                <footer class="do-blog-post-date">
+	                    <time datetime="{{{date.full}}}">
+	                        <span class="do-post-date">{{date.day}}</span>
+	                        <span class="do-post-month">{{date.month}}</span>
+	                    </time>
+	                </footer>
+				{{/if}}
             </article>
         {{/each}}
     </section>

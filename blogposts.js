@@ -8,7 +8,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-02-07T16:00",
 		},
-		image: "images/blog/1.jpg",
+		image: "/img/blog/1.JPG",
 		content: `<p class='lead'>User experience(UX) is the heart and soul of any site. It determines whether you hit or miss your audience. But a good UX is not easily achieved, especially if you’re just making a design. But why should a frontender learn UX, why not hire a UX-designer?</p>
 		<h2>Introduction</h2>
 		<p>Stephen Hay is senior UX Design Lead at Catawiki. He is known of his book Responsive design workflow. He ended up with Responsive webdesign out of frustration of CSS. He mentioned ways to perfect your web design to be responsive during his talk about responsive web design he mentioned.</p>
@@ -51,7 +51,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-02-14T16:00",
 		},
-		image: "images/blog/2.jpg",
+		image: "/img/blog/2.JPG",
 		content: `
 		<p class='lead'>Sketchnoting  is a great way to take notes while paying attention during a lecture or meeting. A mixture of sketches and text will ensure you take the most important notes.</p>
 
@@ -91,14 +91,14 @@ module.exports = [
 	},
 	{
 		id: 3,
-		title: "What it means to be a web developer and the browser bloats we are creating.",
+		title: "The browser bloats we are creating",
 		date: {
 			day: "28",
 			month: "feb",
 			year: "2017",
 			full: "2017-02-28T16:00",
 		},
-		image: "images/blog/3.jpg",
+		image: "/img/blog/3.JPG",
 		content: `
 		<p class="lead"> Peter – Paul Koch is the founder of Fronteers. According to Quirksmode (an online platform for browser compatibility information)  Peter-Paul Koch has been a professional front-end engineer since 1998. He focused on HTML, CSS, JavaScript, and browser compatibility even when doing so was not yet fashionable.</p>
 
@@ -149,7 +149,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-03-14T16:00",
 		},
-		image: "images/blog/4.jpg",
+		image: "/img/blog/4.JPG",
 		content: `
 		<h2>What is Git/Github</h2>
 		<p>Github is the online (social?) platform that holds all your code and codes of others. You are not restricted on posting only code though.
@@ -206,7 +206,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-03-21T16:00",
 		},
-		image: "images/blog/5.jpg",
+		image: "/img/blog/5.JPG",
 		content: `
 		<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>
 
@@ -244,7 +244,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-03-21T16:00",
 		},
-		image: "images/blog/6.jpg",
+		image: "/img/blog/6.JPG",
 		content: `
 		<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>
 
@@ -282,7 +282,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-04-14T16:00",
 		},
-		image: "images/blog/6.jpg",
+		image: "/img/blog/7.JPG",
 		content: `
 		<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>
 
@@ -302,33 +302,6 @@ module.exports = [
 	},
 	{
 		id: 8,
-		title: "Realtime web and GraphQL",
-		date: {
-			day: "14",
-			month: "Apr",
-			year: "2017",
-			full: "2017-04-14T16:00",
-		},
-		image: "images/blog/7.jpg",
-		content: `
-		<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>
-
-		<p>The Drupal site allowed him to do many thing but he soon discovered that it was time for an update. At that moment Meteor.js was hip and happening so they decided to ride along the Meteor.js train.</p>
-
-		<p>By taking this step it allowed him to build the chat module that would update realtime to the server. This was due to the data distribution protocal build-in meteor.js. The way it works is via websockets that sends data back and forth from server to client.</p>
-
-		<p>Check out the npm module ddp-client for more information on the usage.</p>
-
-		<h2>GraphQL</h2>
-		<p>When doing an API call to a REST API the structure looks similar like this : /api/location. The response will be everything that belongs to the location.</p>
-
-		<p>GraphQL makes sure you get only what you need. The response depends on the fields that you include to you API call</p>
-		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 9,
 		title: "Obscure browsers",
 		date: {
 			day: "18",
@@ -336,7 +309,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-04-18T16:00",
 		},
-		image: "images/blog/8.jpg",
+		image: "/img/blog/8.JPG",
 		content: `
 		<p class="lead">Everything is turning smart these days, so why not a smart house. Niels tries to connect everthing in his house to the internet. During his talk about obscure browsers he gave some tips how to connect anything to the web.</p>
 
@@ -361,7 +334,7 @@ module.exports = [
 		link: function(){return "/blog/"+this.id;}
 	},
 	{
-		id: 10,
+		id: 9,
 		title: "Your own company by and with CMD",
 		date: {
 			day: "16",
@@ -369,7 +342,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-05-16T16:00",
 		},
-		image: "images/blog/9.jpg",
+		image: "/img/blog/9.JPG",
 		content: `
 		<p class="lead">Nick de Bruin is owner of Lively and gave a talk on how he started Lively. Nick used to be a Communication and Multimedia design student.</p>
 
@@ -386,7 +359,7 @@ module.exports = [
 		link: function(){return "/blog/"+this.id;}
 	},
 	{
-		id: 11,
+		id: 10,
 		title: "Interaction Engineer",
 		date: {
 			day: "23",
@@ -394,7 +367,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-05-23T16:00",
 		},
-		image: "images/blog/10.jpg",
+		image: "/img/blog/10.JPG",
 		content: `
 		<h2>A basic setup for Internet of Things</h2>
 		<p>To set up your own internet of things project you will need:</p>
@@ -415,7 +388,7 @@ module.exports = [
 		link: function(){return "/blog/"+this.id;}
 	},
 	{
-		id: 12,
+		id: 11,
 		title: "Inclusive design",
 		date: {
 			day: "31",
@@ -423,7 +396,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-05-23T16:00",
 		},
-		image: "images/blog/12.jpg",
+		image: "/img/blog/11.JPG",
 		content: `
 		<p class="lead">Leonie is a blind developer and gave a talk  about screen readers during the icons</p>
 
@@ -452,7 +425,7 @@ module.exports = [
 		link: function(){return "/blog/"+this.id;}
 	},
 	{
-		id: 13,
+		id: 12,
 		title: "Using npm as task runner",
 		date: {
 			day: "10",
@@ -460,7 +433,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-06-10T16:00",
 		},
-		image: "images/blog/.jpg",
+		image: "",
 		content: `
 		<p class="lead">I was a bit late on learning Gulp and I am doing my best to let it go, here is why you should do so too.<p>
 
@@ -500,7 +473,7 @@ module.exports = [
 		link: function(){return "/blog/"+this.id;}
 	},
 	{
-		id: 14,
+		id: 13,
 		title: "Keeping up with the ECMAScripts",
 		date: {
 			day: "10",
@@ -508,7 +481,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-06-10T16:00",
 		},
-		image: "images/blog/.jpg",
+		image: "",
 		content: `
 		<p class="heading">So Javascript es3000 is around the corner and you don’t even know what version of JavaScript you are writing in, whatever should you do?</p>
 
@@ -540,7 +513,7 @@ module.exports = [
 		link: function(){return "/blog/"+this.id;}
 	},
 	{
-		id: 15,
+		id: 14,
 		title: "Realtime web and why you should use it",
 		date: {
 			day: "24",
@@ -548,7 +521,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-06-24T16:00",
 		},
-		image: "images/blog/.jpg",
+		image: "",
 		content: `
 		<p class="lead">Realtime web has been around for a long time, enabling connection between multiple devices in realtime. Here is a reason why you should start using this technology.</p>
 
@@ -582,7 +555,7 @@ module.exports = [
 		link: function(){return "/blog/"+this.id;}
 	},
 	{
-		id: 16,
+		id: 15,
 		title: "Static website FTW",
 		date: {
 			day: "25",
@@ -590,7 +563,7 @@ module.exports = [
 			year: "2017",
 			full: "2017-06-24T16:00",
 		},
-		image: "images/blog/.jpg",
+		image: "",
 		content: `
 		<p class="lead">During a project I received feedback of from a tutor. He told me: “A server is not needed for this specific project, you could use a service like Travis to build static pages”. My curiosity rose and I decided to do some further research on this.</p>
 
