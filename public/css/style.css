@@ -233,7 +233,8 @@ article {
     width: 100%;
     overflow: hidden;
     position: relative;
-    text-align: center; }
+    text-align: center;
+    background-color: rgba(102, 50, 49, 0.3); }
     article figure img {
       width: 100%; }
   article figcaption {
