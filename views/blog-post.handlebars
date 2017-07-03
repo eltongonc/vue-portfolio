@@ -1,10 +1,9 @@
 <main>
-  <h1>{{{pageTitle}}}</h1>
-    <section class="blogposts">
+    <section class="blogpost">
         <!-- BLOG SINGLE CONTENT -->
         <article>
             <figure>
-                <img width="200" src="{{image}}" alt="Blog Single Image">
+                <img src="{{image}}" alt="Blog Single Image">
 
                 <figcaption class="do-post-format-icon">
                     <i class="fa fa-quote-right"></i>
@@ -14,11 +13,12 @@
             <section class="content">
                 <!--  POST TITLE -->
                 <section>
+					<h1>{{{title}}}</h1>
+					<hr>
                     <time datetime="{{{fullDate}}}">
                         <span class="do-post-date">{{day}}</span>
                         <span class="do-post-month">{{month}}</span>
                     </time>
-                    <h1>{{{title}}}</h1>
                 </section>
                 <!--  POST TITLE END-->
 

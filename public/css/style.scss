@@ -25,7 +25,6 @@ body {
 	font-family: $font-regular;
 	margin: 0;
 	padding: 2em;
-	box-sizing: border-box;
 }
 
 a {
@@ -45,6 +44,8 @@ h6 {
 
 p {
 	color: #333;
+	line-height: 1.75;
+	font-size: 1.2em;
 }
 header, footer {
 	a {
@@ -60,6 +61,21 @@ ul {
 
 figure {
 	margin: 0;
+	width: 100%;
+	img {
+		width: 100%;
+	}
+
+}
+
+hr {
+	color: $red;
+	width: 10em;
+	margin: 0;
+	background: $red;
+	border: 0;
+	height: 0.5em;
+	margin-bottom: 2em;
 }
 
 /**********
@@ -74,52 +90,105 @@ figure {
 
 @import "./components/header.scss";
 
+@import "./components/cards.scss";
+
 main {
 	position: relative;
-	height: 90%;
-	margin-top: 1em;
-	padding-left: 1em;
 	padding-top: 4em;
 
-	article {
-		padding-left: 7em;
-		height: 50%;
+	.page-header {
+
+		height: 20em;
 		width: 99%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		border: solid white;
+
 	}
 	h1 {
 		box-sizing: border-box;
-		font-size: 5em;
 		color: $red;
 		text-transform: none;
 	}
 
-	section {
-		background: black;
-		background-image: url("/img/profiel%20(2).jpg");
-		background-size: cover;
-		background-size: 50% 100%;
-		background-repeat: no-repeat;
-		background-position: right;
-		position: absolute;
-		top: 6%;
-		left: 0;
-		width: 100%;
-		height: 50%;
-		z-index: -1;
-		overflow: hidden;
+	@media (min-width: 80em) {
+		margin-top: 1em;
+		min-height: 90%;
+		h1 {
+			font-size: 5em;
+		}
+		.page-header {
+			padding-left: 7em;
+		}
 
-		div {
-			display: block;
-			background:$grey;
-			width: 75%;
-			height: 150%;
-			transform: rotate(45deg);
+		.page-header+section {
+			background: black;
+			background-image: url("/img/profiel%20(2).jpg");
+			background-size: cover;
+			background-size: 50% 100%;
+			background-repeat: no-repeat;
+			background-position: right;
+			position: absolute;
+			top: 6%;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			z-index: -1;
+			overflow: hidden;
+
+			div {
+				display: block;
+				background:$grey;
+				width: 75%;
+				height: 150%;
+				transform: rotate(45deg);
+			}
 		}
 	}
+}
+.list article,
+.blogpost article {
+	display: flex;
+
+	figure {
+		position: sticky;
+		top: 1em;
+		width: 100%;
+		height: 50em;
+		overflow: hidden;
+		margin-bottom: 3.5em;
+	}
+
+	>* {
+		max-width: 50%;
+	}
+	.content {
+		box-sizing: border-box;
+		padding: 0 4em;
+	}
+
+	.thumbnails {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1em;
+	}
+
+	.small-img-temp {
+		width: 8em;
+		height: 4em;
+		background: $red;
+	}
+}
+
+.link {
+	width: 6em;
+	margin: auto;
+	margin-top: 1em;
+	text-align: center;
+	background: $red;
+	color: white;
+	padding: 0.5em 1em;
+	border-radius: .1em;
 }
 
 

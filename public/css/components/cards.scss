@@ -1,0 +1,39 @@
+/***
+** cards
+***/
+.recent-work,
+.card-container {
+	>h2 {
+		width: 100%;
+		text-align: center;
+		margin: 1em 0;
+	}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.card {
+		margin-bottom: 1em;
+		position: relative;
+		h2 {
+			font-size: 1.3em;
+			text-align: center;
+			text-shadow: 0 0 10px black;
+		}
+
+		figcaption {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 25%;
+			color: white;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	@media (min-width: 50em) {
+		margin-top: 5em;
+		.card {
+			width: 15em
+		}
+	}
+}

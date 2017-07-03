@@ -10,12 +10,12 @@ var router = express.Router();
 router.get("/", function(req, res) {
     res.render("work", { title: "Work",pageTitle: "Work", list, work_active : true, work: list });
 });
-//
-// router.get("/:project", function(req, res) {
-//     var work = list.filter(function(item){
-//         return item.link() === req.originalUrl;
-//     });
-//     res.render("project", work[0]);
-// });
+
+router.get("/:project", function(req, res) {
+    var work = list.filter(function(item){
+        return item.link() === req.originalUrl;
+    });
+    res.render("project", work[0]);
+});
 
 module.exports = router;
