@@ -9,6 +9,7 @@ module.exports = [
 			full: "2017-02-07T16:00",
 		},
 		image: "images/blog/1.jpg",
+		lead: "<p class='lead'>User experience(UX) is the heart and soul of any site. It determines whether you hit or miss your audience. But a good UX is not easily achieved, especially if you’re just making a design. But why should a frontender learn UX, why not hire a UX-designer?</p>",
 		content: `<p class='lead'>User experience(UX) is the heart and soul of any site. It determines whether you hit or miss your audience. But a good UX is not easily achieved, especially if you’re just making a design. But why should a frontender learn UX, why not hire a UX-designer?</p>
 		<h2>Introduction</h2>
 		<p>Stephen Hay is senior UX Design Lead at Catawiki. He is known of his book Responsive design workflow. He ended up with Responsive webdesign out of frustration of CSS. He mentioned ways to perfect your web design to be responsive during his talk about responsive web design he mentioned.</p>
@@ -52,6 +53,7 @@ module.exports = [
 			full: "2017-02-14T16:00",
 		},
 		image: "images/blog/2.jpg",
+		lead: "<p class='lead'>Sketchnoting  is a great way to take notes while paying attention during a lecture or meeting. A mixture of sketches and text will ensure you take the most important notes.</p>",
 		content: `
 		<p class='lead'>Sketchnoting  is a great way to take notes while paying attention during a lecture or meeting. A mixture of sketches and text will ensure you take the most important notes.</p>
 
@@ -99,6 +101,7 @@ module.exports = [
 			full: "2017-02-28T16:00",
 		},
 		image: "images/blog/3.jpg",
+		lead: `<p class="lead"> Peter – Paul Koch is the founder of Fronteers. According to Quirksmode (an online platform for browser compatibility information)  Peter-Paul Koch has been a professional front-end engineer since 1998. He focused on HTML, CSS, JavaScript, and browser compatibility even when doing so was not yet fashionable.</p>`,
 		content: `
 		<p class="lead"> Peter – Paul Koch is the founder of Fronteers. According to Quirksmode (an online platform for browser compatibility information)  Peter-Paul Koch has been a professional front-end engineer since 1998. He focused on HTML, CSS, JavaScript, and browser compatibility even when doing so was not yet fashionable.</p>
 
@@ -149,6 +152,9 @@ module.exports = [
 			year: "2017",
 			full: "2017-03-14T16:00",
 		},
+		lead: `<h2>What is Git/Github</h2>
+		<p>Github is the online (social?) platform that holds all your code and codes of others. You are not restricted on posting only code though.
+		Git is the command-line interface that lets you manage your projects locally on your computer or online, this requires Github.</p>`,
 		image: "images/blog/4.jpg",
 		content: `
 		<h2>What is Git/Github</h2>
@@ -207,6 +213,7 @@ module.exports = [
 			full: "2017-03-21T16:00",
 		},
 		image: "images/blog/5.jpg",
+		lead: `	<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>`,
 		content: `
 		<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>
 
@@ -245,6 +252,7 @@ module.exports = [
 			full: "2017-03-21T16:00",
 		},
 		image: "images/blog/6.jpg",
+		lead: `<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>`,
 		content: `
 		<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>
 
@@ -283,6 +291,7 @@ module.exports = [
 			full: "2017-04-14T16:00",
 		},
 		image: "images/blog/6.jpg",
+		lead: `<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>`,
 		content: `
 		<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>
 
@@ -310,6 +319,7 @@ module.exports = [
 			full: "2017-04-14T16:00",
 		},
 		image: "images/blog/7.jpg",
+		lead: `<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>`,
 		content: `
 		<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>
 
@@ -337,6 +347,7 @@ module.exports = [
 			full: "2017-04-18T16:00",
 		},
 		image: "images/blog/8.jpg",
+		lead: `<p class="lead">Everything is turning smart these days, so why not a smart house. Niels tries to connect everthing in his house to the internet. During his talk about obscure browsers he gave some tips how to connect anything to the web.</p>`,
 		content: `
 		<p class="lead">Everything is turning smart these days, so why not a smart house. Niels tries to connect everthing in his house to the internet. During his talk about obscure browsers he gave some tips how to connect anything to the web.</p>
 
@@ -370,6 +381,7 @@ module.exports = [
 			full: "2017-05-16T16:00",
 		},
 		image: "images/blog/9.jpg",
+		lead: `<p class="lead">Nick de Bruin is owner of Lively and gave a talk on how he started Lively. Nick used to be a Communication and Multimedia design student.</p>`,
 		content: `
 		<p class="lead">Nick de Bruin is owner of Lively and gave a talk on how he started Lively. Nick used to be a Communication and Multimedia design student.</p>
 
@@ -395,6 +407,15 @@ module.exports = [
 			full: "2017-05-23T16:00",
 		},
 		image: "images/blog/10.jpg",
+		lead: `<h2>A basic setup for Internet of Things</h2>
+		<p>To set up your own internet of things project you will need:</p>
+		<ul>
+			<li>IOT devices</li>
+			<li>Database API</li>
+			<li>A server</li>
+			<li>A server</li>
+			<li>And clients</li>
+		</ul>`,
 		content: `
 		<h2>A basic setup for Internet of Things</h2>
 		<p>To set up your own internet of things project you will need:</p>
@@ -424,6 +445,7 @@ module.exports = [
 			full: "2017-05-23T16:00",
 		},
 		image: "images/blog/12.jpg",
+		lead: `<p class="lead">Leonie is a blind developer and gave a talk  about screen readers during the icons</p>`,
 		content: `
 		<p class="lead">Leonie is a blind developer and gave a talk  about screen readers during the icons</p>
 
@@ -461,6 +483,7 @@ module.exports = [
 			full: "2017-06-10T16:00",
 		},
 		image: "images/blog/.jpg",
+		lead: `<p class="lead">I was a bit late on learning Gulp and I am doing my best to let it go, here is why you should do so too.<p>`,
 		content: `
 		<p class="lead">I was a bit late on learning Gulp and I am doing my best to let it go, here is why you should do so too.<p>
 
@@ -509,6 +532,7 @@ module.exports = [
 			full: "2017-06-10T16:00",
 		},
 		image: "images/blog/.jpg",
+		lead: `<p class="heading">So Javascript es3000 is around the corner and you don’t even know what version of JavaScript you are writing in, whatever should you do?</p>`,
 		content: `
 		<p class="heading">So Javascript es3000 is around the corner and you don’t even know what version of JavaScript you are writing in, whatever should you do?</p>
 
@@ -549,6 +573,7 @@ module.exports = [
 			full: "2017-06-24T16:00",
 		},
 		image: "images/blog/.jpg",
+		lead: `<p class="lead">Realtime web has been around for a long time, enabling connection between multiple devices in realtime. Here is a reason why you should start using this technology.</p>`,
 		content: `
 		<p class="lead">Realtime web has been around for a long time, enabling connection between multiple devices in realtime. Here is a reason why you should start using this technology.</p>
 
@@ -591,6 +616,7 @@ module.exports = [
 			full: "2017-06-24T16:00",
 		},
 		image: "images/blog/.jpg",
+		lead: `<p class="lead">During a project I received feedback of from a tutor. He told me: “A server is not needed for this specific project, you could use a service like Travis to build static pages”. My curiosity rose and I decided to do some further research on this.</p>`,
 		content: `
 		<p class="lead">During a project I received feedback of from a tutor. He told me: “A server is not needed for this specific project, you could use a service like Travis to build static pages”. My curiosity rose and I decided to do some further research on this.</p>
 

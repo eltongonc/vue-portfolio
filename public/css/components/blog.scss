@@ -1,0 +1,37 @@
+/**********
+** blog
+**********/
+.blog-container {
+	display: flex;
+	flex-wrap: wrap;
+
+	div,
+	aside {
+		width: 100%;
+		position: static;
+	}
+	.card {
+		width: 100%;
+		padding-bottom: 2em;
+		border-bottom: 1px solid white;
+		margin-bottom: 4em;
+	}
+	@media (min-width: 50em) {
+
+		div {
+			width: 75%;
+			padding-right: 2em;
+		}
+		aside {
+			top: 1em;
+			width: 25%;
+			height: 100%;
+			position: sticky;
+		}
+
+		.card {
+			margin: auto;
+			width: 75%;
+		}
+	}
+}

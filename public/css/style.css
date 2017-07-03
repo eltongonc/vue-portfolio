@@ -12,8 +12,7 @@ body {
 body {
   background-color: #E5DCC3;
   font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 2em; }
+  margin: 0; }
 
 a {
   text-decoration: none; }
@@ -28,7 +27,8 @@ h6 {
   font-family: "Open Sans", sans-serif;
   margin: 0; }
 
-p {
+p,
+li {
   color: #333;
   line-height: 1.75;
   font-size: 1.2em; }
@@ -48,24 +48,21 @@ figure {
     width: 100%; }
 
 hr {
-  color: #663231;
   width: 10em;
   margin: 0;
-  background: #663231;
+  background: #E5DCC3;
   border: 0;
   height: 0.5em;
   margin-bottom: 2em; }
 
-/**********
-** colors
-**********/
 /**********
 ** layout
 **********/
 /**********
 ** header
 **********/
-header {
+body > header {
+  padding: .5em;
   height: 10%;
   display: -ms-flexbox;
   display: flex;
@@ -77,16 +74,15 @@ header {
   border-bottom: 1px solid rgba(102, 50, 49, 0.1);
   position: fixed;
   top: 0;
-  padding-top: 3%;
-  left: 5%;
-  width: 90%;
+  left: 0;
+  width: 100%;
   z-index: 1; }
   @media (max-width: 50em) {
-    header > h1 {
+    body > header > h1 {
       height: 1.5em;
       width: 5em;
       overflow: hidden; } }
-  header nav {
+  body > header nav {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
@@ -97,54 +93,59 @@ header {
     width: 100%;
     z-index: 9;
     position: fixed;
-    overflow: hidden; }
-    header nav.offscreen {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3); }
+    body > header nav.offscreen {
       transition: .3s;
       top: 0;
       right: 0;
       opacity: 0;
       pointer-events: none; }
-  header .transition {
+  body > header .transition {
     position: fixed;
     background-color: #663231;
     height: 0;
     width: 400%;
     transform-origin: center;
     transform: translate(26%, 100%) rotate(-45deg); }
-  header ul {
+  body > header ul {
     position: fixed;
     top: 20%;
     left: 23%;
     width: 100%; }
-  header li a {
+  body > header li a {
     font-size: 3em;
     color: #E5DCC3; }
   @media (min-width: 50em) {
-    header {
+    body > header {
       position: static;
       width: 100%;
-      padding-top: 0;
-      z-index: 0; }
-      header nav {
+      z-index: 0;
+      padding: 1em; }
+      body > header nav {
         position: static;
-        max-width: 25%;
+        max-width: 20%;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: end;
         justify-content: flex-end;
         top: 0;
         right: 0;
-        z-index: 9; }
-        header nav.offscreen {
+        z-index: 9;
+        background: none;
+        padding-right: 2em; }
+        body > header nav.offscreen {
           opacity: 1;
           pointer-events: painted; }
-      header ul {
+      body > header .transition {
+        display: none; }
+      body > header ul {
         position: static;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: justify;
         justify-content: space-between; }
-        header ul li a {
+        body > header ul li a {
           color: #663231;
           opacity: 1;
           font-size: 1.2em; } }
@@ -174,7 +175,9 @@ header {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 95%;
+  margin: auto; }
   .recent-work > h2,
   .card-container > h2 {
     width: 100%;
@@ -182,8 +185,9 @@ header {
     margin: 1em 0; }
   .recent-work .card,
   .card-container .card {
-    margin-bottom: 1em;
-    position: relative; }
+    margin-bottom: 2em;
+    position: relative;
+    width: 100%; }
     .recent-work .card h2,
     .card-container .card h2 {
       font-size: 1.3em;
@@ -200,6 +204,16 @@ header {
       display: flex;
       -ms-flex-direction: column;
       flex-direction: column; }
+  .recent-work .card:hover::before,
+  .card-container .card:hover::before {
+    transition: 1s;
+    position: absolute;
+    z-index: 0;
+    transform: translate(-0.7em, 1em);
+    content: "";
+    height: 10em;
+    width: 98%;
+    border: solid #663231; }
   @media (min-width: 50em) {
     .recent-work,
     .card-container {
@@ -210,9 +224,12 @@ header {
 
 main {
   position: relative;
-  padding-top: 4em; }
-  main .page-header {
-    height: 20em;
+  padding: 4em 2em; }
+  main header {
+    height: 100%;
+    margin-top: 0; }
+  main .home-header {
+    height: 27em;
     width: 99%;
     display: -ms-flexbox;
     display: flex;
@@ -223,68 +240,94 @@ main {
   main h1 {
     box-sizing: border-box;
     color: #663231;
-    text-transform: none; }
-  @media (min-width: 80em) {
+    font-size: 2em; }
+  @media (min-width: 48em) {
     main {
-      margin-top: 1em;
-      min-height: 90%; }
+      min-height: 90%;
+      padding-top: 0; }
+      main header {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background: url("http://eltongoncalves.nl/img/Banners/frontend.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 20em;
+        width: 100%;
+        margin-bottom: 1em; }
       main h1 {
-        font-size: 5em; }
-      main .page-header {
+        font-size: 3em;
+        color: white; }
+      main .home-header {
+        margin-top: 2em;
         padding-left: 7em; }
-      main .page-header + section {
-        background: black;
+        main .home-header h1 {
+          color: #663231; }
+        main .home-header hr {
+          background: #663231; }
+      main .home-header + section {
         background-image: url("/img/profiel%20(2).jpg");
         background-size: cover;
         background-size: 50% 100%;
         background-repeat: no-repeat;
         background-position: right;
         position: absolute;
-        top: 6%;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 50%;
-        z-index: -1;
-        overflow: hidden; }
-        main .page-header + section div {
-          display: block;
-          background: #E5DCC3;
-          width: 75%;
-          height: 150%;
-          transform: rotate(45deg); } }
+        height: 27em;
+        z-index: 0;
+        overflow: hidden; } }
 
-.list article,
-.blogpost article {
+.list article figure,
+.blogpost article figure {
+  height: 100%; }
+
+.list article .content,
+.blogpost article .content {
+  box-sizing: border-box;
+  padding-top: 4em; }
+
+.list article .thumbnails,
+.blogpost article .thumbnails {
   display: -ms-flexbox;
-  display: flex; }
-  .list article figure,
-  .blogpost article figure {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1em;
-    width: 100%;
-    height: 50em;
-    overflow: hidden;
-    margin-bottom: 3.5em; }
-  .list article > *,
-  .blogpost article > * {
-    max-width: 50%; }
-  .list article .content,
-  .blogpost article .content {
-    box-sizing: border-box;
-    padding: 0 4em; }
-  .list article .thumbnails,
-  .blogpost article .thumbnails {
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 4em; }
+
+.list article .small-img-temp,
+.blogpost article .small-img-temp {
+  width: 8em;
+  height: 4em;
+  background: #663231; }
+
+@media (min-width: 80em) {
+  .list article,
+  .blogpost article {
     display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-bottom: 1em; }
-  .list article .small-img-temp,
-  .blogpost article .small-img-temp {
-    width: 8em;
-    height: 4em;
-    background: #663231; }
+    display: flex; }
+    .list article figure,
+    .blogpost article figure {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 1em;
+      width: 100%;
+      height: 50em;
+      overflow: hidden;
+      margin-bottom: 3.5em; }
+    .list article > *,
+    .blogpost article > * {
+      max-width: 50%; }
+    .list article .content,
+    .blogpost article .content {
+      box-sizing: border-box;
+      padding: 0 4em; } }
 
 .link {
   width: 6em;
@@ -296,10 +339,76 @@ main {
   padding: 0.5em 1em;
   border-radius: .1em; }
 
+/**********
+** about
+**********/
+.about {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .about h3 {
+    margin: 3em 0 1em 0; }
+  .about img {
+    width: 90%; }
+  .about hr {
+    background-color: #663231; }
+  @media (min-width: 50em) {
+    .about .contact-info {
+      width: 33%; }
+    .about .description {
+      width: 66%; } }
+  .about .description ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 1em; }
+    .about .description ul li {
+      border: solid #663231;
+      font-weight: bold;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      width: 10em;
+      padding: 1em;
+      color: #663231; }
+
+/**********
+** blog
+**********/
+.blog-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .blog-container div,
+  .blog-container aside {
+    width: 100%;
+    position: static; }
+  .blog-container .card {
+    width: 100%;
+    padding-bottom: 2em;
+    border-bottom: 1px solid white;
+    margin-bottom: 4em; }
+  @media (min-width: 50em) {
+    .blog-container div {
+      width: 75%;
+      padding-right: 2em; }
+    .blog-container aside {
+      top: 1em;
+      width: 25%;
+      height: 100%;
+      position: -webkit-sticky;
+      position: sticky; }
+    .blog-container .card {
+      margin: auto;
+      width: 75%; } }
+
 /***
 ** Footer
 ***/
 body > footer {
+  background: #663231;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -318,8 +427,9 @@ body > footer {
     margin: .3em 0;
     width: 100%;
     display: inline-block;
-    background-color: rgba(102, 50, 49, 0.1); }
+    background-color: rgba(151, 220, 172, 0.1); }
     body > footer ul li a {
+      color: rgba(255, 255, 255, 0.7);
       display: block;
       padding: 1em; }
     body > footer ul li:hover, body > footer ul li.active {

@@ -1,20 +1,20 @@
 /**********
 ** header
 **********/
-header {
+body > header {
+		padding: .5em;
 		height: 10%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		background-color: $grey;
 		border-bottom: 1px solid rgba($red,0.1);
-			position: fixed;
-			top: 0;
-			padding-top: 3%;
-			left: 5%;
-			width: 90%;
-			z-index: 1;
-			// a {color: $red;}
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		// a {color: $red;}
 
 		// smaller logo
 		@media (max-width: 50em) {
@@ -36,6 +36,7 @@ header {
 			z-index: 9;
 			position: fixed;
 			overflow: hidden;
+			background-color: rgba(black,0.3);
 			&.offscreen {
 				transition: .3s;
 				top: 0;
@@ -69,22 +70,27 @@ header {
 		@media (min-width: 50em) {
 			position: static;
 			width: 100%;
-			padding-top: 0;
 			z-index: 0;
+			padding: 1em;
 
 			nav {
 				position: static;
-				max-width: 25%;
+				max-width: 20%;
 				display: flex;
 				justify-content: flex-end;
 				top: 0;
 				right: 0;
 				z-index: 9;
+				background: none;
+				padding-right: 2em;
 				// overflow: hidden;
 				&.offscreen {
 					opacity: 1;
 					pointer-events: painted;
 				}
+			}
+			.transition {
+				display: none;
 			}
 			ul {
 				position: static;

@@ -1,14 +1,9 @@
 <main id="work-overview">
-    <h1>{{pageTitle}}</h1>
-	<hr>
-    <nav>
-      <ul>
-        <li class="selected"><a href="#all">All</a></li>
-        <li><a href="#visual">Visual</a></li>
-        <li><a href="#code">Code</a></li>
-      </ul>
-    </nav>
-    <section class="card-overview">
+	<header class="header">
+		<h1>{{pageTitle}}</h1>
+		<hr>
+	</header>
+    <section class="card-container">
         {{#each list}}
             <article class="card">
                 <figure>
@@ -16,7 +11,6 @@
                 </figure>
                 <figcaption>
                     <h2>{{{title}}}</h2>
-                    <p>{{summary}}</p>
                     <a href="{{link}}" class="link">View</a>
                 </figcaption>
             </article>

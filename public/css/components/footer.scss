@@ -3,6 +3,7 @@
 ***/
 
 body > footer {
+	background: $red;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -18,8 +19,9 @@ body > footer {
         margin: .3em 0;
         width: 100%;
         display: inline-block;
-		background-color: rgba($red,0.1);
+		background-color: rgba($green,0.1);
         a {
+			color: rgba(white, 0.7);
           display: block;
 		  padding: 1em;
         }

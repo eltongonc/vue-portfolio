@@ -15,7 +15,7 @@ var tl = new TimelineLite();
 /****************
 ** sticky header
 ****************/
-var header = document.querySelector('header');
+var header = document.querySelector('body > header');
 var navItems = document.querySelector('nav ul li');
     navItems.classList.add('hidden');
 

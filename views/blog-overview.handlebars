@@ -1,24 +1,40 @@
 <main>
-    <h1>{{pageTitle}}</h1>
-	<hr>
-    <p>Here you'll find a collection of blogposts and unfinished work</p>
-    <section class="card-container">
-        {{#each list}}
-            <article class="card">
-                <figure>
-                    <img src="https://unsplash.it/288/166?random" alt="" title="{{title}}" />
-                </figure>
-                <figcaption>
-                    <h2>{{{title}}}</h2>
-                    <a href="{{link}}" class="link">View</a>
-                </figcaption>
-                <footer class="do-blog-post-date">
-                    <time datetime="{{{date.full}}}">
-                        <span class="do-post-date">{{date.day}}</span>
-                        <span class="do-post-month">{{date.month}}</span>
-                    </time>
-                </footer>
-            </article>
-        {{/each}}
+	<header>
+		<h1>{{pageTitle}}</h1>
+		<hr>
+	</header>
+    <section class="blog-container">
+		<div>
+			{{#each list}}
+			<article class="card">
+				<figure>
+					<img src="{{image}}" alt="" title="{{title}}" />
+				</figure>
+				<footer class="do-blog-post-date">
+					<time datetime="{{{date.full}}}">
+						<span class="do-post-date">{{date.day}}</span>
+						<span class="do-post-month">{{date.month}}</span>
+						<span class="do-post-month">{{date.year}}</span>
+					</time>
+					<h2>{{{title}}}</h2>
+					<p>{{{lead}}}</p>
+					<a href="{{link}}" class="link">Read post</a>
+				</footer>
+			</article>
+			{{/each}}
+		</div>
+		<aside>
+			<!-- <form class="search" action="/blog" method="POST">
+				<input type="text" name="search" value="{{searchvalue}}" placeholder="search">
+			</form> -->
+			<h3>Archive</h3>
+			<ul>
+				<li>Februari 2017</li>
+				<li>March 2017</li>
+				<li>April 2017</li>
+				<li>May 2017</li>
+				<li>June 2017</li>
+			</ul>
+		</aside>
     </section>
 </main>
