@@ -11,6 +11,7 @@ var router = express.Router();
 router.get("/", function(req, res) {
     res.render("blog-overview", {title: "Blog", pageTitle: "Blog",list, blog_active : true });
 });
+
 router.post("/", function(req, res) {
 	var searchQuery = req.body.search;
 	var newList = list.filter(item=>

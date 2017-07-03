@@ -1,15 +1,17 @@
 # Portfolio
+This is a portfolio made with Node.js
+
+This project is made to test the capabilities of Node + framework: express.js
 
 ## TODO
 **Pages**
-- [ ] Create a `home` page
-- [ ] Create an `about` page
-- [ ] Create a `works overview` page
-- [ ] Create a `work detail` page
-- [ ] Create a `contact` page
+- [x] Create a `home` page
+- [x] Create an `about` page
+- [x] Create a `works overview` page
+- [x] Create a `work detail` page
+- [x] Create a `contact` page
 
 **Components**
-- [ ] Create a `header` with the logo and links to the pages
-- [ ] Gooey effect `nav`
-- [ ] Create `blocks` for the works overview page
-- [ ] Create a footer with additional info
+- [x] Create a `header` with the logo and links to the pages
+- [x] Create `blocks` for the works overview page
+- [x] Create a footer with additional info

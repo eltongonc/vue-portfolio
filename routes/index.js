@@ -2,7 +2,7 @@ var index = require("./home"),
     about = require("./about"),
     // api = require("./api"),
     work = require("./work"),
-    contact = require("./contact"),
+    // contact = require("./contact"),
     blog = require("./blog");
 
 
@@ -11,6 +11,5 @@ module.exports = {
     // "/api": api,
     "/about": about,
     "/work": work,
-    "/contact": contact,
     "/blog": blog
 };
