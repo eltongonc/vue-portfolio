@@ -48,6 +48,6 @@ app.use(function(req, res) {
 
 
 
-app.listen(process.env.port, function(){
+app.listen(process.env.port || 80, function(){
 	console.log('App running on port'+ this.address().port);
 });
