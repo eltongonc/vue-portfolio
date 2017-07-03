@@ -1,26 +1,29 @@
-<main>
-  <h1>{{title}}</h1>
+<main class="list">
     <section>
             <article>
                 <figure>
                     <img src="{{image}}" alt="Blog Single Image">
 
-                    <figcaption class="do-post-format-icon">
-                        <i class="fa fa-quote-right"></i>
+                    <figcaption class="thumbnails">
+						<div class="small-img-temp">
+						</div>
+						<div class="small-img-temp">
+						</div>
+						<div class="small-img-temp">
+						</div>
+						<div class="small-img-temp">
+						</div>
                     </figcaption>
+					<a class="link" href="{{externalLink}}">Visit the site</a>
                 </figure>
 
                 <section class="content">
                     <section>
-                        <time datetime="{{{date.full}}}">
-                            <span class="do-post-date">{{date.day}}</span>
-                            <span class="do-post-month">{{date.month}}</span>
-                        </time>
-                        <h1>{{{title}}}</h1>
+						<h1>{{{title}}}</h1>
+						<hr>
                     </section>
 
                     {{{content}}}
-                    <a href="{{externalLink}}">View</a>
                 </section>
             </article>
         <!-- <footer>

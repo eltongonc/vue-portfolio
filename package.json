@@ -6,7 +6,7 @@
   "email": "eltongonc@gmail.com",
   "scripts": {
     "start": "node app.js",
-    "dev": "gulp",
+    "dev": "set PORT=3000 && gulp",
     "dev:live": "ngrok http 3000",
     "lint": "gulp lint",
     "test": "mocha --recursive test",

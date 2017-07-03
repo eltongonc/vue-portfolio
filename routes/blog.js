@@ -1,6 +1,7 @@
 var express = require("express");
 
 var list = require("../blogposts.js"); // this belongs in a database
+list = list.reverse();
 
 var router = express.Router();
 
@@ -8,7 +9,16 @@ var router = express.Router();
 ** Blog page.
 *****************/
 router.get("/", function(req, res) {
-    res.render("blog-overview", {title: "Blog", pageTitle: "This page is my playground",list, blog_active : true });
+    res.render("blog-overview", {title: "Blog", pageTitle: "Blog",list, blog_active : true });
+});
+router.post("/", function(req, res) {
+	var searchQuery = req.body.search;
+	var newList = list.filter(item=>
+			(item.title.toLowercase().indexOf(searchQuery)  !== -1 ||
+			item.content.toLowercase().indexOf(searchQuery) !== -1)
+			? item : null
+	)
+    res.render("blog-overview", {title: "Blog", pageTitle: "This page is my playground",list: newList, blog_active : true, searchvalue: req.body.search });
 });
 
 router.get("/:post", function(req, res) {

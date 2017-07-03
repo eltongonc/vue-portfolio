@@ -1,108 +1,120 @@
 /**********
 ** header
 **********/
-header {
-  background-color: $red;
-  display: flex;
-  justify-content: space-between;
-  padding: 1em 2em;
-  box-sizing: border-box;
-  &.sticky{
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: white;
-        z-index: 99;
-        a {color: $red;}
-        h1 {color: $red}
-  }
-
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-
-  }
-
-  nav {
-    height: 100%;
-    transition: 1s;
-    button {
-      display: none;
-    }
-    ul {
-      text-align: center;
-      margin: 0;
-      li {
-        margin-right: .3em;
-        display: inline-block;
-        background-color: rgba($grey, 0.7);
-        a {
-          font-weight: bold;
-          height: 100%;
-          padding: 0.5em 1em;
-          transition: .1s;
-          color: $red;
-          display: inline-block;
-          width: 3em;
-        }
-        &:hover, &.active  {
-          background-color: rgba($green, 0.7);
-        }
-      }
-    }
-    // mobile
-    @media (max-width: 50em){
-      position: absolute;
-      top: 9.9em;
-      right: 0;
-      width: 50%;
-	  background: $red;
-	  z-index: 999;
-
-	ul {
+body > header {
+		padding: .5em;
+		height: 10%;
 		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		height: 30%;
-		li:first-child{
-			display: none;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background-color: $grey;
+		border-bottom: 1px solid rgba($red,0.1);
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		// a {color: $red;}
+
+		// smaller logo
+		@media (max-width: 50em) {
+			>h1 {
+				height: 1.5em;
+				width: 5em;
+				overflow: hidden;
+			}
+		}
+
+
+		nav {
+			display: flex;
+			justify-content: flex-end;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 9;
+			position: fixed;
+			overflow: hidden;
+			background-color: rgba(black,0.3);
+			&.offscreen {
+				transition: .3s;
+				top: 0;
+				right: 0;
+				// visibility: hidden;
+				opacity: 0;
+				pointer-events: none;
+			}
+		}
+		.transition {
+			position: fixed;
+			background-color: $red;
+			height: 0;
+			width: 400%;
+			transform-origin: center;
+			transform: translate(26%, 100%) rotate(-45deg);
+		}
+		ul {
+			position: fixed;
+			top : 20%;
+			left: 23%;
+			width: 100%;
 		}
 		li {
-
-			background-color: rgba($grey, 1);
+			a {
+				font-size: 3em;
+				color: $grey;
+			}
 		}
-		li a {
+
+		@media (min-width: 50em) {
+			position: static;
 			width: 100%;
-			height: 2em;
-			opacity: 1;
-		}
-	}
+			z-index: 0;
+			padding: 1em;
 
-      &.offscreen {
-        // right: -999px;
-        width: 0;
-		height: 100%;
-        overflow: hidden;
-      }
-    }
-  }
-  [href="#page"] {
-    transform: rotate(90deg);
-    position: relative;
-    bottom: .5em;
-    right: 0.5em
-  }
+			nav {
+				position: static;
+				max-width: 20%;
+				display: flex;
+				justify-content: flex-end;
+				top: 0;
+				right: 0;
+				z-index: 9;
+				background: none;
+				padding-right: 2em;
+				// overflow: hidden;
+				&.offscreen {
+					opacity: 1;
+					pointer-events: painted;
+				}
+			}
+			.transition {
+				display: none;
+			}
+			ul {
+				position: static;
+				display: flex;
+				justify-content: space-between;
+				li a {
+					color: $red;
+					opacity: 1;
+					font-size: 1.2em;
+				}
+			}
+		}
+
 }
 
 .mobile-menu {
     position: relative;
+	z-index: 999;
     background-color: rgba($grey, 0.7);
     font-weight: bold;
     height: 100%;
     padding: 0.5em 1em;
     transition: .3s;
     display: inline-block;
-    width: 3em;
     a {color: $red;}
     @media (min-width: 50em){
       display: none;

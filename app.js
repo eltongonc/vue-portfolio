@@ -1,18 +1,13 @@
 var express = require("express");
 var path = require("path");
 // var favicon = require("serve-favicon");
-var logger = require("morgan");
-var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var exphbs  = require("express-handlebars");
 var env = require("dotenv").config();
 
 var routes = require("./routes/index");
 
-// process.env.PORT = 3000
-
-var app = express(),
-    port = process.env.PORT || 80;
+var app = express()
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
@@ -27,12 +22,10 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "handlebars");
 
 // app.use(favicon(__dirname + "/public/img/favicon.ico"));
-app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 // Create all routes
@@ -55,5 +48,6 @@ app.use(function(req, res) {
 
 
 
-app.listen(port);
-console.log('App running on port', port);
+app.listen(process.env.port, function(){
+	console.log('App running on port'+ this.address().port);
+});

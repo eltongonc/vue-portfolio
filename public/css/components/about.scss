@@ -1,0 +1,43 @@
+/**********
+** about
+**********/
+.about {
+	display: flex;
+	flex-wrap: wrap;
+
+	h3 {
+		margin: 3em 0 1em 0;
+	}
+
+	img {
+		width: 90%;
+	}
+	hr {
+		background-color: $red;
+	}
+	@media (min-width: 50em) {
+		.contact-info {
+			width: 33%;
+		}
+		.description {
+			width: 66%;
+		}
+	}
+
+	.description ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 1em;
+
+		li {
+			border: solid $red;
+			// background: white;
+			font-weight: bold;
+			margin-right: 1em;
+			margin-bottom: 1em;
+			width: 10em;
+			padding: 1em;
+			color: $red;
+		}
+	}
+}
