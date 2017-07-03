@@ -18,7 +18,6 @@ router.post("/", function(req, res) {
 			item.content.toLowercase().indexOf(searchQuery) !== -1)
 			? item : null
 	)
-	console.log(newList);
     res.render("blog-overview", {title: "Blog", pageTitle: "This page is my playground",list: newList, blog_active : true, searchvalue: req.body.search });
 });
 

@@ -1,11 +1,11 @@
 /************
 ** vars
 *************/
-var primaryColor= "#ebebeb";
-var greenAccent= "#455A64";
-var redAccent= "#607D8B";
-var darkFonts= "#5a5f70";
-var lightFonts= "#7e8c93";
+// var primaryColor= "#ebebeb";
+// var greenAccent= "#455A64";
+// var redAccent= "#607D8B";
+// var darkFonts= "#5a5f70";
+// var lightFonts= "#7e8c93";
 
 // tells if page is allowed to scroll;
 var scrollable = true;

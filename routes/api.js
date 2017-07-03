@@ -26,13 +26,13 @@ router.get("/", function(req, res) {
                         renderPage(skills);
                     }
                 }).catch(error=>{
-                    console.log(error);
+                    throw error;
                 });
             });
         }
     })
     .catch(error=>{
-        console.log(error);
+		throw error;
     });
 
     function renderPage(skills){

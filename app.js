@@ -6,10 +6,7 @@ var exphbs  = require("express-handlebars");
 
 var routes = require("./routes/index");
 
-// process.env.PORT = 3000
-
-var app = express(),
-    port = process.env.PORT || 80;
+var app = express()
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;

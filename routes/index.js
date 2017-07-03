@@ -1,6 +1,6 @@
 var index = require("./home"),
     about = require("./about"),
-    api = require("./api"),
+    // api = require("./api"),
     work = require("./work"),
     contact = require("./contact"),
     blog = require("./blog");
