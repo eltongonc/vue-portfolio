@@ -153,11 +153,10 @@ module.exports = [
 			year: "2017",
 			full: "2017-03-14T16:00",
 		},
-		image: "/img/blog/4.JPG",
 		lead: `<h2>What is Git/Github</h2>
 		<p>Github is the online (social?) platform that holds all your code and codes of others. You are not restricted on posting only code though.
 		Git is the command-line interface that lets you manage your projects locally on your computer or online, this requires Github.</p>`,
-		image: "images/blog/4.jpg",
+		image: "/img/blog/4.JPG",
 		content: `
 		<h2>What is Git/Github</h2>
 		<p>Github is the online (social?) platform that holds all your code and codes of others. You are not restricted on posting only code though.
@@ -601,10 +600,13 @@ module.exports = [
 		<p>Here are some examples that add a fascinating twist to the realtimeness and  utilize mobile device features.</p>
 
 		<h2>Swip.js</h2>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/qXOwT0ieOgw" frameborder="0" allowfullscreen></iframe>
 		<p>Swip.js is a project that allows you to extend the screen of a device. Using swip.js you connect devices next to each other to further extend your screen.
 		It uses socket.io to make a connections between multiple clients within range of each other. This connection extends the overall canvas with the device width and height. Position of an object on one client will be transferred to the other client.</p>
 
+
 		<h2>Racer a chrome experiment</h2>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/17P67Uz0kcw" frameborder="0" allowfullscreen></iframe>
 		<p>Similar to Swip.js, Racer does an excellent job of connecting devices together. Racer is a racing game for mobile devices. Placing the devices next to each other will extend the race track. The UI looks great and is fully responsive. The team split the soundtrack of the game so each player that enters the lobby adds sound that is part of the whole soundtrack.  Racer also uses Websockets.</p>
 
 		<h2>Conclusion</h2>
@@ -644,16 +646,17 @@ module.exports = [
 
 		<p>Jekyll uses a thing called front matters. Here is where all the metadata goes. You can specify the title, type, date and more. A basic Jekyll structure looks as follows:</p>
 		<code>
-		---
-		title: Title of the document
-		categories:
-		- Category A
-		- Category B
-		---
-
-		# Actual content
-
-		This is the document
+		---<br>
+		title: Title of the document<br>
+		categories:<br>
+		- Category A<br>
+		- Category B<br>
+		---<br>
+		<br>
+		# Actual content<br>
+		<br>
+		This is the document<br>
+		<br>
 		</code>
 
 		<h2>Static files vs Dynamic files</h2

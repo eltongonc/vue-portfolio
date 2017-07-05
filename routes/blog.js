@@ -1,7 +1,7 @@
 var express = require("express");
 
 var list = require("../blogposts.js"); // this belongs in a database
-list = list.reverse();
+// list = list.reverse();
 
 var router = express.Router();
 
@@ -23,7 +23,8 @@ router.post("/", function(req, res) {
 });
 
 router.get("/:post", function(req, res) {
-    var index = req.params.post - 1;
+	// list = list.reverse();
+    var index = req.params.post;
     var post = {
 		pageTitle: "Blog",
         blog_active : true,

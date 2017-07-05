@@ -6,7 +6,7 @@
     <section class="blog-container">
 		<div>
 			{{#each list}}
-			<article class="card">
+			<article id="{{date.month}}" class="card">
 				<figure>
 					<img src="{{image}}" alt="" title="{{title}}" />
 				</figure>
@@ -29,11 +29,11 @@
 			</form> -->
 			<h3>Archive</h3>
 			<ul>
-				<li>Februari 2017</li>
-				<li>March 2017</li>
-				<li>April 2017</li>
-				<li>May 2017</li>
-				<li>June 2017</li>
+				<li><a href="#feb">Februari 2017</a></li>
+				<li><a href="#Mar">March 2017</a></li>
+				<li><a href="#Apr">April 2017</a></li>
+				<li><a href="#May">May 2017</a></li>
+				<li><a href="#Jun">June 2017</a></li>
 			</ul>
 		</aside>
     </section>
