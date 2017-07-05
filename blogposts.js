@@ -659,29 +659,38 @@ module.exports = [
 		<br>
 		</code>
 
-		<h2>Static files vs Dynamic files</h2
-		<table>
-			<tr>
-				<th> </th
-				<th>Static</th
-				<th>Dynamic</th
-			</tr
-			<tr>
-				<th>Pro’s</th
-				<th>- Cheap to develop<br>
-					- Cheap to host
-				</th
-				<th>-Dynamic content<br>
-					-Users can login/submit input
-				</th
-			</tr
-			<tr>
-				<th>Con’s</th
-				<th>- No user input</th
-				<th>- Hosting costs a little more <br>
-					- slower</th
-			</tr
-		</table>
+		<h2>Static files vs Dynamic files</h2>
+		<br>
+		<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 458px">
+<colgroup>
+<col style="width: 54px">
+<col style="width: 151px">
+<col style="width: 253px">
+</colgroup>
+  <tr>
+    <th class="tg-yw4l"></th>
+    <th class="tg-9hbo">Static</th>
+    <th class="tg-9hbo">Dynamic</th>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Pro's</td>
+    <td class="tg-yw4l">- Cheap to develop<br>- Cheap to host</td>
+    <td class="tg-yw4l">-Dynamic content<br>-Users interaction e.g: login or submit input</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Con's </td>
+    <td class="tg-yw4l">- No user input</td>
+    <td class="tg-yw4l">- Hosting costs a little more,<br>- Slower because of the filesize</td>
+  </tr>
+</table>
+<br>
 		`,
 		author: "Elton Gonçalves Gomes",
 		link: function(){return "/blog/"+this.id;}
