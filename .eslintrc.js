@@ -1,30 +1,18 @@
+// http://eslint.org/docs/user-guide/configuring
+
 module.exports = {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "node": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "sourceType": "module"
-    },
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error"
-        ]
-    },
-	"fix": true
-};
+  root: true,
+  parserOptions: {
+    sourceType: 'module'
+  },
+  env: {
+    browser: true,
+  },
+  // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
+  // required to lint *.vue files
+  plugins: [
+    'html'
+  ],
+  // add your custom rules here
+  'rules': {}
+}

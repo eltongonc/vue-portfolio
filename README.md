@@ -1,17 +1,21 @@
-# Portfolio
-This is a portfolio made with Node.js
+# vue-portfolio
 
-This project is made to test the capabilities of Node + framework: express.js
+> A vue portfolio
 
-## TODO
-**Pages**
-- [x] Create a `home` page
-- [x] Create an `about` page
-- [x] Create a `works overview` page
-- [x] Create a `work detail` page
-- [x] Create a `contact` page
+## Build Setup
 
-**Components**
-- [x] Create a `header` with the logo and links to the pages
-- [x] Create `blocks` for the works overview page
-- [x] Create a footer with additional info
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
