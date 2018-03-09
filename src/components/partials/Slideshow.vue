@@ -1,29 +1,20 @@
 <template>
-	<section class="container">
-		<h3 class="active">{{image.title}}</h3>
-		<div>
-			<figure class="example" aria-hidden="true">
-				<a v-on:click="openModal" :href="image.link">
-					<img :src="image.link" :title="image.title">
-				</a>
-			</figure>
+	<section>
+        <flickity class="carousel" ref="flickity" :options="flickityOptions" >
+            <div v-for="item in allImgs" class="carousel-cell"><a  v-on:click="openModal"><img :src="item.link" :alt="item.title"></a></div>
+        </flickity>
 
-			<button v-on:click="prevImg" class="prev" aria-hidden="true">&#8249;</button>
-			<button v-on:click="nextImg" class="next" aria-hidden="true">&#8250;</button>
-		</div>
-
-		<div class="modal">
-			<button v-on:click="closeModal" name="closeButton">X</button>
-			<div class="content">
-
-			</div>
-		</div>
+        <div class="modal .container">
+            <button v-on:click="closeModal">X</button>
+            <div class="content"><!--JS populated--></div>
+        </div>
 	</section>
 </template>
 
 <script>
-var index = 0;
+import Flickity from 'vue-flickity';
 
+var index = 0;
 
 export default {
 	props: ['data'],
@@ -31,45 +22,35 @@ export default {
 	data: function(){
 		var imgSource = this.data
 
-
 		return {
 			allImgs: this.data,
-			image: imgSource[index]
+			image: imgSource[index],
+            flickityOptions: {
+                initialIndex: 3,
+                freeScroll: false,
+                lazyLoad: true,
+                accessibility: true,
+                adaptiveHeight: true
+            }
 		}
 	},
+    components: {
+        Flickity
+    },
 	methods: {
-		prevImg: function(){
-			if (index > 0) {
-				this.prev = true
-				index = index -=1;
-				this.image = this.data[index]
-			}else {
-				this.prev = false
-			}
-		},
-		nextImg: function(){
-			if (index !== (this.data.length - 1)) {
-				this.next = true
-				index = index +=1;
-				this.image = this.data[index]
-			}else {
-				this.next = false
-			}
-		},
 		openModal: function(e){
-			e.preventDefault();
-			var modal = document.querySelector(".modal");
-			console.log(modal);
-			modal.children[1].innerHTML = ""
 
-			modal.classList.add('open');
-			modal.children[1].innerHTML = e.target.outerHTML
-		},
+            var modal = document.querySelector('.modal')
+
+            if(e.target.parentNode.parentNode.classList.contains("is-selected")){
+                modal.children[1].innerHTML = e.target.outerHTML;
+                modal.classList.add('open')
+            }
+        },
 		closeModal: function(e){
-			var modal = document.querySelector(".modal");
-			console.log(modal);
-			modal.classList.remove("open");
-		}
+            var modal = document.querySelector('.modal')
+            modal.classList.remove('open')
+        },
 	}
 }
 </script>
@@ -77,107 +58,104 @@ export default {
 
 
 <style scoped>
+section {
+    overflow-x: hidden;
+}
 .modal {
-
+    flex-wrap: wrap;
+    display: flex;
+    position: fixed;
 	transition: .3s;
-	transform: scale(0);
+	/*transform: scale(0);*/
+    opacity: 0;
+    visibility: hidden;
 	transform-origin: center;
-	top: 50%;
-	left: 50%;
-	height: 0;
-	width: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
 }
 .modal.open{
-	display: flex;
-	flex-wrap: wrap;
-	position: fixed;
-	transform: scale(1);
-	top: 0;
-	left: 0;
+    opacity: 1;
+    visibility: visible;
 	background-color: rgba(0,0,0,0.8);
-	z-index: 999;
-	height: 100%;
-	width: 100%;
+    z-index: 999;
 }
 .content {
-	width: 99%;
-	overflow: hidden;
-	border: solid;
-}
-
-.content img {
 	width: 100%;
+    display: flex;
+}
+.content img {
+    width: 99%;
+    height: auto;
+    margin: auto;
+}
+@media (min-width:50em) {
+    .content img {
+        width: auto;
+        height: 99%;
+        margin: auto;
+    }
 }
 
+button {
+    border: none;
+    color: #663231;
+    font-weight: bold;
+    font-size: 2em;
+    width: 2em;
+    height: 2em;
+    top: 1%;
+    right: 2%;
+    border-radius: .3em;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+}
 .container {
 	width: 100%;
 	padding-left: 0;
 	padding-right: 0;
 }
 
-div {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
+section {
+    padding: 0 0 4em 0;
 }
 
-div figure {
-	position: relative;
-	max-height: 30em;
-	width: 100%;
-	overflow: hidden;
-	order: 0;
+/*carousel*/
+.carousel {
+  width: 100%;
+  margin-right: 10px;
+  height: 14em;
+}
+.carousel-cell {
+    transform: scale(0.8);
+    transition: .3s;
+    width: 50%;
+    height: 100%;
+    margin-right: 10px;
+}
+@media (min-width:50em) {
+    .carousel-cell {
+        width: 50%;
+        height: 100%;
+    }
 }
 
-figure img {
-	transition: 1s;
-	width: 100%;
-	height: auto;
+.carousel-cell a {
+    display: block;
+    width: 100%;
+    height: 14em;
+}
+
+.carousel-cell img {
+    box-shadow: 0 0 2em #ccc;
+    height: 100%;
+}
+
+.carousel-cell.is-selected {
+  transform: scale(1);
 }
 
 
-button {
-	font-size: 2em;
-	height: 2em;
-	width: 2em;
-	background-color: #663231;
-	border: none;
-	color: white;
-	border-radius: 0.1em;
-}
-
-button:first-child {
-	order: 0
-}
-button:last-child {
-	order: 2
-}
-@media (min-width: 50em) {
-	.content {
-		width: auto;
-		height: 85%;
-		overflow: hidden;
-		border: solid;
-	}
-	.content img {
-		width: auto;
-		height: 100%;
-	}
-
-	div {
-		justify-content: center;
-	}
-	div figure {
-		order: 1;
-		width: 50%;
-	}
-	h3 {
-		position: static;
-	}
-}
-
-ul {
-	list-style: none;
-}
 </style>

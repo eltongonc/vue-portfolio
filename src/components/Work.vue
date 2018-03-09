@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<header class="header">
+		<header>
 			<h1>Portfolio</h1>
 		</header>
 		<section class="card-container">
@@ -37,11 +37,31 @@ export default {
 </script>
 
 <style scoped>
+	/*header*/
+	header {
+		height: 80vh;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 0;
+		background-color: #42b983;
+		background-position: center;
+		background-size: cover;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+	}
+	header h1,
+	header h2 {
+		color: white;
+		text-transform: uppercase;
+	}
+	header h1 {
+		width: 10em;
+	}
 
 	/*General*/
-	h1 {
-		text-align: center;
-	}
 	h2 {
 		text-align: center;
 		width: 100%;
@@ -103,6 +123,16 @@ export default {
 	}
 
 	@media (min-width:50em) {
+		header {
+			height: 65vh;
+			padding-top: 4em;
+			padding-right: 10em;
+		}
+
+		header h1{
+			color: white;
+			text-transform: uppercase;
+		}
 		img {
 			width: 50%;
 		}

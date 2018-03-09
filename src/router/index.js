@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import About from '../components/About'
 import Work from '../components/Work'
 import Home from '../components/Home'
 import Detail from '../components/Detail'
@@ -20,7 +19,7 @@ export default new Router({
 		{
 			path: '/work',
 			name: 'Work',
-			component: Work
+            redirect: "/"
 		},
 		{
 			path: '/work/:slug',

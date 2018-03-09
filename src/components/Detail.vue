@@ -4,10 +4,12 @@
 			<figure>
 				<img :src="image" alt="" :title="title" />
 			</figure>
-			<h1>{{title}}</h1>
+            <a href="/" class="backButton">Back</a>
+			<h1 class="section-header">{{title}}</h1>
 			<article>
 				<p class="lead">{{summary}}</p>
 				<p v-html="content"></p>
+                <iframe v-if="video" :src="video" frameborder='0' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen=''></iframe>
 				<p style="font-weight:bold">
 					<span>Client:</span>
 					{{client}}
@@ -42,7 +44,6 @@ export default {
 </script>
 
 <style scoped>
-
 	/*General*/
 	ul {
 		padding-left: 0;
@@ -75,9 +76,23 @@ export default {
 		margin:auto;
 	}
 
+    main {
+        margin-bottom: 5em;
+    }
+
 	article {
+	    padding: 2em;
 		margin-bottom: 4em;
 	}
+    article > p {
+        margin-bottom: 3em;
+    }
+    @media (min-width:50em) {
+        article {
+            max-width: 40em;
+            margin: auto;
+        }
+    }
 	.card-container {
 		display: flex;
 		flex-wrap: wrap;
@@ -111,9 +126,16 @@ export default {
 		margin: 0;
 		margin-bottom: 4em;
 		border:solid white;
-		max-height: 20em;
 		overflow: hidden;
 	}
+
+    @media (min-width:50em) {
+        figure {
+            border-bottom:1em solid #97DCAC;
+            height: 38em;
+        }
+    }
+
 	figure img {
 		width: 100%;
 	}
@@ -127,4 +149,27 @@ export default {
 		color:#663231
 	}
 
+    iframe {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .backButton {
+        border: .1em solid #663231;
+        color:white;
+        position: fixed;
+        top: 4vh;
+        left: -3em;
+        width: 5em;
+        align-self: flex-start;
+        text-align: right ;
+        align-content: flex-start;
+        margin-left: 0;
+        z-index: 999;
+    }
+    @media (min-width:50em) {
+        .backButton {
+            left: -3em;
+        }
+    }
 </style>

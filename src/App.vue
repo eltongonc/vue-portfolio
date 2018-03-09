@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <vueHeader></vueHeader>
-    <!-- <img src="./assets/logo.png"> -->
     <router-view></router-view>
 	<vueFooter></vueFooter>
   </div>
@@ -20,26 +19,9 @@ export default {
 	vueFooter
   }
 }
-
-
-//sticky header
-window.addEventListener('scroll', function(){
-	var headerOffset = window.scrollY >= 50;
-
-	console.log(window.scrollY);
-	console.log(window.scrollY >= 50);
-	var header = document.querySelector('header section');
-	// make the header fixed
-	if(headerOffset){
-		header.classList.add('sticky');
-	}
-	else{
-		header.classList.remove('sticky');
-	}
-});
 </script>
 
-<style>
+<style lang="scss">
 html,
 body,
 #app {
@@ -48,7 +30,7 @@ body,
 	height: 100%;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -56,14 +38,21 @@ body,
   /*margin-top: 60px;*/
 }
 
-main {
-	min-height: 65%;
+/*green #97dcac*/
+
+.section-header {
+    width: 100%;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    color: #663231;
+    margin: .5em 0;
 }
 
-main > *{
-	padding: 2em;
-}
-main > *:nth-child(even) {
-	background-color: #97dcac;
+blockquote {
+    border-left: .3em solid #ededed;
+    padding-left: 1em;
+    color: #999;
+    font-style: italic;
 }
 </style>
