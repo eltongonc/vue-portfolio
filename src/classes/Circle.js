@@ -40,19 +40,11 @@ export class Circle {
         if (object.x + object.radius + object.dx > innerWidth || object.x - object.radius < 0){
             object.dx = -object.dx;
         }
-    }
 
-    interactivity(mousePos) {
-        // if ( (this.x > mousePos.x - mousePos.range && this.x < mousePos.x + mousePos.range) && this.radius < this.radiusMax  ) {
-        // }
-        //
-        // if ( (this.y > mousePos.y - mousePos.range && this.y < mousePos.y + mousePos.range) && this.radius < this.radiusMax  ) {
-        //     this.radius += 1
-        // }
-        //
-        // if(this.radius > (this.radiusMin + 1)){
-        //     this.radius -= 1
-        // }
+        // bounce verticaly
+        if (object.y + object.radius + object.dy > innerWidth || object.y - object.radius < 0){
+            object.dy = -object.dy;
+        }
     }
 
 

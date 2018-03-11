@@ -1,5 +1,6 @@
 <template>
 	<main>
+        <Poster></Poster>
 		<header>
 			<h1>Portfolio</h1>
 		</header>
@@ -25,13 +26,20 @@
 </template>
 
 <script>
+import Poster from './partials/Poster';
 import workList from "../assets/allWork.js";
 
 
 export default {
 	data: function(){
 		return { list:workList}
-	}
+	},
+    components:{
+        // Portfolio,
+        Poster,
+        // Skills,
+        // Intro,
+    }
 }
 
 </script>

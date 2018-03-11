@@ -1,175 +1,156 @@
 <template>
-	<main>
-		<header class="header">
-			<figure>
-				<img :src="image" alt="" :title="title" />
-			</figure>
-            <a href="/" class="backButton">Back</a>
-			<h1 class="section-header">{{title}}</h1>
-			<article>
-				<p class="lead">{{summary}}</p>
-				<p v-html="content"></p>
-                <iframe v-if="video" :src="video" frameborder='0' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen=''></iframe>
-				<p style="font-weight:bold">
-					<span>Client:</span>
-					{{client}}
-				</p>
+	<main class="details">
+        <Poster :background="pageData.image" :name="pageData.title" :summary="pageData.summary"></Poster>
+		<div class="details__inner">
+            <a href="/" ref="backButton" class="details__back">Back</a>
+
+			<article class="details__content">
+				<p class="content__lead">{{pageData.summary}}</p>
+				<div class="content__body" v-html="pageData.content"></div>
+				<div class="content__meta">
+					<h3 class="meta__client">Client: {{pageData.client}}</h3>
+				</div>
+
+                <h3 v-if="pageData.video">Promo video</h3>
+                <iframe class="content__video" v-if="pageData.video" :src="pageData.video" frameborder='0' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen=''></iframe>
 			</article>
-		</header>
-		<slideshow :data="image_list"></slideshow>
-		<section class="card-container">
-			<a v-if="externalLink" v-bind:href="externalLink">Visit the site</a>
-			<a v-if="code_link" v-bind:href="code_link">View code</a>
+		</div>
+
+		<Slideshow :data="pageData.image_list"></Slideshow>
+		<section class="card-container links">
+			<a v-if="pageData.externalLink" v-bind:href="pageData.externalLink" class="links--external">Visit the site</a>
+			<a v-if="pageData.code_link" v-bind:href="pageData.code_link" class="links--github">View code</a>
 		</section>
 	</main>
 </template>
 
 <script>
-import slideshow from "./partials/Slideshow";
-import workList from "../assets/allWork.js";
+    import Poster from './partials/Poster';
+    import Intro from './partials/Intro';
 
-export default {
-	props: ['slug', 'name'],
-	data(){
-		var pageId = this.slug
-		var pageData = workList.filter(function(item){
-			if(item.urlTitle == pageId) return item;
-		})
-		return pageData[0]
-	},
-	components: {
-		slideshow
-	}
-}
+    import Slideshow from "./partials/Slideshow";
+    import workList from "../assets/allWork.js";
+
+    export default {
+    	props: ['slug', 'name'],
+        components: {
+            Slideshow,
+            Poster,
+            Intro,
+        },
+        methods: {
+            hideBackButton() {
+                window.addEventListener('scroll', (e) => {
+                    if (window.pageYOffset > 500 && !this.$refs.backButton.classList.contains('invisible')) {
+                        this.$refs.backButton.classList.add('invisible');
+                    } else if(window.pageYOffset < 500 && this.$refs.backButton.classList.contains('invisible')) {
+                        this.$refs.backButton.classList.remove('invisible');
+                    }
+                })
+            }
+        },
+    	data(){
+    		var pageId = this.slug
+    		var pageData = workList.filter(function(item){
+    			if(item.urlTitle == pageId) return item;
+    		})
+    		return { pageData: pageData[0] }
+    	},
+        mounted() {
+            this.hideBackButton()
+        },
+    }
 </script>
 
-<style scoped>
-	/*General*/
-	ul {
-		padding-left: 0;
-	}
+<style lang="scss" scoped>
+    $grid-large: 65rem;
+    $grid-medium: 38rem;
+    $red: #663231;
+    $green: #97dcac;
+    $dark_grey: #3D3D49;
+    $light_grey: #ededed;
 
-	h1 {
-		text-align: center;
-	}
-
-	h2 {
-		font-size: 1.2em;
-	}
-	p {
-		text-align: left;
-		font-size: 1.2em;
-		max-width: 38em;
-		margin: auto;
-	}
-	p.lead {
-		text-align: center;
-		font-style: italic;
-	}
-
-	li {
-		font-size: 1.2em;
-		list-style: none;
-		color: #663231;
-		margin: .5em;
-		width: 10em;
-		margin:auto;
-	}
-
-    main {
+    .details {
         margin-bottom: 5em;
-    }
 
-	article {
-	    padding: 2em;
-		margin-bottom: 4em;
-	}
-    article > p {
-        margin-bottom: 3em;
-    }
-    @media (min-width:50em) {
-        article {
-            max-width: 40em;
-            margin: auto;
+        .details__back {
+            color: white;
+            position: fixed;
+            top: 10rem;
+            left: -3em;
+            width: 5em;
+            padding: 1em;
+            text-align: right ;
+            margin-left: 0;
+            z-index: 999;
+            transition: opacity .3s;
+            opacity: 1;
+            border-radius: 0.2em;
+            background: #663231;
+            text-decoration: none;
+
+            &.invisible {
+                opacity: 0.1;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .details__content {
+    	    padding: 2em;
+    		margin-bottom: 4em;
+            .content__lead {
+                text-align: center;
+                font-style: italic;
+                font-size: 1.2em;
+                max-width: $grid-medium;
+                margin: 0 auto;
+            }
+            .content__body {
+        		text-align: left;
+        		font-size: 1.2em;
+        		max-width: $grid-medium;
+        		margin: auto;
+        	}
+            h3 {
+                font-size: 1.3rem;
+                margin-top: 4rem;
+            }
+            ul {
+                padding-left: 0;
+                li {
+                    font-size: 1.2em;
+                    list-style: none;
+                    color: #663231;
+                    margin: .5em;
+                    width: 10em;
+                    margin:auto;
+                }
+            }
+            iframe {
+                height: 50vh;
+                width: 100%;
+            }
         }
     }
-	.card-container {
-		display: flex;
+
+    .links {
+        display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-	}
-
-	/*cards*/
-	a {
-		transition: .3s;
-		border-radius: 0.3em;
-		color: white;
-		width: 15em;
-		padding: 1em;
-		/*height: 15em;*/
-		position: relative;
-		overflow: hidden;
-		margin: .1em;
-		background: #663231;
-		text-decoration: none;
-	}
-
-	a:hover,
-	a:active {
-		background-color: white;
-		color: #663231;
-	}
-
-	figure {
-		background-color: #97DCAC;
-		transition: 1s;
-		margin: 0;
-		margin-bottom: 4em;
-		border:solid white;
-		overflow: hidden;
-	}
-
-    @media (min-width:50em) {
-        figure {
-            border-bottom:1em solid #97DCAC;
-            height: 38em;
-        }
-    }
-
-	figure img {
-		width: 100%;
-	}
-	figcaption {
-		transition: 1s;
-		position: absolute;
-		bottom: 0;
-		padding: 2%  0;
-		width: 100%;
-		background: rgba(255,255,255, 0.8);
-		color:#663231
-	}
-
-    iframe {
-        height: 50vh;
-        width: 100%;
-    }
-
-    .backButton {
-        border: .1em solid #663231;
-        color:white;
-        position: fixed;
-        top: 4vh;
-        left: -3em;
-        width: 5em;
-        align-self: flex-start;
-        text-align: right ;
-        align-content: flex-start;
-        margin-left: 0;
-        z-index: 999;
-    }
-    @media (min-width:50em) {
-        .backButton {
-            left: -3em;
+        .links--external,
+        .links--github {
+        	transition: .3s;
+        	border-radius: 0.3rem;
+        	color: white;
+        	width: 15em;
+        	padding: 1em;
+        	/*height: 15em;*/
+        	position: relative;
+        	overflow: hidden;
+        	margin: .1em;
+        	background: #663231;
+        	text-decoration: none;
         }
     }
 </style>

@@ -1,13 +1,16 @@
 <template>
-    <section class="poster">
+    <section class="poster" :style="'background-image:url('+background+')'">
         <div class="poster__inner">
-            <figcaption class="poster__intro">
+            <figcaption v-if="!name" class="poster__intro">
                 <h1>Hi, I'm Elton Gonçalves Gomes</h1>
                 <h2>Frontend developer</h2>
-                <a href="#about" class="button">Get to know me</a>
+            </figcaption>
+            <figcaption v-else class="poster__intro">
+                <h1>{{name}}</h1>
+                <h2>{{subtitle}}</h2>
             </figcaption>
         </div>
-        <canvas ref=canvas id="canvas"></canvas>
+        <canvas v-if="!background" ref=canvas id="canvas"></canvas>
     </section>
 </template>
 
@@ -16,6 +19,7 @@
 
     export default {
         name: 'Poster',
+        props: ['background', 'name', 'summary', 'subtitle'],
         data() {
             return {
                 canvas: document.getElementById('canvas'),
@@ -23,11 +27,6 @@
                 circles: {
                     container: [],
                     amount: 100,
-                },
-                mousePos: {
-                    range: 15,
-                    x: 0,
-                    y: 0,
                 },
                 radius: {
                     max: 100,
@@ -65,7 +64,12 @@
             },
 
             animate() {
-                const mouse = this.mousePos;
+                const mouse = {
+                    range: 15,
+                    x: 0,
+                    y: 0,
+                };
+
                 // clear the canvas
                 this.ctx.clearRect(0,0, this.$refs.canvas.width, this.$refs.canvas.height);
 
@@ -76,49 +80,26 @@
                 requestAnimationFrame(this.animate);
             },
 
-            input(){
-                // const mouse = this.mousePos;
-                //
-                // this.$refs.canvas.addEventListener('mousemove',function(e){
-                //     if(e) {
-                //         mouse.x = e.x;
-                //         mouse.y = e.y;
-                //     }
-                // });
-                //
-                // this.$refs.canvas.addEventListener('mouseleave',function(e){
-                //     mouse.x = undefined;
-                //     mouse.y = undefined;
-                // })
-                //
-                // this.mousePos = mouse;
-                // // updates the circles
-                // this.circles.container.forEach(circle =>{circle.update(mouse)})
-            },
-
             startCanvas() {
                 // call the settings once
                 this.setup();
 
                 // start the animation loop
                 this.animate();
-
-                // allow input
-                this.input();
             },
 
             resize() {
-                console.log(this.$refs.canvas);
                 this.$refs.canvas.width = this.$refs.canvas.parentNode.clientWidth;
                 this.$refs.canvas.height = this.$refs.canvas.parentNode.clientHeight;
             },
         },
-        beforeMount() {
-        },
         mounted() {
-            window.addEventListener('resize', this.resize)
-            this.resize();
-            this.startCanvas();
+            if (!this.background) {
+                window.addEventListener('resize', this.resize)
+                this.resize();
+                this.startCanvas();
+            } else {
+            }
         },
     }
 </script>
@@ -133,9 +114,8 @@
         height: 45rem;
 
         background-color: $dark_grey;
-        // background-image: url("/static/header-small.jpg");
-        // background-size: contain;
-        // background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         canvas {
             position: absolute;
@@ -165,21 +145,22 @@
                     text-shadow: 0 0 10px #333;
                     text-transform: uppercase;
                     transform: scale(1.5);
+                    transition: .3s;
+                    max-width: 30em;
                 }
 
-                h1 {
-                    width: 21rem;
-                }
                 h2 {
-                    max-width: 30em;
                     margin: auto;
                     margin-top: 1em;
                     margin-bottom: 1em;
                     font-weight: normal;
-                    font-style: italic;
-                    transition: 1s;
                     position: relative;
                     z-index: 1;
+                }
+                h3 {
+                    text-align: left;
+                    color: white;
+                    text-shadow: 0 0 10px #333;
                 }
                 .button {
                     display: block;
@@ -202,16 +183,14 @@
             }
         }
         @media (max-width:50em) {
-        	height: 20rem;
-            .poster__intro {
-                h1,
-                h2 {
-                    transform: scale(1);
+            .poster__inner {
+                .poster__intro {
+                    h1,
+                    h2 {
+                        transform: scale(1);
+                    }
                 }
-
             }
         }
     }
-
-
 </style>
