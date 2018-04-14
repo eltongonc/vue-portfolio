@@ -2,9 +2,16 @@
 
 > A vue portfolio
 
+<!-- TOC -->
+
+* [vue-portfolio](#vue-portfolio)
+  * [Build Setup](#build-setup)
+
+<!-- /TOC -->
+
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 

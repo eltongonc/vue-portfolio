@@ -3,27 +3,25 @@
 		<Poster></Poster>
 		<Intro></Intro>
 		<Skills></Skills>
-        <Portfolio></Portfolio>
+        <Portfolio :amount="portfolioCount"></Portfolio>
 	</main>
 </template>
 
 
 <script>
-    import Portfolio from './partials/Portfolio';
-    import Poster from './partials/Poster';
-    import Intro from './partials/Intro';
-    import Skills from './partials/Skills';
+    import { Portfolio, Intro, Poster, Skills } from "./partials";
 
     export default {
+        data(){
+            return {
+                portfolioCount: 3,
+            };
+        },
         components:{
             Portfolio,
             Poster,
             Skills,
             Intro,
         }
-    }
+    };
 </script>
-
-
-<style lang="scss" scoped>
-</style>

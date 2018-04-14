@@ -1,6 +1,6 @@
 <template>
 	<footer id="navigation">
-        <h4>Copyright &copy; 2018 Elton Gonçalves Gomes, Amsterdam</h4>
+        <h4>Copyright &copy; {{copyright}}</h4>
         <div class="contact">
             <section class="contact--mobile">
                 <nav class="contact__nav">
@@ -40,7 +40,7 @@
                                         </g>
                                     </g>
                                 </svg>
-                            Contact me on eltongonc@gmail.com</a>
+                            Send me an email</a>
                         </li>
         				<li>
                             <a href="https://github.com/eltongonc">
@@ -140,161 +140,163 @@
 </template>
 
 <script>
-import { TweenLite as tl, } from 'gsap';
-import ScrollToPlugin from 'gsap/src/uncompressed/plugins/ScrollToPlugin';
+import { TweenLite as tl } from "gsap";
+import ScrollToPlugin from "gsap/src/uncompressed/plugins/ScrollToPlugin";
 
 export default {
-	name: 'vueFooter',
-    methods: {
-        scrollToTop(e) {
-            e.preventDefault();
+  name: "vueFooter",
+  data() {
+    const year = new Date();
 
-            tl.to(window, 1.5, {
-                scrollTo: 0,
-            });
-        }
+    return {
+      copyright: ` ${year.getUTCFullYear()} Elton Gonçalves Gomes, Amsterdam`
+    };
+  },
+  methods: {
+    scrollToTop(e) {
+      e.preventDefault();
+
+      tl.to(window, 1.5, {
+        scrollTo: 0
+      });
     }
-}
-
-
+  }
+};
 </script>
 
 <style lang="scss">
-    $grid-large: 65rem;
-    $grid-medium: 32rem;
-    $red: #663231;
-    $green: #97dcac;
-    $dark_grey: #3D3D49;
-    $light_grey: #ededed;
+$grid-large: 65rem;
+$grid-medium: 32rem;
+$red: #663231;
+$green: #97dcac;
+$dark_grey: #3d3d49;
+$light_grey: #ededed;
 
-    $dark_boxshadow: 0 0 10rem -2rem #000;
+$dark_boxshadow: 0 0 10rem -2rem #000;
 
-    footer {
-    	background: $dark_grey;
-    	display: flex;
-    	flex-wrap: wrap;
-    	justify-content: center;
-    	align-items: center;
-    	padding: 1rem;
-    	border-top: .1rem solid $green;
-        box-shadow: $dark_boxshadow;
+footer {
+  background: $dark_grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-top: 0.1rem solid $green;
+  box-shadow: $dark_boxshadow;
+  h4 {
+    width: 100%;
+    text-align: center;
+    color: $light_grey;
+    vertical-align: middle;
+  }
+  svg {
+    width: 2em;
+    margin-right: 0.5em;
+    path,
+    polygon {
+      fill: $green;
+    }
+  }
+
+  .contact {
+    .contact--mobile {
+      .contact__nav {
+        ul {
+          list-style-type: none;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          li {
+            flex-grow: 1;
+            box-shadow: $dark_boxshadow;
+            margin: 0.1em;
+            // width: 100%;
+            display: inline-block;
+            background-color: rgba(151, 220, 172, 0.1);
+            border-radius: 0.3em;
+            overflow: hidden;
+          }
+          a {
+            transition: 0.3s;
+            padding: 0.7rem;
+            color: #663231;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            text-align: left;
+            svg {
+              width: 1.3rem;
+            }
+            &:hover,
+            &:active {
+              background-color: rgba($green, 0.5);
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .contact--desktop {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 50em) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    h4 {
+      width: auto;
+      display: inline;
+      font-weight: lighter;
+    }
+
+    .contact {
+      .contact--mobile {
+        display: none;
+      }
+      .contact--desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         h4 {
-        	width: 100%;
-        	text-align: center;
-        	color: $light_grey;
-            vertical-align: middle;
+          margin: 0;
+          display: block;
+          font-family: "Courgette", cursive;
         }
-        svg {
-            width: 2em;
-            margin-right: .5em;
-            path,
-            polygon {
-                fill: $green;
-            }
+        span {
+          margin-left: 1rem;
         }
-
-        .contact {
-            .contact--mobile {
-                .contact__nav {
-                    ul {
-                        list-style-type: none;
-                        padding: 0;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        li {
-                            flex-grow: 1;
-                            box-shadow: $dark_boxshadow;
-                            margin: .1em;
-                            // width: 100%;
-                            display: inline-block;
-                            background-color: rgba(151, 220, 172, 0.1);
-                            border-radius: 0.3em;
-                            overflow: hidden;
-                        }
-                        a {
-                            transition: .3s;
-                            padding: .5em;
-                            color: #663231;
-                            text-decoration: none;
-                            color: rgba(255, 255, 255, 0.7);
-                            display: flex;
-                            padding: 1em;
-                            align-items: center;
-                            svg {
-                                width: 1.3rem;
-                            }
-                            &:hover,
-                            &:active {
-                                background-color: rgba($green, 0.5);
-                                color: white;
-                            }
-                        }
-                    }
+        .contact__nav {
+          ul {
+            margin: 0;
+            padding-left: 0;
+            li {
+              display: inline-block;
+              width: 3rem;
+              background: none;
+              a {
+                padding: 0.5em;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                border-radius: 0.3em;
+                transition: 0.3s;
+                svg {
+                  margin: 0.1rem;
                 }
+                &:hover {
+                  background-color: $green;
+                }
+              }
             }
-            .contact--desktop {
-                display: none;
-            }
+          }
         }
-
+      }
     }
-
-
-    @media (min-width: 50em) {
-    	footer {
-    		display: flex;
-    		justify-content: space-between;
-            h4 {
-                width: auto;
-                display: inline;
-                font-weight: lighter;
-            }
-
-            .contact {
-                .contact--mobile {
-                    display: none;
-                }
-                .contact--desktop {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    h4 {
-                        margin: 0;
-                        display: block;
-                        font-family: "Courgette", cursive;
-                    }
-                    span {
-                        margin-left: 1rem;
-                    }
-                    .contact__nav {
-                        ul{
-                            margin: 0;
-                            padding-left: 0;
-                            li {
-                                display: inline-block;
-                                width: 3rem;
-                                background: none;
-                                a {
-                                    padding: .5em;
-                                    box-sizing: border-box;
-                                    display: flex;
-                                    align-items: center;
-                                    border-radius: .3em;
-                                    transition: .3s;
-                                    svg {
-                                        margin: .1rem;
-                                    }
-                                    &:hover {
-                                        background-color: $green;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-    	}
-    }
-
+  }
+}
 </style>

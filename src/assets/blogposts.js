@@ -1,16 +1,16 @@
 module.exports = [
-	{
-		id: 1,
-		title: "UX is Frontend Development? ",
-		date: {
-			day: "07",
-			month: "feb",
-			year: "2017",
-			full: "2017-02-07T16:00",
-		},
-		image: "/img/blog/1.JPG",
-		lead: "<p class='lead'>User experience(UX) is the heart and soul of any site. It determines whether you hit or miss your audience. But a good UX is not easily achieved, especially if you’re just making a design. But why should a frontender learn UX, why not hire a UX-designer?</p>",
-		content: `<p class='lead'>User experience(UX) is the heart and soul of any site. It determines whether you hit or miss your audience. But a good UX is not easily achieved, especially if you’re just making a design. But why should a frontender learn UX, why not hire a UX-designer?</p>
+    {
+        id: 1,
+        title: "UX is Frontend Development? ",
+        date: {
+            day: "07",
+            month: "feb",
+            year: "2017",
+            full: "2017-02-07T16:00",
+        },
+        image: "/img/blog/1.JPG",
+        lead: "<p class='lead'>User experience(UX) is the heart and soul of any site. It determines whether you hit or miss your audience. But a good UX is not easily achieved, especially if you’re just making a design. But why should a frontender learn UX, why not hire a UX-designer?</p>",
+        content: `<p class='lead'>User experience(UX) is the heart and soul of any site. It determines whether you hit or miss your audience. But a good UX is not easily achieved, especially if you’re just making a design. But why should a frontender learn UX, why not hire a UX-designer?</p>
 		<h2>Introduction</h2>
 		<p>Stephen Hay is senior UX Design Lead at Catawiki. He is known of his book Responsive design workflow. He ended up with Responsive webdesign out of frustration of CSS. He mentioned ways to perfect your web design to be responsive during his talk about responsive web design he mentioned.</p>
 
@@ -40,22 +40,22 @@ module.exports = [
 		<p>Put your digital equipment aside, grab a pen and paper and start doodling around for at least 5min. “Creativity comes after the 20 first sketches”
 		It’s important to not use any erasable tool, why? Well if there is a possibility to erase your mistakes you will do so, thus limiting your creativity by only “perfect” sketches. A mistake on one sketch can be the missing link to your revolutionary idea.</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 2,
-		title: "Sketchnoting",
-		date: {
-			day: "14",
-			month: "feb",
-			year: "2017",
-			full: "2017-02-14T16:00",
-		},
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 2,
+        title: "Sketchnoting",
+        date: {
+            day: "14",
+            month: "feb",
+            year: "2017",
+            full: "2017-02-14T16:00",
+        },
 
-		image: "/img/blog/2.JPG",
-		lead: "<p class='lead'>Sketchnoting  is a great way to take notes while paying attention during a lecture or meeting. A mixture of sketches and text will ensure you take the most important notes.</p>",
-		content: `
+        image: "/img/blog/2.JPG",
+        lead: "<p class='lead'>Sketchnoting  is a great way to take notes while paying attention during a lecture or meeting. A mixture of sketches and text will ensure you take the most important notes.</p>",
+        content: `
 		<p class='lead'>Sketchnoting  is a great way to take notes while paying attention during a lecture or meeting. A mixture of sketches and text will ensure you take the most important notes.</p>
 
 		<h2>Introduction</h2>
@@ -89,21 +89,21 @@ module.exports = [
 
 		<p>Practice to become pro at sketchnoting </p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 3,
-		title: "The browser bloats we are creating",
-		date: {
-			day: "28",
-			month: "feb",
-			year: "2017",
-			full: "2017-02-28T16:00",
-		},
-		image: "/img/blog/3.JPG",
-		lead: `<p class="lead"> Peter – Paul Koch is the founder of Fronteers. According to Quirksmode (an online platform for browser compatibility information)  Peter-Paul Koch has been a professional front-end engineer since 1998. He focused on HTML, CSS, JavaScript, and browser compatibility even when doing so was not yet fashionable.</p>`,
-		content: `
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 3,
+        title: "The browser bloats we are creating",
+        date: {
+            day: "28",
+            month: "feb",
+            year: "2017",
+            full: "2017-02-28T16:00",
+        },
+        image: "/img/blog/3.JPG",
+        lead: "<p class=\"lead\"> Peter – Paul Koch is the founder of Fronteers. According to Quirksmode (an online platform for browser compatibility information)  Peter-Paul Koch has been a professional front-end engineer since 1998. He focused on HTML, CSS, JavaScript, and browser compatibility even when doing so was not yet fashionable.</p>",
+        content: `
 		<p class="lead"> Peter – Paul Koch is the founder of Fronteers. According to Quirksmode (an online platform for browser compatibility information)  Peter-Paul Koch has been a professional front-end engineer since 1998. He focused on HTML, CSS, JavaScript, and browser compatibility even when doing so was not yet fashionable.</p>
 
 		<h2>Why do these problem accure</h2>
@@ -141,23 +141,23 @@ module.exports = [
 			<li>Use libraries only when needed, study them and try to use one per project</li>
 		</ul>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 4,
-		title: "Advanced Git Tips & Tricks",
-		date: {
-			day: "14",
-			month: "Mar",
-			year: "2017",
-			full: "2017-03-14T16:00",
-		},
-		lead: `<h2>What is Git/Github</h2>
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 4,
+        title: "Advanced Git Tips & Tricks",
+        date: {
+            day: "14",
+            month: "Mar",
+            year: "2017",
+            full: "2017-03-14T16:00",
+        },
+        lead: `<h2>What is Git/Github</h2>
 		<p>Github is the online (social?) platform that holds all your code and codes of others. You are not restricted on posting only code though.
 		Git is the command-line interface that lets you manage your projects locally on your computer or online, this requires Github.</p>`,
-		image: "/img/blog/4.JPG",
-		content: `
+        image: "/img/blog/4.JPG",
+        content: `
 		<h2>What is Git/Github</h2>
 		<p>Github is the online (social?) platform that holds all your code and codes of others. You are not restricted on posting only code though.
 		Git is the command-line interface that lets you manage your projects locally on your computer or online, this requires Github.</p>
@@ -201,21 +201,21 @@ module.exports = [
 		<h2>Conclusion</h2>
 		<p>Basically github is a diary for your code, it keeps track and lets you view the history of your code. You should create a github account right now if you haven’t got one.</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 5,
-		title: "Accessibility",
-		date: {
-			day: "28",
-			month: "feb",
-			year: "2017",
-			full: "2017-03-21T16:00",
-		},
-		image: "/img/blog/5.JPG",
-		lead: `	<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>`,
-		content: `
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 5,
+        title: "Accessibility",
+        date: {
+            day: "28",
+            month: "feb",
+            year: "2017",
+            full: "2017-03-21T16:00",
+        },
+        image: "/img/blog/5.JPG",
+        lead: "	<p class=\"lead\">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>",
+        content: `
 		<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>
 
 		<h2>Tips for accessible sites</h2>
@@ -240,22 +240,22 @@ module.exports = [
 		<h3>Aria-hidden</h3>
 		<p>If you want some content to be ignored by screen readers, use the aria-hidden attribute <p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 6,
-		title: "Developers love Design",
-		date: {
-			day: "21",
-			month: "Mar",
-			year: "2017",
-			full: "2017-03-21T16:00",
-		},
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 6,
+        title: "Developers love Design",
+        date: {
+            day: "21",
+            month: "Mar",
+            year: "2017",
+            full: "2017-03-21T16:00",
+        },
 
-		image: "/img/blog/6.JPG",
-		lead: `<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>`,
-		content: `
+        image: "/img/blog/6.JPG",
+        lead: "<p class=\"lead\">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>",
+        content: `
 		<p class="lead">Most of the time we make amazing looking websites that are pretty much useless for those visually impaired. Bram Duvigneau is a blind developer and gives accessibility advices. He talked about how he experiences the web and how it should be.</p>
 
 		<h2>Tips for accessible sites</h2>
@@ -280,21 +280,21 @@ module.exports = [
 		<h3>Aria-hidden</h3>
 		<p>If you want some content to be ignored by screen readers, use the aria-hidden attribute <p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 7,
-		title: "Realtime web and GraphQL",
-		date: {
-			day: "14",
-			month: "Apr",
-			year: "2017",
-			full: "2017-04-14T16:00",
-		},
-		image: "/img/blog/7.JPG",
-		lead: `<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>`,
-		content: `
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 7,
+        title: "Realtime web and GraphQL",
+        date: {
+            day: "14",
+            month: "Apr",
+            year: "2017",
+            full: "2017-04-14T16:00",
+        },
+        image: "/img/blog/7.JPG",
+        lead: "<p class=\"lead\">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>",
+        content: `
 		<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>
 
 		<p>The Drupal site allowed him to do many thing but he soon discovered that it was time for an update. At that moment Meteor.js was hip and happening so they decided to ride along the Meteor.js train.</p>
@@ -308,21 +308,21 @@ module.exports = [
 
 		<p>GraphQL makes sure you get only what you need. The response depends on the fields that you include to you API call</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 8,
-		title: "Realtime web and GraphQL",
-		date: {
-			day: "14",
-			month: "Apr",
-			year: "2017",
-			full: "2017-04-14T16:00",
-		},
-		image: "/img/blog/7.jpg",
-		lead: `<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>`,
-		content: `
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 8,
+        title: "Realtime web and GraphQL",
+        date: {
+            day: "14",
+            month: "Apr",
+            year: "2017",
+            full: "2017-04-14T16:00",
+        },
+        image: "/img/blog/7.jpg",
+        lead: "<p class=\"lead\">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>",
+        content: `
 		<p class="lead">Peter works at Lively and during his talk he spoke of a Case for startdashboard.nl. He went from a Drupal site to a Realtime Meteor.js app and here is why it was a great success.</p>
 
 		<p>The Drupal site allowed him to do many thing but he soon discovered that it was time for an update. At that moment Meteor.js was hip and happening so they decided to ride along the Meteor.js train.</p>
@@ -336,22 +336,22 @@ module.exports = [
 
 		<p>GraphQL makes sure you get only what you need. The response depends on the fields that you include to you API call</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 9,
-		title: "Obscure browsers",
-		date: {
-			day: "18",
-			month: "Apr",
-			year: "2017",
-			full: "2017-04-18T16:00",
-		},
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 9,
+        title: "Obscure browsers",
+        date: {
+            day: "18",
+            month: "Apr",
+            year: "2017",
+            full: "2017-04-18T16:00",
+        },
 
-		image: "/img/blog/8.JPG",
-		lead: `<p class="lead">Everything is turning smart these days, so why not a smart house. Niels tries to connect everthing in his house to the internet. During his talk about obscure browsers he gave some tips how to connect anything to the web.</p>`,
-		content: `
+        image: "/img/blog/8.JPG",
+        lead: "<p class=\"lead\">Everything is turning smart these days, so why not a smart house. Niels tries to connect everthing in his house to the internet. During his talk about obscure browsers he gave some tips how to connect anything to the web.</p>",
+        content: `
 		<p class="lead">Everything is turning smart these days, so why not a smart house. Niels tries to connect everthing in his house to the internet. During his talk about obscure browsers he gave some tips how to connect anything to the web.</p>
 
 		<h2>Niels projects</h2>
@@ -371,22 +371,22 @@ module.exports = [
 
 		<p>The iot device should connect to an API set by your server and a computer should make request to the server.</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 9,
-		title: "Your own company by and with CMD",
-		date: {
-			day: "16",
-			month: "May",
-			year: "2017",
-			full: "2017-05-16T16:00",
-		},
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 9,
+        title: "Your own company by and with CMD",
+        date: {
+            day: "16",
+            month: "May",
+            year: "2017",
+            full: "2017-05-16T16:00",
+        },
 
-		image: "/img/blog/9.JPG",
-		lead: `<p class="lead">Nick de Bruin is owner of Lively and gave a talk on how he started Lively. Nick used to be a Communication and Multimedia design student.</p>`,
-		content: `
+        image: "/img/blog/9.JPG",
+        lead: "<p class=\"lead\">Nick de Bruin is owner of Lively and gave a talk on how he started Lively. Nick used to be a Communication and Multimedia design student.</p>",
+        content: `
 		<p class="lead">Nick de Bruin is owner of Lively and gave a talk on how he started Lively. Nick used to be a Communication and Multimedia design student.</p>
 
 		<h2>Everybody can build an app</h2>
@@ -398,20 +398,20 @@ module.exports = [
 		<p>Get all idea’s you have out of your head. Use SCRUM or a similar way of checking on your progress</p>
 
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 10,
-		title: "Interaction Engineer",
-		date: {
-			day: "23",
-			month: "May",
-			year: "2017",
-			full: "2017-05-23T16:00",
-		},
-		image: "/img/blog/10.JPG",
-		lead: `<h2>A basic setup for Internet of Things</h2>
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 10,
+        title: "Interaction Engineer",
+        date: {
+            day: "23",
+            month: "May",
+            year: "2017",
+            full: "2017-05-23T16:00",
+        },
+        image: "/img/blog/10.JPG",
+        lead: `<h2>A basic setup for Internet of Things</h2>
 		<p>To set up your own internet of things project you will need:</p>
 		<ul>
 			<li>IOT devices</li>
@@ -420,7 +420,7 @@ module.exports = [
 			<li>A server</li>
 			<li>And clients</li>
 		</ul>`,
-		content: `
+        content: `
 		<h2>A basic setup for Internet of Things</h2>
 		<p>To set up your own internet of things project you will need:</p>
 
@@ -436,22 +436,22 @@ module.exports = [
 		<h3>And clients</h3>
 		<p>These are the devices that will communicate with the server to send messages.</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 11,
-		title: "Inclusive design",
-		date: {
-			day: "31",
-			month: "May",
-			year: "2017",
-			full: "2017-05-23T16:00",
-		},
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 11,
+        title: "Inclusive design",
+        date: {
+            day: "31",
+            month: "May",
+            year: "2017",
+            full: "2017-05-23T16:00",
+        },
 
-		image: "/img/blog/11.JPG",
-		lead: `<p class="lead">Leonie is a blind developer and gave a talk  about screen readers during the icons</p>`,
-		content: `
+        image: "/img/blog/11.JPG",
+        lead: "<p class=\"lead\">Leonie is a blind developer and gave a talk  about screen readers during the icons</p>",
+        content: `
 		<p class="lead">Leonie is a blind developer and gave a talk  about screen readers during the icons</p>
 
 		<h3>4 things about screen readers</h3>
@@ -475,21 +475,21 @@ module.exports = [
 		You have a choice while people with motoric disabilities don’t
 		Accessibility doesn’t have to be perfect</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 12,
-		title: "Using npm as task runner",
-		date: {
-			day: "10",
-			month: "Jun",
-			year: "2017",
-			full: "2017-06-10T16:00",
-		},
-		image: "",
-		lead: `<p class="lead">I was a bit late on learning Gulp and I am doing my best to let it go, here is why you should do so too.<p>`,
-		content: `
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 12,
+        title: "Using npm as task runner",
+        date: {
+            day: "10",
+            month: "Jun",
+            year: "2017",
+            full: "2017-06-10T16:00",
+        },
+        image: "",
+        lead: "<p class=\"lead\">I was a bit late on learning Gulp and I am doing my best to let it go, here is why you should do so too.<p>",
+        content: `
 		<p class="lead">I was a bit late on learning Gulp and I am doing my best to let it go, here is why you should do so too.<p>
 
 		<p>After I just started getting comfortable with Gulp people told me I should let it go. But, why? Its doing its job well and helping me getting my projects done. I soon discovered that those people were right and this is why.</p>
@@ -524,22 +524,22 @@ module.exports = [
 		<h2>Conclusion</h2>
 		<p>Npm is great, npm scripts can take over task runners. The task runner rely on plugins, which most have an independent npm version anyway. I encourage you to try npm as a task runner, you wont be disappointed.</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 13,
-		title: "Keeping up with the ECMAScripts",
-		date: {
-			day: "10",
-			month: "Jun",
-			year: "2017",
-			full: "2017-06-10T16:00",
-		},
-		image: "",
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 13,
+        title: "Keeping up with the ECMAScripts",
+        date: {
+            day: "10",
+            month: "Jun",
+            year: "2017",
+            full: "2017-06-10T16:00",
+        },
+        image: "",
 
-		lead: `<p class="heading">So Javascript es3000 is around the corner and you don’t even know what version of JavaScript you are writing in, whatever should you do?</p>`,
-		content: `
+        lead: "<p class=\"heading\">So Javascript es3000 is around the corner and you don’t even know what version of JavaScript you are writing in, whatever should you do?</p>",
+        content: `
 		<p class="heading">So Javascript es3000 is around the corner and you don’t even know what version of JavaScript you are writing in, whatever should you do?</p>
 
 		<p>Well you don’t have to do anything and here is why based on some mistakes and misinterpretation I had:</p>
@@ -566,21 +566,21 @@ module.exports = [
 		<h2>Conclusion</h2>
 		<p>Even though you don’t need to  learn the new features of the ECMAscripts, it may come in handy to know some of it. Learn just a bit so you can hang out with the cool kids. So If you want to challenge yourself, learn the ECMAScript versions. Here is a link to get you started <a href="https://webapplog.com/es6/">webapplog</a></p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 14,
-		title: "Realtime web and why you should use it",
-		date: {
-			day: "24",
-			month: "Jun",
-			year: "2017",
-			full: "2017-06-24T16:00",
-		},
-		image: "",
-		lead: `<p class="lead">Realtime web has been around for a long time, enabling connection between multiple devices in realtime. Here is a reason why you should start using this technology.</p>`,
-		content: `
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 14,
+        title: "Realtime web and why you should use it",
+        date: {
+            day: "24",
+            month: "Jun",
+            year: "2017",
+            full: "2017-06-24T16:00",
+        },
+        image: "",
+        lead: "<p class=\"lead\">Realtime web has been around for a long time, enabling connection between multiple devices in realtime. Here is a reason why you should start using this technology.</p>",
+        content: `
 		<p class="lead">Realtime web has been around for a long time, enabling connection between multiple devices in realtime. Here is a reason why you should start using this technology.</p>
 
 		<h2>What is realtime web</h2>
@@ -612,21 +612,21 @@ module.exports = [
 		<h2>Conclusion</h2>
 		<p>Realtime web is an interesting web technology that opens roads to creativity. By using RTW on your products you will receive instant responses to your requests.</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
-	{
-		id: 15,
-		title: "Static website FTW",
-		date: {
-			day: "25",
-			month: "Jun",
-			year: "2017",
-			full: "2017-06-24T16:00",
-		},
-		image: "",
-		lead: `<p class="lead">During a project I received feedback of from a tutor. He told me: “A server is not needed for this specific project, you could use a service like Travis to build static pages”. My curiosity rose and I decided to do some further research on this.</p>`,
-		content: `
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
+    {
+        id: 15,
+        title: "Static website FTW",
+        date: {
+            day: "25",
+            month: "Jun",
+            year: "2017",
+            full: "2017-06-24T16:00",
+        },
+        image: "",
+        lead: "<p class=\"lead\">During a project I received feedback of from a tutor. He told me: “A server is not needed for this specific project, you could use a service like Travis to build static pages”. My curiosity rose and I decided to do some further research on this.</p>",
+        content: `
 		<p class="lead">During a project I received feedback of from a tutor. He told me: “A server is not needed for this specific project, you could use a service like Travis to build static pages”. My curiosity rose and I decided to do some further research on this.</p>
 
 		<h2>What is a static website generator</h2>
@@ -692,8 +692,8 @@ module.exports = [
 </table>
 <br>
 		`,
-		author: "Elton Gonçalves Gomes",
-		link: function(){return "/blog/"+this.id;}
-	},
+        author: "Elton Gonçalves Gomes",
+        link: function(){return "/blog/"+this.id;}
+    },
 
 ];

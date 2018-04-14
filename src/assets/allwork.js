@@ -4,13 +4,23 @@ module.exports = [
         urlTitle: "medialab",
         image_small: "/static/medialab/medialab-small.jpg",
         image: "/static/medialab/medialab.jpg",
-		image_list: [
-			{title: "Homepage highfi design", link: "/static/medialab/home.jpg"},
-			{title: "Categorie highfi design", link: "/static/medialab/categorie.jpg"},
-			{title: "Detail highfi design", link: "/static/medialab/devices.jpg"},
-			{title: "FAQ highfi design", link: "/static/medialab/faq.jpg"}
-		],
-        summary: "Medialab is a support/FAQ page build for Medialab.co. This website is built with Wordpress and gives the owner the ability to manage the website's content",
+        image_list: [
+            {
+                title: "Homepage highfi design",
+                link: "/static/medialab/home.jpg"
+            },
+            {
+                title: "Categorie highfi design",
+                link: "/static/medialab/categorie.jpg"
+            },
+            {
+                title: "Detail highfi design",
+                link: "/static/medialab/devices.jpg"
+            },
+            { title: "FAQ highfi design", link: "/static/medialab/faq.jpg" }
+        ],
+        summary:
+            "Medialab is a support/FAQ page build for Medialab.co. This website is built with Wordpress and gives the owner the ability to manage the website's content",
         content: `
         <h3>About Medialab</h3>
         <p>Medialab is an online sharing platform started in Amsterdam 2007. They focus on storing, transferring a sharing media online. The support page of Medialab allows people to contact Medialab or view frequently asked questions. </p>
@@ -24,20 +34,26 @@ module.exports = [
             <li>Implement the found research</li>
             <li>Present to client</li>
         </ol>`,
-		client: "Medialab.co",
+        client: "Medialab.co",
         author: "Elton Gonçalves Gomes",
         externalLink: "http://support.medialab.co/",
-        code_link: "",
+        code_link: ""
     },
     {
         title: "Funda serverside",
         urlTitle: "funda-serverside",
-        image_small: "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png",
-        image: "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png",
-		image_list: [
-		"https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png"],
-        summary: "Funda server-side is a site optimization audit done for Funda.nl. Series of test were done to illustrate how the current site could be optimized",
-        content: `Funda server-side is an server-side application that runs on Node.js + Express. This project was built to illustrate a few performance patterns that could optimize the speed of the current Funda website. Funda server-side is based on the existing <a href="www.funda.nl">Funda site</a>.
+        image_small:
+            "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png",
+        image:
+            "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png",
+        image_list: [
+            "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png"
+        ],
+        summary:
+            "Funda server-side is a site optimization audit done for Funda.nl. Series of test were done to illustrate how the current site could be optimized",
+        content: `
+        <h3>About Funda server-side</h3>
+        Funda server-side is an server-side application that runs on Node.js + Express. This project was built to illustrate a few performance patterns that could optimize the speed of the current Funda website. Funda server-side is based on the existing <a href="www.funda.nl">Funda site</a>.
 
 		<h3>What does it do</h3>
 		<p>Funda server-side allows users to search and get information on houses in the Netherlands that are registered on Funda. </p>
@@ -51,21 +67,29 @@ module.exports = [
             <li>I didn't succeed on making the images smaller, but I did manage to get a higher score on Google's <a href="https://developers.google.com/speed/pagespeed/insights/?hl=nl">PageSpeed insights</a> for mobile. </li>
 		<p>There isn't any live version but the code can be viewed on GitHub. </p>`,
         author: "Elton Gonçalves Gomes",
-		client: "Free project",
+        client: "Free project",
         colaborators: "",
         externalLink: "https://github.com/eltongonc/funda_serverside",
-        code_link: "https://github.com/eltongonc/funda_serverside",
+        code_link: "https://github.com/eltongonc/funda_serverside"
     },
     {
         title: "Soundcloud explorer",
         urlTitle: "soundcloud-explorer",
-		image_small: "/static/soundcloud_explorer/soundcloud_exp-small.jpg",
+        image_small: "/static/soundcloud_explorer/soundcloud_exp-small.jpg",
         image: "/static/soundcloud_explorer/soundcloud_exp.jpg",
-		image_list: [
-			{title: "Soundcloud explorer homepage", link: "/static/soundcloud_explorer/soundcloud_exp-small.jpg"},
-			{title: "Flowchart of the app", link: "https://camo.githubusercontent.com/6b4f472972d7c7e50bd9fefd20e834791a8f7c6b/68747470733a2f2f656c746f6e676f6e632e6769746875622e696f2f7765625f6170705f66726f6d5f736372617463682f7765656b332f696d672f666c6f7763686172742e706e67"}
-		],
-        summary: "Soundcloud explorer is a music exploration website build with HTML, CSS and JavaScript. It allows the user to search and play songs that are available on Soundcloud",
+        image_list: [
+            {
+                title: "Soundcloud explorer homepage",
+                link: "/static/soundcloud_explorer/soundcloud_exp-small.jpg"
+            },
+            {
+                title: "Flowchart of the app",
+                link:
+                    "https://camo.githubusercontent.com/6b4f472972d7c7e50bd9fefd20e834791a8f7c6b/68747470733a2f2f656c746f6e676f6e632e6769746875622e696f2f7765625f6170705f66726f6d5f736372617463682f7765656b332f696d672f666c6f7763686172742e706e67"
+            }
+        ],
+        summary:
+            "Soundcloud explorer is a music exploration website build with HTML, CSS and JavaScript. It allows the user to search and play songs that are available on Soundcloud",
         content: `This website uses the Soundcloud API to search and play songs directly on the page. Soundcloud explorer was built as a three-week project during a school assignment. The main focus was to learn Object Oriented Programming JavaScript.
 		<h3>How does it work</h3>
 		<p>This is a basic Single page application that uses JavaScript to get data from an API and navigate through the routes. </p>
@@ -81,22 +105,32 @@ module.exports = [
 		</ul>
 		`,
         author: "Elton Gonçalves Gomes",
-		client: "Free project",
+        client: "Free project",
         externalLink: "http://eltongoncalves.nl/minor",
-        code_link: "https://github.com/eltongonc/web_app_from_scratch",
+        code_link: "https://github.com/eltongonc/web_app_from_scratch"
     },
     {
         title: "Zoku inspire",
         urlTitle: "zoku-inspire",
-		image_small: "/static/zoku/zoku-compressed1.jpg",
-		image: "/static/zoku/zoku.jpg",
-		image_list: [
-			{title: "Join workshop page", link: "/static/zoku/attend.png"},
-			{title: "Big screen workshop  overview", link: "/static/zoku/big-screen.png"},
-			{title: "Big screen workshop datail", link: "/static/zoku/workshop.png"},
-			{title: "Mobile workshop  overview", link: "/static/zoku/mobile-wall.png"}
-		],
-        summary: "Zoku Inspire is a prototype that illustrate the concept of aiding visitors of the Zoku hotel to a social connection in Amsterdam. Hotel guests can use this app to host and attend workshops.",
+        image_small: "/static/zoku/zoku-compressed1.jpg",
+        image: "/static/zoku/zoku.jpg",
+        image_list: [
+            { title: "Join workshop page", link: "/static/zoku/attend.png" },
+            {
+                title: "Big screen workshop  overview",
+                link: "/static/zoku/big-screen.png"
+            },
+            {
+                title: "Big screen workshop datail",
+                link: "/static/zoku/workshop.png"
+            },
+            {
+                title: "Mobile workshop  overview",
+                link: "/static/zoku/mobile-wall.png"
+            }
+        ],
+        summary:
+            "Zoku Inspire is a prototype that illustrate the concept of aiding visitors of the Zoku hotel to a social connection in Amsterdam. Hotel guests can use this app to host and attend workshops.",
         content: `
         <h3>About Zoku</h3>
 		<p>Hotel Zoku is a relative new concept in the hotel industry. Their goal is to bring people together under one roof. It's not just a hotel, it's a place where people can share knowledge, ideas and get to know inspiring people and companies. </p>
@@ -109,40 +143,48 @@ module.exports = [
 		`,
 
         author: "Elton Gonçalves Gomes",
-		client: "Hotel Zoku",
+        client: "Hotel Zoku",
         externalLink: "https://eltongonc.github.io/zoku/",
-        code_link: "https://github.com/eltongonc/zoku",
+        code_link: "https://github.com/eltongonc/zoku"
     },
-	{
-		title: "Drum kit",
-		urlTitle: "drum-kit",
-		image_small: "/static/drumkit/drum-kit-small.jpg",
-		image: "/static/drumkit/drum-kit.jpg",
-		// image_list: [
-		// 	{title: "Soundcloud explorer homepage", link: "/static/soundcloud_exp-small.jpg"},
-		// 	{title: "Flowchart of the app", link: "https://camo.githubusercontent.com/6b4f472972d7c7e50bd9fefd20e834791a8f7c6b/68747470733a2f2f656c746f6e676f6e632e6769746875622e696f2f7765625f6170705f66726f6d5f736372617463682f7765656b332f696d672f666c6f7763686172742e706e67"}
-		// ],
-		summary: "Drum kit is an interactive soundboard. This project was build to illustrate the capabilities of a web browser. At it's minimal the website requires basic HTML and uses browser technology to add layers of enhancements.",
-		content: `
+    {
+        title: "Drum kit",
+        urlTitle: "drum-kit",
+        image_small: "/static/drumkit/drum-kit-small.jpg",
+        image: "/static/drumkit/drum-kit.jpg",
+        // Image_list: [
+        // 	{title: "Soundcloud explorer homepage", link: "/static/soundcloud_exp-small.jpg"},
+        // 	{title: "Flowchart of the app", link: "https://camo.githubusercontent.com/6b4f472972d7c7e50bd9fefd20e834791a8f7c6b/68747470733a2f2f656c746f6e676f6e632e6769746875622e696f2f7765625f6170705f66726f6d5f736372617463682f7765656b332f696d672f666c6f7763686172742e706e67"}
+        // ],
+        summary:
+            "Drum kit is an interactive soundboard. This project was build to illustrate the capabilities of a web browser. At it's minimal the website requires basic HTML and uses browser technology to add layers of enhancements.",
+        content: `
         <h3>About the project</h3>
 		<p>This project is a sequencer that allows users to make sounds with 8 different instruments. The app allows users to interact by using their keyboard keys or mouse.</p>
 		`,
-		author: "Elton Gonçalves Gomes",
-		client: "Free project",
-		externalLink: "https://eltongonc.github.io/drum_kit/public/build",
-		code_link: "https://github.com/eltongonc/drum-kit",
-	},
+        author: "Elton Gonçalves Gomes",
+        client: "Free project",
+        externalLink: "https://eltongonc.github.io/drum_kit/public/build",
+        code_link: "https://github.com/eltongonc/drum-kit"
+    },
     {
         title: "Daskas",
         urlTitle: "daskas",
         image_small: "/static/daskas/daskas-small.jpg",
         image: "/static/daskas/daskas.jpg",
-		image_list: [
-			{title: "Concept 1: Skeuomorphism homepage", link: "/static/daskas/home.jpg"},
-			{title: "Concept 2: Gift generator", link: "/static/daskas/gift-generator.jpg"}
-		],
-		video: "https://player.vimeo.com/video/153789377",
-		summary: "Daskas.nl is a re-designed webshop build for Daskas. With skuemorphism we tried to make a visual representation of the physical shop.",
+        image_list: [
+            {
+                title: "Concept 1: Skeuomorphism homepage",
+                link: "/static/daskas/home.jpg"
+            },
+            {
+                title: "Concept 2: Gift generator",
+                link: "/static/daskas/gift-generator.jpg"
+            }
+        ],
+        video: "https://player.vimeo.com/video/153789377",
+        summary:
+            "Daskas.nl is a re-designed webshop build for Daskas. With skuemorphism we tried to make a visual representation of the physical shop.",
         content: `
         <h3>About Daskas</h3>
         <p>Daskas started as a small glass workshop in 1990 By Rob and Eliane Dashorst in Amsterdam, The Netherlands. As Daskas aged, it became more known and has grown to a unique but well known giftshop at the Haarlemmerstraat in Amsterdam.</p>
@@ -179,9 +221,9 @@ module.exports = [
             <li>Evita Zethof</li>
             <li>Naomi Roos</li>
         </ul>`,
-		client: "Rob Dashorst",
+        client: "Rob Dashorst",
         author: "Elton Gonçalves Gomes",
         externalLink: "http://www.daskas.nl/",
-        code_link: "",
-    },
+        code_link: ""
+    }
 ];

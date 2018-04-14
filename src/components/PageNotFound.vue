@@ -1,13 +1,12 @@
 <template>
 	<main class="errorpage">
-        <Poster name="Oops!" subtitle="It looks like I haven't made this page"></Poster>
+        <Poster :name="page.name" :subtitle="page.subtitle"></Poster>
         <Intro :pageData="pageData"></Intro>
 	</main>
 </template>
 
 <script>
-    import Poster from './partials/Poster';
-    import Intro from './partials/Intro';
+    import { Poster, Intro } from "./partials";
 
     export default {
         components: {
@@ -16,8 +15,12 @@
         },
         data() {
             return {
+                page: {
+                    name: "Oops!",
+                    subtitle: "It looks like I haven't made this page",
+                },
                 pageData: {
-                    title: 'Try one of these pages instead',
+                    title: "Try one of these pages instead",
                     summary: `
                     <nav class="errorpage__nav">
                         <ul>
@@ -29,9 +32,9 @@
                         </ul>
                     </nav>`
                 }
-            }
+            };
         },
-    }
+    };
 </script>
 
 <style lang="scss">
@@ -41,7 +44,6 @@
     $green: #97dcac;
     $dark_grey: #3D3D49;
     $light_grey: #ededed;
-
     $dark_boxshadow: 0 0 10rem -2rem #000;
 
     .errorpage {
@@ -50,17 +52,25 @@
                 padding: 0;
                 list-style: none;
                 li {
+                        text-align: center;
+                        background-color: $green;
+                        margin-bottom: .3rem;
+                        border-radius: .3rem;
+                        transition: .3s;
+                        box-shadow: $dark_boxshadow;
                     a {
-                        display: inline-block;
+                        display: block;
                         font-weight: bold;
                         font-size: 1.3rem;
                         text-decoration: none;
-                        transition: .3s;
-                        color: $red;
-                        margin: .4rem 0;
-                        &:hover {
-                            color: $green;
-                        }
+                        color: $dark_grey;
+                        padding: .5rem;
+                    }
+                    &:last-child {
+                        background-color: $light_grey;
+                    }
+                    &:hover {
+                        background-color: darken($green, 10%);
                     }
                 }
             }
