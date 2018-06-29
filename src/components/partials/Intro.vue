@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss">
-$grid-large: 80rem;
+$grid-large: 80%;
 $grid-medium: 32rem;
 $red: #663231;
 $green: #97dcac;
@@ -111,6 +111,7 @@ $dark_boxshadow: 0 0 10rem -2rem #000;
   @media (max-width: 50em) {
     transform: translateY(0);
     background-color: white;
+    max-width: 100%;
   }
 }
 </style>

@@ -37,7 +37,8 @@ module.exports = [
         client: "Medialab.co",
         author: "Elton Gonçalves Gomes",
         externalLink: "http://support.medialab.co/",
-        code_link: ""
+        code_link: "",
+        tags: ["code", "visual"]
     },
     {
         title: "Funda serverside",
@@ -70,7 +71,8 @@ module.exports = [
         client: "Free project",
         colaborators: "",
         externalLink: "https://github.com/eltongonc/funda_serverside",
-        code_link: "https://github.com/eltongonc/funda_serverside"
+        code_link: "https://github.com/eltongonc/funda_serverside",
+        tags: ["code"]
     },
     {
         title: "Soundcloud explorer",
@@ -107,7 +109,8 @@ module.exports = [
         author: "Elton Gonçalves Gomes",
         client: "Free project",
         externalLink: "http://eltongoncalves.nl/minor",
-        code_link: "https://github.com/eltongonc/web_app_from_scratch"
+        code_link: "https://github.com/eltongonc/web_app_from_scratch",
+        tags: ["code"]
     },
     {
         title: "Zoku inspire",
@@ -145,7 +148,8 @@ module.exports = [
         author: "Elton Gonçalves Gomes",
         client: "Hotel Zoku",
         externalLink: "https://eltongonc.github.io/zoku/",
-        code_link: "https://github.com/eltongonc/zoku"
+        code_link: "https://github.com/eltongonc/zoku",
+        tags: ["code", "visual"]
     },
     {
         title: "Drum kit",
@@ -165,7 +169,8 @@ module.exports = [
         author: "Elton Gonçalves Gomes",
         client: "Free project",
         externalLink: "https://eltongonc.github.io/drum_kit/public/build",
-        code_link: "https://github.com/eltongonc/drum-kit"
+        code_link: "https://github.com/eltongonc/drum-kit",
+        tags: ["code"]
     },
     {
         title: "Daskas",
@@ -224,6 +229,7 @@ module.exports = [
         client: "Rob Dashorst",
         author: "Elton Gonçalves Gomes",
         externalLink: "http://www.daskas.nl/",
-        code_link: ""
+        code_link: "",
+        tags: ["code", "visual"]
     }
 ];

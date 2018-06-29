@@ -53,6 +53,12 @@ export default {
     this.$refs.carousel.on("staticClick", (event, pointer, image) => {
       this.openModal(image);
     });
+
+    document.addEventListener('keyup', (e) => {
+      if (e.keyCode === 27) {
+        this.closeModal();
+      }
+    });
   },
   methods: {
     openModal: function(img) {

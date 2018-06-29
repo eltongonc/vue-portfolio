@@ -41,7 +41,6 @@ export default {
   },
   methods: {
     setup() {
-      console.log("setup");
       this.ctx = this.$refs.canvas.getContext("2d");
 
       // prevents re-adding circles on resize
@@ -68,7 +67,6 @@ export default {
     },
 
     animate() {
-      console.log("animate");
       const mouse = {
         range: 15,
         x: 0,
@@ -93,7 +91,6 @@ export default {
     },
 
     startCanvas() {
-      console.log("startcanvas", this.$refs.canvas);
       // call the settings once
       this.setup();
 
@@ -102,7 +99,6 @@ export default {
     },
 
     resize() {
-      console.log("resize");
       this.$refs.canvas.width = this.$refs.canvas.parentNode.clientWidth;
       this.$refs.canvas.height = this.$refs.canvas.parentNode.clientHeight;
     }
@@ -115,12 +111,10 @@ export default {
       window.addEventListener("resize", this.resize);
       this.resize();
       this.startCanvas();
-      console.log("not about page ");
     }
   },
 
   destroyed() {
-    console.log("before destroyed...");
     window.removeEventListener("resize", this.resize);
   }
 };
