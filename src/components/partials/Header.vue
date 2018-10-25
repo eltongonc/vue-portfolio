@@ -1,13 +1,15 @@
 <template>
   <header class="header">
       <div class="header__inner">
-          <router-link class="header__logo" to="/"><h1>Elton Gonçalves Gomes <small>Frontend Developer</small></h1></router-link>
+          <router-link class="header__logo" to="/">
+            <h1 class="logo__title">Elton Gonçalves Gomes <small class="logo__subtitle">Frontend Developer</small></h1>
+          </router-link>
           <nav class="header__nav">
-              <ul>
-                  <li><router-link to="/" v-on:click.native="switchPage" active-class="nav--active">Home</router-link></li>
-                  <li><router-link to="/about" v-on:click.native="switchPage" active-class="nav--active">About</router-link></li>
-                  <li><router-link to="/portfolio" v-on:click.native="switchPage" active-class="nav--active">Portfolio</router-link></li>
-                  <li class="mobile_only"><a v-on:click="toggleMenu" href="#navigation">Menu</a></li>
+              <ul class="nav__inner">
+                  <li class="nav__item"><router-link to="/" v-on:click.native="switchPage" active-class="nav--active">Home</router-link></li>
+                  <li class="nav__item"><router-link to="/about" v-on:click.native="switchPage" active-class="nav--active">About</router-link></li>
+                  <li class="nav__item"><router-link to="/portfolio" v-on:click.native="switchPage" active-class="nav--active">Portfolio</router-link></li>
+                  <li class="nav__item mobile_only"><a v-on:click="toggleMenu" href="#navigation">Menu</a></li>
               </ul>
           </nav>
           <nav ref="nav" class="header__nav--aside">
@@ -23,9 +25,6 @@
 </template>
 
 <script>
-import { TweenLite as tl } from "gsap";
-import ScrollToPlugin from "gsap/src/uncompressed/plugins/ScrollToPlugin";
-
 export default {
   name: "vueHeader",
   methods: {
@@ -39,7 +38,7 @@ export default {
       menu.classList.toggle("nav--open");
     },
 
-    handleScroll(event) {
+    handleScroll() {
       const header = document.querySelector("header");
       const offset = header.clientHeight - 50;
       if (window.pageYOffset < offset) {
@@ -48,45 +47,46 @@ export default {
         header.classList.add("header--filled");
       }
     },
+    watch: {
+        'this.$route.params.id': function (id) {
+            console.log("blablalba");
+        }
+      },
 
     switchPage(e) {
       e.preventDefault();
-
-      const menu = this.$refs.nav;
-      menu.classList.remove("nav--open");
+      this.$refs.nav.classList.remove("nav--open");
     }
   },
-  // VUE MOUNTED
+
   mounted() {
-    if (window.location.pathname !== "/") {
-      const header = document.querySelector("header");
+    const header = document.querySelector("header");
+
+    // add a filled background on pages that don't have a picture background
+    if (this.$route.name !=="About") {
+      window.addEventListener("scroll", this.handleScroll);
+    } else {
       header.classList.add("header--filled");
     }
 
-    const menu = this.$refs.nav;
-    menu.classList.remove("nav--open");
-  },
-  // VUE UPDATED
-  updated() {
-    const menu = this.$refs.nav;
-    menu.classList.remove("nav--open");
+    // Hide the mobile nav menu
+    this.$refs.nav.classList.remove("nav--open");
   },
 
-  // VUE CREATED
-  created() {
-    if (window.location.pathname === "/") {
-      window.addEventListener("scroll", this.handleScroll);
+  updated() {
+    this.$refs.nav.classList.remove("nav--open");
+
+    if (window.location.pathname !=="/about") {
+      header.classList.remove("header--filled");
+    } else {
+      header.classList.add("header--filled");
     }
   },
 
-  // VUE DESTROYED
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $grid-large: 80rem;
 $red: #663231;
 $green: #97dcac;
@@ -100,30 +100,29 @@ $dark_grey: #3d3d49;
   width: 100%;
   transition: 0.3s;
   z-index: 9;
-  a {
-    text-decoration: none;
-  }
   .header__inner {
     max-width: $grid-large;
     margin: 0 auto;
     display: flex;
     padding: 0.5rem 1rem;
-    h1 {
-      color: $green;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      font-weight: bold;
-      text-align: left;
-      small {
-        font-size: 1rem;
-        color: #aaa;
+    .header__logo {
+      .logo__title {
+        color: $green;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: left;
+        .logo__subtitle {
+          font-size: 1rem;
+          color: #aaa;
+        }
       }
     }
     .header__nav {
       width: 100%;
       height: inherit;
       display: flex;
-      ul {
+      .nav__inner {
         box-sizing: border-box;
         width: 100%;
         display: flex;
@@ -133,7 +132,7 @@ $dark_grey: #3d3d49;
         padding: 0;
         margin: 0;
         list-style: none;
-        li {
+        .nav__item {
           margin: 1rem;
           a {
             display: block;

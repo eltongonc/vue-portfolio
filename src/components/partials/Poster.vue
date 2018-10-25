@@ -1,11 +1,11 @@
 <template>
-    <section :class="['poster', name? 'poster__page': 'poster__home' ]" :style="'background-image:url('+background+')'">
+    <section :class="['poster poster--' + className, title? 'poster__page': 'poster__home' ]" :style="'background-image:url('+background+')'">
         <div class="poster__inner">
-            <div v-if="!name" class="poster__intro">
+            <div v-if="!title" class="poster__intro">
                 <h1>Hi, I'm Elton Gonçalves Gomes</h1>
             </div>
             <figcaption v-else class="poster__intro">
-                <h1>{{name}}</h1>
+                <h1>{{title}}</h1>
                 <h2>{{subtitle}}</h2>
             </figcaption>
         </div>
@@ -18,11 +18,14 @@ import { Circle } from "../../classes/Circle";
 
 export default {
   name: "Poster",
-  props: ["background", "name", "summary", "subtitle"],
+  props: ["title", "summary", "subtitle", "background"],
   data() {
     return {
       canvas: document.getElementById("canvas"),
+      animating: false,
+      animationFrame: null,
       ctx: null,
+      className: this.$route.name.toLowerCase(),
       circles: {
         container: [],
         amount: 100
@@ -87,27 +90,37 @@ export default {
       });
 
       // creates a loop for this animate function
-      requestAnimationFrame(this.animate);
+      this.animationFrame = requestAnimationFrame(this.animate);
     },
 
     startCanvas() {
-      // call the settings once
-      this.setup();
+      if (this.animating) {
+        // call the settings once
+        this.setup();
+  
+        // start the animation loop
+        this.animate();
+      }
+    },
 
-      // start the animation loop
-      this.animate();
+    stopCanvas() {
+      cancelAnimationFrame(this.animationFrame);
     },
 
     resize() {
       this.$refs.canvas.width = this.$refs.canvas.parentNode.clientWidth;
       this.$refs.canvas.height = this.$refs.canvas.parentNode.clientHeight;
-    }
+    },
+    
   },
 
   mounted() {
-    // console.log(this.$refs.canvas);
-
-    if (this.$refs.canvas !== undefined) {
+    console.log(this.$route);
+    
+    const canvas = document.getElementById('canvas');
+    
+    if (canvas && !this.animating) {
+      this.animating = true;
       window.addEventListener("resize", this.resize);
       this.resize();
       this.startCanvas();
@@ -116,6 +129,8 @@ export default {
 
   destroyed() {
     window.removeEventListener("resize", this.resize);
+    this.animating = false;
+    this.stopCanvas();
   }
 };
 </script>
@@ -133,7 +148,12 @@ $dark_grey: #3d3d49;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center left;
-
+  &.poster--work {
+    height: 28rem;
+  }
+  &.poster--about {
+    height: 28rem;
+  }
   canvas {
     position: absolute;
     top: 0;

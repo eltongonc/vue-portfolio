@@ -2,7 +2,7 @@
   <div id="app">
     <vueHeader></vueHeader>
     <router-view></router-view>
-	<vueFooter></vueFooter>
+    <vueFooter></vueFooter>
   </div>
 </template>
 
@@ -85,5 +85,9 @@ li {
 
 .hidden {
   display: none;
+}
+
+a {
+  text-decoration: none;
 }
 </style>

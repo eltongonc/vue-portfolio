@@ -4,8 +4,8 @@
 
 <!-- TOC -->
 
-* [vue-portfolio](#vue-portfolio)
-  * [Build Setup](#build-setup)
+- [vue-portfolio](#vue-portfolio)
+    - [Build Setup](#build-setup)
 
 <!-- /TOC -->
 
@@ -16,7 +16,7 @@
 npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+npm start
 
 # build for production with minification
 npm run build

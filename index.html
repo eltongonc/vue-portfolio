@@ -35,9 +35,99 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128074406-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-128074406-1');
+    </script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <noscript>
+        <style>
+          html,body {
+            margin: 0;
+            padding: 0;
+          }
+
+          .noscript {
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #3d3d49;
+          }
+
+          .noscript__inner {
+            padding: 3em 5em;
+            background-color: white;
+            margin: 0 auto;
+            border-radius: 0.3rem;
+            box-shadow: 0 0 10rem -2rem #000;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+          }
+
+          .text {
+            max-width: 32em;
+            margin: 0 auto;
+            color: #333;
+            padding: 2rem;
+          }
+          
+          ul {
+            padding: 0;
+            margin-top: 1.5rem;
+          }
+          li {
+            list-style: none;
+          }
+          .text__links {
+            font-style: normal;
+            color: #663231;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            padding: .3rem 0;
+            display: block;
+          }
+          .text__links:hover {
+              color: #97dcac;
+          }
+        </style>
+        <div class="noscript">
+          <div class="noscript__inner" style="">
+            <div class="text">
+              <h1>Elton Gonçalves Gomes</h1>
+              <p>Hi, this is my portfolio</p>
+              <p>For a better experience enable Javascript</p>
+              <nav>
+                <ul>
+                  <li>
+                      <a class="text__links" href="mailto:eltongoncalves@gmail.com">Send me an email</a>
+                  </li>
+                  <li>
+                      <a class="text__links" href="https://github.com/eltongonc">
+                      View my work</a>
+                  </li>
+                  <li>
+                    <a class="text__links" href="https://www.linkedin.com/in/elton-gon%C3%A7alves-gomes-b415a3105/">
+                    Get to know me better</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </navscript>
+
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>

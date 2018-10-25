@@ -1,21 +1,19 @@
 <template>
     <section id="portfolio" class="portfolio">
-
-        <h2 class="title" v-if="amount">Portfolio</h2>
+        <!-- show only if amount is set -->
+        <h2 class="title" v-if="amount">Latest projects</h2>
 
         <!-- if an amount is not set -->
         <div class="portfolio__inner" v-if="!amount">
-
             <!-- filtes for the items -->
             <div class="item__filter">
-                <button id="toggle_all" v-on:click="filterItems" class="filter__button filter__button--active">All</button>
-                <button id="toggle_code" v-on:click="filterItems" class="filter__button">Code</button>
+                <button id="toggle_code" v-on:click="filterItems" class="filter__button filter__button--active">Code</button>
                 <button id="toggle_visual" v-on:click="filterItems" class="filter__button">Visual</button>
             </div>
 
             <!-- the portfolio items -->
             <div class="portfolio__items">
-              <a v-for="(item, index) in items" :key="index" class="item" :href="`/work/${item.urlTitle}`">
+              <a v-for="(item, index) in items" :key="index" class="item" :href="`/portfolio/${item.urlTitle}`">
                   <div class="item__image" :style="`background-image: url(${item.image_small})`"></div>
                   <div class="item__summary">
                       <h3 class="summary__title">{{item.title}}</h3>
@@ -38,9 +36,9 @@
         <!-- if an amount is set. Show this -->
         <div class="portfolio__inner" v-else>
             
-            <!-- the portfolio items -->
+            <!-- portfolio items -->
             <div class="portfolio__items">
-              <a v-for="(item, index) in items.slice(0, amount)" :key="index" class="item" :href="`/portfolio/${item.urlTitle}`">
+              <a v-for="(item, key) in items.slice(0, amount)" :key="key" class="item" :href="`/portfolio/${item.urlTitle}`">
                   <div class="item__image" :style="`background-image: url(${item.image_small})`"></div>
                   <div class="item__summary">
                       <h3 class="summary__title">{{item.title}}</h3>
@@ -54,7 +52,6 @@
               </a>
             </div>
         </div><!--End portfolio__inner else-->
-
     </section>
 </template>
 
@@ -73,14 +70,7 @@ export default {
     filterItems(e) {
       const button = e.target;
       const selector = button.id.split("_")[1];
-      this.items = workList.reduce((result, item, key) => {
-        if (selector === "all") {
-          result.push(item)
-        } else if(item.tags.includes(selector)){
-          result.push(item)
-        }
-        return result;
-      }, []);
+      this.items = workList.filter((item) => item.tags.includes(selector) );
 
       // update selected class
       document.querySelectorAll(".filter__button").forEach(element => {
@@ -92,7 +82,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $grid-large: 65rem;
 $grid-medium: 50rem;
 $red: #663231;
@@ -178,6 +168,11 @@ $dark_boxshadow_medium: 0 0 5rem -2rem #000;
             text-align: left;
             padding: 0 2rem;
           }
+          &:last-child {
+            .summary__text {
+              text-align: center;
+            }
+          }
           h3,
           p {
             max-width: $grid-medium;
@@ -193,7 +188,7 @@ $dark_boxshadow_medium: 0 0 5rem -2rem #000;
           min-width: 30rem;
         }
         &:last-child {
-          min-width: 2rem;
+          min-width: 100%;
         }
         &:hover {
           .item__image,

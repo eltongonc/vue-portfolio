@@ -31,7 +31,7 @@ export default {
         pageDots: false,
         groupCells: false,
         autoPlay: true,
-        prevNextButtons: false
+        prevNextButtons: false,
       },
       descriptionIndex: 0,
       skillDesc: [],
@@ -40,12 +40,12 @@ export default {
   },
 
   mounted() {
-    // Update the desciption of the selected skill
-    this.$refs.carousel.on("dragEnd", () => {
+    // Update the desciption of the selected skill when dragged
+    this.$refs.carousel.on("scroll", () => {
       this.descriptionIndex = this.$refs.carousel.selectedIndex();
     });
 
-    // Update the desciption of the selected skill
+    // Update the desciption of the selected skill when a skill is manually selected
     this.$refs.carousel.on("staticClick", (event, pointer, el, index) => {
       // If clicked area is not a html element return
       if (!el) return;
@@ -89,7 +89,6 @@ $light_grey: #ededed;
   padding: 5em 0;
   width: 100%;
   position: relative;
-  background: $light_grey;
   transition: 3s;
 
   .subtitle {
