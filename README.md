@@ -1,15 +1,19 @@
-# vue-portfolio
+![Poster](./static//poster.jpg)
 
-> A vue portfolio
+# Vue Portfolio
+
+My latest portfolio build with the Progressive
+JavaScript Framework [Vuejs](https://vuejs.org)
 
 <!-- TOC -->
 
-- [vue-portfolio](#vue-portfolio)
-    - [Build Setup](#build-setup)
+- [Vue Portfolio](#vue-portfolio)
+    - [Basic Commands](#basic-commands)
+    - [Live site](#live-site)
 
 <!-- /TOC -->
 
-## Build Setup
+## Basic Commands
 
 ```bash
 # install dependencies
@@ -23,6 +27,16 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# generate critical css based on a width and height above the fold
+criticalcss
+
+# lints the project to checks errors
+lint
+
+# deploys a live dev server after you run npm start
+ngrok
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Live site
+To view my portfolio please visit [https://eltongoncalves.nl](https://eltongoncalves.nl).

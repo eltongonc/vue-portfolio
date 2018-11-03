@@ -1,26 +1,26 @@
 <template>
 	<main class="errorpage">
-        <Poster :title="page.name" :subtitle="page.subtitle"></Poster>
+        <PosterCanvas :title="page.title" :subtitle="page.subtitle"></PosterCanvas>
         <Intro :pageData="pageData"></Intro>
 	</main>
 </template>
 
 <script>
-    import { Poster, Intro } from '../partials';
+    import { PosterCanvas, Intro } from '../partials';
 
     export default {
         components: {
-            Poster,
+            PosterCanvas,
             Intro,
         },
         data() {
             return {
                 page: {
-                    name: "Oops!",
+                    title: "Oops!",
                     subtitle: "It looks like I haven't made this page",
                 },
                 pageData: {
-                    title: "Try one of these pages instead",
+                    title: "Try one of these pages",
                     summary: `
                     <nav class="errorpage__nav">
                         <ul>

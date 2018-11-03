@@ -155,10 +155,12 @@ $light_grey: #ededed;
   }
 
   @media (max-width: 50em) {
+    padding-top: 0;
     .subtitle {
       padding: 0;
-      max-width: $grid-medium;
+      max-width: 18em;
       text-align: left;
+      margin: 1em auto;
     }
   }
 }

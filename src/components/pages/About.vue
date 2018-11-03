@@ -3,9 +3,9 @@
 		<Poster :background="page.background" :title="page.name"></Poster>
         <section class="about__content">
             <div class="content__photo">
-              <img class="photo" :src="pageData.img" alt="Photo of me">
+              <img class="photo" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
             </div>
-            <div class="content__subtitle subtitle" v-html="pageData.text"></div>
+            <div class="content__subtitle" v-html="pageData.text"></div>
         </section>
 	</main>
 </template>
@@ -49,12 +49,14 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      flex-direction: row-reverse;
       .content__photo {
         width: 20em;
         height: 20em;
         overflow: hidden;
         border-radius: .3em;
         box-shadow: $dark_boxshadow;
+        margin-left: 5rem;
         .photo {
           height: 100%;
         }
@@ -64,8 +66,22 @@
         margin-bottom: 0;
         padding-top: 0;
         padding-bottom: 0;
+        text-align: left;
+        max-width: 32rem;
         p {
           margin-top: 0;
+        }
+      }
+    }
+    @media (max-width: 50rem) {
+      .about__content {
+        flex-wrap: wrap;
+        padding-top: 4em;
+        .content__photo {
+          margin: 0;
+          margin-bottom: 4em;
+          width: 15em;
+          height: 15em;
         }
       }
     }

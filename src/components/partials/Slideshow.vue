@@ -1,16 +1,16 @@
 <template>
 	<section class="slideshow">
-        <flickity class="carousel" ref="carousel" :options="flickOptions" >
-            <div v-for="(item, index) in allImgs" :key="index" class="carousel-cell">
-                <a><img :src="item.link" :alt="item.title"></a>
-            </div>
-        </flickity>
+    <flickity class="carousel" ref="carousel" :options="flickOptions" >
+      <div v-for="(item, index) in allImgs" :key="index" class="carousel-cell">
+        <a><img :src="item.link" :alt="item.title"></a>
+      </div>
+    </flickity>
 
-        <div class="modal">
-            <button class="modal__button" v-on:click="closeModal">X</button>
-            <div class="modal__content"></div>
-            <div class="modal__overlay"></div>
-        </div>
+    <div class="modal">
+      <button class="modal__button" v-on:click="closeModal">X</button>
+      <div class="modal__content"></div>
+      <div class="modal__overlay"></div>
+    </div>
 	</section>
 </template>
 

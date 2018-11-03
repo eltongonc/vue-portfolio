@@ -1,12 +1,12 @@
 <template>
 	<main>
-        <Poster :title="page.name"></Poster>
+        <PosterCanvas :title="page.name"></PosterCanvas>
 		<Portfolio></Portfolio>
 	</main>
 </template>
 
 <script>
-	import { Poster, Portfolio, Intro } from '../partials';
+	import { PosterCanvas, Portfolio, Intro } from '../partials';
 
 	export default {
 	    data(){
@@ -23,7 +23,7 @@
 	    },
 	    components:{
 	        Portfolio,
-	        Poster,
+	        PosterCanvas,
 	        Intro,
 	    }
 	};

@@ -103,8 +103,15 @@ $dark_boxshadow: 0 0 10rem -2rem #000;
     display: block;
     height: 100%;
     .intro__inner {
+    box-shadow: none;
       transform: translateY(0);
       max-width: 100%;
+      padding: 2em 0;
+      .intro__text {
+        .text__title {
+          text-align: left;
+        }
+      }
     }
   }
 }

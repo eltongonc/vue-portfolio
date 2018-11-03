@@ -1,6 +1,6 @@
 <template>
 	<main :class="className">
-		<Poster></Poster>
+		<PosterCanvas></PosterCanvas>
 		<Intro></Intro>
 		<Skills></Skills>
         <Portfolio :amount="portfolioCount"></Portfolio>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import { Poster, Portfolio, Intro, Skills } from '../partials';
+    import { PosterCanvas, Portfolio, Intro, Skills } from '../partials';
 
     export default {
         data(){
@@ -19,7 +19,7 @@
         },
         components:{
             Portfolio,
-            Poster,
+            PosterCanvas,
             Skills,
             Intro,
         }

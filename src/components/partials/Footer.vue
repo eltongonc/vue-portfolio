@@ -1,32 +1,34 @@
 <template>
-	<footer id="navigation">
-        <h4>Copyright &copy; {{copyright}}</h4>
+	<footer id="navigation" class="footer">
+    <div class="footer__inner">
+        <h4 class="footer__copyright">Copyright &copy; {{new Date().getUTCFullYear() +  ' Elton Gonçalves Gomes, Amsterdam'}}</h4>
+
         <div class="contact">
-            <section class="contact--mobile">
-                <nav class="contact__nav">
-        			<ul>
-                <li v-if="!this.$route.path.match('/')">
-                    <router-link to="/">
-                        <svg viewBox="0 0 27.02 27.02" xml:space="preserve">
-                            <g>
-                                <path d="M3.674,24.876c0,0-0.024,0.604,0.566,0.604c0.734,0,6.811-0.008,6.811-0.008l0.01-5.581   c0,0-0.096-0.92,0.797-0.92h2.826c1.056,0,0.991,0.92,0.991,0.92l-0.012,5.563c0,0,5.762,0,6.667,0   c0.749,0,0.715-0.752,0.715-0.752V14.413l-9.396-8.358l-9.975,8.358C3.674,14.413,3.674,24.876,3.674,24.876z"/>
-                                <path d="M0,13.635c0,0,0.847,1.561,2.694,0l11.038-9.338l10.349,9.28c2.138,1.542,2.939,0,2.939,0   L13.732,1.54L0,13.635z"/>
-                                <polygon points="23.83,4.275 21.168,4.275 21.179,7.503 23.83,9.752  "/>
-                            </g>
-                        </svg>
-                    Home</router-link>
+          <section class="contact--mobile">
+            <nav class="contact__nav">
+              <ul class="nav__inner">
+                <li v-if="homeButton">
+                  <router-link to="/">
+                      <svg viewBox="0 0 27.02 27.02" xml:space="preserve">
+                          <g>
+                              <path d="M3.674,24.876c0,0-0.024,0.604,0.566,0.604c0.734,0,6.811-0.008,6.811-0.008l0.01-5.581   c0,0-0.096-0.92,0.797-0.92h2.826c1.056,0,0.991,0.92,0.991,0.92l-0.012,5.563c0,0,5.762,0,6.667,0   c0.749,0,0.715-0.752,0.715-0.752V14.413l-9.396-8.358l-9.975,8.358C3.674,14.413,3.674,24.876,3.674,24.876z"/>
+                              <path d="M0,13.635c0,0,0.847,1.561,2.694,0l11.038-9.338l10.349,9.28c2.138,1.542,2.939,0,2.939,0   L13.732,1.54L0,13.635z"/>
+                              <polygon points="23.83,4.275 21.168,4.275 21.179,7.503 23.83,9.752  "/>
+                          </g>
+                      </svg>
+                  Home</router-link>
                 <li>
-                    <a href="#app" v-on:click="scrollToTop">
-                        <svg viewBox="0 0 284.929 284.929" xml:space="preserve">
-                            <g>
-                                <g>
-                                    <path d="M17.128,167.872c1.903,1.902,4.093,2.854,6.567,2.854c2.474,0,4.664-0.952,6.567-2.854L142.466,55.666l112.208,112.206    c1.902,1.902,4.093,2.854,6.563,2.854c2.478,0,4.668-0.952,6.57-2.854l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.563    c0-2.475-0.951-4.665-2.847-6.567L149.028,7.419c-1.901-1.906-4.088-2.853-6.562-2.853s-4.665,0.95-6.567,2.853L2.856,140.464    C0.95,142.367,0,144.554,0,147.034c0,2.468,0.953,4.658,2.856,6.561L17.128,167.872z" />
-                                    <path d="M149.028,117.055c-1.901-1.906-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,250.1    C0.95,252.003,0,254.192,0,256.67c0,2.472,0.953,4.661,2.856,6.564l14.272,14.276c1.903,1.903,4.093,2.848,6.567,2.848    c2.474,0,4.664-0.951,6.567-2.848l112.204-112.209l112.208,112.209c1.902,1.903,4.093,2.852,6.563,2.852    c2.478,0,4.668-0.948,6.57-2.852l14.274-14.276c1.902-1.903,2.847-4.093,2.847-6.564c0-2.478-0.951-4.667-2.847-6.57    L149.028,117.055z" />
-                                </g>
-                            </g>
-                        </svg>
-                        Back to top
-                    </a>
+                  <a href="#app" v-on:click="scrollToTop">
+                      <svg viewBox="0 0 284.929 284.929" xml:space="preserve">
+                          <g>
+                              <g>
+                                  <path d="M17.128,167.872c1.903,1.902,4.093,2.854,6.567,2.854c2.474,0,4.664-0.952,6.567-2.854L142.466,55.666l112.208,112.206    c1.902,1.902,4.093,2.854,6.563,2.854c2.478,0,4.668-0.952,6.57-2.854l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.563    c0-2.475-0.951-4.665-2.847-6.567L149.028,7.419c-1.901-1.906-4.088-2.853-6.562-2.853s-4.665,0.95-6.567,2.853L2.856,140.464    C0.95,142.367,0,144.554,0,147.034c0,2.468,0.953,4.658,2.856,6.561L17.128,167.872z" />
+                                  <path d="M149.028,117.055c-1.901-1.906-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,250.1    C0.95,252.003,0,254.192,0,256.67c0,2.472,0.953,4.661,2.856,6.564l14.272,14.276c1.903,1.903,4.093,2.848,6.567,2.848    c2.474,0,4.664-0.951,6.567-2.848l112.204-112.209l112.208,112.209c1.902,1.903,4.093,2.852,6.563,2.852    c2.478,0,4.668-0.948,6.57-2.852l14.274-14.276c1.902-1.903,2.847-4.093,2.847-6.564c0-2.478-0.951-4.667-2.847-6.57    L149.028,117.055z" />
+                              </g>
+                          </g>
+                      </svg>
+                      Back to top
+                  </a>
                 </li>
         				<li>
                     <a href="mailto:eltongoncalves@gmail.com">
@@ -74,18 +76,18 @@
             </section>
             <section class="contact--desktop">
                 <h4>Contact me on</h4>
-                  <span aria-hidden="true">
-                    <svg viewBox="0 0 236.4 89" xml:space="preserve">
-                    <path d="M3.8,33.1C35.7,42.8,67,46.1,96.7,49.8c29.6,3.8,59.9,4.7,90.7,2.6c-10.4,5.9-21.4,13.5-33.1,23
-                    	c-1.6,1.3-2.5,3-2.7,5.1c-0.2,2.1,0.4,3.9,1.7,5.6c1.3,1.6,3,2.6,5.1,2.9c2.1,0.3,3.9-0.2,5.4-1.5c13.8-11.3,26.9-19.9,39.3-26
-                    	c11.5-5.8,18.8-9.4,21.8-10.8c0.2,0,0.4,0,0.5-0.1l1-0.1c0.8-0.1,1.4-0.2,1.6-0.3c1.9-0.3,3.5-0.8,4.7-1.7c3.2-2.3,4.3-5.3,3.4-9
-                    	c-0.8-3.6-3-6-6.5-6.9c-1.4-0.5-3-0.6-4.8-0.4l-2.6,0.5c-4.7-0.9-8.6-1.7-11.6-2.5c-17.3-4.8-32.3-14-45.1-27.6
-                    	c-1.5-1.5-3.2-2.4-5.3-2.4c-2.1-0.1-3.9,0.6-5.4,2c-1.5,1.4-2.2,3.2-2.2,5.3c0,2.1,0.7,3.9,2.2,5.5c10,10.6,20.9,18.7,32.8,24.4
-                    	c-30.1,2.1-59.6,1.3-88.5-2.2c-28.4-3.6-59.2-6.7-91-16.4C0.7,16.6-3.4,31.1,3.8,33.1z"/>
-                    </svg>
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 236.4 89" xml:space="preserve">
+                  <path d="M3.8,33.1C35.7,42.8,67,46.1,96.7,49.8c29.6,3.8,59.9,4.7,90.7,2.6c-10.4,5.9-21.4,13.5-33.1,23
+                    c-1.6,1.3-2.5,3-2.7,5.1c-0.2,2.1,0.4,3.9,1.7,5.6c1.3,1.6,3,2.6,5.1,2.9c2.1,0.3,3.9-0.2,5.4-1.5c13.8-11.3,26.9-19.9,39.3-26
+                    c11.5-5.8,18.8-9.4,21.8-10.8c0.2,0,0.4,0,0.5-0.1l1-0.1c0.8-0.1,1.4-0.2,1.6-0.3c1.9-0.3,3.5-0.8,4.7-1.7c3.2-2.3,4.3-5.3,3.4-9
+                    c-0.8-3.6-3-6-6.5-6.9c-1.4-0.5-3-0.6-4.8-0.4l-2.6,0.5c-4.7-0.9-8.6-1.7-11.6-2.5c-17.3-4.8-32.3-14-45.1-27.6
+                    c-1.5-1.5-3.2-2.4-5.3-2.4c-2.1-0.1-3.9,0.6-5.4,2c-1.5,1.4-2.2,3.2-2.2,5.3c0,2.1,0.7,3.9,2.2,5.5c10,10.6,20.9,18.7,32.8,24.4
+                    c-30.1,2.1-59.6,1.3-88.5-2.2c-28.4-3.6-59.2-6.7-91-16.4C0.7,16.6-3.4,31.1,3.8,33.1z"/>
+                  </svg>
                 </span>
                 <nav class="contact__nav">
-                    <ul>
+                    <ul class="nav__inner">
                         <li>
                             <a href="https://github.com/eltongonc">
                                 <svg viewBox="0 0 32.6 31.8" xml:space="preserve">
@@ -136,6 +138,7 @@
                 </nav>
             </section>
         </div>
+    </div>
 	</footer>
 </template>
 
@@ -145,11 +148,6 @@ import ScrollToPlugin from "gsap/src/uncompressed/plugins/ScrollToPlugin";
 
 export default {
   name: "Footer",
-  data() {
-    return {
-      copyright: ` ${new Date().getUTCFullYear()} Elton Gonçalves Gomes, Amsterdam`
-    };
-  },
   methods: {
     scrollToTop(e) {
       e.preventDefault();
@@ -158,12 +156,20 @@ export default {
         scrollTo: 0
       });
     }
+  },
+  computed: {
+    homeButton() {
+      return this.$route.name !== 'Home';
+    }
+  },
+  mounted() {
+    
   }
 };
 </script>
 
 <style lang="scss">
-$grid-large: 65rem;
+$grid-large: 80rem;
 $grid-medium: 32rem;
 $red: #663231;
 $green: #97dcac;
@@ -172,86 +178,19 @@ $light_grey: #ededed;
 
 $dark_boxshadow: 0 0 10rem -2rem #000;
 
-footer {
+.footer {
   background: $dark_grey;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-top: 0.1rem solid $green;
   box-shadow: $dark_boxshadow;
-  h4 {
-    width: 100%;
-    text-align: center;
-    color: $light_grey;
-    vertical-align: middle;
-  }
-  svg {
-    width: 2em;
-    margin-right: 0.5em;
-    path,
-    polygon {
-      fill: $green;
-    }
-  }
-
-  .contact {
-    .contact--mobile {
-      .contact__nav {
-        ul {
-          list-style-type: none;
-          padding: 0;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          li {
-            flex-grow: 1;
-            box-shadow: $dark_boxshadow;
-            margin: 0.1em;
-            // width: 100%;
-            display: inline-block;
-            background-color: rgba(151, 220, 172, 0.1);
-            border-radius: 0.3em;
-            overflow: hidden;
-          }
-          a {
-            transition: 0.3s;
-            padding: 0.7rem;
-            color: #663231;
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.7);
-            display: flex;
-            align-items: center;
-            text-align: left;
-            svg {
-              width: 1.3rem;
-            }
-            &:hover,
-            &:active {
-              background-color: rgba($green, 0.5);
-              color: white;
-            }
-          }
-        }
-      }
-    }
-    .contact--desktop {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: 50em) {
-  footer {
+  border-top: 0.1rem solid $green;
+  .footer__inner {
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
-    h4 {
-      width: auto;
-      display: inline;
+    .footer__copyright {
+       color: $light_grey;
+      display: inline-block;
       font-weight: lighter;
     }
-
     .contact {
       .contact--mobile {
         display: none;
@@ -260,35 +199,118 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        height: 100%;
+        color: white;
         h4 {
           margin: 0;
           display: block;
+          font-weight: lighter;
           font-family: "Courgette", cursive;
         }
         span {
           margin-left: 1rem;
+          margin-right: .5rem;
           transform: translateY(30%);
+          svg {
+            width: 2em;
+            path {
+              fill: white;
+            }
+          }
         }
         .contact__nav {
-          ul {
+          .nav__inner {
             margin: 0;
-            padding-left: 0;
+            padding: 0;
+            display: flex;
             li {
               display: inline-block;
-              width: 3rem;
+              width: 2rem;
+              height: 2rem;
               background: none;
+              margin: 0 .2em;
               a {
-                padding: 0.5em;
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
+                height: 100%;
+                display: inline-block;
                 border-radius: 0.3em;
                 transition: 0.3s;
                 svg {
-                  margin: 0.1rem;
+                  height: 100%;
+                  padding: .2em;
+                  box-sizing: border-box;
+                  path {
+                    transition: 0.3s;
+                    fill: $green;
+                  }
                 }
                 &:hover {
                   background-color: $green;
+                  svg {
+                    path {
+                      fill: $dark_grey;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 50em) {
+    .footer__inner {
+      padding: 1rem;
+      flex-wrap: wrap;
+      .contact {
+        width: 100%;
+        .contact--desktop {
+          display: none;
+        }
+        .contact--mobile {
+          display: block;
+          .contact__nav {
+            .nav__inner {
+              list-style-type: none;
+              padding: 0;
+              display: flex;
+              flex-wrap: wrap;
+              li {
+                width: 100%;
+                box-shadow: $dark_boxshadow;
+                margin: 0.1em;
+                display: inline-block;
+                background-color: rgba(151, 220, 172, 0.1);
+                overflow: hidden;
+                &:first-child {
+                  border-radius: 0.3em 0.3em 0 0;
+                }
+                &:last-child {
+                  border-radius: 0 0 0.3em 0.3em;
+                }
+                a {
+                  transition: 0.3s;
+                  padding: 0.7rem;
+                  color: #663231;
+                  text-decoration: none;
+                  color: rgba(255, 255, 255, 0.7);
+                  display: flex;
+                  align-items: center;
+                  text-align: left;
+                  svg {
+                    width: 1.3em;
+                    margin-right: 1em;
+                    margin-left: .2em;
+                    path,
+                    polygon {
+                      fill: $green;
+                    }
+                  }
+                  &:hover,
+                  &:active {
+                    background-color: rgba($green, 0.5);
+                    color: white;
+                  }
                 }
               }
             }

@@ -6,6 +6,7 @@ import Portfolio from "./Portfolio";
 import Poster from "./Poster";
 import Skills from "./Skills";
 import Slideshow from "./Slideshow";
+import PosterCanvas from "./PosterCanvas";
 
 export default {
     Footer,
@@ -14,6 +15,7 @@ export default {
     Portfolio,
     Poster,
     Skills,
-    Slideshow
+    Slideshow,
+    PosterCanvas
 };
 </script>

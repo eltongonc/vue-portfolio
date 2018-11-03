@@ -6,11 +6,11 @@ module.exports = [
         image: "/static/jsclient_builder/jsclient%20builder-form-init.png",
         image_list: [
             {
-                title: "Laptop",
+                title: "A laptop displaying a mockup of the Jsclient builder",
                 link: "/static/jsclient_builder/laptop.png"
             },
             {
-                title: "Form init",
+                title: "The initial page of the jsclient builder displaying an interactive form",
                 link: "/static/jsclient_builder/jsclient%20builder-form-init.png"
             }
         ],
@@ -51,18 +51,21 @@ module.exports = [
         image: "/static/medialab/medialab.jpg",
         image_list: [
             {
-                title: "Homepage highfi design",
+                title: "The first homepage high fidelity design of support.Medialab.co",
                 link: "/static/medialab/home.jpg"
             },
             {
-                title: "Categorie highfi design",
+                title: "An image showing the categorie page",
                 link: "/static/medialab/categorie.jpg"
             },
             {
-                title: "Detail highfi design",
+                title: "Three mockups of high fidelity design on a laptop mobile and tablet",
                 link: "/static/medialab/devices.jpg"
             },
-            { title: "FAQ highfi design", link: "/static/medialab/faq.jpg" }
+            { 
+                title: "A high fidelity design of a Frequently Asked Question page", 
+                link: "/static/medialab/faq.jpg" 
+            }
         ],
         summary:
             "Medialab is a support/FAQ page build for Medialab.co. This website is built with Wordpress and gives the owner the ability to manage the website's content",
@@ -73,7 +76,7 @@ module.exports = [
         <h3>The assignment</h3>
         <blockquote>Research, design, recommend and create a new support page.</blockquote>
         <p>The old design of the site didn’t represent the look-and-feel of Medialab. It had different colors and layout than the corporate website. My assignment was to rebuild the current website to match the identity of the company.</p>
-        <img src="/static/medialab/devices.jpg">,
+        <img width="100%" src="/static/medialab/devices.jpg">,
         <h3>About the project</h3>
         <p>For this project I replaced the old support page with an editted WordPress theme</p>
         <p>The assignment was split into four parts:</p>
@@ -98,7 +101,11 @@ module.exports = [
         image:
             "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png",
         image_list: [
-            "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png"
+            {
+                title: "An image desplaying the search page with a few search results",
+                link: "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png"
+            },
+            
         ],
         summary:
             "Funda server-side is a site optimization audit done for Funda.nl. A series of test were done to illustrate how the current site could be optimized",
@@ -134,11 +141,11 @@ module.exports = [
         image: "/static/soundcloud_explorer/soundcloud_exp.jpg",
         image_list: [
             {
-                title: "Soundcloud explorer homepage",
+                title: "A search results page of the Soundcloud explorer",
                 link: "/static/soundcloud_explorer/soundcloud_exp-small.jpg"
             },
             {
-                title: "Flowchart of the app",
+                title: "A flowchart of how the web app works",
                 link:
                     "https://camo.githubusercontent.com/6b4f472972d7c7e50bd9fefd20e834791a8f7c6b/68747470733a2f2f656c746f6e676f6e632e6769746875622e696f2f7765625f6170705f66726f6d5f736372617463682f7765656b332f696d672f666c6f7763686172742e706e67"
             }
@@ -176,17 +183,20 @@ module.exports = [
         image_small: "/static/zoku/zoku-compressed1.jpg",
         image: "/static/zoku/zoku.jpg",
         image_list: [
-            { title: "Join workshop page", link: "/static/zoku/attend.png" },
+            { 
+                title: "A page that allows a user to join a workshop via a form or qr-code",
+                link: "/static/zoku/attend.png"
+            },
             {
-                title: "Big screen workshop  overview",
+                title: "An overview page of all the workshop",
                 link: "/static/zoku/big-screen.png"
             },
             {
-                title: "Big screen workshop datail",
+                title: "A workshop detail page on a big screen",
                 link: "/static/zoku/workshop.png"
             },
             {
-                title: "Mobile workshop  overview",
+                title: "An overview page of all workshops on a mobile phone",
                 link: "/static/zoku/mobile-wall.png"
             }
         ],
@@ -262,11 +272,11 @@ module.exports = [
         image: "/static/daskas/daskas.jpg",
         image_list: [
             {
-                title: "Concept 1: Skeuomorphism homepage",
+                title: "Homepage of Daskas displaying shelfs with product that symbolizes the product categories",
                 link: "/static/daskas/home.jpg"
             },
             {
-                title: "Concept 2: Gift generator",
+                title: "A page that displays a gift generator",
                 link: "/static/daskas/gift-generator.jpg"
             }
         ],

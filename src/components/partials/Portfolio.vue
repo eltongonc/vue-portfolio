@@ -222,21 +222,24 @@ $dark_boxshadow_medium: 0 0 5rem -2rem #000;
     }
   }
   @media (max-width: 50em) {
+    padding-top: 2em;
     .portfolio__inner {
       justify-content: center;
-      padding: 1rem;
+      padding: .8rem;
       .portfolio__items {
         .item {
           margin: 1rem 0.4rem;
           height: 18rem;
-          &:first-child,
-          &:nth-child(6),
-          &:last-child {
-            min-width: 18rem;
-            flex-grow: 1;
+          min-width: 100%;
+          &:first-child {
+            min-width: 100%;
+          }
+          &:nth-child(6) {
+            min-width: 100%;
           }
           &.item--more {
             margin: 0;
+            height: 100%;
             h3 {
               margin: 0;
             }

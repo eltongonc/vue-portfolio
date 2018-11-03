@@ -1,25 +1,31 @@
 <template>
-  <header class="header">
+  <header :class="['header', headerFilled || $route.name == ('About' || 'DetailPage') ? 'header--filled': '']">
       <div class="header__inner">
+          <!-- Logo -->
           <router-link class="header__logo" to="/">
             <h1 class="logo__title">Elton Gonçalves Gomes <small class="logo__subtitle">Frontend Developer</small></h1>
           </router-link>
+
+          <!-- Desktop nav -->
           <nav class="header__nav">
               <ul class="nav__inner">
-                  <li class="nav__item"><router-link to="/" v-on:click.native="switchPage" active-class="nav--active">Home</router-link></li>
-                  <li class="nav__item"><router-link to="/about" v-on:click.native="switchPage" active-class="nav--active">About</router-link></li>
-                  <li class="nav__item"><router-link to="/portfolio" v-on:click.native="switchPage" active-class="nav--active">Portfolio</router-link></li>
+                  <li class="nav__item"><router-link to="/" active-class="nav--active">Home</router-link></li>
+                  <li class="nav__item"><router-link to="/about" active-class="nav--active">About</router-link></li>
+                  <li class="nav__item"><router-link to="/portfolio" active-class="nav--active">Portfolio</router-link></li>
                   <li class="nav__item mobile_only"><a v-on:click="toggleMenu" href="#navigation">Menu</a></li>
               </ul>
           </nav>
-          <nav ref="nav" class="header__nav--aside">
+
+          <!-- Mobile overlay nav -->
+          <nav :class="['header__nav--aside', mobileNavOpen? 'nav--open': '']">
               <ul>
-                  <li><router-link to="/" v-on:click.native="switchPage" active-class="nav--active">Home</router-link></li>
-                   <li><router-link to="/about" v-on:click.native="switchPage" active-class="nav--active">About</router-link></li>
-                  <li><router-link to="/portfolio" v-on:click.native="switchPage" active-class="nav--active">Portfolio</router-link></li>
+                  <li><router-link to="/" active-class="nav--active">Home</router-link></li>
+                   <li><router-link to="/about" active-class="nav--active">About</router-link></li>
+                  <li><router-link to="/portfolio" active-class="nav--active">Portfolio</router-link></li>
                   <li class="mobile_only"><a v-on:click="toggleMenu" href="#navigation">Close</a></li>
               </ul>
           </nav>
+
       </div>
   </header>
 </template>
@@ -27,62 +33,50 @@
 <script>
 export default {
   name: "vueHeader",
+  data() {
+    return {
+      scrollId: null,
+      headerFilled: false,
+      mobileNavOpen: false,
+    }
+  },
   methods: {
-    addHiddenClass() {
-      return window.innerWidth / 16 > 50 ? "hidden" : "";
-    },
-
     toggleMenu(e) {
       e.preventDefault();
-      const menu = this.$refs.nav;
-      menu.classList.toggle("nav--open");
+      this.mobileNavOpen = !this.mobileNavOpen;
+      
     },
 
     handleScroll() {
       const header = document.querySelector("header");
       const offset = header.clientHeight - 50;
-      if (window.pageYOffset < offset) {
-        header.classList.remove("header--filled");
-      } else if (!header.classList.contains("header--filled")) {
+
+      // add a filled background on pages that don't have a picture background
+      if (this.$route.name == "Home" || this.$route.name == "Work" || this.$route.name == 'PageNotFound' ) {
+        this.scrollId = window.addEventListener("scroll", () => {
+          if (window.pageYOffset < offset) {
+            this.headerFilled = false;
+          } else {
+            this.headerFilled = true;
+          }
+        });
+      } else {
         header.classList.add("header--filled");
+        window.removeEventListener("scroll", this.scrollId);
       }
     },
-    watch: {
-        'this.$route.params.id': function (id) {
-            console.log("blablalba");
-        }
-      },
+  },
 
-    switchPage(e) {
-      e.preventDefault();
-      this.$refs.nav.classList.remove("nav--open");
+  watch: {
+    $route(to, from) {
+      this.mobileNavOpen = false;
+      this.handleScroll();
     }
   },
 
   mounted() {
-    const header = document.querySelector("header");
-
-    // add a filled background on pages that don't have a picture background
-    if (this.$route.name !=="About") {
-      window.addEventListener("scroll", this.handleScroll);
-    } else {
-      header.classList.add("header--filled");
-    }
-
-    // Hide the mobile nav menu
-    this.$refs.nav.classList.remove("nav--open");
+    this.handleScroll();
   },
-
-  updated() {
-    this.$refs.nav.classList.remove("nav--open");
-
-    if (window.location.pathname !=="/about") {
-      header.classList.remove("header--filled");
-    } else {
-      header.classList.add("header--filled");
-    }
-  },
-
 };
 </script>
 
@@ -216,15 +210,18 @@ $dark_grey: #3d3d49;
       align-items: center;
       .header__logo {
         width: 75%;
-        h1 {
-          font-size: 1rem;
+        .logo__title {
+          font-size: .9rem;
           margin: 0;
+          .logo__subtitle {
+            font-size: .9rem;
+          }
         }
       }
       .header__nav {
         width: 25%;
-        ul {
-          li {
+        .nav__inner {
+          .nav__item {
             display: none;
             &.mobile_only {
               margin: 0;

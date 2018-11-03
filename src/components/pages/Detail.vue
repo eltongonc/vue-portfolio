@@ -1,8 +1,8 @@
 <template>
-	<main class="details">
-        <Poster :background="pageData.image" :title="pageData.title" :summary="pageData.summary"></Poster>
+  <main class="details">
+    <Poster id="poster" :background="pageData.image" :title="pageData.title" :summary="pageData.summary"></Poster>
 		<div class="details__inner">
-            <a href="/" ref="backButton" class="details__back">Back</a>
+            <a v-on:click="$router.go(-1)" :class="['details__back', isVisible? '':'transparant']">Back</a>
 
 			<article class="details__content" v-if="pageData.summary">
 				<p class="content__lead">{{pageData.summary}}</p>
@@ -17,7 +17,7 @@
                     <video v-if="pageData.video.mp4" class="video" controls>
                         <source :src="pageData.video.mp4">
                     </video>
-                    <iframe v-else-if="pageData.video.url" class="video" :src="pageData.video.url" frameborder='0' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen='' autoplay="false"></iframe>
+                    <iframe v-else-if="pageData.video.url" class="video" :src="pageData.video.url" width="100%" frameborder='0' webkitallowfullscreen='' mozallowfullscreen='' allowfullscreen='' autoplay="false"></iframe>
                 </div>
 			</article>
 
@@ -46,28 +46,27 @@
             Intro,
         },
         methods: {
-            hideBackButton() {
+            hideBackButton(offSet) {
                 window.addEventListener("scroll", (e) => {
-                    if (window.pageYOffset > 250 && !this.$refs.backButton.classList.contains("invisible")) {
-                        this.$refs.backButton.classList.add("invisible");
-                    } else if(window.pageYOffset < 250 && this.$refs.backButton.classList.contains("invisible")) {
-                        this.$refs.backButton.classList.remove("invisible");
+                    if (window.pageYOffset < offSet) {
+                      this.isVisible = true;
+                    } else {
+                      this.isVisible = false;
                     }
                 });
             }
         },
         data(){
-            let pageId = this.slug;
-            let pageData = workList.filter(function(item){
-                if(item.urlTitle == pageId) return item;
-            });
-
-            console.log(pageData[0]);
-            
-            return { pageData: pageData[0] };
+            return { 
+                pageData: workList.filter((item) => item.urlTitle == this.slug)[0],
+                isVisible: true,
+            };
         },
         mounted() {
-            this.hideBackButton();
+            const poster = document.querySelector('#poster');
+            const offSet = poster.getClientRects()[0].height - (6* 16); // height - 6em;
+            
+            this.hideBackButton(offSet);
         },
     };
 </script>
@@ -86,7 +85,7 @@
         .details__back {
             color: white;
             position: fixed;
-            top: 5rem;
+            top: 7rem;
             left: -3em;
             width: 5em;
             padding: 1em;
@@ -99,7 +98,7 @@
             background: #663231;
             text-decoration: none;
 
-            &.invisible {
+            &.transparant {
                 opacity: 0.1;
                 &:hover {
                     opacity: 1;
@@ -108,6 +107,7 @@
         }
         .details__content {
     	    padding: 2em;
+            padding-top: 5em;
     		margin-bottom: 4em;
             h3 {
                 font-size: 1.3rem;
@@ -136,11 +136,15 @@
                         margin:auto;
                     }
                 }
+                img {
+                    width: 100%;
+                }
         	}
             .content__video {
                 .video {
                     height: 25rem;
-                    width: 100%;
+                    max-width: 100%;
+                    margin: auto;
                 }
             }
         }
@@ -168,6 +172,9 @@
 
     @media (max-width: 50em) {
         .details {
+            .details__back {
+                top: 5em;
+            }
             .details__content {
                 .content__video {
                     iframe {

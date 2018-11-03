@@ -9,6 +9,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
+var HtmlCriticalPlugin = require("html-critical-webpack-plugin")
 
 var env = config.build.env
 
@@ -84,6 +85,13 @@ var webpackConfig = merge(baseWebpackConfig, {
       name: 'manifest',
       chunks: ['vendor']
     }),
+    // copy custom sitemap
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../sitemap.xml'),
+        to: path.resolve(__dirname, '../dist')
+      }
+    ]),
     // copy custom static assets
     new CopyWebpackPlugin([
       {
@@ -99,6 +107,9 @@ var webpackConfig = merge(baseWebpackConfig, {
       // List of routes to prerender
       [
           '/',
+          '/about/',
+          '/work/',
+          '/work/jsclient-builder/',
           '/work/medialab/',
           '/work/funda-serverside/',
           '/work/soundcloud-explorer/',
