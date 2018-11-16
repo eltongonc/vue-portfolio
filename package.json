@@ -5,14 +5,15 @@
   "author": "Elton Gonçalves Gomes <eltongonc@gmail.com>",
   "private": true,
   "scripts": {
-    "build": "rm -rf ./dist && node build/build.js && npm run criticalcss",
-    "criticalcss" : "node criticalcss.js",
+    "build": "rm -rf ./dist && node build/build.js",
+    "criticalcss": "node criticalcss.js",
     "lint": "eslint --ext .js,.vue src",
     "ngrok": "ngrok http 8080",
     "start": "rm -rf ./dist && node build/dev-server.js"
   },
   "dependencies": {
     "moment": "^2.22.2",
+    "npm": "^6.4.1",
     "typed.js": "^2.0.2",
     "vue": "^2.3.4",
     "vue-flickity": "^1.0.8",

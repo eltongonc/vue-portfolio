@@ -219,6 +219,8 @@ $dark_grey: #3d3d49;
         h1,
         h2 {
           transform: scale(1);
+          width: 100%;
+          max-width: 100%;
         }
       }
     }
