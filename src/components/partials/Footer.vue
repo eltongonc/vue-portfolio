@@ -56,7 +56,6 @@
                         </svg>
                     View more of my work</a>
                 </li>
-        				<!-- <li><a href="/blog">Explore my playground/Blog</a></li> -->
         				<li>
                     <a href="https://www.linkedin.com/in/elton-gon%C3%A7alves-gomes-b415a3105/">
                         <svg viewBox="0 0 430.1 430.1" xml:space="preserve">
@@ -70,6 +69,12 @@
                             </g>
                         </svg>
                     Get to know me better</a>
+                </li>
+        				<li>
+                    <a href="/sitemap.html">
+                        <svg viewBox="0 0 430.1 430.1" xml:space="preserve">
+                        </svg>
+                    View the pages Sitemap</a>
                 </li>
         			</ul>
         		</nav>

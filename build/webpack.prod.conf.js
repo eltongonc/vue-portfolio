@@ -85,10 +85,24 @@ var webpackConfig = merge(baseWebpackConfig, {
       name: 'manifest',
       chunks: ['vendor']
     }),
-    // copy custom sitemap
+    // copy custom sitemap.xml
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../sitemap.xml'),
+        to: path.resolve(__dirname, '../dist')
+      }
+    ]),
+    // copy custom sitemap.html
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../sitemap.html'),
+        to: path.resolve(__dirname, '../dist')
+      }
+    ]),
+    // copy custom robots.txt
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../robots.txt'),
         to: path.resolve(__dirname, '../dist')
       }
     ]),
@@ -108,14 +122,14 @@ var webpackConfig = merge(baseWebpackConfig, {
       [
           '/',
           '/about/',
-          '/work/',
-          '/work/jsclient-builder/',
-          '/work/medialab/',
-          '/work/funda-serverside/',
-          '/work/soundcloud-explorer/',
-          '/work/zoku-inspire/',
-          '/work/drum-kit/',
-          '/work/daskas/'
+          '/portfolio/',
+          '/portfolio/jsclient-builder/',
+          '/portfolio/medialab/',
+          '/portfolio/funda-serverside/',
+          '/portfolio/soundcloud-explorer/',
+          '/portfolio/zoku-inspire/',
+          '/portfolio/drum-kit/',
+          '/portfolio/daskas/'
       ]
     ),
   ]
