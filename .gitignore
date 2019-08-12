@@ -14,3 +14,6 @@ yarn-error.log*
 *.docx
 
 oldContent
+
+# Design 
+design/

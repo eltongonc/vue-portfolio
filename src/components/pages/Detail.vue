@@ -36,7 +36,7 @@
 
 <script>
     import { Poster, Intro, Slideshow } from '../partials';
-    import workList from "../../assets/allWork.js";
+    import workList from "../../assets/allwork.js";
 
     export default {
         props: ["slug", "name"],

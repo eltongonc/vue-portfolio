@@ -1,29 +1,45 @@
 <template>
-  <header :class="['header', headerFilled || $route.name == ('About' || 'DetailPage') ? 'header--filled': '']">
+  <header class="header"  :class="{'header--filled': headerFilled}">
       <div class="header__inner">
           <!-- Logo -->
           <router-link class="header__logo" to="/">
             <h1 class="logo__title">Elton Gonçalves Gomes <small class="logo__subtitle">Frontend Developer</small></h1>
           </router-link>
-
+          
           <!-- Desktop nav -->
           <nav class="header__nav">
               <ul class="nav__inner">
-                  <li class="nav__item"><router-link to="/" active-class="nav--active">Home</router-link></li>
-                  <li class="nav__item"><router-link to="/about" active-class="nav--active">About</router-link></li>
-                  <li class="nav__item"><router-link to="/portfolio" active-class="nav--active">Portfolio</router-link></li>
-                  <li class="nav__item mobile_only"><a v-on:click="toggleMenu" href="#navigation">Menu</a></li>
+                  <li class="nav__item">
+                    <router-link to="/" active-class="nav--active">Home</router-link>
+                  </li>
+                  <li class="nav__item">
+                    <router-link to="/about" active-class="nav--active">About</router-link>
+                  </li>
+                  <li class="nav__item">
+                    <router-link to="/portfolio" active-class="nav--active">Portfolio</router-link>
+                  </li>
+                  <li class="nav__item mobile_only">
+                    <a v-on:click="toggleMenu" href="#navigation">Menu</a>
+                  </li>
               </ul>
           </nav>
 
           <!-- Mobile overlay nav -->
           <nav :class="['header__nav--aside', mobileNavOpen? 'nav--open': '']">
-              <ul>
-                  <li><router-link to="/" active-class="nav--active">Home</router-link></li>
-                   <li><router-link to="/about" active-class="nav--active">About</router-link></li>
-                  <li><router-link to="/portfolio" active-class="nav--active">Portfolio</router-link></li>
-                  <li class="mobile_only"><a v-on:click="toggleMenu" href="#navigation">Close</a></li>
-              </ul>
+            <ul>
+              <li>
+                <router-link to="/" active-class="nav--active">Home</router-link>
+              </li>
+                <li>
+                  <router-link to="/about" active-class="nav--active">About</router-link>
+              </li>
+              <li>
+                <router-link to="/portfolio" active-class="nav--active">Portfolio</router-link>
+              </li>
+              <li class="mobile_only">
+                <a v-on:click="toggleMenu" href="#navigation">Close</a>
+              </li>
+            </ul>
           </nav>
 
       </div>
@@ -36,7 +52,7 @@ export default {
   data() {
     return {
       scrollId: null,
-      headerFilled: false,
+      headerFilled: this.$route.name == 'About' || this.$route.name == 'DetailPage',
       mobileNavOpen: false,
     }
   },
@@ -44,17 +60,39 @@ export default {
     toggleMenu(e) {
       e.preventDefault();
       this.mobileNavOpen = !this.mobileNavOpen;
-      
+    },
+
+    updateHeader() {
+      const header = document.querySelector("header");
+      const offset = header.clientHeight - 50;
+
+      if (this.$route.name === "Home" || this.$route.name === "Portfolio" || this.$route.name === 'PageNotFound' ) {
+        if (window.pageYOffset <= offset) {
+          header.classList.remove("header--filled");
+        } else {
+          this.headerFilled = true;
+        }
+      } else {
+        header.classList.add("header--filled");
+      }
     },
 
     handleScroll() {
       const header = document.querySelector("header");
       const offset = header.clientHeight - 50;
 
+      console.log(window.pageYOffset <= offset);
+      
+      if (window.pageYOffset <= offset) {
+        this.headerFilled = false;
+      } else {
+        this.headerFilled = true;
+      }
+
       // add a filled background on pages that don't have a picture background
-      if (this.$route.name == "Home" || this.$route.name == "Work" || this.$route.name == 'PageNotFound' ) {
+      if (this.$route.name == "Home" || this.$route.name == "Portfolio" || this.$route.name == 'PageNotFound' ) {
         this.scrollId = window.addEventListener("scroll", () => {
-          if (window.pageYOffset < offset) {
+          if (window.pageYOffset <= offset) {
             this.headerFilled = false;
           } else {
             this.headerFilled = true;
@@ -70,7 +108,7 @@ export default {
   watch: {
     $route(to, from) {
       this.mobileNavOpen = false;
-      this.handleScroll();
+      this.updateHeader();
     }
   },
 
