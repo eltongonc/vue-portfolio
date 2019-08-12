@@ -11,10 +11,11 @@ export default new Router({
     base: __dirname,
     routes: [
         {
-            path: "*",
+            path: "/404",
             name: "PageNotFound",
             component: PageNotFound
         },
+        { path: '*', redirect: '/404' },  
         {
             path: "/",
             name: "Home",
@@ -27,7 +28,7 @@ export default new Router({
         },
         {
             path: "/portfolio",
-            name: "Work",
+            name: "Portfolio",
             component: Work
         },
         {

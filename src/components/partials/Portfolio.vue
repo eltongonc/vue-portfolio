@@ -13,13 +13,14 @@
 
             <!-- the portfolio items -->
             <div class="portfolio__items">
-              <a v-for="(item, index) in items" :key="index" class="item" :href="`/portfolio/${item.urlTitle}`">
+              <router-link v-for="(item, index) in items" :key="index" class="item" :to="`/portfolio/${item.urlTitle}`">
                   <div class="item__image" :style="`background-image: url(${item.image_small})`"></div>
                   <div class="item__summary">
                       <h3 class="summary__title">{{item.title}}</h3>
                       <p class="summary__text">{{item.summary}}</p>
                   </div>
-              </a>
+              </router-link>
+
               <!-- a link to more projects -->
               <a href="https://github.com/eltongonc" class="item">
                   <img src="../../assets/github.svg" alt="">
@@ -56,7 +57,7 @@
 </template>
 
 <script>
-import workList from "../../assets/allWork.js";
+import workList from "../../assets/allwork.js";
 
 export default {
   props: ["amount"],

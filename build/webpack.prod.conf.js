@@ -129,7 +129,8 @@ var webpackConfig = merge(baseWebpackConfig, {
           '/portfolio/soundcloud-explorer/',
           '/portfolio/zoku-inspire/',
           '/portfolio/drum-kit/',
-          '/portfolio/daskas/'
+          '/portfolio/daskas/',
+          '/404/'
       ]
     ),
   ]
