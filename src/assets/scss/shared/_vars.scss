@@ -1,0 +1,25 @@
+// Colors
+$red: #663231;
+$green: #97dcac;
+$dark_grey: #3d3d49;
+$light_grey: #ededed;
+$black: #000000;
+
+// Grid
+$grid-xlarge:   80rem;
+$grid-large:    65rem;
+$grid-medium:   50rem;
+$grid-small:    38rem;
+$grid-xsmall:   32rem;
+
+// Shadows
+$dark_boxshadow: 0 0 10rem -2rem $black;
+$dark_boxshadow_medium: 0 0 5rem -2rem $black;
+$dark_boxshadow_large: 0 0 1rem 0rem $black;
+$light_boxshadow: 0 0 10rem -2rem $green;
+$light_boxshadow_large: 0 0 1rem 0rem $green;
+$light_boxshadow_medium: 0 0 5rem -2rem $green;
+
+// Fonts
+$font-heebo: 'Heebo', sans-serif;
+$font-dosis: 'Dosis', sans-serif;

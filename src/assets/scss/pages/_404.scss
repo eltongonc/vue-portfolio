@@ -1,0 +1,30 @@
+.errorpage {
+	.errorpage__nav {
+		ul {
+			padding: 0;
+			list-style: none;
+			li {
+					text-align: center;
+					background-color: $green;
+					margin-bottom: .3rem;
+					border-radius: .3rem;
+					transition: .3s;
+					box-shadow: $dark_boxshadow;
+				a {
+					display: block;
+					font-weight: bold;
+					font-size: 1.3rem;
+					text-decoration: none;
+					color: $dark_grey;
+					padding: .5rem;
+				}
+				&:last-child {
+					background-color: $light_grey;
+				}
+				&:hover {
+					background-color: darken($green, 10%);
+				}
+			}
+		}
+	}
+}

@@ -15,7 +15,10 @@ export default new Router({
             name: "PageNotFound",
             component: PageNotFound
         },
-        { path: '*', redirect: '/404' },  
+        { 
+            path: '*', 
+            redirect: '/404' 
+        },  
         {
             path: "/",
             name: "Home",
@@ -29,6 +32,11 @@ export default new Router({
         {
             path: "/portfolio",
             name: "Portfolio",
+            component: Work
+        },
+        {
+            path: "/contact",
+            name: "Contact",
             component: Work
         },
         {

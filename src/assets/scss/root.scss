@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Heebo&display=swap');
+
+@import './shared/vars.scss';
+
+@import './pages/home.scss';
+@import './pages/about.scss';
+@import './pages/detail.scss';
+@import './pages/404.scss';
+
+@import './shared/header.scss';
+@import './shared/footer.scss';
+@import './shared/intro.scss';
+@import './shared/portfolio.scss';
+@import './shared/poster.scss';
+@import './shared/skills.scss';
+@import './shared/slideshow.scss';
+@import './shared/typography.scss';
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/*green #97dcac*/
+
+.section-header {
+  width: 100%;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  color: #663231;
+  margin: 0.5em 0;
+}
+
+blockquote {
+  border-left: 0.3em solid #ededed;
+  padding-left: 1em;
+  color: #999;
+  font-style: italic;
+}
+
+.title {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  color: $red;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+.subtitle {
+  max-width: $grid-medium;
+  margin: 3rem auto;
+  text-align: left;
+  display: block;
+  min-height: 4rem;
+  padding: 2rem;
+}
+
+p,
+li {
+  line-height: 175%;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
