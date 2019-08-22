@@ -1,13 +1,14 @@
 <template>
 	<main :class="className">
-		<PosterCanvas></PosterCanvas>
-		<Skills></Skills>
-        <Portfolio :amount="portfolioCount"></Portfolio>
+		<PosterCanvas/>
+        <WhatIDo/>
+		<Skills/>
+        <Portfolio :amount="portfolioCount"/>
 	</main>
 </template>
 
 <script>
-    import { PosterCanvas, Portfolio, Intro, Skills } from '../partials';
+    import { PosterCanvas, Portfolio, Intro, Skills, WhatIDo } from '../partials';
 
     export default {
         data(){
@@ -21,6 +22,7 @@
             PosterCanvas,
             Skills,
             Intro,
+            WhatIDo,
         }
     };
 </script>

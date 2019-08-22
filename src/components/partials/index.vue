@@ -7,6 +7,7 @@ import Poster from "./Poster";
 import Skills from "./Skills";
 import Slideshow from "./Slideshow";
 import PosterCanvas from "./PosterCanvas";
+import WhatIDo from "./WhatIDo";
 
 export default {
     Footer,
@@ -16,6 +17,7 @@ export default {
     Poster,
     Skills,
     Slideshow,
-    PosterCanvas
+    PosterCanvas,
+    WhatIDo,
 };
 </script>

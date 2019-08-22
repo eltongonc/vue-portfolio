@@ -2,6 +2,24 @@
   background: $dark_grey;
   box-shadow: $dark_boxshadow;
   border-top: 0.1rem solid $green;
+  nav {
+    width: 85%;
+    margin: 0 auto;
+    ul {
+      padding-left: 0;
+      list-style: none;
+      color: white;
+      li {
+        text-align: left;
+        ul {
+          padding-left: 1rem;
+        }
+        a {
+          color: white;
+        }
+      }
+    }
+  }
   .footer__inner {
     padding: 0.5rem 1rem;
     display: flex;
