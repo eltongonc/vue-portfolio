@@ -11,26 +11,35 @@
                   <router-link to="/"><HomeIcon/>Home</router-link>
                 <li>
                   <a href="#app" v-on:click="scrollToTop">
+                    <span class="icon__wrapper">
                       <ToTopIcon/>
+                    </span>
                       Back to top
                   </a>
                 </li>
         				<li>
                     <a href="mailto:eltongoncalves@gmail.com">
+                      <span class="icon__wrapper">
                         <MailIcon/>
+                      </span>
                     Send me an email</a>
                 </li>
         				<li>
                     <a href="https://github.com/eltongonc">
+                    <span class="icon__wrapper">
                         <GitHubIcon/>
+                    </span>
                     View more of my work</a>
                 </li>
         				<li>
                     <a href="https://www.linkedin.com/in/elton-gon%C3%A7alves-gomes-b415a3105/">
+                    <span class="icon__wrapper">
                         <LinkedInIcon/>
+                    </span>
                     Get to know me better</a>
                 </li>
         				<li>
+                  <span class="icon__wrapper"></span>
                     <a href="/sitemap.html">
                     View the pages Sitemap</a>
                 </li>

@@ -3,7 +3,6 @@
   box-shadow: $dark_boxshadow;
   border-top: 0.1rem solid $green;
   nav {
-    width: 85%;
     margin: 0 auto;
     ul {
       padding-left: 0;
@@ -32,6 +31,7 @@
     .contact {
       .contact--mobile {
         display: none;
+        padding-bottom: 0;
       }
       .contact--desktop {
         display: flex;
