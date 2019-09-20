@@ -1,30 +1,32 @@
 <template>
-  <div class="what-i-do">
-	  <div class="what-i-do__inner">
-		  <figure>
-			  <img src="" alt="">
+  <div class="what-i-do container">
+	  <div class="what-i-do__inner row">
+		  <figure class="col-lg-6 col-md-6">
+			  <img src='https://picsum.photos/200' alt="">
 		  </figure>
-		  <section>
-			  <h2>What I do</h2>
-			  <p>I love to mess around with web related technologies and would love to see everything connected to the internet. I can provide a wide range of web related services</p>
-			  <ul>
-				  <li>
-					  <h3>Websites</h3>
-					  <p>I love to mess around with web related technologies and would love to see everything connected to the internet.</p>
-				  </li>
-				  <li>
-					  <h3>Webshops</h3>
-					  <p>I love to mess around with web related technologies and would love to see everything connected to the internet.</p>
-				  </li>
-				  <li>
-					  <h3>Webapps</h3>
-					  <p>I love to mess around with web related technologies and would love to see everything connected to the internet.</p>
-				  </li>
-				  <li>
-					  <h3>Prototyping</h3>
-					  <p>I love to mess around with web related technologies and would love to see everything connected to the internet.</p>
-				  </li>
-			  </ul>
+		  <section class="col-lg-6 col-md-6 d-flex align-items-center">
+			  <div>
+				<h2 class="section-title">What I do</h2>
+				<p class="section-subtitle">I love to mess around with web related technologies and would love to see everything connected to the internet. I can provide a wide range of web related services</p>
+				<ul class="list">
+					<li>
+						<h3 class="list-title"><span class="lnr lnr-select"></span> Websites</h3>
+						<p>I love to mess around with web related technologies and would love to see everything connected to the internet.</p>
+					</li>
+					<li>
+						<h3 class="list-title"><span class="lnr lnr-cart"></span> Webshops</h3>
+						<p>I love to mess around with web related technologies and would love to see everything connected to the internet.</p>
+					</li>
+					<li>
+						<h3 class="list-title"><span class="lnr lnr-laptop-phone"></span> Webapps</h3>
+						<p>I love to mess around with web related technologies and would love to see everything connected to the internet.</p>
+					</li>
+					<li>
+						<h3 class="list-title"><span class="lnr lnr-rocket"></span> Prototyping</h3>
+						<p>I love to mess around with web related technologies and would love to see everything connected to the internet.</p>
+					</li>
+				</ul>
+			  </div>
 		  </section>
 	  </div>
   </div>

@@ -1,0 +1,38 @@
+.what-i-do {
+	padding: 4rem 0;
+
+	figure {
+		padding: 2rem;
+		img {
+			width: 100%;
+			height: 100%;
+			background-color: $dark-grey;
+		}
+	}
+
+	section {
+		padding-bottom: 0;
+		.section-subtitle {
+			margin-bottom: 4rem;
+		}
+	
+		ul {
+			display: flex;
+			list-style: none;
+			flex-wrap: wrap;
+			padding-left: 0;	
+			li {
+				width: 49%;
+				text-align: left;
+				margin-bottom: 2rem;
+				.list-title {
+					font-size: 1.2rem;
+					.lnr {
+						color: $dark-grey;
+						margin-right: .5rem;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,6 +1,6 @@
 <template>
   <header class="header"  :class="{'header--filled': headerFilled}">
-      <div class="header__inner">
+      <div class="header__inner container">
           <!-- Logo -->
           <router-link class="header__logo" to="/">
             <img src="../../assets/images/logo-white.png"/>
