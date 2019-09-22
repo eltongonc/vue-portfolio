@@ -1,5 +1,5 @@
 <template>
-	<section class="contact-page-area section-gap">
+	<section class="section">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 pb-60">
@@ -15,15 +15,6 @@
 						<div class="contact-details">
 							<h5>Amsterdam, The Netherlands</h5>
 							<p>&nbsp;</p>
-						</div>
-					</div>
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-phone-handset"></span>
-						</div>
-						<div class="contact-details">
-							<h5>00 (958) 9865 562</h5>
-							<p>Mon to Fri 9am to 6 pm</p>
 						</div>
 					</div>
 					<div class="single-contact-address d-flex flex-row">
@@ -45,6 +36,14 @@
 								<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email"/>
 
 								<input name="subject" placeholder="Enter subject" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required="" type="text" defaultValue={subject[1]}/>
+
+								<select class="common-input mb-20 form-control">
+									<option value="" disabled selected>Select a type op project</option>
+									<option value="websites">Websites</option>
+									<option value="webshops">Webshops</option>
+									<option value="webapps">Webapps</option>
+									<option value="prototyping">Prototyping</option>
+								</select>
 							</div>
 							<div class="col-lg-6 form-group">
 								<textarea class="common-textarea form-control" name="message" placeholder="Enter Messege" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Enter Messege'" required=""></textarea>				

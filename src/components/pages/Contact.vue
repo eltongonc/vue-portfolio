@@ -1,6 +1,8 @@
 <template>
 		<main :class="className">
-		<PosterCanvas/>
+		<PosterCanvas>
+      <h1>I&apos;m happy to help</h1>
+    </PosterCanvas>
     <ContactForm/>
 	</main>
 </template>
