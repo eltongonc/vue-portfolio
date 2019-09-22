@@ -21,31 +21,34 @@
 
         <div class="filters-content">
             <isotope 
-              ref="cpt" 
+              ref="cpt"
               :list="items.slice(0, amount)" 
               :options="options"
               @filter="filterOption=arguments[0]"
-              class="row grid"
+              v-images-loaded:on.progress="layout"
+              class="row"
             >
               <div v-for="(item, key) in items.slice(0, amount)" :class="[item.category, 'col-sm-4', 'item__summary']" :key="key">
-                  <img class="image img-fluid" :src="item.image_small" alt=""/>
+                <div class="relative">
+                  <div class="thumb">
+                    <div class="overlay overlay-bg"></div>
+                    <img class="image img-fluid" :src="item.image_small" alt=""/>
+                  </div>
+                </div>
+                <div class="p-inner">
+                  <h4>{{item.title}}</h4>
+                  <div class="cat">{{item.category}}</div>
+                </div>
               </div>
             </isotope>
         </div>
-
-        	
-        <div>
-          <h3 class="section-title">Your Project</h3>
-          <p>Do you have a project in mind? Let’s work together to make the next project on this page yours.</p>
-          <router-link class="primary-btn text-uppercase" to="/contact">Start a project</router-link>
-        </div>
       </div>
-
     </section>
 </template>
 
 <script>
 import isotope from 'vueisotope'
+import imagesLoaded from 'vue-images-loaded'
 
 import workList from "../../assets/allwork.js";
 
@@ -55,17 +58,18 @@ export default {
   components: {
     isotope,
   },
+  directives: {
+      imagesLoaded
+  },
   data() {
     return { 
       items: workList,
+      selected: null,
       filterOption: "all",
-      filterOption: "show all",
       options: {
-        masonry: {
-          itemSelector: '.all',
-          percentPosition: true,
-          columnWidth: '.all',
-        },
+        itemSelector: '.all',
+        percentPosition: true,
+        columnWidth: '.all',
         getFilterData: {
           "all": () => {
             return true
@@ -84,20 +88,12 @@ export default {
     };
   },
   methods: {
-    filterItems(e) {
-      const button = e.target;
-      const selector = button.id.split("_")[1];
-      this.items = workList.filter((item) => item.tags.includes(selector) );
-
-      // update selected class
-      document.querySelectorAll(".filter__button").forEach(element => {
-        element.classList.remove("filter__button--active");
-      });
-      button.classList.add("filter__button--active");
-    },
     filter(key) {
         this.$refs.cpt.filter(key);
-    }
+    },
+    layout () {
+        this.$refs.cpt.layout('masonry');
+    }  
   }
 };
 </script>

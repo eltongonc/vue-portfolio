@@ -22,14 +22,16 @@
   }
 
   .filters-content {
-    min-height: 100px;
+    margin-top: 50px;
     .item {
-      height: 200px;
-      width: 200px;
-      .item__summary {
-        img {
-          width: 100%;
-        }
+      display: block;
+      margin-bottom: 2rem;
+      .relative {
+        position: relative;
+      }
+      .p-inner {
+        padding: 20px 0px;
+        text-align: center;
       }
     }
   }

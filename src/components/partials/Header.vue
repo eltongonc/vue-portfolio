@@ -1,12 +1,11 @@
 <template>
   <header class="header"  :class="{'header--filled': headerFilled}">
       <div class="header__inner container">
-          <!-- Logo -->
+
           <router-link class="header__logo" to="/">
             <img src="../../assets/images/logo-white.png"/>
           </router-link>
           
-          <!-- Desktop nav -->
           <nav class="header__nav">
               <ul class="nav__inner">
                   <li class="nav__item">
@@ -24,7 +23,6 @@
               </ul>
           </nav>
 
-          <!-- Mobile overlay nav -->
           <nav :class="['header__nav--aside', mobileNavOpen? 'nav--open': '']">
             <ul>
               <li>
