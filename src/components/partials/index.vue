@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import Slideshow from "./Slideshow";
 import PosterCanvas from "./PosterCanvas";
 import WhatIDo from "./WhatIDo";
+import ContactForm from "./ContactForm";
 
 export default {
     Footer,
@@ -19,5 +20,6 @@ export default {
     Slideshow,
     PosterCanvas,
     WhatIDo,
+    ContactForm,
 };
 </script>

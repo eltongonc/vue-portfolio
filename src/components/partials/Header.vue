@@ -36,6 +36,9 @@
               <li>
                 <router-link to="/portfolio" active-class="nav--active">Portfolio</router-link>
               </li>
+              <li>
+                <router-link to="/contact" active-class="nav--active">Contact</router-link>
+              </li>
               <li class="mobile_only">
                 <a v-on:click="toggleMenu" href="#navigation">Close</a>
               </li>

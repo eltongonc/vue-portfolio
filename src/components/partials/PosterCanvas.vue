@@ -1,7 +1,7 @@
 <template>
     <section :class="['poster poster--canvas poster--' + className, title? 'poster__page': 'poster__home' ]">
-        <div class="poster__inner">
-            <div v-if="!title" class="poster__intro">
+        <div class="container poster__inner">
+            <div v-if="!title" class=" row poster__intro">
                 <h1>Hi<br/> my name is Elton,</h1>
                 <h2>I am a Front-end developer and I can help you with a new website.</h2>
                 <router-link v-if="this.$router.currentRoute.path === '/'" to="/contact" v-on:click.native="scrollTo" class="button">Contact me</router-link>

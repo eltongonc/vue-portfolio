@@ -3,8 +3,8 @@
       <div class="container">
 
         <!-- show only if amount is set -->
-        <diV v-if="amount" class="row d-flex justify-content-center">
-          <h2 class="section-title">Latest projects</h2>
+        <diV class="row d-flex justify-content-center">
+          <h2 class="section-title">Projects</h2>
         </div>
 
 
@@ -31,6 +31,13 @@
                   <img class="image img-fluid" :src="item.image_small" alt=""/>
               </div>
             </isotope>
+        </div>
+
+        	
+        <div>
+          <h3 class="section-title">Your Project</h3>
+          <p>Do you have a project in mind? Let’s work together to make the next project on this page yours.</p>
+          <router-link class="primary-btn text-uppercase" to="/contact">Start a project</router-link>
         </div>
       </div>
 

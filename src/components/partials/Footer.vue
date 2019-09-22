@@ -2,7 +2,7 @@
 	<footer class="footer">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
 							<div class="single-footer-widget">
 								<h4>Sitemap</h4>
 								<p><router-link to="/about">About</router-link></p>
@@ -12,7 +12,7 @@
 								<p><router-link to="/changelog">Changelog</router-link></p>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12 social-widget">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 social-widget">
 							<div class="single-footer-widget">
 								<h4>Contact Information</h4>
 								<div class="footer-social d-flex align-items-center">
@@ -22,10 +22,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="col-lg-4 col-md-5 col-sm-4 col-xs-12">
 							<div class="single-footer-widget">
 								<h4>Elton Gonçalves Gomes</h4>
-								<img src={logo} alt=""/>
+								<img src="logo" alt=""/>
 							</div>
 						</div>
 					</div>
@@ -62,7 +62,6 @@ export default {
   },
   data() {
     return {
-      logo,
     }
   },
   computed: {

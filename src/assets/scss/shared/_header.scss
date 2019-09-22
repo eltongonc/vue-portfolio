@@ -21,17 +21,6 @@
         width: 18rem;
         margin: auto;
       }
-      .logo__title {
-        color: $green;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-align: left;
-        .logo__subtitle {
-          font-size: 1rem;
-          color: #aaa;
-        }
-      }
     }
     .header__nav {
       width: 100%;
@@ -53,14 +42,14 @@
             display: block;
             padding: 0.5rem 1rem;
             text-decoration: none;
-            color: #aaa;
+            color: $green;
             font-weight: bold;
             text-transform: uppercase;
             font-size: 0.8rem;
             transition: 0.3s;
             &:hover,
             &.router-link-exact-active.nav--active {
-              color: $green;
+              color: $white;
             }
           }
           &.mobile_only {
