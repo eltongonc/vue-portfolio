@@ -7,11 +7,17 @@
   width: 100%;
   position: relative;
   transition: 3s;
-
+  .title {
+    margin: 0;
+    margin-bottom: .5rem;
+  }
   .subtitle {
     padding: 0;
     max-width: 100%;
     text-align: center;
+    margin: 0;
+    margin-bottom: 2rem;
+    min-height: auto;
   }
 
   .carousel {
@@ -68,16 +74,6 @@
 
     .flickity-page-dots .dot.is-selected {
       background: white;
-    }
-  }
-
-  @media (max-width: 50em) {
-    padding-top: 0;
-    .subtitle {
-      padding: 0;
-      max-width: 18em;
-      text-align: left;
-      margin: 1em auto;
     }
   }
 }
