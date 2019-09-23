@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import { Work, About, Home, Detail, Contact, PageNotFound } from "../components";
+import { Work, About, Home, Detail, Blog, PageNotFound } from "../components";
 
 Vue.use(Router);
 
@@ -35,9 +35,9 @@ export default new Router({
             component: Work
         },
         {
-            path: "/contact",
-            name: "Contact",
-            component: Contact
+            path: "/blog",
+            name: "Blog",
+            component: Blog
         },
         {
             path: "/portfolio/:slug",

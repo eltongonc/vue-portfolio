@@ -1,5 +1,6 @@
 .what-i-do {
 	padding: 4rem 0;
+	background-color: white;
 
 	figure {
 		padding: 2rem;
@@ -27,6 +28,7 @@
 				margin-bottom: 2rem;
 				.list-title {
 					font-size: 1.2rem;
+					text-transform: uppercase;
 					.lnr {
 						color: $dark-grey;
 						margin-right: .5rem;

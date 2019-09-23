@@ -1,12 +1,10 @@
 <template>
     <section id="portfolio" class="portfolio">
       <div class="container">
-
-        <!-- show only if amount is set -->
+        
         <diV class="row d-flex justify-content-center">
           <h2 class="section-title">Projects</h2>
         </div>
-
 
         <div class="filters">
           <ul>
@@ -37,7 +35,6 @@
                 </div>
                 <div class="p-inner">
                   <h4>{{item.title}}</h4>
-                  <div class="cat">{{item.category}}</div>
                 </div>
               </div>
             </isotope>

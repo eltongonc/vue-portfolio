@@ -1,37 +1,35 @@
 <template>
 	<main class="about">
-		<Poster>
+		<PosterCanvas>
       <h1>{{page.name}}</h1>
-    </Poster>
+    </PosterCanvas>
 
-    <section class="about__content">
-        <div class="content__photo">
-          <img class="photo" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
-        </div>
-        <div class="content__subtitle" v-html="pageData.text"></div>
-    </section>
-
-    <div class="skills container">
-      <div class="row">
-        <div class="col-md-6">
-          <img class="photo" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
-        </div>
-        <div class="col-md-6">
-          <h3 class="section-title">Your Project</h3>
-          <p>Do you have a project in mind? Let’s work together to make the next project on this page yours.</p>
-          <router-link class="button" to="/contact">Start a project</router-link>
+    <div class="portfolio">
+      <div class="container">
+        <diV class="row d-flex justify-content-center">
+          <h2 class="section-title">About me</h2>
         </div>
       </div>
+
+      <section class="about__content">
+          <div class="content__photo">
+            <img class="photo" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
+          </div>
+          <div class="content__subtitle" v-html="pageData.text"></div>
+      </section>
     </div>
+
+    <ContactForm/>
 	</main>
 </template>
 
 <script>
-  import { Poster, Intro } from '../partials';
+  import { PosterCanvas, Intro, ContactForm } from '../partials';
 
   export default {
     components: {
-      Poster,
+      PosterCanvas,
+      ContactForm,
       Intro
     },
     data() {

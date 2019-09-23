@@ -1,5 +1,5 @@
 <template>
-	<section class="section">
+	<section class="section section--contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 pb-60">

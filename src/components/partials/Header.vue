@@ -9,13 +9,13 @@
           <nav class="header__nav">
               <ul class="nav__inner">
                   <li class="nav__item">
-                    <router-link to="/about" active-class="nav--active">About</router-link>
-                  </li>
-                  <li class="nav__item">
                     <router-link to="/portfolio" active-class="nav--active">Portfolio</router-link>
                   </li>
                   <li class="nav__item">
-                    <router-link to="/contact" active-class="nav--active">Contact</router-link>
+                    <router-link to="/about" active-class="nav--active">About</router-link>
+                  </li>
+                  <li class="nav__item">
+                    <router-link to="/blog" active-class="nav--active">Blog</router-link>
                   </li>
                   <li class="nav__item mobile_only">
                     <a v-on:click="toggleMenu" href="#navigation">Menu</a>
@@ -28,14 +28,14 @@
               <li>
                 <router-link to="/" active-class="nav--active">Home</router-link>
               </li>
+              <li>
+                <router-link to="/portfolio" active-class="nav--active">Portfolio</router-link>
+              </li>
                 <li>
                   <router-link to="/about" active-class="nav--active">About</router-link>
               </li>
               <li>
-                <router-link to="/portfolio" active-class="nav--active">Portfolio</router-link>
-              </li>
-              <li>
-                <router-link to="/contact" active-class="nav--active">Contact</router-link>
+                <router-link to="/blog" active-class="nav--active">Blog</router-link>
               </li>
               <li class="mobile_only">
                 <a v-on:click="toggleMenu" href="#navigation">Close</a>
@@ -53,7 +53,7 @@ export default {
   data() {
     return {
       scrollId: null,
-      headerFilled: this.$route.name == 'About' || this.$route.name == 'DetailPage',
+      headerFilled: false,
       mobileNavOpen: false,
     }
   },
@@ -67,15 +67,11 @@ export default {
       const header = document.querySelector("header");
       const offset = header.clientHeight - 50;
 
-      if (this.$route.name === "Home" || this.$route.name === "Portfolio" || this.$route.name === 'PageNotFound' ) {
         if (window.pageYOffset <= offset) {
           header.classList.remove("header--filled");
         } else {
           this.headerFilled = true;
         }
-      } else {
-        header.classList.add("header--filled");
-      }
     },
 
     handleScroll() {
@@ -91,7 +87,6 @@ export default {
       }
 
       // add a filled background on pages that don't have a picture background
-      if (this.$route.name == "Home" || this.$route.name == "Portfolio" || this.$route.name == 'PageNotFound' ) {
         this.scrollId = window.addEventListener("scroll", () => {
           if (window.pageYOffset <= offset) {
             this.headerFilled = false;
@@ -99,10 +94,6 @@ export default {
             this.headerFilled = true;
           }
         });
-      } else {
-        header.classList.add("header--filled");
-        window.removeEventListener("scroll", this.scrollId);
-      }
     },
   },
 

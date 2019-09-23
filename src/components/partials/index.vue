@@ -3,7 +3,6 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Intro from "./Intro";
 import Portfolio from "./Portfolio";
-import Poster from "./Poster";
 import Skills from "./Skills";
 import Slideshow from "./Slideshow";
 import PosterCanvas from "./PosterCanvas";
@@ -15,7 +14,6 @@ export default {
     Header,
     Intro,
     Portfolio,
-    Poster,
     Skills,
     Slideshow,
     PosterCanvas,

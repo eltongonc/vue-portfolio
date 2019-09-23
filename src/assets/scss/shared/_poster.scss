@@ -14,8 +14,9 @@
     z-index: 0;
     pointer-events: none;
   }
+  
   .poster__inner {
-    margin: 0 auto;
+    // margin: 0 auto;
     display: flex;
     align-items: center;
     height: 100%;
@@ -24,8 +25,7 @@
     .poster__intro {
       transition: 0.3s ease-in-out;
       padding: 90px 0;
-      box-sizing: border-box;
-      max-width: 30rem;
+      
       h1,
       h2 {
         color: white;
@@ -35,7 +35,6 @@
       
       h1 {
         text-transform: uppercase;
-        font-family: $font-heebo;
         margin-bottom: .5rem;
       }
 
@@ -53,9 +52,36 @@
         text-shadow: 0 0 10px #333;
       }
     }
+
+    .scroll-icon {
+      color: white;
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      animation: pulse 2s 3s ease-out infinite;
+      opacity: 0;
+    }
   }
 
   &.poster--home {
     height: 100vh;
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none
+  }
+  50% {
+    opacity: .8;
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none
   }
 }

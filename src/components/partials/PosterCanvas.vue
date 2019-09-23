@@ -1,13 +1,18 @@
 <template>
-    <section :class="['poster poster--canvas poster--' + className, title? 'poster__page': 'poster__home' ]">
+    <section :class="'poster poster--' + className">
         <div class="container poster__inner">
             <div v-if="!title" class=" row poster__intro">
-              <slot></slot>
+              <div class="col-sm-8">
+                <slot></slot>
+              </div>
             </div>
-            <figcaption v-else class="row poster__intro">
+            <div v-else class="row poster__intro">
+              <div class="col-sm-8">
                 <h1>{{title}}</h1>
                 <h2>{{subtitle}}</h2>
-            </figcaption>
+              </div>
+            </div>
+            <span v-if="className === 'home'" class="scroll-icon lnr lnr-chevron-down"></span>
         </div>
         <canvas ref="canvas" id="canvas"></canvas>
     </section>
