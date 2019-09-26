@@ -23,9 +23,6 @@
                   <li class="nav__item">
                     <a href="#contact" v-scroll-to="{el: '#contact', offset: -50}" active-class="nav--active">Contact</a>
                   </li>
-                  <!-- <li class="nav__item">
-                    <router-link to="/blog" active-class="nav--active">Blog</router-link>
-                  </li> -->
                   <li class="nav__item mobile_only">
                     <a v-on:click="toggleMenu" href="#navigation">Menu</a>
                   </li>
@@ -34,18 +31,21 @@
 
           <nav :class="['header__nav--aside', mobileNavOpen? 'nav--open': '']">
             <ul>
-              <li>
-                <router-link to="/" active-class="nav--active">Home</router-link>
+              <li class="nav__item">
+                <a v-on:click="closeMenu" href="#about" v-scroll-to="{el: '#about', offset: -50}" active-class="nav--active">About</a>
               </li>
-              <!-- <li>
-                <router-link to="/portfolio" active-class="nav--active">Portfolio</router-link>
-              </li> -->
-                <li>
-                  <router-link to="/about" active-class="nav--active">About</router-link>
+              <li class="nav__item">
+                <a v-on:click="closeMenu" href="#services" v-scroll-to="{el: '#services', offset: -50}" active-class="nav--active">Services</a>
               </li>
-              <!-- <li>
-                <router-link to="/blog" active-class="nav--active">Blog</router-link>
-              </li> -->
+              <li class="nav__item">
+                <a v-on:click="closeMenu" href="#skills" v-scroll-to="{el: '#skills', offset: -50}" active-class="nav--active">Skills</a>
+              </li>
+              <li class="nav__item">
+                <a v-on:click="closeMenu" href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}" active-class="nav--active">Portfolio</a>
+              </li>
+              <li class="nav__item">
+                <a v-on:click="closeMenu" href="#contact" v-scroll-to="{el: '#contact', offset: -50}" active-class="nav--active">Contact</a>
+              </li>
               <li class="mobile_only">
                 <a v-on:click="toggleMenu" href="#navigation">Close</a>
               </li>
@@ -70,6 +70,10 @@ export default {
     toggleMenu(e) {
       e.preventDefault();
       this.mobileNavOpen = !this.mobileNavOpen;
+    },
+
+    closeMenu() {
+      this.mobileNavOpen = false;
     },
 
     updateHeader() {
