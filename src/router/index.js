@@ -34,11 +34,11 @@ export default new Router({
             name: "Portfolio",
             component: Work
         },
-        {
-            path: "/blog",
-            name: "Blog",
-            component: Blog
-        },
+        // {
+        //     path: "/blog",
+        //     name: "Blog",
+        //     component: Blog
+        // },
         {
             path: "/portfolio/:slug",
             name: "DetailPage",

@@ -1,5 +1,5 @@
 <template>
-  <header class="header"  :class="{'header--filled': headerFilled}">
+  <header class="header" :class="{'header--filled': headerFilled}">
       <div class="header__inner container">
 
           <router-link class="header__logo" to="/">
@@ -9,14 +9,23 @@
           <nav class="header__nav">
               <ul class="nav__inner">
                   <li class="nav__item">
-                    <router-link to="/portfolio" active-class="nav--active">Portfolio</router-link>
+                    <a href="#about" v-scroll-to="{el: '#about', offset: -50}" active-class="nav--active">About</a>
                   </li>
                   <li class="nav__item">
-                    <router-link to="/about" active-class="nav--active">About</router-link>
+                    <a href="#services" v-scroll-to="{el: '#services', offset: -50}" active-class="nav--active">Services</a>
                   </li>
                   <li class="nav__item">
+                    <a href="#skills" v-scroll-to="{el: '#skills', offset: -50}" active-class="nav--active">Skills</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}" active-class="nav--active">Portfolio</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#contact" v-scroll-to="{el: '#contact', offset: -50}" active-class="nav--active">Contact</a>
+                  </li>
+                  <!-- <li class="nav__item">
                     <router-link to="/blog" active-class="nav--active">Blog</router-link>
-                  </li>
+                  </li> -->
                   <li class="nav__item mobile_only">
                     <a v-on:click="toggleMenu" href="#navigation">Menu</a>
                   </li>
@@ -28,15 +37,15 @@
               <li>
                 <router-link to="/" active-class="nav--active">Home</router-link>
               </li>
-              <li>
+              <!-- <li>
                 <router-link to="/portfolio" active-class="nav--active">Portfolio</router-link>
-              </li>
+              </li> -->
                 <li>
                   <router-link to="/about" active-class="nav--active">About</router-link>
               </li>
-              <li>
+              <!-- <li>
                 <router-link to="/blog" active-class="nav--active">Blog</router-link>
-              </li>
+              </li> -->
               <li class="mobile_only">
                 <a v-on:click="toggleMenu" href="#navigation">Close</a>
               </li>
@@ -78,8 +87,6 @@ export default {
       const header = document.querySelector("header");
       const offset = header.clientHeight - 50;
 
-      console.log(window.pageYOffset <= offset);
-      
       if (window.pageYOffset <= offset) {
         this.headerFilled = false;
       } else {

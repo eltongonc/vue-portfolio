@@ -3,7 +3,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 pb-60">
-					<h1 class="mb-10 text-center">I can help you with your project.<br/>Let&apos;s get in tough</h1>
+					<h2 class="section-title text-center">I can help you with your project</h2>
+					<p class="section-subtitle text-center">Leave your contact behind if you have a project on your mind</p>
 				</div>
 			</div>
 			<div class="row">

@@ -29,13 +29,15 @@
               <div v-for="(item, key) in items.slice(0, amount)" :class="[item.category, 'col-sm-4', 'item__summary']" :key="key">
                 <div class="relative">
                   <div class="thumb">
-                    <div class="overlay overlay-bg"></div>
+                    <div class="overlay overlay-bg">
+                      <h4>{{item.title}}</h4>
+                    </div>
                     <img class="image img-fluid" :src="item.image_small" alt=""/>
                   </div>
                 </div>
-                <div class="p-inner">
+                <!-- <div class="p-inner">
                   <h4>{{item.title}}</h4>
-                </div>
+                </div> -->
               </div>
             </isotope>
         </div>

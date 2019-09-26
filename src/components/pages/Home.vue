@@ -5,25 +5,46 @@
             <h2>I am a Front-end developer and I can help you with a new website.</h2>
             <router-link v-if="this.$router.currentRoute.path === '/'" to="/contact" v-on:click.native="scrollTo" class="button">Contact me</router-link>
         </PosterCanvas>
-        <WhatIDo/>
-		<Skills/>
-        <Portfolio/>
-        <div class="skills">
-          <h3 class="section-title">Your Project</h3>
-          <p>Do you have a project in mind? Let’s work together to make the next project on this page yours.</p>
-          <router-link class="button" to="/contact">Start a project</router-link>
+
+        <div id="about" class="portfolio">
+            <div class="container">
+                <diV class="row d-flex justify-content-center">
+                <h2 class="section-title">About me</h2>
+                </div>
+            </div>
+
+            <section class="about__content">
+                <div class="content__photo">
+                    <img class="photo" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
+                </div>
+                <div class="content__subtitle" v-html="pageData.text"></div>
+            </section>
         </div>
+        
+        <WhatIDo id="services"/>
+		<Skills id="skills"/>
+        <Portfolio id="portfolio"/>
+
+        <ContactForm id="contact"/>
 	</main>
 </template>
 
 <script>
-    import { PosterCanvas, Portfolio, Intro, Skills, WhatIDo } from '../partials';
+    import { PosterCanvas, Portfolio, Intro, Skills, WhatIDo, ContactForm, } from '../partials';
 
     export default {
         data(){
             return {
                 portfolioCount: 4,
                 className: 'page page--' + this.$route.name.toLowerCase(),
+                pageData: {
+                    text: `
+                        <p>My name is Elton Gonçalves Gomes I was born in Cabo Verde and moved to the Netherlands when I was six years old. I’m always working on developing myself and learning new stuff.</p>
+                        <p>After graduating for my bachelor Communication and Multimedia Design I started my career as a front-end developer. I am currently working fulltime at a design technology company name <a href="https://ateliersai.com">SAI</a>, but I have enough time for some side-projects</p>
+                        <p>I strongly believe that things happen for a reason. You stranding on my portfolio and reading this piece of text at the moment is not a coincidence. Maybe you want a website or maybe you just want a drinking buddy! Either way I like to help you with both.</p>
+                    `,
+                    img: "/static/profile.jpg"
+                }
             };
         },
         components:{
@@ -32,6 +53,7 @@
             Skills,
             Intro,
             WhatIDo,
+            ContactForm,
         }
     };
 </script>
