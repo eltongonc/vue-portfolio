@@ -1,5 +1,3 @@
-$primary-color: $dark-grey;
-
 .footer {
   background-color: $dark-grey;
   padding: 120px 0;
@@ -28,33 +26,25 @@ $primary-color: $dark-grey;
         color: $white!important;
         margin-bottom: 25px;
         font-weight: 500;
-    } 
-    .form-control{
-        border: none;
-        width: 80%!important;
-        font-weight: 300;
-        background: #f9f9ff;
-        padding-left: 20px;
-        border-radius: 0;
-        font-size: 14px;
-        line-height: normal!important;
-        color:$black;
-        &:focus {
-            box-shadow: none;
-            color:$black;
-        }
+        text-align: center;
     }
+    p {
+      text-align: center;
+    }
+
     ul li {
         margin-bottom: 10px;
         a {
             color: $text-color;
             &:hover {
-                color: $primary-color;
+                color: $dark-grey;
             }
         }
     }
   
     .footer-social{
+      display: flex;
+      justify-content: center;
         a{
             width: 30px;
             height: 30px;
@@ -66,7 +56,7 @@ $primary-color: $dark-grey;
             }
             &:hover{
                 i{
-                      color:$primary-color;
+                      color:$dark-grey;
                 }
               
             }
@@ -82,6 +72,22 @@ $primary-color: $dark-grey;
     color: $white;
     a {
       color: $white;
+    }
+  }
+
+  @media (min-width: $grid-xsmall) {
+    .single-footer-widget {
+      h4,
+      p {
+        text-align: left;
+      }
+
+      .footer-social {
+        justify-content: flex-start;
+        a {
+          margin-right: 1rem;
+        }
+      }
     }
   }
 }

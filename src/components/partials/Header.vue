@@ -2,17 +2,14 @@
   <header class="header" :class="{'header--filled': headerFilled}">
       <div class="header__inner container">
 
-          <router-link class="header__logo" to="/">
+          <a href="" v-scroll-to="{el: '.poster'}" class="header__logo" to="/">
             <img src="../../assets/images/logo-white.png"/>
-          </router-link>
+          </a>
           
           <nav class="header__nav">
               <ul class="nav__inner">
                   <li class="nav__item">
-                    <a href="#about" v-scroll-to="{el: '#about', offset: -50}" active-class="nav--active">About</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#services" v-scroll-to="{el: '#services', offset: -50}" active-class="nav--active">Services</a>
+                    <a href="#about" v-scroll-to="{el: '#about', offset: -50}" active-class="nav--active">About me</a>
                   </li>
                   <li class="nav__item">
                     <a href="#skills" v-scroll-to="{el: '#skills', offset: -50}" active-class="nav--active">Skills</a>
@@ -33,9 +30,6 @@
             <ul>
               <li class="nav__item">
                 <a v-on:click="closeMenu" href="#about" v-scroll-to="{el: '#about', offset: -50}" active-class="nav--active">About</a>
-              </li>
-              <li class="nav__item">
-                <a v-on:click="closeMenu" href="#services" v-scroll-to="{el: '#services', offset: -50}" active-class="nav--active">Services</a>
               </li>
               <li class="nav__item">
                 <a v-on:click="closeMenu" href="#skills" v-scroll-to="{el: '#skills', offset: -50}" active-class="nav--active">Skills</a>

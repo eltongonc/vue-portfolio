@@ -6,7 +6,7 @@
             <router-link v-if="this.$router.currentRoute.path === '/'" to="/contact" v-on:click.native="scrollTo" class="button">Contact me</router-link>
         </PosterCanvas>
 
-        <div id="about" class="portfolio">
+        <div id="about" class="section">
             <div class="container">
                 <diV class="row d-flex justify-content-center">
                 <h2 class="section-title">About me</h2>
@@ -21,7 +21,7 @@
             </section>
         </div>
         
-        <WhatIDo id="services"/>
+        <!-- <WhatIDo id="services"/> -->
 		<Skills id="skills"/>
         <Portfolio id="portfolio"/>
 

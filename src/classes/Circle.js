@@ -20,11 +20,6 @@ export class Circle {
     // Uncomment to enable movement
     this.movement(this);
 
-    // Uncomment to enable mouse interactivity
-    // if (mousePos) {
-    // This.interactivity(mousePos);
-    // }
-
     this.draw();
   }
 

@@ -1,67 +1,23 @@
-.page--contact {
-	.section {
-		padding: 4rem;
-		background: #f9f9ff;
+.contact__content {
+	background: $light_grey;
 
-		h1 {
-			margin-bottom: 4rem;
-		}
-		
-		.contact-btns {
-			font-size: 18px;
-			font-weight: 600;
-			text-align: center;
-			padding: 40px;
-			color: $white;
-			margin-bottom: 30px;
-			&:hover {
-				color: $white;
+	.address-wrap{
+		.single-contact-address {
+			margin-bottom: 8px;
+			h5 {
+				font-weight: 300;
+				font-size: 16px;
+				margin-bottom: 5px;
+			}
+			.lnr {
+				font-size: 30px;
+				font-weight: 500;
+				margin-right: 30px;
 			}
 		}
-		.form-area {
-			.form-control{
-				&:focus{
-					box-shadow: none!important;
-					border-color:#ced4da!important;
-				}
-			}
-			input {
-				padding: 15px;
-				margin-bottom: 1rem;
-			}
-			input,
-			textarea {
-				border-radius: 0;
-				font-size: 13px!important;
-			}
-			textarea {
-				height: 190px;
-				margin-top: 0px;
-				padding: 15px;
-			}
-			.genric-btn {
-				border-radius: 0!important;
-				font-size: 14px;
-				text-transform: uppercase!important;
-			}
-		}
-		.address-wrap{
-			@media(max-width:991px){
-				margin-bottom:30px;
-			}
-			.single-contact-address {
-				margin-bottom: 8px;
-				h5 {
-					font-weight: 300;
-					font-size: 16px;
-					margin-bottom: 5px;
-				}
-				.lnr {
-					font-size: 30px;
-					font-weight: 500;
-					margin-right: 30px;
-				}
-			}
+
+		@media(max-width:991px){
+			margin-bottom:30px;
 		}
 	}
 }

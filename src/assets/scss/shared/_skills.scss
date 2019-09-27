@@ -14,10 +14,11 @@
     margin: 0;
     margin-bottom: .5rem;
     text-align: center;
+    width: 100%;
   }
-  .subtitle {
+  .section-subtitle {
     padding: 0;
-    max-width: 100%;
+    width: 100%;
     text-align: center;
     margin: 0;
     margin-bottom: 2rem;
@@ -36,8 +37,8 @@
     .carousel-cell {
       margin: 0 0.5rem;
       box-shadow: 0 0 1.5rem 0rem $light_grey;
-      width: 10rem;
-      height: 6rem;
+      width: 12rem;
+      height: 8rem;
       border-radius: 0.3rem;
       color: white;
       font-weight: bold;
@@ -52,6 +53,8 @@
 
       span {
         margin-top: 1rem;
+        text-align: center;
+        color: $dark-grey;
       }
 
       &.is-selected {

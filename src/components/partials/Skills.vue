@@ -1,7 +1,14 @@
 <template>
-    <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-subtitle">{{ skillDesc[descriptionIndex] }}</p>
+    <section id="skills" class="skills section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="section-title">Skills</h2>
+              <p class="section-subtitle">{{ skillDesc[descriptionIndex] }}</p>
+            </div>
+          </div>
+        </div>
+        
         <Flickity ref="carousel" class="carousel" :options="flickOptions">
             <div v-for="(skill, index) in skills" :key="index" class="carousel-cell">
                 <div :id="skill.id"></div>

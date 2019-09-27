@@ -1,5 +1,5 @@
 <template>
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio section">
       <div class="container">
         
         <diV class="row d-flex justify-content-center">

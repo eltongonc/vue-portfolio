@@ -13,3 +13,13 @@ body {
 .section-title {
 	text-transform: uppercase;
 }
+
+.link {
+	text-decoration: none;
+	color: $dark_grey;
+	cursor: pointer;
+	&:hover {
+		color: $green;
+		text-decoration: none;
+	}
+}

@@ -1,98 +1,48 @@
-.about {
-	.about__content {
-		padding: 2rem 0 4em 0;
-		max-width: 80% ;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
+.about__content {
+	padding-top: 2rem;
+	padding-bottom: 0;
+	max-width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	// flex-direction: row-reverse;
+	.content__photo {
+		width: 100%;
+		overflow: hidden;
+		border-radius: .3em;
+		margin-bottom: 2rem;
+		
+		.photo {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.content__subtitle {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		text-align: left;
+		max-width: 32rem;
+		p {
+			margin-top: 0;
+		}
+	}
+
+	@media (min-width: $grid-xsmall) {
 		flex-direction: row-reverse;
+		padding-bottom: 0;
 		.content__photo {
 			width: 20em;
 			height: 20em;
-			overflow: hidden;
-			border-radius: .3em;
-			box-shadow: $dark_boxshadow;
 			margin-left: 5rem;
+			margin-bottom: 2rem;
+
 			.photo {
+				width: auto;
 				height: 100%;
-			}
-		}
-		.content__subtitle {
-			margin-top: 0;
-			margin-bottom: 0;
-			padding-top: 0;
-			padding-bottom: 0;
-			text-align: left;
-			max-width: 32rem;
-			p {
-				margin-top: 0;
-			}
-		}
-
-	}
-	.section--contact {
-		padding: 4rem;
-		background: $light_grey;
-
-		h1 {
-			margin-bottom: 4rem;
-		}
-		
-		.contact-btns {
-			font-size: 18px;
-			font-weight: 600;
-			text-align: center;
-			padding: 40px;
-			color: $white;
-			margin-bottom: 30px;
-			&:hover {
-				color: $white;
-			}
-		}
-		.form-area {
-			.form-control{
-				&:focus{
-					box-shadow: none!important;
-					border-color:#ced4da!important;
-				}
-			}
-			input {
-				padding: 15px;
-				margin-bottom: 1rem;
-			}
-			input,
-			textarea {
-				border-radius: 0;
-				font-size: 13px!important;
-			}
-			textarea {
-				height: 190px;
-				margin-top: 0px;
-				padding: 15px;
-			}
-			.genric-btn {
-				border-radius: 0!important;
-				font-size: 14px;
-				text-transform: uppercase!important;
-			}
-		}
-		.address-wrap{
-			@media(max-width:991px){
-				margin-bottom:30px;
-			}
-			.single-contact-address {
-				margin-bottom: 8px;
-				h5 {
-					font-weight: 300;
-					font-size: 16px;
-					margin-bottom: 5px;
-				}
-				.lnr {
-					font-size: 30px;
-					font-weight: 500;
-					margin-right: 30px;
-				}
 			}
 		}
 	}

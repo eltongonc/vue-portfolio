@@ -7,7 +7,7 @@
   padding-top: 70px;
   
   canvas {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     box-sizing: border-box;
@@ -16,7 +16,6 @@
   }
   
   .poster__inner {
-    // margin: 0 auto;
     display: flex;
     align-items: center;
     height: 100%;
@@ -67,6 +66,19 @@
 
   &.poster--home {
     height: 100vh;
+  }
+
+  @media (max-width: $grid-xsmall) {
+    .poster__inner {
+      .poster__inner {
+        h1 {
+          font-size: 30px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
   }
 }
 

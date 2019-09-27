@@ -15,6 +15,7 @@
       align-items: center;
       transition: transform .3s ease-in-out;
       transform-origin: left;
+      transform: scale(0.8);
       img {
         line-height: 1;
         vertical-align: middle;
@@ -113,12 +114,6 @@
   &.header--filled {
     background-color: $dark_grey;
     box-shadow: 0 0 2em #333;
-
-    .header__inner {
-      .header__logo {
-        transform: scale(0.8);
-      }
-    }
   }
   @media (max-width: $grid-medium) {
     .header__inner {
