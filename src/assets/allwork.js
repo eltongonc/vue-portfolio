@@ -2,6 +2,7 @@ module.exports = [
     {
         title: "JSClient Builder",
         urlTitle: "jsclient-builder",
+        category: "prototyping",
         image_small: "/static/jsclient_builder/jsclient%20builder-form-init.png",
         image: "/static/jsclient_builder/jsclient%20builder-form-init.png",
         image_list: [
@@ -41,12 +42,13 @@ module.exports = [
         client: "Dimebox - Hans van Leeuwen",
         author: "Elton Gonçalves Gomes",
         tags: ["code", "visual"],
-        startDate: "2018-02-05", //YYYY-MMMM-DD
+        startDate: "2018-02-05",
         endDate: "2018-06-29"
     },
     {
         title: "MediaLab",
         urlTitle: "medialab",
+        category: "webapp",
         image_small: "/static/medialab/medialab-small.jpg",
         image: "/static/medialab/medialab.jpg",
         image_list: [
@@ -96,6 +98,7 @@ module.exports = [
     {
         title: "Funda serverside",
         urlTitle: "funda-serverside",
+        category: "prototyping",
         image_small:
             "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png",
         image:
@@ -137,6 +140,7 @@ module.exports = [
     {
         title: "Soundcloud explorer",
         urlTitle: "soundcloud-explorer",
+        category: "prototyping",
         image_small: "/static/soundcloud_explorer/soundcloud_exp-small.jpg",
         image: "/static/soundcloud_explorer/soundcloud_exp.jpg",
         image_list: [
@@ -180,6 +184,7 @@ module.exports = [
     {
         title: "Zoku inspire",
         urlTitle: "zoku-inspire",
+        category: "prototyping",
         image_small: "/static/zoku/zoku-compressed1.jpg",
         image: "/static/zoku/zoku.jpg",
         image_list: [
@@ -247,6 +252,7 @@ module.exports = [
     {
         title: "Drum kit",
         urlTitle: "drum-kit",
+        category: "prototyping",
         image_small: "/static/drumkit/drum-kit-small.jpg",
         image: "/static/drumkit/drum-kit.jpg",
         image_list: [],
@@ -268,6 +274,7 @@ module.exports = [
     {
         title: "Daskas",
         urlTitle: "daskas",
+        category: "webshop",
         image_small: "/static/daskas/daskas-small.jpg",
         image: "/static/daskas/daskas.jpg",
         image_list: [

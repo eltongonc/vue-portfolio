@@ -1,0 +1,25 @@
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: $font-dosis;
+}
+
+.title {
+	font-size: 1.5rem;
+}
+
+.section-title {
+	text-transform: uppercase;
+}
+
+.link {
+	text-decoration: none;
+	color: $dark_grey;
+	cursor: pointer;
+	&:hover {
+		color: $green;
+		text-decoration: none;
+	}
+}

@@ -1,13 +1,18 @@
 <template>
-    <section :class="['poster poster--canvas poster--' + className, title? 'poster__page': 'poster__home' ]">
-        <div class="poster__inner">
-            <div v-if="!title" class="poster__intro">
-                <h1>Hi, I'm Elton Gonçalves Gomes</h1>
+    <section :class="'poster poster--' + className">
+        <div class="container poster__inner">
+            <div v-if="!title" class=" row poster__intro">
+              <div class="col-sm-8">
+                <slot></slot>
+              </div>
             </div>
-            <figcaption v-else class="poster__intro">
+            <div v-else class="row poster__intro">
+              <div class="col-sm-8">
                 <h1>{{title}}</h1>
                 <h2>{{subtitle}}</h2>
-            </figcaption>
+              </div>
+            </div>
+            <span v-if="className === 'home'" class="scroll-icon lnr lnr-chevron-down"></span>
         </div>
         <canvas ref="canvas" id="canvas"></canvas>
     </section>
@@ -35,10 +40,13 @@ export default {
         min: 5
       },
       colors: [
-        "#1abc9c", // turquoise
-        "#2ecc71", // emerald
-        "#16a085", // green tea
-        "#27ae60" // nephritis
+        // "#1abc9c", // turquoise
+        // "#2ecc71", // emerald
+        // "#16a085", // green tea
+        // "#27ae60" // nephritis
+        "#ededed",
+        "silver",
+        "grey",
       ]
     };
   },
@@ -61,6 +69,7 @@ export default {
               this.radius.min,
             dx: (Math.random() - 0.4) * 1,
             dy: (Math.random() - 0.4) * 1,
+            color: this.colors[Math.floor(Math.random() * this.colors.length)],
             radius: Math.floor(Math.random() * this.radius.min)
           })
         );
@@ -132,105 +141,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-$grid-large: 80rem;
-$red: #663231;
-$green: #97dcac;
-$dark_grey: #3d3d49;
-
-.poster {
-  height: 45rem;
-  background-color: $dark_grey;
-  canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    z-index: 0;
-  }
-  .poster__inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-    position: relative;
-    .poster__intro {
-      transition: 0.3s;
-      padding: 1em;
-      box-sizing: border-box;
-      max-width: 30rem;
-      position: absolute;
-      z-index: 1;
-      h1,
-      h2 {
-        text-align: left;
-        color: white;
-        text-shadow: 0 0 10px #333;
-        text-transform: uppercase;
-        transform: scale(1.5);
-        transition: 0.3s;
-        max-width: 30em;
-      }
-
-      h2 {
-        margin: auto;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        font-weight: normal;
-        position: relative;
-        z-index: 1;
-      }
-      h3 {
-        text-align: left;
-        color: white;
-        text-shadow: 0 0 10px #333;
-      }
-      .button {
-        display: block;
-        margin: 2rem auto;
-        padding: 1rem;
-        text-decoration: none;
-        color: white;
-        width: 10em;
-        text-transform: uppercase;
-        border: 0.2rem solid white;
-        background-color: transparent;
-        border-radius: 0.3rem;
-        transition: 0.3s;
-        font-weight: bold;
-        &:hover {
-          background: white;
-          color: #333;
-        }
-      }
-    }
-  }
-  &.poster--work {
-    height: 28rem;
-  } 
-  @media (max-width: 50em) {
-    height: 20rem;
-    .poster__inner {
-      .poster__intro {
-        max-width: 18em;
-        margin: 0 auto;
-        h1,
-        h2 {
-          transform: scale(1);
-          width: 100%;
-          max-width: 100%;
-        }
-      }
-    }
-    &.poster__home {
-      .poster__inner {
-        .poster__intro {
-          top: 8rem;
-        }
-      }
-    }
-  }
-}
-</style>

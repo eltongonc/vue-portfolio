@@ -62,7 +62,7 @@ module.exports = [
   {
     id: "id",
     category: 1,
-    skillDesc: "I also have a basic knowledge of the following tools ",
+    skillDesc: "I also have a basic knowledge of the following tools",
     name: "InDesign",
     svg: `<svg viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
         <path style="fill:#FF5F96;" d="M512,512H0V0h512V512z"/>
@@ -276,7 +276,7 @@ module.exports = [
     skillDesc: "I own a Windows machine but I am not afraid of IOS or Linux",
     name: "Windows",
     svg: `<svg viewBox="0 0 128 128">
-<path fill="#00ADEF" d="M126 1.637l-67 9.834v49.831l67-.534zM1.647 66.709l.003 42.404 50.791 6.983-.04-49.057zM58.467 67.389l.094 49.465 67.376 9.509.016-58.863zM1.61 19.297l.047 42.383 50.791-.289-.023-49.016z"></path>
-</svg>`
+    <path fill="#00ADEF" d="M126 1.637l-67 9.834v49.831l67-.534zM1.647 66.709l.003 42.404 50.791 6.983-.04-49.057zM58.467 67.389l.094 49.465 67.376 9.509.016-58.863zM1.61 19.297l.047 42.383 50.791-.289-.023-49.016z"></path>
+    </svg>`
   }
 ];

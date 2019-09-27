@@ -1,7 +1,14 @@
 <template>
-    <section id="skills" class="skills">
-        <h2 class="title">Skills</h2>
-        <p class="subtitle">{{ skillDesc[descriptionIndex] }}</p>
+    <section id="skills" class="skills section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="section-title">Skills</h2>
+              <p class="section-subtitle">{{ skillDesc[descriptionIndex] }}</p>
+            </div>
+          </div>
+        </div>
+        
         <Flickity ref="carousel" class="carousel" :options="flickOptions">
             <div v-for="(skill, index) in skills" :key="index" class="carousel-cell">
                 <div :id="skill.id"></div>
@@ -73,95 +80,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-$grid-medium: 32rem;
-$red: #663231;
-$green: #97dcac;
-$dark_grey: #3d3d49;
-$light_grey: #ededed;
-
-.hidden {
-  opacity: 0 !important;
-}
-
-.skills {
-  padding: 5em 0;
-  width: 100%;
-  position: relative;
-  transition: 3s;
-
-  .subtitle {
-    padding: 0;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .carousel {
-    outline: 0;
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    cursor: grab;
-
-    .carousel-cell {
-      margin: 0 0.5rem;
-      box-shadow: 0 0 1.5rem 0rem $light_grey;
-      width: 10rem;
-      height: 6rem;
-      border-radius: 0.3rem;
-      color: white;
-      font-weight: bold;
-      background: $green;
-      transition: 0.3s;
-      opacity: 0.5;
-      transform: scale(0.8);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      padding: 1rem;
-
-      span {
-        margin-top: 1rem;
-      }
-
-      &.is-selected {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .flickity-viewport {
-      transition: height 0.2s;
-      margin-bottom: 1rem;
-    }
-
-    .flickity-page-dots {
-      bottom: -22px;
-    }
-
-    .flickity-page-dots .dot {
-      height: 4px;
-      width: 40px;
-      margin: 0;
-      border-radius: 0;
-    }
-
-    .flickity-page-dots .dot.is-selected {
-      background: white;
-    }
-  }
-
-  @media (max-width: 50em) {
-    padding-top: 0;
-    .subtitle {
-      padding: 0;
-      max-width: 18em;
-      text-align: left;
-      margin: 1em auto;
-    }
-  }
-}
-</style>

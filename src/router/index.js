@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import { Work, About, Home, Detail, PageNotFound } from "../components";
+import { Work, About, Home, Detail, Blog, PageNotFound } from "../components";
 
 Vue.use(Router);
 
@@ -15,7 +15,10 @@ export default new Router({
             name: "PageNotFound",
             component: PageNotFound
         },
-        { path: '*', redirect: '/404' },  
+        { 
+            path: '*', 
+            redirect: '/404' 
+        },  
         {
             path: "/",
             name: "Home",
@@ -31,6 +34,11 @@ export default new Router({
             name: "Portfolio",
             component: Work
         },
+        // {
+        //     path: "/blog",
+        //     name: "Blog",
+        //     component: Blog
+        // },
         {
             path: "/portfolio/:slug",
             name: "DetailPage",

@@ -3,8 +3,8 @@
       <div class="intro__inner">
           <div v-if="!pageData" class="intro__text">
               <h2 class="text__title">I'm a front-end developer</h2>
-              <p class="text__paragraph">I consider myself as a T-shaped Front-end developer who focusses on coding but also knows a thing or two about UI and UX. I live in Amsterdam, the Netherlands and can't wait to start exploring the world. I love to mess around with web related technologies and would love to see everything connected to the internet. During my career as a frontend developer I developed a well-balanced knowledge in coding for client-side and server-side.</p>
-              <router-link v-if="this.$router.currentRoute.path === '/'" to="/#skills" v-on:click.native="scrollTo" class="text__link">Let me show you some of my skills</router-link>
+              <p class="text__paragraph">Hi my name is Elton Goncalves Gomes. I am a Front-end developer and I can help you with a new website.</p>
+              <router-link v-if="this.$router.currentRoute.path === '/'" to="/contact" v-on:click.native="scrollTo" class="text__link">Contact me</router-link>
           </div>
           <div class="intro__text" v-else>
               <h2 class="text__title">{{pageData.title}}</h2>
@@ -42,77 +42,3 @@ export default {
     }
 };
 </script>
-
-<style lang="scss">
-$grid-large: 80%;
-$grid-medium: 32rem;
-$red: #663231;
-$green: #97dcac;
-$dark_grey: #3d3d49;
-$light_grey: #ededed;
-
-$dark_boxshadow: 0 0 10rem -2rem #000;
-
-.intro {
-  display: inline-block;
-  height: 20em;
-  width: 100%;
-  .intro__inner {
-    padding: 5em 0;
-    background-color: white;
-    margin: 0 auto;
-    border-radius: 0.3rem;
-    box-shadow: $dark_boxshadow;
-    max-width: $grid-large;
-    transform: translateY(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    .intro__text {
-      max-width: $grid-medium;
-      margin: 0 auto;
-      color: #333;
-      padding: 2rem;
-      .text__title {
-        font-style: normal;
-        text-align: center;
-        margin-top: 0;
-        text-transform: uppercase;
-      }
-      .text__paragraph {
-        font-style: normal;
-        text-align: left;
-      }
-      .text__link {
-        text-align: center;
-        font-style: normal;
-        color: $red;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-        padding: 1rem;
-        display: block;
-        &:hover {
-          color: $green;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 50em) {
-    display: block;
-    height: 100%;
-    .intro__inner {
-    box-shadow: none;
-      transform: translateY(0);
-      max-width: 100%;
-      padding: 2em 0;
-      .intro__text {
-        .text__title {
-          text-align: left;
-        }
-      }
-    }
-  }
-}
-</style>

@@ -1,21 +1,35 @@
 <template>
 	<main class="about">
-		<Poster :background="page.background" :title="page.name"></Poster>
-        <section class="about__content">
-            <div class="content__photo">
-              <img class="photo" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
-            </div>
-            <div class="content__subtitle" v-html="pageData.text"></div>
-        </section>
+		<PosterCanvas>
+      <h1>{{page.name}}</h1>
+    </PosterCanvas>
+
+    <div class="portfolio">
+      <div class="container">
+        <diV class="row d-flex justify-content-center">
+          <h2 class="section-title">About me</h2>
+        </div>
+      </div>
+
+      <section class="about__content">
+          <div class="content__photo">
+            <img class="photo" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
+          </div>
+          <div class="content__subtitle" v-html="pageData.text"></div>
+      </section>
+    </div>
+
+    <ContactForm/>
 	</main>
 </template>
 
 <script>
-  import { Poster, Intro } from '../partials';
+  import { PosterCanvas, Intro, ContactForm } from '../partials';
 
   export default {
     components: {
-      Poster,
+      PosterCanvas,
+      ContactForm,
       Intro
     },
     data() {
@@ -27,65 +41,13 @@
         },
         pageData: {
           text: `
-            <p>My name is Elton Gonçalves Gomes and I am always working on developing myself and learning new stuff.</p>
-            <p>I was born on the Cape Verdean-islands and moved to the Netherlands when I was six years old. When I grow up I want to use my frontend development skills to create a mobile-friendly environment there.</p>
-            <p>I used to be a financial administrator but switched to a more fun and exciting branch that is focused on computer software. The course that I switched to allowed me to be more technical and creative.</p>
-            <p>In 2018 I graduated with a bachelor’s degree in Communication and Multimedia Design.</p>
-            <p>If I am not at the gym working on my fitness, you can find me around family and friends. During the weekends I get little to no sleep because of my party animal instinct.</p>`,
+            <p>My name is Elton Gonçalves Gomes I was born in Cabo Verde and moved to the Netherlands when I was six years old. I’m always working on developing myself and learning new stuff.</p>
+            <p>After graduating for my bachelor Communication and Multimedia Design I started my career as a front-end developer. I am currently working fulltime at a design technology company name <a href="https://ateliersai.com">SAI</a>, but I have enough time for some side-projects</p>
+            <p>I strongly believe that things happen for a reason. You stranding on my portfolio and reading this piece of text at the moment is not a coincidence. Maybe you want a website or maybe you just want a drinking buddy! Either way I like to help you with both.</p>
+          `,
           img: "/static/profile.jpg"
         }
       };
     }
   };
 </script>
-<style lang="scss">
-  $dark_boxshadow: 0 0 10rem -2rem #000;
-
-  .about {
-    .about__content {
-      padding: 8em 0;
-      max-width: 80% ;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-direction: row-reverse;
-      .content__photo {
-        width: 20em;
-        height: 20em;
-        overflow: hidden;
-        border-radius: .3em;
-        box-shadow: $dark_boxshadow;
-        margin-left: 5rem;
-        .photo {
-          height: 100%;
-        }
-      }
-      .content__subtitle {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        text-align: left;
-        max-width: 32rem;
-        p {
-          margin-top: 0;
-        }
-      }
-    }
-    @media (max-width: 50rem) {
-      .about__content {
-        flex-wrap: wrap;
-        padding-top: 4em;
-        .content__photo {
-          margin: 0;
-          margin-bottom: 4em;
-          width: 15em;
-          height: 15em;
-        }
-      }
-    }
-  }
-</style>
-
-
