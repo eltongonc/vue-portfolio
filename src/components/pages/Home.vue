@@ -6,19 +6,20 @@
             <router-link v-if="this.$router.currentRoute.path === '/'" to="/contact" v-on:click.native="scrollTo" class="button">Contact me</router-link>
         </PosterCanvas>
 
-        <div id="about" class="section">
+        <div id="about" class="about section">
             <div class="container">
                 <diV class="row d-flex justify-content-center">
-                <h2 class="section-title">About me</h2>
+                    <h2 class="section-title">About me</h2>
                 </div>
+
+                <section class="about__content row d-flex justify-content-center">
+                    <div class="content__photo col-md-4 col-sm-8 d-flex justify-content-center align-items-start">
+                        <img class="img-fluid " :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
+                    </div>
+                    <div class="content__subtitle col-md-8 col-sm-12" v-html="pageData.text"></div>
+                </section>
             </div>
 
-            <section class="about__content">
-                <div class="content__photo">
-                    <img class="photo" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
-                </div>
-                <div class="content__subtitle" v-html="pageData.text"></div>
-            </section>
         </div>
         
         <!-- <WhatIDo id="services"/> -->

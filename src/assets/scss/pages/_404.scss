@@ -1,4 +1,11 @@
 .errorpage {
+	.poster {
+		height: 100vh;
+		canvas {
+			position: fixed;
+			// height: 100vh;
+		}
+	}
 	.errorpage__nav {
 		ul {
 			padding: 0;

@@ -95,11 +95,12 @@
           }
           &.mobile_only {
             position: absolute;
-            top: 1.3rem;
+            top: 0.5rem;
             right: 2rem;
             a {
               font-size: 1rem;
               text-transform: capitalize;
+              text-decoration: none;
             }
           }
         }

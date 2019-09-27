@@ -39,7 +39,7 @@
 							<div class="col-lg-6 form-group">
 								<input 
 									name="phone"
-									placeholder="Enter your phonenumber"
+									placeholder="Enter your phone number"
 									onFocus="this.placeholder = ''"
 									onBlur="this.placeholder = 'Enter subject'"
 									class="common-input mb-20 form-control"

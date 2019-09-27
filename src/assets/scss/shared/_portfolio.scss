@@ -32,31 +32,34 @@
       margin-bottom: 2rem;
       .relative {
         position: relative;
-        .thumb {
-          height: 200px;
-          overflow: hidden;
-          border: 1px solid #ededed;
-          border-radius: 4px;
-          position: relative;
-          cursor: pointer;
-          .overlay {
-            display: flex;
-            position: absolute;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity .3s ease-in-out;
-            width: 100%;
-            height: 100%;
-            background-color: $green;
-          }
-          img {
-            box-shadow: none
-          }
-
-          &:hover {
+        a {
+          color: $dark-grey;
+          .thumb {
+            max-height: 180px;
+            overflow: hidden;
+            border: 1px solid #ededed;
+            border-radius: 4px;
+            position: relative;
+            cursor: pointer;
             .overlay {
-              opacity: 1;
+              display: flex;
+              position: absolute;
+              align-items: center;
+              justify-content: center;
+              opacity: 0;
+              transition: opacity .3s ease-in-out;
+              width: 100%;
+              height: 100%;
+              background-color: $green;
+            }
+            img {
+              box-shadow: none
+            }
+  
+            &:hover {
+              .overlay {
+                opacity: 1;
+              }
             }
           }
         }

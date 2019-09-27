@@ -132,7 +132,7 @@ module.exports = [
   {
     id: "wot",
     category: 2,
-    skillDesc: "These are the things I really want to learn",
+    skillDesc: "These are the things I want to learn",
     name: "Web of Things",
     svg: `<svg viewBox="0 0 511.999 511.999" xml:space="preserve">
         <g>
@@ -189,7 +189,7 @@ module.exports = [
   {
     id: "backend",
     category: 2,
-    skillDesc: "These are the things I really want to learn",
+    skillDesc: "These are the things I want to learn",
     name: "Backend Development",
     svg: `
         <svg viewBox="0 0 58 58" xml:space="preserve">
@@ -237,7 +237,7 @@ module.exports = [
   {
     id: "webapp",
     category: 2,
-    skillDesc: "These are the things I really want to learn",
+    skillDesc: "These are the things I want to learn",
     name: "Web-App Development",
     svg: `
         <svg viewBox="0 0 512 512" xml:space="preserve">
@@ -269,14 +269,5 @@ module.exports = [
         	<path style="fill:#E6E6E6;" d="M420,244h-4c-2.212,0-4-1.788-4-4s1.788-4,4-4h4c2.212,0,4,1.788,4,4S422.212,244,420,244z"/>
         </g>
         </svg>`
-  },
-  {
-    id: "windows",
-    category: 3,
-    skillDesc: "I own a Windows machine but I am not afraid of IOS or Linux",
-    name: "Windows",
-    svg: `<svg viewBox="0 0 128 128">
-    <path fill="#00ADEF" d="M126 1.637l-67 9.834v49.831l67-.534zM1.647 66.709l.003 42.404 50.791 6.983-.04-49.057zM58.467 67.389l.094 49.465 67.376 9.509.016-58.863zM1.61 19.297l.047 42.383 50.791-.289-.023-49.016z"></path>
-    </svg>`
   }
 ];

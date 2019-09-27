@@ -19,29 +19,28 @@ module.exports = [
             mp4: "/static/jsclient_builder/jsclient_pp.mp4",
         },
         summary:
-            "The Jsclient Builder is an interactive webpage that helps customers of Dimebox generate and style a paymentform",
+            "The Jsclient Builder is an interactive webpage that helps customers of Dimebox generate and style a payment form",
         content: `
         <h3>About Dimebox</h3>
-        <p>Dimebox is company that allows online payments for banks and merchants. The company was founded in 2014 by Hans van Leeuwen, Jan Joost Kalff, and Raymundo Leefmans</p>
+        <p>Dimebox is a company that allows online payments for banks and merchants. The company was founded in 2014 by Hans van Leeuwen, Jan Joost Kalff, and Raymundo Leefmans</p>
 
         <h3>The assignment</h3>
         <blockquote>How can the merchant create and edit a payment form made by the jsclient, without knowing how to write code.</blockquote>
-        <p>To set up a paymentform with the jsclient, merchants need to have to be technically oriented. A merchant has to search guidance if he doesn't know how to write code.</p>
+        <p>To set up a payment form with the jsclient, merchants need to have to be technically oriented. A merchant has to search guidance if he doesn't know how to write code.</p>
 
         <h3>About the project</h3>
-        <p>For this project I created a Single Page Application (SPA) that allows the user to add custom text, edit style and view how the form will appear on his page. When the user is done customizing a HTML code can be generated to paste onto his webpage</p>
+        <p>For this project, I created a Single Page Application (SPA) that allows the user to add custom text, edit style and view how the form will appear on his page. When the user is done customizing an HTML code can be generated to paste onto his webpage</p>
         <ul>
             <li>Competitor research</li>
-            <li>Desk- and fieldresearch</li>
+            <li>Desk- and field research</li>
             <li>Weekly meetings with a coach for guidance</li>
             <li>Writing code and style guides</li>
             <li>User testing</li>
         </ul>
 
-        <p>Because this project was build for Dimebox I can't provide the codebase</p>`,
+        <p>The code is not publicly available because this project was built for Dimebox</p>`,
         client: "Dimebox - Hans van Leeuwen",
         author: "Elton Gonçalves Gomes",
-        tags: ["code", "visual"],
         startDate: "2018-02-05",
         endDate: "2018-06-29"
     },
@@ -80,7 +79,7 @@ module.exports = [
         <p>The old design of the site didn’t represent the look-and-feel of Medialab. It had different colors and layout than the corporate website. My assignment was to rebuild the current website to match the identity of the company.</p>
         <img width="100%" src="/static/medialab/devices.jpg">,
         <h3>About the project</h3>
-        <p>For this project I replaced the old support page with an editted WordPress theme</p>
+        <p>For this project, I replaced the old support page with an edited WordPress theme</p>
         <p>The assignment was split into four parts:</p>
         <ol>
             <li>Observing the old site</li>
@@ -118,7 +117,7 @@ module.exports = [
         <blockquote>Research ways to make the funda website faster</blockquote>
 
         <h3>About Funda server-side</h3>
-        Funda server-side is an server-side application that runs on Node.js + Express. This project was built to illustrate a few performance patterns that could optimize the speed of the current Funda website. Funda server-side is based on the existing <a href="www.funda.nl">Funda site</a>.
+        Funda server-side is a server-side application that runs on Node.js + Express. This project was built to illustrate a few performance patterns that could optimize the speed of the current Funda website. Funda server-side is based on the existing <a href="www.funda.nl">Funda site</a>.
 
         <h3>What does it do</h3>
         <p>Funda server-side allows users to search and get information on houses in the Netherlands that are registered on Funda. </p>
@@ -127,10 +126,10 @@ module.exports = [
         <h3>Results</h3>
         <p>The site became much faster after applying optimization. </p>
         <ul>
-            <li>Rendering files on the server will give the website a boost in performance. </li>
+            <li>Rendering files on the server will give the website a boost in performance.</li>
             <li>Loading page a-sync helps the DOM content load much faster. </li>
-            <li>I didn't succeed on making the images smaller, but I did manage to get a higher score on Google's <a href="https://developers.google.com/speed/pagespeed/insights/?hl=nl">PageSpeed insights</a> for mobile. </li>
-        <p>There isn't any live version but the code can be viewed on GitHub. </p>`,
+            <li>I didn't succeed on making the images smaller, but I did manage to get a higher score on Google's <a href="https://developers.google.com/speed/pagespeed/insights/?hl=nl">PageSpeed Insights</a> for mobile.</li>
+        <p>There isn't any live version but the code can be viewed on GitHub.</p>`,
         author: "Elton Gonçalves Gomes",
         client: "Free project",
         colaborators: "",
@@ -158,11 +157,11 @@ module.exports = [
             "Soundcloud explorer is a music exploration website build with HTML, CSS, and JavaScript. It allows the user to search and play songs that are available on Soundcloud",
         content: `
         <h3>The assignment</h3>
-        <blockquote>Create a singlepage application using only Vanilla Javascript</blockquote>
+        <blockquote>Create a single page application using only Vanilla Javascript</blockquote>
 
         <h3>About the project</h3>
 		<p>This is a basic Single page application that uses JavaScript to get data from the SoundCloud API and uses this data to play songs.</p>
-        <p>The main focus was to learn Object Oriented Programming JavaScript.</p>
+        <p>The main focus was to learn Object-Oriented Programming JavaScript.</p>
         <p>Because this was a three-week project it still contains bugs.</p>
         
 		<h3>Features</h3>
@@ -172,7 +171,7 @@ module.exports = [
 			<li>Get information about a song.</li>
 			<li>Login page (no actual authentication yet)</li>
 			<li>The app has a router that checks if a route exists and sends a corresponding message if it doesn't.</li>
-			<li>Pretty urls</li>
+			<li>Pretty URLs</li>
 		</ul>
 		`,
         author: "Elton Gonçalves Gomes",
@@ -216,7 +215,7 @@ module.exports = [
         <p>The guests of the Zoku hotel are expats that stay here for a period of three months. After these three months, they are allowed to choose whether they find their own place to stay or prolong their stay at Zoku</p>
 
         <h3>About the project</h3>
-        <p>Zoku Inspire is a way to help guests get familiar with the locals of the city. By sharing knowledge, guests will meet new people with common interest. </p>
+        <p>Zoku Inspire is a way to help guests get familiar with the locals of the city. By sharing knowledge, guests will meet new people with a common interest.</p>
         <p>A visitor of the Zoku hotel can use his/her mobile phone to create a workshop and shared their expertise. This workshop will then be displayed on a bigger screen, at a central point within the hotel lobby. </p>
         <p>For this project I worked together with two skilled designers, to create a prototype of the app. This was a project of 6 weeks and during this project, we did the following:</p>
         <ul>
@@ -228,13 +227,13 @@ module.exports = [
         </ul>
 
         <h3>My Role</h3>
-        <p>During this project everyone had the same role. I mainly focussed on writing, managing and maintaining the code on GitHub.</p>
+        <p>During this project, everyone had the same role. I mainly focussed on writing, managing and maintaining the code on GitHub.</p>
 
         <h3>Result</h3>
         <p>Zoku Inspire resulted in a website that can be interacted via two places:</p>
         <ul>
-            <li>Mobile App: Is used to create an event</li>
-            <li>Big touchscreen: Placed on a centralpoint in the hotel and is used as a overview of all events</li>
+            <li><strong>Mobile App</strong>: Is used to create an event</li>
+            <li><strong>Big touchscreen</strong>: Placed on a central point in the hotel and is used as a overview of all events</li>
         </ul>
 
         <h3>Colaborators</h3>
@@ -257,7 +256,7 @@ module.exports = [
         image: "/static/drumkit/drum-kit.jpg",
         image_list: [],
         summary:
-            "Drum kit is an interactive soundboard. This project was build to illustrate the capabilities of a web browser. At it's minimal the website requires basic HTML and uses browser technology to add layers of enhancements.",
+            "The Drum kit is an interactive soundboard. This project was build to illustrate the capabilities of a web browser. At it's minimal the website requires basic HTML and uses browser technology to add layers of enhancements.",
         content: `
         <h3>About the project</h3>
         <p>This project is a sequencer that allows users to make sounds with 8 different instruments. The app allows users to interact by using their keyboard keys or mouse.</p>
@@ -291,7 +290,7 @@ module.exports = [
             url: "https://player.vimeo.com/video/153789377",
         },
         summary:
-            "Daskas.nl is a re-designed webshop build for Daskas. With Skuemorphism we tried to make a visual representation of the physical shop.",
+            "Daskas is a re-designed webshop build for Daskas. With Skuemorphism we tried to make a visual representation of the physical shop.",
         content: `
         <h3>About Daskas</h3>
         <p>Daskas started as a small glass workshop in 1990 By Rob and Eliane Dashorst in Amsterdam, The Netherlands. As Daskas aged, it became more known and has grown into a unique but well-known gift shop at the Haarlemmerstraat in Amsterdam.</p>
@@ -313,12 +312,12 @@ module.exports = [
         <p>We used OpenCart as a backend platform. OpenCart is an eCommerce platform designed for webshops, it helped us give the client an overview of the purchases and order history.</p>
 
         <h3>My Role</h3>
-        <p>During this project I took the role as the Backend and Frontend developer. I was mainly responsible for the code that was delivered, but I also played a huge part in the conception and testing of the project.</p>
+        <p>During this project, I took the role of the Backend and Frontend developer. I was mainly responsible for the code that was delivered, but I also played a huge part in the conception and testing of the project.</p>
 
         <h3>Result</h3>
         <p>Daskas resolved into two main concepts:</p>
         <ul>
-            <li>Skeumorpism: Making a visual representation of the physical shop. We tried to recreate the way products are placed in the shop.</li>
+            <li>Skeuomorphism: Making a visual representation of the physical shop. We tried to recreate the way products are placed in the shop.</li>
             <li>Gift generator: The site can generate a gift based on user input. This would help a customer buy a gift for someone.</li>
         </ul>
 
@@ -332,6 +331,5 @@ module.exports = [
         author: "Elton Gonçalves Gomes",
         externalLink: "http://www.daskas.nl/",
         code_link: "",
-        tags: ["code", "visual"]
     }
 ];
