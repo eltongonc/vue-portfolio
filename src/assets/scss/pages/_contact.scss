@@ -1,0 +1,23 @@
+.contact__content {
+	background: $light_grey;
+
+	.address-wrap{
+		.single-contact-address {
+			margin-bottom: 8px;
+			h5 {
+				font-weight: 300;
+				font-size: 16px;
+				margin-bottom: 5px;
+			}
+			.lnr {
+				font-size: 30px;
+				font-weight: 500;
+				margin-right: 30px;
+			}
+		}
+
+		@media(max-width:991px){
+			margin-bottom:30px;
+		}
+	}
+}

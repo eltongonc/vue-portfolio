@@ -1,17 +1,42 @@
-# Portfolio
-This is a portfolio made with Node.js
+![Poster](./static//poster.jpg)
 
-This project is made to test the capabilities of Node + framework: express.js
+# Vue Portfolio
 
-## TODO
-**Pages**
-- [x] Create a `home` page
-- [x] Create an `about` page
-- [x] Create a `works overview` page
-- [x] Create a `work detail` page
-- [x] Create a `contact` page
+My latest portfolio build with the Progressive
+JavaScript Framework [Vuejs](https://vuejs.org)
 
-**Components**
-- [x] Create a `header` with the logo and links to the pages
-- [x] Create `blocks` for the works overview page
-- [x] Create a footer with additional info
+<!-- TOC -->
+
+- [Vue Portfolio](#vue-portfolio)
+    - [Basic Commands](#basic-commands)
+    - [Live site](#live-site)
+
+<!-- /TOC -->
+
+## Basic Commands
+
+```bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm start
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# generate critical css based on a width and height above the fold
+criticalcss
+
+# lints the project to checks errors
+lint
+
+# deploys a live dev server after you run npm start
+ngrok
+```
+
+## Live site
+To view my portfolio please visit [https://eltongoncalves.nl](https://eltongoncalves.nl).

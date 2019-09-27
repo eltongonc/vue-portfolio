@@ -1,0 +1,99 @@
+.poster {
+  background-color: $dark-grey;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  padding-bottom: 0;
+  padding-top: 70px;
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .poster__inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    .poster__intro {
+      transition: 0.3s ease-in-out;
+      padding: 90px 0;
+      
+      h1,
+      h2 {
+        color: white;
+        text-shadow: 0 0 10px #333;
+        transition: 0.3s ease-in-out;
+      }
+      
+      h1 {
+        text-transform: uppercase;
+        margin-bottom: .5rem;
+      }
+
+      h2 {
+        margin: auto;
+        margin-bottom: 1em;
+        font-weight: normal;
+        position: relative;
+        z-index: 1;
+        font-family: $font-dosis;
+      }
+
+      h3 {
+        color: $white;
+        text-shadow: 0 0 10px #333;
+      }
+    }
+
+    .scroll-icon {
+      color: white;
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      animation: pulse 2s 3s ease-out infinite;
+      opacity: 0;
+    }
+  }
+
+  &.poster--home {
+    height: 100vh;
+  }
+
+  @media (max-width: $grid-xsmall) {
+    .poster__inner {
+      .poster__inner {
+        h1 {
+          font-size: 30px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none
+  }
+  50% {
+    opacity: .8;
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none
+  }
+}
