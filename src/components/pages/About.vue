@@ -4,20 +4,19 @@
       <h1>{{page.name}}</h1>
     </PosterCanvas>
 
-    <div class="portfolio">
-      <div class="container">
-        <diV class="row">
-          <h2 class="section-title text-center">About me</h2>
-        </div>
-        
-        <section class="about__content row">
-            <div class="content__photo col-m-8 col-sm-12">
-              <img class="photo" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
+    <div id="about" class="about section">
+        <div class="container">
+            <diV class="row d-flex justify-content-center">
+                <h2 class="section-title">About me</h2>
             </div>
-            <div class="content__subtitle col-sm-4 col-sm-12" v-html="pageData.text"></div>
-        </section>
-      </div>
 
+            <section class="about__content row d-flex justify-content-center">
+                <div class="content__photo col-md-4 col-sm-8 d-flex justify-content-center align-items-start">
+                    <img class="img-fluid " :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
+                </div>
+                <div class="content__subtitle col-md-8 col-sm-12" v-html="pageData.text"></div>
+            </section>
+        </div>
     </div>
 
     <ContactForm/>
