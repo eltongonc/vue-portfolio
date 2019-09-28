@@ -5,7 +5,7 @@ import { Work, About, Home, Detail, PageNotFound, ContactResponse } from "../com
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     mode: "history",
     history: true,
     base: __dirname,
@@ -13,40 +13,73 @@ export default new Router({
         {
             path: "*",
             name: "PageNotFound",
-            component: PageNotFound
+            component: PageNotFound,
+            meta: {
+                title: () => '404 | Elton Gonçalves Gomes',
+            }
         },
         {
             path: "/",
             name: "Home",
-            component: Home
+            component: Home,
+            meta: {
+                title: () => 'Home | Elton Gonçalves Gomes',
+            }
         },
         {
             path: "/about",
             name: "About",
-            component: About
+            component: About,
+            meta: {
+                title: () => 'About Me | Elton Gonçalves Gomes',
+            }
         },
         {
             path: "/projects",
             name: "Projects",
-            component: Work
+            component: Work,
+            meta: {
+                title: () => 'Projects Overview | Elton Gonçalves Gomes',
+            }
         },
         {
-            path: "/portfolio/:slug",
+            path: "/projects/:slug",
             name: "DetailPage",
             component: Detail,
-            props:true
+            props:true,
+            meta: {
+                title: (route) => {
+                    let title = route.params.slug.replace('-', ' ');
+                    title = title[0].toUpperCase() + title.slice(1);
+
+                    return title + ' | Elton Gonçalves Gomes'
+                }
+            }
         },
         {
-            path: "/succes",
-            name: "ContactSucces",
+            path: "/success",
+            name: "ContactSuccess",
             component: ContactResponse,
-            props:true
+            props:true,
+            meta: {
+                title: () => 'Contact Success | Elton Gonçalves Gomes',
+            }
         },
         {
             path: "/failed",
-            name: "ContactSucces",
+            name: "ContactFail",
             component: ContactResponse,
-            props:true
+            props:true,
+            meta: {
+                title: () => 'Contact Failed | Elton Gonçalves Gomes',
+            }
         },
     ]
 });
+
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title(to);
+    next()
+})
+
+export default router;

@@ -122,14 +122,14 @@ var webpackConfig = merge(baseWebpackConfig, {
       [
           '/',
           '/about/',
-          '/portfolio/',
-          // '/portfolio/jsclient-builder/',
-          // '/portfolio/medialab/',
-          // '/portfolio/funda-serverside/',
-          // '/portfolio/soundcloud-explorer/',
-          // '/portfolio/zoku-inspire/',
-          // '/portfolio/drum-kit/',
-          // '/portfolio/daskas/',
+          '/projects/',
+          // '/projects/jsclient-builder/',
+          // '/projects/medialab/',
+          // '/projects/funda-serverside/',
+          // '/projects/soundcloud-explorer/',
+          // '/projects/zoku-inspire/',
+          // '/projects/drum-kit/',
+          // '/projects/daskas/',
           '/404/'
       ]
     ),

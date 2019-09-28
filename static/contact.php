@@ -31,7 +31,7 @@
 	}
 
     if (@mail($to, $email, $message, $headers)) {
-		header('Location: /succes');
+		header('Location: /success');
     }else {
 		header('Location: /failed');
     }

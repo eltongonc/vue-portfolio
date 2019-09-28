@@ -17,6 +17,7 @@
     "typed.js": "^2.0.2",
     "vue": "^2.3.4",
     "vue-flickity": "^1.0.8",
+    "vue-helmet": "^1.1.5",
     "vue-images-loaded": "^1.1.2",
     "vue-router": "^2.7.0",
     "vue-scrollto": "^2.17.1",
