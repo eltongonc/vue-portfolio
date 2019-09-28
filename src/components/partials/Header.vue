@@ -55,9 +55,7 @@ export default {
       menuItems: [
         { title: 'Home', url: ''},
         { title: 'About', url: 'about'},
-        { title: 'Skills', url: 'skills', homeOnly: true},
         { title: 'Projects', url: 'projects'},
-        { title: 'Contact', url: 'contact', homeOnly: true},
       ]
     }
   },

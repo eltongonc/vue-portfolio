@@ -1,4 +1,4 @@
-module.exports = [
+const projects = [
     {
         title: "JSClient Builder",
         urlTitle: "jsclient-builder",
@@ -333,3 +333,15 @@ module.exports = [
         code_link: "",
     }
 ];
+
+
+export default projects;
+
+export function getDescription(url) {
+    const project = projects.filter(item => item.urlTitle === url)[0];
+    if (project) {
+        return project.urlTitle;
+    } 
+
+    return "My name is Elton Gonçalves Gomes. I'm a T-shaped Front-end developer who focusses on coding but also knows a thing or two about UI and UX";
+}
