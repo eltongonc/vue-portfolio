@@ -45,23 +45,23 @@
     .footer-social{
       display: flex;
       justify-content: center;
-        a{
-            width: 30px;
-            height: 30px;
-            display: inline-block;
-            text-align: center;
-            i{
-                vertical-align: bottom;
-                color:$white;
-            }
-            &:hover{
-                i{
-                      color:$dark-grey;
-                }
-              
-            }
+      a{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 1rem;
+        i{
+          vertical-align: bottom;
+          color:$white;
         }
-    }    
+        &:hover{
+          i{
+            color:$dark-grey;
+          }
+        }
+      }
+    }
   }
 
   .footer-text{
@@ -84,9 +84,6 @@
 
       .footer-social {
         justify-content: flex-start;
-        a {
-          margin-right: 1rem;
-        }
       }
     }
   }

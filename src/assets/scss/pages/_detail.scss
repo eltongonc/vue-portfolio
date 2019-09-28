@@ -1,11 +1,13 @@
 .details {
-	margin-bottom: 5em;
-
+	margin-top: 7rem;
+	img {
+		border: 1px solid $light_grey;
+	}
 	.details__back {
-		color: white;
+		color: white !important;
 		position: fixed;
 		top: 7rem;
-		left: -3em;
+		left: -1em;
 		width: 5em;
 		padding: 1em;
 		text-align: right ;
@@ -16,6 +18,7 @@
 		border-radius: 0.2em;
 		background: #663231;
 		text-decoration: none;
+		cursor: pointer;
 
 		&.transparant {
 			opacity: 0.1;
@@ -25,34 +28,26 @@
 		}
 	}
 	.details__content {
-		padding: 2em;
-		padding-top: 5em;
-		margin-bottom: 4em;
 		h3 {
-			font-size: 1.3rem;
-			margin-top: 4rem;
+			font-size: 1.4rem;
+			margin-top: 2rem;
+			font-weight: bold;
 		}
 		.content__lead {
 			text-align: left;
 			font-style: italic;
-			font-size: 1.2em;
-			max-width: $grid-medium;
+			font-size: 1.2rem;
 			margin: 0 auto;
+			margin-top: 2rem;
 		}
 		.content__body {
 			text-align: left;
-			font-size: 1.2em;
-			max-width: $grid-medium;
+			font-size: 1.2rem;
 			margin: auto;
 			ul {
 				padding-left: 0;
 				li {
-					font-size: 1.2em;
 					list-style: none;
-					color: #663231;
-					margin: .5em;
-					width: 10em;
-					margin:auto;
 				}
 			}
 			img {
@@ -60,10 +55,23 @@
 			}
 		}
 		.content__video {
+			display: flex;
+			flex-direction: column;
 			.video {
-				height: 25rem;
+				max-height: 25rem;
+				align-self: center;
 				max-width: 100%;
 				margin: auto;
+			}
+		}
+
+	}
+	.content__screenshots {
+		.images {
+			margin-top: 2rem;
+			img {
+				width: 100%;
+				margin-bottom: 1rem;
 			}
 		}
 	}
@@ -76,16 +84,7 @@
 	.links--external,
 	.links--github {
 		transition: .3s;
-		border-radius: 0.3rem;
-		color: white;
-		width: 15em;
-		padding: 1em;
-		/*height: 15em;*/
-		position: relative;
-		overflow: hidden;
 		margin: .1em;
-		background: #663231;
-		text-decoration: none;
 	}
 }
 

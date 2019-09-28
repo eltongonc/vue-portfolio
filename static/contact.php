@@ -31,9 +31,9 @@
 	}
 
     if (@mail($to, $email, $message, $headers)) {
-		header('Location: /email-succes');
+		header('Location: /succes');
     }else {
-		header('Location: /email-failed');
+		header('Location: /failed');
     }
 	
 	function IsInjected($str) {

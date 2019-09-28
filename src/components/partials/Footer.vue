@@ -5,18 +5,19 @@
 				<div class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
 					<div class="single-footer-widget">
 						<h4>Sitemap</h4>
-						<p><a href="#about" v-scroll-to="{el: '#about', offset: -50}">About</a></p>
-						<p><a href="#skills" v-scroll-to="{el: '#skills', offset: -50}">Contact</a></p>
-						<p><a href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}">Portfolio</a></p>
+						<p v-for="(item, i) in menuItems" :key="i">
+							<a :href="'#'+item.url" v-if="$route.name == 'Home'" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
+							<router-link v-else :to="'/'+item.url" active-class="nav--active">{{item.title}}</router-link>
+						</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 social-widget">
 					<div class="single-footer-widget">
 						<h4>Contact Information</h4>
 						<div class="footer-social d-flex align-items-center">
-							<a href="#"><LinkedInIcon/></a>
-							<a href="#"><GitHubIcon/></a>
-							<a href="#"><MailIcon/></a>
+							<a href="https://www.linkedin.com/in/elton-gon%C3%A7alves-gomes-b415a3105/" target="_blank" ref="noopener noreferrer"><LinkedInIcon/></a>
+							<a href="http://github.com/eltongonc" target="_blank" ref="noopener noreferrer"><GitHubIcon/></a>
+							<a href="mailto:eltongonc@gmail.com" target="_blank" ref="noopener noreferrer"><MailIcon/></a>
 						</div>
 					</div>
 				</div>
@@ -54,6 +55,13 @@ export default {
   },
   data() {
     return {
+		menuItems: [
+			{ title: 'Home', url: ''},
+			{ title: 'About', url: 'about'},
+			{ title: 'Skills', url: 'skills'},
+			{ title: 'Portfolio', url: 'portfolio'},
+			{ title: 'Contact', url: 'contact'},
+		]
     }
   },
 };

@@ -1,7 +1,10 @@
 <template>
 	<main class="errorpage">
-        <PosterCanvas :title="page.title" :subtitle="page.subtitle"></PosterCanvas>
-        <Intro :pageData="pageData"></Intro>
+        <PosterCanvas>
+            <h1>Oops!</h1>
+            <h2>It looks like I haven't made this page</h2>
+            <router-link to="/about" class="button">Contact me</router-link>
+        </PosterCanvas>
 	</main>
 </template>
 
@@ -15,10 +18,6 @@
         },
         data() {
             return {
-                page: {
-                    title: "Oops!",
-                    subtitle: "It looks like I haven't made this page",
-                },
                 pageData: {
                     title: "Try one of these pages",
                     summary: `

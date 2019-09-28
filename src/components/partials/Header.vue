@@ -2,24 +2,18 @@
   <header class="header" :class="{'header--filled': headerFilled}">
       <div class="header__inner container">
 
-          <a href="" v-scroll-to="{el: '.poster'}" class="header__logo" to="/">
+          <router-link to="/" class="header__logo">
             <img src="../../assets/images/logo-white.png"/>
-          </a>
+          </router-link>
           
           <nav class="header__nav">
               <ul class="nav__inner">
-                  <li class="nav__item">
-                    <a href="#about" v-scroll-to="{el: '#about', offset: -50}" active-class="nav--active">About me</a>
+
+                  <li v-for="(item, i) in menuItems" :key="i" class="nav__item">
+                    <a :href="'#'+item.url" v-if="$route.name == 'Home'" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
+                    <router-link v-else :to="'/'+item.url" active-class="nav--active">{{item.title}}</router-link>
                   </li>
-                  <li class="nav__item">
-                    <a href="#skills" v-scroll-to="{el: '#skills', offset: -50}" active-class="nav--active">Skills</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}" active-class="nav--active">Portfolio</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#contact" v-scroll-to="{el: '#contact', offset: -50}" active-class="nav--active">Contact</a>
-                  </li>
+                 
                   <li class="nav__item mobile_only">
                     <a v-on:click="toggleMenu" href="#navigation">Menu</a>
                   </li>
@@ -35,7 +29,7 @@
                 <a v-on:click="closeMenu" href="#skills" v-scroll-to="{el: '#skills', offset: -50}" active-class="nav--active">Skills</a>
               </li>
               <li class="nav__item">
-                <a v-on:click="closeMenu" href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}" active-class="nav--active">Portfolio</a>
+                <a v-on:click="closeMenu" href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}" active-class="nav--active">Projects</a>
               </li>
               <li class="nav__item">
                 <a v-on:click="closeMenu" href="#contact" v-scroll-to="{el: '#contact', offset: -50}" active-class="nav--active">Contact</a>
@@ -58,6 +52,12 @@ export default {
       scrollId: null,
       headerFilled: false,
       mobileNavOpen: false,
+      menuItems: [
+        { title: 'About', url: 'about'},
+        { title: 'Skills', url: 'skills'},
+        { title: 'Portfolio', url: 'portfolio'},
+        { title: 'Contact', url: 'contact'},
+      ]
     }
   },
   methods: {
@@ -71,34 +71,40 @@ export default {
     },
 
     updateHeader() {
-      const header = document.querySelector("header");
-      const offset = header.clientHeight - 50;
+      window.removeEventListener("scroll", this.scrollId, false);
 
-        if (window.pageYOffset <= offset) {
-          header.classList.remove("header--filled");
-        } else {
-          this.headerFilled = true;
-        }
+      if(this.$route.name == 'DetailPage') {
+        this.headerFilled = true;
+      } else {
+        this.handleScroll();
+      }
     },
 
     handleScroll() {
       const header = document.querySelector("header");
       const offset = header.clientHeight - 50;
-
+      
       if (window.pageYOffset <= offset) {
         this.headerFilled = false;
       } else {
         this.headerFilled = true;
       }
 
-      // add a filled background on pages that don't have a picture background
-        this.scrollId = window.addEventListener("scroll", () => {
-          if (window.pageYOffset <= offset) {
-            this.headerFilled = false;
-          } else {
-            this.headerFilled = true;
+
+      if(this.$route.name == 'DetailPage') {
+        this.headerFilled = true;
+      } else {
+        // add a filled background on pages that don't have a picture background
+          this.scrollId = () => {
+            if (window.pageYOffset <= offset) {
+              this.headerFilled = false;
+            } else {
+              this.headerFilled = true;
+            }
           }
-        });
+
+          window.addEventListener("scroll", this.scrollId, false);
+      }
     },
   },
 
@@ -106,6 +112,8 @@ export default {
     $route(to, from) {
       this.mobileNavOpen = false;
       this.updateHeader();
+
+      window.scrollTo(0,0);
     }
   },
 
