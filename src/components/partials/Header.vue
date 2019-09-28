@@ -9,9 +9,11 @@
           <nav class="header__nav">
               <ul class="nav__inner">
                   <div v-for="(item, i) in menuItems" :key="i">
-                    <li class="nav__item">
-                      <a :href="'#'+item.url" v-if="$route.name == 'Home'" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
-                      <router-link v-else :to="'/'+item.url" active-class="nav--active">{{item.title}}</router-link>
+                    <li v-if="$route.name == 'Home'" class="nav__item">
+                      <a :href="'#'+item.url" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
+                    </li>
+                    <li v-else-if="!item.homeOnly" class="nav__item">
+                      <router-link :to="'/'+item.url" active-class="nav--active">{{item.title}}</router-link>
                     </li>
                   </div>
                  
@@ -27,8 +29,8 @@
                 <li v-if="$route.name == 'Home'" class="nav__item">
                   <a :href="'#'+item.url" v-on:click="closeMenu" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
                 </li>
-                <li v-else class="nav__item">
-                  <router-link v-if="!item.homeOnly" :to="'/'+item.url" v-on:click="closeMenu" active-class="nav--active">{{item.title}}</router-link>
+                <li v-else-if="!item.homeOnly" class="nav__item">
+                  <router-link :to="'/'+item.url" v-on:click="closeMenu" active-class="nav--active">{{item.title}}</router-link>
                 </li>
               </div>
 

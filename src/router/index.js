@@ -23,7 +23,7 @@ const router = new Router({
             name: "Home",
             component: Home,
             meta: {
-                title: () => 'Home | Elton Gonçalves Gomes',
+                title: () => 'Front-End Developer | Elton Gonçalves Gomes',
             }
         },
         {
