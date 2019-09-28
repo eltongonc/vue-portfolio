@@ -12,7 +12,7 @@
 
             <section class="about__content row d-flex justify-content-center">
                 <div class="content__photo col-md-4 col-sm-8 d-flex justify-content-center align-items-start">
-                    <img class="img-fluid " :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
+                    <img class="img-fluid" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
                 </div>
                 <div class="content__subtitle col-md-8 col-sm-12" v-html="pageData.text"></div>
             </section>
