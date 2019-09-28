@@ -7,19 +7,13 @@
           </router-link>
           
           <nav class="header__nav">
-              <ul class="nav__inner" v-if="this.$route.name !== 'DetailPage'">
-                  <li class="nav__item">
-                    <a href="#about" v-scroll-to="{el: '#about', offset: -50}" active-class="nav--active">About</a>
+              <ul class="nav__inner">
+
+                  <li v-for="(item, i) in menuItems" :key="i" class="nav__item">
+                    <a :href="'#'+item.url" v-if="$route.name == 'Home'" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
+                    <router-link v-else :to="'/'+item.url" active-class="nav--active">{{item.title}}</router-link>
                   </li>
-                  <li class="nav__item">
-                    <a href="#skills" v-scroll-to="{el: '#skills', offset: -50}" active-class="nav--active">Skills</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}" active-class="nav--active">Portfolio</a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="#contact" v-scroll-to="{el: '#contact', offset: -50}" active-class="nav--active">Contact</a>
-                  </li>
+                 
                   <li class="nav__item mobile_only">
                     <a v-on:click="toggleMenu" href="#navigation">Menu</a>
                   </li>
@@ -35,7 +29,7 @@
                 <a v-on:click="closeMenu" href="#skills" v-scroll-to="{el: '#skills', offset: -50}" active-class="nav--active">Skills</a>
               </li>
               <li class="nav__item">
-                <a v-on:click="closeMenu" href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}" active-class="nav--active">Portfolio</a>
+                <a v-on:click="closeMenu" href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}" active-class="nav--active">Projects</a>
               </li>
               <li class="nav__item">
                 <a v-on:click="closeMenu" href="#contact" v-scroll-to="{el: '#contact', offset: -50}" active-class="nav--active">Contact</a>
@@ -58,6 +52,12 @@ export default {
       scrollId: null,
       headerFilled: false,
       mobileNavOpen: false,
+      menuItems: [
+        { title: 'About', url: 'about'},
+        { title: 'Skills', url: 'skills'},
+        { title: 'Portfolio', url: 'portfolio'},
+        { title: 'Contact', url: 'contact'},
+      ]
     }
   },
   methods: {

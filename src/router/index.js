@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import { Work, About, Home, Detail, Blog, PageNotFound } from "../components";
+import { Work, About, Home, Detail, PageNotFound, ContactResponse } from "../components";
 
 Vue.use(Router);
 
@@ -34,6 +34,18 @@ export default new Router({
             path: "/portfolio/:slug",
             name: "DetailPage",
             component: Detail,
+            props:true
+        },
+        {
+            path: "/succes",
+            name: "ContactSucces",
+            component: ContactResponse,
+            props:true
+        },
+        {
+            path: "/failed",
+            name: "ContactSucces",
+            component: ContactResponse,
             props:true
         },
     ]

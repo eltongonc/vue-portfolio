@@ -3,7 +3,7 @@
 		<PosterCanvas>
             <h1>Hi<br/> my name is Elton,</h1>
             <h2>I am a Front-end developer and I can help you with a new website.</h2>
-            <router-link v-if="this.$router.currentRoute.path === '/'" to="/contact" v-on:click.native="scrollTo" class="button">Contact me</router-link>
+            <a v-if="this.$router.currentRoute.path === '/'" href="#" class="button" v-scroll-to="{el: '#contact', offset: -50}">Contact me</a>
         </PosterCanvas>
 
         <div id="about" class="about section">
