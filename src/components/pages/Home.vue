@@ -24,19 +24,18 @@
         
         <!-- <WhatIDo id="services"/> -->
 		<Skills id="skills"/>
-        <Portfolio id="portfolio"/>
+        <Projects id="projects"/>
 
         <ContactForm id="contact"/>
 	</main>
 </template>
 
 <script>
-    import { PosterCanvas, Portfolio, Intro, Skills, WhatIDo, ContactForm, } from '../partials';
+    import { PosterCanvas, Projects, Intro, Skills, WhatIDo, ContactForm, } from '../partials';
 
     export default {
         data(){
             return {
-                portfolioCount: 4,
                 className: 'page page--' + this.$route.name.toLowerCase(),
                 pageData: {
                     text: `
@@ -49,7 +48,7 @@
             };
         },
         components:{
-            Portfolio,
+            Projects,
             PosterCanvas,
             Skills,
             Intro,

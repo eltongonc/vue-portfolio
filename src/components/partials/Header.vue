@@ -8,11 +8,12 @@
           
           <nav class="header__nav">
               <ul class="nav__inner">
-
-                  <li v-for="(item, i) in menuItems" :key="i" class="nav__item">
-                    <a :href="'#'+item.url" v-if="$route.name == 'Home'" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
-                    <router-link v-else :to="'/'+item.url" active-class="nav--active">{{item.title}}</router-link>
-                  </li>
+                  <div v-for="(item, i) in menuItems" :key="i">
+                    <li class="nav__item">
+                      <a :href="'#'+item.url" v-if="$route.name == 'Home'" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
+                      <router-link v-else :to="'/'+item.url" active-class="nav--active">{{item.title}}</router-link>
+                    </li>
+                  </div>
                  
                   <li class="nav__item mobile_only">
                     <a v-on:click="toggleMenu" href="#navigation">Menu</a>
@@ -22,18 +23,15 @@
 
           <nav :class="['header__nav--aside', mobileNavOpen? 'nav--open': '']">
             <ul>
-              <li class="nav__item">
-                <a v-on:click="closeMenu" href="#about" v-scroll-to="{el: '#about', offset: -50}" active-class="nav--active">About</a>
-              </li>
-              <li class="nav__item">
-                <a v-on:click="closeMenu" href="#skills" v-scroll-to="{el: '#skills', offset: -50}" active-class="nav--active">Skills</a>
-              </li>
-              <li class="nav__item">
-                <a v-on:click="closeMenu" href="#portfolio" v-scroll-to="{el: '#portfolio', offset: -50}" active-class="nav--active">Projects</a>
-              </li>
-              <li class="nav__item">
-                <a v-on:click="closeMenu" href="#contact" v-scroll-to="{el: '#contact', offset: -50}" active-class="nav--active">Contact</a>
-              </li>
+              <div v-for="(item, i) in menuItems" :key="i">
+                <li v-if="$route.name == 'Home'" class="nav__item">
+                  <a :href="'#'+item.url" v-on:click="closeMenu" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
+                </li>
+                <li v-else class="nav__item">
+                  <router-link v-if="!item.homeOnly" :to="'/'+item.url" v-on:click="closeMenu" active-class="nav--active">{{item.title}}</router-link>
+                </li>
+              </div>
+
               <li class="mobile_only">
                 <a v-on:click="toggleMenu" href="#navigation">Close</a>
               </li>
@@ -53,10 +51,11 @@ export default {
       headerFilled: false,
       mobileNavOpen: false,
       menuItems: [
+        { title: 'Home', url: ''},
         { title: 'About', url: 'about'},
-        { title: 'Skills', url: 'skills'},
-        { title: 'Portfolio', url: 'portfolio'},
-        { title: 'Contact', url: 'contact'},
+        { title: 'Skills', url: 'skills', homeOnly: true},
+        { title: 'Projects', url: 'projects'},
+        { title: 'Contact', url: 'contact', homeOnly: true},
       ]
     }
   },
