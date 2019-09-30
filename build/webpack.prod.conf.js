@@ -10,6 +10,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var HtmlCriticalPlugin = require("html-critical-webpack-plugin")
+const Renderer = PrerenderSpaPlugin.PuppeteerRenderer;
+
+
 
 var env = config.build.env
 
@@ -115,23 +118,28 @@ var webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
     // SEO optimization
-    new PrerenderSpaPlugin(
-      // Absolute path to compiled SPA
-      path.resolve(__dirname, '../dist'),
-      // List of routes to prerender
-      [
+    new PrerenderSpaPlugin({
+      staticDir: path.resolve(__dirname, '../dist'),
+      routes: [
           '/',
           '/about/',
-          '/portfolio/',
-          // '/portfolio/jsclient-builder/',
-          // '/portfolio/medialab/',
-          // '/portfolio/funda-serverside/',
-          // '/portfolio/soundcloud-explorer/',
-          // '/portfolio/zoku-inspire/',
-          // '/portfolio/drum-kit/',
-          // '/portfolio/daskas/',
+          '/projects/',
+          '/projects/jsclient-builder/',
+          '/projects/medialab/',
+          '/projects/funda-serverside/',
+          '/projects/soundcloud-explorer/',
+          '/projects/zoku-inspire/',
+          '/projects/drum-kit/',
+          '/projects/daskas/',
           '/404/'
-      ]
+      ],
+      renderer: new Renderer({
+        renderAfterElementExists: '.header'
+      }),
+
+    }
+      // Absolute path to compiled SPA
+      // List of routes to prerender
     ),
   ]
 })

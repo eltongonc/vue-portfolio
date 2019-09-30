@@ -28,7 +28,7 @@
             >
               <div v-for="(item, key) in items.slice(0, amount)" :class="[item.category, 'col-sm-4', 'item__summary']" :key="key">
                 <div class="relative">
-                  <router-link :to="`/portfolio/${item.urlTitle}`">
+                  <router-link :to="`/projects/${item.urlTitle}`">
                     <div class="thumb">
                       <div class="overlay overlay-bg">
                         <h4>{{item.title}}</h4>

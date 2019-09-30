@@ -1,4 +1,4 @@
-module.exports = [
+const projects = [
     {
         title: "JSClient Builder",
         urlTitle: "jsclient-builder",
@@ -117,7 +117,7 @@ module.exports = [
         <blockquote>Research ways to make the funda website faster</blockquote>
 
         <h3>About Funda server-side</h3>
-        Funda server-side is a server-side application that runs on Node.js + Express. This project was built to illustrate a few performance patterns that could optimize the speed of the current Funda website. Funda server-side is based on the existing <a href="www.funda.nl">Funda site</a>.
+        Funda server-side is a server-side application that runs on Node.js + Express. This project was built to illustrate a few performance patterns that could optimize the speed of the current Funda website. Funda server-side is based on the existing <a href="https://funda.nl/">Funda site</a>.
 
         <h3>What does it do</h3>
         <p>Funda server-side allows users to search and get information on houses in the Netherlands that are registered on Funda. </p>
@@ -333,3 +333,15 @@ module.exports = [
         code_link: "",
     }
 ];
+
+
+export default projects;
+
+export function getDescription(url) {
+    const project = projects.filter(item => item.urlTitle === url)[0];
+    if (project) {
+        return project.summary;
+    } 
+
+    return "My name is Elton Gonçalves Gomes. I'm a T-shaped Front-end developer who focusses on coding but also knows a thing or two about UI and UX";
+}

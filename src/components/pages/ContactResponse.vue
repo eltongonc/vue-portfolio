@@ -24,7 +24,7 @@ import { PosterCanvas, Portfolio } from '../partials';
 			  const response = this.$route.path.replace('/', '');
 			  let message;
 
-			  if (response === 'succes') {
+			  if (response === 'success') {
 				  message = 'Your message was sent successfully!'
 			  } else {
 				  message = 'Something went wrong sending the message!'
