@@ -19,18 +19,21 @@
         </div>
     </div>
 
+    <Timeline v-if="$route.name === 'About'"/>
+
     <ContactForm/>
 	</main>
 </template>
 
 <script>
-  import { PosterCanvas, Intro, ContactForm } from '../partials';
+  import { PosterCanvas, Intro, ContactForm, Timeline } from '../partials';
 
   export default {
     components: {
       PosterCanvas,
       ContactForm,
-      Intro
+      Intro,
+      Timeline
     },
     data() {
       return {

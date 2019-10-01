@@ -1,0 +1,144 @@
+$content-width: 360px;
+
+
+.timeline{
+	padding-top: 0;
+  ul{
+    .timeline-item{
+      background: rgba($green, 0.3);
+      position: relative;
+      margin: 0 auto;
+      width: 2px;
+      padding-bottom: 40px;
+      list-style-type: none;
+      
+      &:last-child{
+        padding-bottom: 7px;
+      }
+      
+      &:before{
+        content: '';
+        background: $white;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        border: 5px solid $green;
+        border-radius: 50%;
+      }
+      
+      .hidden {
+        opacity: 0;
+      }
+      
+      .content{
+        background-color: $white;
+        position: relative;
+        top: .5rem;
+        width: $content-width;
+        color: $dark_grey;
+        margin-bottom: 3rem;
+        
+        .content-title {
+          margin-bottom: 0;
+          font-weight: bold;
+        }
+        
+        .content-duration {
+          margin-bottom: 1rem;
+        }
+
+        .content-link {
+          margin-top: 1rem;
+        }
+
+        .content-img {
+          margin-bottom: 3rem;
+          height: 30px;
+          // width: 100px;
+          border-radius: 0;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: .5rem;
+          }
+        }
+      }
+      
+      &:nth-child(odd) .content {
+        left: 50px;
+        .content-img {
+          margin-left: 0;
+          margin-right: auto;
+        }
+        &::before {
+          left: -38px;
+        }
+      }
+      
+      &:nth-child(even) .content {
+        left: calc(-#{$content-width} - 45px);
+        text-align: right;
+
+        .content-img {
+          margin-left: auto;
+          margin-right: 0;
+        }
+
+        &::before {
+          right: -38px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $grid-l) {
+	  ul {
+		  li {
+			  .content {
+				  width: 41vw;
+			  }
+  
+			  &:nth-child(even) {
+				  .content {
+					  left: calc(-41vw - 45px);
+				  }
+			  }
+		  }
+	  }
+  }
+	
+  @media screen and (max-width: $grid-m) {
+	  ul {
+		  .timeline-item {
+        margin-left: 20px;
+			  .content {
+          width: calc(100vw - 200px);
+          
+          .content-title,
+          .content-duration,
+          .content-description {
+					  text-align: initial;
+          }
+			  }
+  
+			  &:nth-child(even) {
+				  .content {
+            left: 45px;
+            text-align: initial;
+					  &::before {
+						  left: -33px;
+					  }
+				  }
+			  }
+		  }
+	  }
+  }
+}

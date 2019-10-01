@@ -7,6 +7,7 @@ import Slideshow from "./Slideshow";
 import PosterCanvas from "./PosterCanvas";
 import WhatIDo from "./WhatIDo";
 import ContactForm from "./ContactForm";
+import Timeline from "./Timeline";
 
 export default {
     Footer,
@@ -17,5 +18,6 @@ export default {
     PosterCanvas,
     WhatIDo,
     ContactForm,
+    Timeline,
 };
 </script>

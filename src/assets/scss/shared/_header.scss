@@ -116,7 +116,7 @@
     background-color: $dark_grey;
     box-shadow: 0 0 2em #333;
   }
-  @media (max-width: $grid-medium) {
+  @media (max-width: $grid-m) {
     .header__inner {
       padding: 0.8rem 1rem;
       align-items: center;
