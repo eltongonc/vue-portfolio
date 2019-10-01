@@ -8,13 +8,13 @@
     margin: 0 auto;
     border-radius: 0.3rem;
     box-shadow: $dark_boxshadow;
-    max-width: $grid-large;
+    max-width: $grid-l;
     transform: translateY(-50%);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     .intro__text {
-      max-width: $grid-medium;
+      max-width: $grid-m;
       margin: 0 auto;
       color: #333;
       padding: 2rem;
