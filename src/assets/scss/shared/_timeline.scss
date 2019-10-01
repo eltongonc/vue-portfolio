@@ -127,16 +127,34 @@ $content-width: 360px;
           .content-description {
 					  text-align: initial;
           }
+          .content-img {
+            margin-left: 0;
+            margin-right: auto;
+          }
 			  }
   
 			  &:nth-child(even) {
 				  .content {
             left: 45px;
             text-align: initial;
+            .content-img {
+              margin-left: 0;
+              margin-right: auto;
+            }
 					  &::before {
 						  left: -33px;
 					  }
 				  }
+			  }
+		  }
+	  }
+  }
+  @media screen and (max-width: $grid-s) {
+	  ul {
+		  .timeline-item {
+        margin-left: 20px;
+			  .content {
+          width: calc(100vw - 110px);
 			  }
 		  }
 	  }
