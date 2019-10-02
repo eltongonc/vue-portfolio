@@ -1,5 +1,6 @@
 .details {
 	margin-top: 7rem;
+	margin-bottom: 7rem;
 	img {
 		border: 1px solid $light_grey;
 	}
@@ -21,7 +22,7 @@
 		cursor: pointer;
 
 		&.transparant {
-			opacity: 0.1;
+			opacity: 0.3;
 			&:hover {
 				opacity: 1;
 			}

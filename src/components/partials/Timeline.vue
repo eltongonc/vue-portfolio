@@ -7,17 +7,19 @@
         </div>
         
 				<ul>
-					<li class="timeline-item" v-for="(item, i) in experience" :key={i}>
+					<li class="timeline-item" v-for="(item) in experience" :key={item}>
             <div class="content">
               <a v-if="item.img" :href="item.link">
-                <img :src="item.img" class="content-img img-fluid d-block mb-30" alt="company logo">
+                <figure v-lazyload>
+                  <img :data-url="item.img" class="content-img img-fluid d-block mb-30" alt="company logo">
+                </figure>
               </a>
               <h5 class="section-title content-title">{{item.title}}</h5>
               <p class="section-title section-subtitle">{{item.subtitle}}</p>
               <p class="content-duration"><b>Duration:</b> {{item.startDate}} - {{item.endDate}}</p>
               <p v-if="item.description" v-html="item.description" class="content-description"></p>
               <ul v-if="item.list">
-                <li v-for="(listItem, j) in item.list" :key="j">{{listItem}}</li>
+                <li v-for="(listItem, j) in item.list" :key="'item_'+ j">{{listItem}}</li>
               </ul>
 
               <router-link v-if="item.endProject" :to="item.endProject" class="content-link button">View Project</router-link>
@@ -38,7 +40,7 @@ export default {
         {
           title: 'SAI',
           subtitle: 'Work Full-Stack Front-End Developer',
-          img: '/static/company-logos/sai.png',
+          img: '/static/img/company-logos/sai.png',
           link: 'https://www.ateliersai.com/',
           startDate: 'November 2018',
           endDate: 'Present',
@@ -54,7 +56,7 @@ export default {
         {
           title: 'Dimebox',
           subtitle: 'Internship Front-End Developer',
-          img: '/static/company-logos/dimebox.png',
+          img: '/static/img/company-logos/dimebox.png',
           link: 'www.dimebox.com',
           startDate: 'August 2017',
           endDate: 'June 2018',
@@ -70,7 +72,7 @@ export default {
         {
           title: 'XS2',
           subtitle: 'Work Web Developer',
-          img: '/static/company-logos/xs2.png',
+          img: '/static/img/company-logos/xs2.png',
           link: '',
           startDate: 'August 2016',
           endDate: 'September 2017',
@@ -87,7 +89,7 @@ export default {
         {
           title: 'Medialab',
           subtitle: 'Internship Front-End Developer',
-          img: '/static/company-logos/medialab.png',
+          img: '/static/img/company-logos/medialab.png',
           link: 'https://www.medialab.co',
           startDate: 'May 2016',
           endDate: 'July 2016',
@@ -102,7 +104,7 @@ export default {
         {
           title: 'Communication & Multimedia Design',
           subtitle: 'Bachelor\'s degree',
-          img: '/static/company-logos/hva.png',
+          img: '/static/img/company-logos/hva.png',
           link: 'https://www.cmd-amsterdam.nl/',
           startDate: 'August 2014',
           endDate: 'July 2018',

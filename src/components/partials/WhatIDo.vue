@@ -20,11 +20,11 @@
 						</li>
 						<li>
 							<h3 class="list-title"><span class="lnr lnr-laptop-phone"></span> Webapps</h3>
-							<p>o	Sometimes just a website is not enough. You need a platform that allows your users to interact with each other or share stuff. A webapp gives a variety of possibilities.</p>
+							<p>Sometimes just a website is not enough. You need a platform that allows your users to interact with each other or share stuff. A webapp gives a variety of possibilities.</p>
 						</li>
 						<li>
 							<h3 class="list-title"><span class="lnr lnr-rocket"></span> Prototyping</h3>
-							<p>o	As stated above, I love to mess around with web related tech. This means sometimes I end some projects as prototype which can be built upon.</p>
+							<p>As stated above, I love to mess around with web related tech. This means sometimes I end some projects as prototype which can be built upon.</p>
 						</li>
 					</ul>
 				</div>

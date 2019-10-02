@@ -3,7 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <img class="img-fluid" :src="pageData.image" :alt="pageData.title">
+                <figure v-lazyload>
+                    <img class="img-fluid" :data-url="pageData.image" :alt="pageData.title">
+                </figure>
             </div>
         </div>
 
@@ -38,11 +40,12 @@
         <div class="images row d-flex justify-content-center">
             <div class="col-sm-9" v-for="(image, i) in pageData.image_list" :key="i">	
                 <a :href="image.link">
-                    <img :src="image.link" class="image-fluid" :alt="image.title">
+                    <figure v-lazyload>
+                        <img :data-url="image.link" class="image-fluid" :alt="image.title">
+                    </figure>
                 </a>
             </div>
         </div>
-        <!-- <Slideshow :data="pageData.image_list"></Slideshow> -->
 
     </div>
 
@@ -82,8 +85,8 @@
             };
         },
         mounted() {
-            const poster = document.querySelector('#poster');
-            const offSet = poster.getClientRects()[0].height - (6* 16); // height - 6em;
+            const poster = document.querySelector('.header');
+            const offSet = poster.getClientRects()[0].height;
             
             this.hideBackButton(offSet);
         },

@@ -3,12 +3,12 @@
         <PosterCanvas>
 			<h1>Here is a list of my projects</h1>
 		</PosterCanvas>
-		<Projects></Projects>
+		<Projects/>
 	</main>
 </template>
 
 <script>
-	import { PosterCanvas, Projects, Intro } from '../partials';
+	import { PosterCanvas, Projects } from '../partials';
 
 	export default {
 	    data(){
@@ -21,7 +21,6 @@
 	    components:{
 	        Projects,
 	        PosterCanvas,
-	        Intro,
 	    }
 	};
 </script>

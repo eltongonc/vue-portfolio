@@ -69,7 +69,7 @@ export default {
         percentPosition: true,
         columnWidth: '.all',
         getFilterData: {
-          "all": () => {
+          "websites": () => {
             return true
           },
           "prototyping": (el) => {
@@ -77,9 +77,6 @@ export default {
           },
           "webapp": (el) => {
             return el.category === 'webapp';
-          },
-          "website": (el) => {
-            return el.category === 'website';
           },
         }
       }
