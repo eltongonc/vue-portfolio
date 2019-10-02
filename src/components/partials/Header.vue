@@ -3,7 +3,7 @@
       <div class="header__inner container">
 
           <router-link to="/" class="header__logo">
-            <img src="../../assets/images/logo-white.png"/>
+            <img src="/static/logo-white.png"/>
           </router-link>
           
           <nav class="header__nav">

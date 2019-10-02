@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import { PosterCanvas, Portfolio } from '../partials';
+import { PosterCanvas } from '../partials';
   export default {
     components: {
-            PosterCanvas,
+		PosterCanvas,
       },
      data(){
             return {

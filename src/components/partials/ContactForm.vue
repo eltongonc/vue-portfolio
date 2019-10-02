@@ -65,7 +65,7 @@
 							</div>
 							<div class="col-lg-12">
 								<div class="alert-msg" style="textAlign: 'left'"></div>
-								<button class="genric-btn primary" style="float: 'right'">Send Message</button>											
+								<button class="genric-btn primary" style="float: 'right'">Send Message</button>
 							</div>
 						</div>
 					</form>	

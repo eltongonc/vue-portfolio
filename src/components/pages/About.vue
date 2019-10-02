@@ -12,7 +12,9 @@
 
             <section class="about__content row d-flex justify-content-center">
                 <div class="content__photo col-md-3 col-sm-8 d-flex justify-content-center align-items-start">
-                    <img class="img-fluid" :src="pageData.img" alt="A picture of Elton Gonçalves Gomes">
+                  <figure v-lazyload>
+                    <img class="img-fluid" :data-url="pageData.img" alt="A picture of Elton Gonçalves Gomes">
+                  </figure>
                 </div>
                 <div class="content__subtitle col-md-6 col-sm-12" v-html="pageData.text"></div>
             </section>
@@ -26,13 +28,12 @@
 </template>
 
 <script>
-  import { PosterCanvas, Intro, ContactForm, Timeline } from '../partials';
+  import { PosterCanvas, ContactForm, Timeline } from '../partials';
 
   export default {
     components: {
       PosterCanvas,
       ContactForm,
-      Intro,
       Timeline
     },
     data() {
@@ -40,7 +41,6 @@
         page: {
           name: "Allow me to introduce myself",
           subtitle: "It looks like I haven't made this page",
-          background: "../../static/background/about_header.jpg"
         },
         pageData: {
           text: `

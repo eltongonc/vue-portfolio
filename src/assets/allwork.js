@@ -3,16 +3,16 @@ const projects = [
         title: "JSClient Builder",
         urlTitle: "jsclient-builder",
         category: "prototyping",
-        image_small: "/static/jsclient_builder/jsclient%20builder-form-init.png",
-        image: "/static/jsclient_builder/jsclient%20builder-form-init.png",
+        image_small: "/static/img/jsclient_builder/jsclient%20builder-form-init.png",
+        image: "/static/img/jsclient_builder/jsclient%20builder-form-init.png",
         image_list: [
             {
                 title: "A laptop displaying a mockup of the Jsclient builder",
-                link: "/static/jsclient_builder/laptop.png"
+                link: "/static/img/jsclient_builder/laptop.png"
             },
             {
                 title: "The initial page of the jsclient builder displaying an interactive form",
-                link: "/static/jsclient_builder/jsclient%20builder-form-init.png"
+                link: "/static/img/jsclient_builder/jsclient%20builder-form-init.png"
             }
         ],
         video: {
@@ -48,24 +48,24 @@ const projects = [
         title: "MediaLab",
         urlTitle: "medialab",
         category: "webapp",
-        image_small: "/static/medialab/medialab-small.jpg",
-        image: "/static/medialab/medialab.jpg",
+        image_small: "/static/img/medialab/medialab-small.jpg",
+        image: "/static/img/medialab/medialab.jpg",
         image_list: [
             {
                 title: "The first homepage high fidelity design of support.Medialab.co",
-                link: "/static/medialab/home.jpg"
+                link: "/static/img/medialab/home.jpg"
             },
             {
                 title: "An image showing the categorie page",
-                link: "/static/medialab/categorie.jpg"
+                link: "/static/img/medialab/categorie.jpg"
             },
             {
                 title: "Three mockups of high fidelity design on a laptop mobile and tablet",
-                link: "/static/medialab/devices.jpg"
+                link: "/static/img/medialab/devices.jpg"
             },
             { 
                 title: "A high fidelity design of a Frequently Asked Question page", 
-                link: "/static/medialab/faq.jpg" 
+                link: "/static/img/medialab/faq.jpg" 
             }
         ],
         summary:
@@ -77,7 +77,7 @@ const projects = [
         <h3>The assignment</h3>
         <blockquote>Research, design, recommend and create a new support page.</blockquote>
         <p>The old design of the site didn’t represent the look-and-feel of Medialab. It had different colors and layout than the corporate website. My assignment was to rebuild the current website to match the identity of the company.</p>
-        <img width="100%" src="/static/medialab/devices.jpg">,
+        <img width="100%" src="/static/img/medialab/devices.jpg">,
         <h3>About the project</h3>
         <p>For this project, I replaced the old support page with an edited WordPress theme</p>
         <p>The assignment was split into four parts:</p>
@@ -92,20 +92,17 @@ const projects = [
         author: "Elton Gonçalves Gomes",
         externalLink: "http://support.medialab.co/",
         code_link: "",
-        tags: ["code", "visual"]
     },
     {
         title: "Funda serverside",
         urlTitle: "funda-serverside",
         category: "prototyping",
-        image_small:
-            "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png",
-        image:
-            "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png",
+        image_small:"/static/img/funda/funda-small.jpg",
+        image: "/static/img/funda/funda.jpg",
         image_list: [
             {
                 title: "An image desplaying the search page with a few search results",
-                link: "https://raw.githubusercontent.com/eltongonc/funda_serverside/master/screenshots/funda.png"
+                link: "/static/img/funda/funda.jpg"
             },
             
         ],
@@ -134,18 +131,17 @@ const projects = [
         client: "Free project",
         colaborators: "",
         code_link: "https://github.com/eltongonc/funda_serverside",
-        tags: ["code"]
     },
     {
         title: "Soundcloud explorer",
         urlTitle: "soundcloud-explorer",
         category: "prototyping",
-        image_small: "/static/soundcloud_explorer/soundcloud_exp-small.jpg",
-        image: "/static/soundcloud_explorer/soundcloud_exp.jpg",
+        image_small: "/static/img/soundcloud_explorer/soundcloud_exp-small.jpg",
+        image: "/static/img/soundcloud_explorer/soundcloud_exp.jpg",
         image_list: [
             {
                 title: "A search results page of the Soundcloud explorer",
-                link: "/static/soundcloud_explorer/soundcloud_exp-small.jpg"
+                link: "/static/img/soundcloud_explorer/soundcloud_exp-small.jpg"
             },
             {
                 title: "A flowchart of how the web app works",
@@ -178,30 +174,29 @@ const projects = [
         client: "Free project",
         externalLink: "http://soundclould.eltongoncalves.nl/",
         code_link: "https://github.com/eltongonc/web_app_from_scratch",
-        tags: ["code"]
     },
     {
         title: "Zoku inspire",
         urlTitle: "zoku-inspire",
         category: "prototyping",
-        image_small: "/static/zoku/zoku-compressed1.jpg",
-        image: "/static/zoku/zoku.jpg",
+        image_small: "/static/img/zoku/zoku-compressed1.jpg",
+        image: "/static/img/zoku/zoku.jpg",
         image_list: [
             { 
                 title: "A page that allows a user to join a workshop via a form or qr-code",
-                link: "/static/zoku/attend.png"
+                link: "/static/img/zoku/attend.png"
             },
             {
                 title: "An overview page of all the workshop",
-                link: "/static/zoku/big-screen.png"
+                link: "/static/img/zoku/big-screen.png"
             },
             {
                 title: "A workshop detail page on a big screen",
-                link: "/static/zoku/workshop.png"
+                link: "/static/img/zoku/workshop.png"
             },
             {
                 title: "An overview page of all workshops on a mobile phone",
-                link: "/static/zoku/mobile-wall.png"
+                link: "/static/img/zoku/mobile-wall.png"
             }
         ],
         summary:
@@ -246,14 +241,13 @@ const projects = [
         client: "Hotel Zoku",
         externalLink: "https://eltongonc.github.io/zoku/",
         code_link: "https://github.com/eltongonc/zoku",
-        tags: ["code", "visual"]
     },
     {
         title: "Drum kit",
         urlTitle: "drum-kit",
         category: "prototyping",
-        image_small: "/static/drumkit/drum-kit-small.jpg",
-        image: "/static/drumkit/drum-kit.jpg",
+        image_small: "/static/img/drumkit/drum-kit-small.jpg",
+        image: "/static/img/drumkit/drum-kit.jpg",
         image_list: [],
         summary:
             "The Drum kit is an interactive soundboard. This project was build to illustrate the capabilities of a web browser. At it's minimal the website requires basic HTML and uses browser technology to add layers of enhancements.",
@@ -268,22 +262,21 @@ const projects = [
         client: "Free project",
         externalLink: "https://eltongonc.github.io/drum_kit/public/build",
         code_link: "https://github.com/eltongonc/drum-kit",
-        tags: ["code"]
     },
     {
         title: "Daskas",
         urlTitle: "daskas",
         category: "webshop",
-        image_small: "/static/daskas/daskas-small.jpg",
-        image: "/static/daskas/daskas.jpg",
+        image_small: "/static/img/daskas/daskas-small.jpg",
+        image: "/static/img/daskas/daskas.jpg",
         image_list: [
             {
                 title: "Homepage of Daskas displaying shelfs with product that symbolizes the product categories",
-                link: "/static/daskas/home.jpg"
+                link: "/static/img/daskas/home.jpg"
             },
             {
                 title: "A page that displays a gift generator",
-                link: "/static/daskas/gift-generator.jpg"
+                link: "/static/img/daskas/gift-generator.jpg"
             }
         ],
         video: {

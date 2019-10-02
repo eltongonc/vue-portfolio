@@ -7,6 +7,7 @@ import VueScrollTo from 'vue-scrollto';
 import App from "./App";
 import router from "./router";
 import store from "./store";
+import LazyLoadDirective from './directives/LazyLoadDirective';
 
 Vue.config.productionTip = false;
 
@@ -25,6 +26,7 @@ Vue.use(VueScrollTo, {
   y: true
 });
 
+Vue.directive("lazyload", LazyLoadDirective);
 
 /* eslint-disable no-new */
 const vue = new Vue({

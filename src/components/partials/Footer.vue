@@ -24,7 +24,6 @@
 				<div class="col-m-3 col-sm-4 col-xs-12">
 					<div class="single-footer-widget">
 						<h4>Elton Gonçalves Gomes</h4>
-						<!-- <img class="img-fluid" src="../../assets/images/logo-white.png"/> -->
 					</div>
 				</div>
 			</div>
