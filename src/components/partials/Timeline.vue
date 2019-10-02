@@ -100,7 +100,7 @@ export default {
           endProject: '/portfolio/medialab'
         },
         {
-          title: 'Communication & Multimedia Desgin',
+          title: 'Communication & Multimedia Design',
           subtitle: 'Bachelor\'s degree',
           img: '/static/company-logos/hva.png',
           link: 'https://www.cmd-amsterdam.nl/',

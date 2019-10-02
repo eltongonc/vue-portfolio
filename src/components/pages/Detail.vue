@@ -60,15 +60,10 @@
 </template>
 
 <script>
-    import { Intro, Slideshow } from '../partials';
     import workList from "../../assets/allwork.js";
 
     export default {
         props: ["slug", "name"],
-        components: {
-            Slideshow,
-            Intro,
-        },
         methods: {
             hideBackButton(offSet) {
                 window.addEventListener("scroll", (e) => {
