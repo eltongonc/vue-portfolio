@@ -3,20 +3,20 @@ const projects = [
         title: "JSClient Builder",
         urlTitle: "jsclient-builder",
         category: "prototyping",
-        image_small: "/static/img/jsclient_builder/jsclient%20builder-form-init.png",
-        image: "/static/img/jsclient_builder/jsclient%20builder-form-init.png",
+        image_small: "/static/img/jsclient_builder/jsclient-builder-form-init-small.jpg",
+        image: "/static/img/jsclient_builder/jsclient-builder-form-init.jpg",
         image_list: [
             {
                 title: "A laptop displaying a mockup of the Jsclient builder",
-                link: "/static/img/jsclient_builder/laptop.png"
+                link: "/static/img/jsclient_builder/laptop.jpg"
             },
             {
                 title: "The initial page of the jsclient builder displaying an interactive form",
-                link: "/static/img/jsclient_builder/jsclient%20builder-form-init.png"
+                link: "/static/img/jsclient_builder/jsclient-builder-form-init.jpg"
             }
         ],
         video: {
-            mp4: "/static/jsclient_builder/jsclient_pp.mp4",
+            mp4: "/static/video/jsclient_builder/jsclient_pp.mp4",
         },
         summary:
             "The Jsclient Builder is an interactive webpage that helps customers of Dimebox generate and style a payment form",

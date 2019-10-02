@@ -5,7 +5,8 @@ img {
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
+  font-display: fallback;
 }
 
 html,
@@ -69,6 +70,7 @@ li {
 
 a {
   text-decoration: none;
+  color: $red;
 }
 
 .fade-enter-active, .fade-leave-active {

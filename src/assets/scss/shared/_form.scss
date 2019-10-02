@@ -1,5 +1,14 @@
 .form-area {
 	.form-group {
+		label {
+			display: block;
+			position: relative;
+			margin-bottom: .5rem;
+			span {
+				margin-bottom: .5rem;
+				display: inline-block;
+			}
+		}
 		&:first-child {
 			margin-bottom: 0;
 		}

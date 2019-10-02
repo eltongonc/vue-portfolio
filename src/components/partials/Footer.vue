@@ -15,9 +15,9 @@
 					<div class="single-footer-widget">
 						<h4>Contact Information</h4>
 						<div class="footer-social d-flex align-items-center">
-							<a href="https://www.linkedin.com/in/elton-gon%C3%A7alves-gomes-b415a3105/" target="_blank" ref="noopener noreferrer"><LinkedInIcon/></a>
-							<a href="http://github.com/eltongonc" target="_blank" ref="noopener noreferrer"><GitHubIcon/></a>
-							<a href="mailto:eltongonc@gmail.com" target="_blank" ref="noopener noreferrer"><MailIcon/></a>
+							<a href="https://www.linkedin.com/in/elton-gon%C3%A7alves-gomes-b415a3105/" target="_blank" rel="noopener noreferrer"><LinkedInIcon/></a>
+							<a href="http://github.com/eltongonc" target="_blank" rel="noopener noreferrer"><GitHubIcon/></a>
+							<a href="mailto:eltongonc@gmail.com" target="_blank" rel="noopener noreferrer"><MailIcon/></a>
 						</div>
 					</div>
 				</div>
