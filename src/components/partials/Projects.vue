@@ -11,7 +11,7 @@
             <li 
               v-for="(val, key) in options.getFilterData" 
               :key="key" @click="filter(key)"
-              :class="[key===filterOption? 'active' : '']">
+              :class="[key === filterOption ? 'active' : '']">
                 {{key}}
             </li>
           </ul>
@@ -63,7 +63,7 @@ export default {
     return { 
       items: workList,
       selected: null,
-      filterOption: "all",
+      filterOption: "websites",
       options: {
         itemSelector: '.all',
         percentPosition: true,

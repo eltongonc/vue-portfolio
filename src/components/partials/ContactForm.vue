@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<h2 class="section-title text-center">Let’s get in tough</h2>
-					<p class="section-subtitle text-center">Leave your contact behind and I will contact you A.S.A.P</p>
+					<p class="section-subtitle text-center">Send me a message on:</p>
 					<h4 class="section-subtitle text-center"><a class="link" href="mailto:eltongonc@gmail.com"><span class="lnr lnr-envelope"></span> eltongonc@gmail.com</a></h4>
 					<p class="section-subtitle text-center">- or -</p>
 				</div>
