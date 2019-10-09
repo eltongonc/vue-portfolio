@@ -1,15 +1,15 @@
-var path = require('path')
-var utils = require('./utils')
-var webpack = require('webpack')
-var config = require('./config')
-var merge = require('webpack-merge')
-var baseWebpackConfig = require('./webpack.base.conf')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-var PrerenderSpaPlugin = require('prerender-spa-plugin')
-var HtmlCriticalPlugin = require("html-critical-webpack-plugin")
+const path = require('path')
+const utils = require('./utils')
+const webpack = require('webpack')
+const config = require('./config')
+const merge = require('webpack-merge')
+const baseWebpackConfig = require('./webpack.base.conf')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
+const HtmlCriticalWebpackPlugin  = require("html-critical-webpack-plugin")
 const Renderer = PrerenderSpaPlugin.PuppeteerRenderer;
 
 
@@ -34,16 +34,19 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       },
       sourceMap: true
     }),
+
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css')
     }),
+
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin({
@@ -51,6 +54,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         safe: true
       }
     }),
+
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
@@ -68,6 +72,22 @@ var webpackConfig = merge(baseWebpackConfig, {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
+
+    // // Critical CSS
+    // new HtmlCriticalWebpackPlugin({
+    //   base: path.resolve(__dirname, '../dist'),
+    //   src: 'index.html',
+    //   dest: 'index.html',
+    //   inline: true,
+    //   minify: true,
+    //   extract: true,
+    //   width: 375,
+    //   height: 565,
+    //   penthouse: {
+    //     blockJSRequests: false,
+    //   }
+    // }),
+
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
@@ -82,41 +102,36 @@ var webpackConfig = merge(baseWebpackConfig, {
         )
       }
     }),
+
     // extract webpack runtime and module manifest to its own file in order to
     // prevent vendor hash from being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']
     }),
-    // copy custom sitemap.xml
+
+    // copy custom sitemap.xml, sitemap.html, robots.txt, custom static assets
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../sitemap.xml'),
         to: path.resolve(__dirname, '../dist')
-      }
-    ]),
-    // copy custom sitemap.html
-    new CopyWebpackPlugin([
+      },
       {
         from: path.resolve(__dirname, '../sitemap.html'),
         to: path.resolve(__dirname, '../dist')
-      }
-    ]),
-    // copy custom robots.txt
-    new CopyWebpackPlugin([
+      },
       {
         from: path.resolve(__dirname, '../robots.txt'),
         to: path.resolve(__dirname, '../dist')
-      }
-    ]),
-    // copy custom static assets
-    new CopyWebpackPlugin([
+      },
       {
         from: path.resolve(__dirname, '../static'),
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
     ]),
+
+
     // SEO optimization
     new PrerenderSpaPlugin({
       staticDir: path.resolve(__dirname, '../dist'),
@@ -136,11 +151,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       renderer: new Renderer({
         renderAfterElementExists: '.header'
       }),
-
-    }
-      // Absolute path to compiled SPA
-      // List of routes to prerender
-    ),
+    }),
   ]
 })
 

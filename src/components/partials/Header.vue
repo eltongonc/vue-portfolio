@@ -3,36 +3,36 @@
       <div class="header__inner container">
 
           <router-link to="/" class="header__logo">
-            <img src="/static/logo-white.png"/>
+            <img src="/static/logo-white.png" alt="logo of Elton Gonçalves Gomes"/>
           </router-link>
           
           <nav class="header__nav">
               <ul class="nav__inner">
-                  <div v-for="(item, i) in menuItems" :key="i">
-                    <li v-if="$route.name == 'Home'" class="nav__item">
-                      <a :href="'#'+item.url" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
-                    </li>
-                    <li v-else-if="!item.homeOnly" class="nav__item">
-                      <router-link :to="'/'+item.url" active-class="nav--active">{{item.title}}</router-link>
-                    </li>
+                <li v-for="(item, i) in menuItems" :key="i"  class="nav__item">
+                  <div v-if="$route.name == 'Home'">
+                    <a :href="'#'+item.url" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
                   </div>
+                  <div v-else-if="!item.homeOnly">
+                    <router-link :to="'/'+item.url" active-class="nav--active">{{item.title}}</router-link>
+                  </div>
+                </li>
                  
-                  <li class="nav__item mobile_only">
-                    <a v-on:click="toggleMenu" href="#navigation">Menu</a>
-                  </li>
+                <li class="nav__item mobile_only">
+                  <a v-on:click="toggleMenu" href="#navigation">Menu</a>
+                </li>
               </ul>
           </nav>
 
           <nav :class="['header__nav--aside', mobileNavOpen? 'nav--open': '']">
             <ul>
-              <div v-for="(item, i) in menuItems" :key="i">
-                <li v-if="$route.name == 'Home'" class="nav__item">
+              <li v-for="(item, i) in menuItems" :key="i" class="nav__item">
+                <div v-if="$route.name == 'Home'">
                   <a :href="'#'+item.url" v-on:click="closeMenu" v-scroll-to="{el: '#'+item.url, offset: -50}" active-class="nav--active">{{item.title}}</a>
-                </li>
-                <li v-else-if="!item.homeOnly" class="nav__item">
+                </div>
+                <div v-else-if="!item.homeOnly" class="nav__item">
                   <router-link :to="'/'+item.url" v-on:click="closeMenu" active-class="nav--active">{{item.title}}</router-link>
-                </li>
-              </div>
+                </div>
+              </li>
 
               <li class="mobile_only">
                 <a v-on:click="toggleMenu" href="#navigation">Close</a>
