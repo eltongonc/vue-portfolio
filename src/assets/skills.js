@@ -271,3 +271,4 @@ module.exports = [
         </svg>`
   }
 ];
+
