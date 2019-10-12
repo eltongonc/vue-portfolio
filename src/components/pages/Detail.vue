@@ -63,7 +63,7 @@
 </template>
 
 <script>
-    import workList from "../../assets/allwork.js";
+    import workList from "../../assets/projects.js";
 
     export default {
         props: ["slug", "name"],

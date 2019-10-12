@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import { Work, About, Home, Detail, PageNotFound, ContactResponse } from "../components";
-import allWorks, { getDescription } from '../assets/allwork.js';
+import projects, { getDescription } from '../assets/projects.js';
 
 Vue.use(Router);
 
@@ -54,7 +54,7 @@ const router = new Router({
             name: "DetailPage",
             component: Detail,
             props:true,
-            allWorks,
+            projects,
             meta: {
                 title: (route) => {
                     let title = route.params.slug.replace('-', ' ');
