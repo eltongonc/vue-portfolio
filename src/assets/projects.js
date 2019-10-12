@@ -1,5 +1,35 @@
 const projects = [
     {
+        title: "JS Sequencer",
+        urlTitle: "js-sequencer",
+        category: "prototyping",
+        image_small: "/static/img/drumkit/js-sequencer-small.jpg",
+        image: "/static/img/drumkit/js-sequencer.png",
+        image_list: [
+            { 
+                title: "The JS Sequencer on its initial state",
+                link: "/static/img/drumkit/js-sequencer.png"
+            },
+            { 
+                title: "The JS Sequencer with additional information",
+                link: "/static/img/drumkit/js-sequencer-2.png"
+            },
+        ],
+        summary:
+            "The Drum kit is an interactive soundboard. This project was build to illustrate the capabilities of a web browser. At it's minimal the website requires basic HTML and uses browser technology to add layers of enhancements.",
+        content: `
+        <h3>About the project</h3>
+        <p>This project is a sequencer that allows users to make sounds with 8 different instruments. The app allows users to interact by using their keyboard keys or mouse.</p>
+        <h3>The assignment</h3>
+        <blockquote>Use Web Audio to demonstrate the capabilities of modern and older browsers.</blockquote>
+        <p>This assignment required me to create a User Experience that is similar on all browsers. Not only on modern browsers but also going back to older browsers</p>
+		`,
+        author: "Elton Gonçalves Gomes",
+        client: "Free project",
+        externalLink: "https://js-sequencer.herokuapp.com/",
+        code_link: "https://github.com/eltongonc/js-sequencer",
+    },
+    {
         title: "JSClient Builder",
         urlTitle: "jsclient-builder",
         category: "prototyping",
@@ -241,27 +271,6 @@ const projects = [
         client: "Hotel Zoku",
         externalLink: "https://eltongonc.github.io/zoku/",
         code_link: "https://github.com/eltongonc/zoku",
-    },
-    {
-        title: "Drum kit",
-        urlTitle: "drum-kit",
-        category: "prototyping",
-        image_small: "/static/img/drumkit/drum-kit-small.jpg",
-        image: "/static/img/drumkit/drum-kit.jpg",
-        image_list: [],
-        summary:
-            "The Drum kit is an interactive soundboard. This project was build to illustrate the capabilities of a web browser. At it's minimal the website requires basic HTML and uses browser technology to add layers of enhancements.",
-        content: `
-        <h3>About the project</h3>
-        <p>This project is a sequencer that allows users to make sounds with 8 different instruments. The app allows users to interact by using their keyboard keys or mouse.</p>
-        <h3>The assignment</h3>
-        <blockquote>Use Web Audio to demonstrate the capabilities of modern and older browsers.</blockquote>
-        <p>This assignment required me to create a User Experience that is similar on all browsers. Not only on modern browsers but also going back to older browsers</p>
-		`,
-        author: "Elton Gonçalves Gomes",
-        client: "Free project",
-        externalLink: "https://eltongonc.github.io/drum_kit/public/build",
-        code_link: "https://github.com/eltongonc/drum-kit",
     },
     {
         title: "Daskas",

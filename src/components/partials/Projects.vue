@@ -48,7 +48,7 @@
 import isotope from 'vueisotope'
 import imagesLoaded from 'vue-images-loaded'
 
-import workList from "../../assets/allwork.js";
+import workList from "../../assets/projects.js";
 
 export default {
   props: ["amount"],

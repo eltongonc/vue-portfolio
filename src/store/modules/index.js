@@ -1,4 +1,4 @@
-const portfolio = require("../../assets/allwork");
+const portfolio = require("../../assets/projects");
 
 const state = {
   portfolio
