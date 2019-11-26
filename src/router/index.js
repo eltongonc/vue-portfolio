@@ -95,8 +95,19 @@ router.beforeEach((to, from, next) => {
     meta.setAttribute('name', 'description');
     meta.setAttribute('content', to.meta.description(to));
 
-    console.log(meta);
+    // <!-- Hotjar Tracking Code for https://eltongoncalves.nl -->
+    const script = document.createElement('script');
+    script.innerHTML = (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1300971,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+
     document.head.appendChild(meta);
+    document.head.appendChild(script);
 
     next()
 })
