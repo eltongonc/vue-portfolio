@@ -30,6 +30,44 @@ const projects = [
         code_link: "https://github.com/eltongonc/js-sequencer",
     },
     {
+        title: "Soundcloud explorer",
+        urlTitle: "soundcloud-explorer",
+        category: "prototyping",
+        image_small: "/static/img/soundcloud_explorer/soundcloud_exp-small.jpg",
+        image: "/static/img/soundcloud_explorer/soundcloud_exp.jpg",
+        image_list: [
+            {
+                title: "A search results page of the Soundcloud explorer",
+                link: "/static/img/soundcloud_explorer/soundcloud_exp.jpg"
+            },
+        ],
+        summary:
+            "Soundcloud explorer is a music exploration website build with HTML, CSS, and JavaScript. It allows the user to search and play songs that are available on Soundcloud",
+        content: `
+        <h3>The assignment</h3>
+        <blockquote>Create a single page application using only Vanilla Javascript</blockquote>
+
+        <h3>About the project</h3>
+		<p>This is a basic Single page application that uses JavaScript to get data from the SoundCloud API and uses this data to play songs.</p>
+        <p>The main focus was to learn Object-Oriented Programming JavaScript.</p>
+        <p>Because this was a three-week project it still contains bugs.</p>
+        
+		<h3>Features</h3>
+		<ul>
+			<li>Get a list of songs based on a search query.</li>
+			<li>Play a song.</li>
+			<li>Get information about a song.</li>
+			<li>Login page (no actual authentication yet)</li>
+			<li>The app has a router that checks if a route exists and sends a corresponding message if it doesn't.</li>
+			<li>Pretty URLs</li>
+		</ul>
+		`,
+        author: "Elton Gonçalves Gomes",
+        client: "Free project",
+        externalLink: "http://soundcloud.eltongoncalves.nl/",
+        code_link: "https://github.com/eltongonc/react-soundcloud-explorer/",
+    },
+    {
         title: "JSClient Builder",
         urlTitle: "jsclient-builder",
         category: "prototyping",
@@ -161,49 +199,6 @@ const projects = [
         client: "Free project",
         colaborators: "",
         code_link: "https://github.com/eltongonc/funda_serverside",
-    },
-    {
-        title: "Soundcloud explorer",
-        urlTitle: "soundcloud-explorer",
-        category: "prototyping",
-        image_small: "/static/img/soundcloud_explorer/soundcloud_exp-small.jpg",
-        image: "/static/img/soundcloud_explorer/soundcloud_exp.jpg",
-        image_list: [
-            {
-                title: "A search results page of the Soundcloud explorer",
-                link: "/static/img/soundcloud_explorer/soundcloud_exp-small.jpg"
-            },
-            {
-                title: "A flowchart of how the web app works",
-                link:
-                    "https://camo.githubusercontent.com/6b4f472972d7c7e50bd9fefd20e834791a8f7c6b/68747470733a2f2f656c746f6e676f6e632e6769746875622e696f2f7765625f6170705f66726f6d5f736372617463682f7765656b332f696d672f666c6f7763686172742e706e67"
-            }
-        ],
-        summary:
-            "Soundcloud explorer is a music exploration website build with HTML, CSS, and JavaScript. It allows the user to search and play songs that are available on Soundcloud",
-        content: `
-        <h3>The assignment</h3>
-        <blockquote>Create a single page application using only Vanilla Javascript</blockquote>
-
-        <h3>About the project</h3>
-		<p>This is a basic Single page application that uses JavaScript to get data from the SoundCloud API and uses this data to play songs.</p>
-        <p>The main focus was to learn Object-Oriented Programming JavaScript.</p>
-        <p>Because this was a three-week project it still contains bugs.</p>
-        
-		<h3>Features</h3>
-		<ul>
-			<li>Get a list of songs based on a search query.</li>
-			<li>Play a song.</li>
-			<li>Get information about a song.</li>
-			<li>Login page (no actual authentication yet)</li>
-			<li>The app has a router that checks if a route exists and sends a corresponding message if it doesn't.</li>
-			<li>Pretty URLs</li>
-		</ul>
-		`,
-        author: "Elton Gonçalves Gomes",
-        client: "Free project",
-        externalLink: "http://soundclould.eltongoncalves.nl/",
-        code_link: "https://github.com/eltongonc/web_app_from_scratch",
     },
     {
         title: "Zoku inspire",
