@@ -13,15 +13,6 @@ const router = new Router({
     base: __dirname,
     routes: [
         {
-            path: "*",
-            name: "PageNotFound",
-            component: PageNotFound,
-            meta: {
-                title: () => '404 | Elton Gonçalves Gomes',
-                description: "Unfortunately, the page you are looking for does not exist. Send me a message I you are looking for something in particular."
-            }
-        },
-        {
             path: "/",
             name: "Home",
             component: Home,
@@ -83,6 +74,15 @@ const router = new Router({
             meta: {
                 title: () => 'Contact Failed | Elton Gonçalves Gomes',
                 description: () => "Thank you for reaching out to me. I will get back to you as soon as possible."
+            }
+        },
+        {
+            path: "*",
+            name: "PageNotFound",
+            component: PageNotFound,
+            meta: {
+                title: () => '404 | Elton Gonçalves Gomes',
+                description: "Unfortunately, the page you are looking for does not exist. Send me a message I you are looking for something in particular."
             }
         },
     ]

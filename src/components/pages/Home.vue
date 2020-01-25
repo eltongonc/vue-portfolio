@@ -1,5 +1,6 @@
 <template>
 	<main :class="className">
+
 		<PosterCanvas>
             <h1>Hi<br/> my name is Elton,</h1>
             <h2>I am a Front-end developer and I can help you with a new website.</h2>
@@ -20,14 +21,15 @@
                     </div>
                     <div class="content__subtitle col-md-6 col-sm-12">
                         <div v-html="pageData.text"></div>
-                        <router-link to="/about" class="button">More about me</router-link>
                     </div>
                 </section>
             </div>
         </div>
+
+        <div id="timeline" class="section section--grey">
+            <Timeline/>
+        </div>
         
-        <!-- <WhatIDo id="services"/> -->
-		<Skills id="skills"/>
         <Projects id="projects"/>
 
         <ContactForm id="contact"/>
@@ -35,7 +37,7 @@
 </template>
 
 <script>
-    import { PosterCanvas, Projects, Intro, Skills, WhatIDo, ContactForm, } from '../partials';
+    import { PosterCanvas, Projects, Intro, Skills, WhatIDo, ContactForm, Timeline } from '../partials';
 
     export default {
         data(){
@@ -45,6 +47,15 @@
                     text: `
                         <p>My name is Elton Gonçalves Gomes I was born in Cabo Verde and moved to the Netherlands when I was six years old. I’m always working on developing myself and learning new stuff.</p>
                         <p>After graduating for my bachelor Communication and Multimedia Design I started my career as a front-end developer. I am currently working fulltime at a design technology company name <a href="https://ateliersai.com">SAI</a>, but I have enough time for some side-projects</p>
+                        <div class="skill-list">
+                            <ul>
+                                <li>JavaScript (ES6)</li>
+                                <li>Node.js + Express</li>
+                                <li>React.js</li>
+                                <li>Vue.js</li>
+                                <li>HTML + S(C)SS</li>
+                            </ul>
+                        </div>
                     `,
                     img: "/static/profile.jpg"
                 }
@@ -57,6 +68,7 @@
             Intro,
             WhatIDo,
             ContactForm,
+            Timeline,
         }
     };
 </script>

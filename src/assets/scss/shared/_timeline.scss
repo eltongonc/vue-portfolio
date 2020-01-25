@@ -18,7 +18,7 @@ $content-width: 360px;
       
       &:before{
         content: '';
-        background: $white;
+        background: $light_grey;
         position: absolute;
         left: 50%;
         top: 40%;
@@ -34,7 +34,7 @@ $content-width: 360px;
       }
       
       .content{
-        background-color: $white;
+        background-color: $light_grey;
         position: relative;
         top: .5rem;
         width: $content-width;

@@ -38,5 +38,21 @@ lint
 ngrok
 ```
 
+## Todos
+### Hero
+- [ ] Add Experience and Contact to the menu
+
+### About me
+- [ ] Align the About Me title left of the content below it
+- [ ] Make the image on the about me section 
+
+### Experience
+- [ ] Add space below the Experience title
+- [ ] Find a better way to display the logo of a company
+
+### Contact
+- [ ] Change the input fields to a material design-like input field with moving label [Example](https://material.io/components/text-fields/#anatomy).
+
+
 ## Live site
 To view my portfolio please visit [https://eltongoncalves.nl](https://eltongoncalves.nl).

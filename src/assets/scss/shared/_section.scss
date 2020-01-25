@@ -1,6 +1,10 @@
 .section {
 	padding-top: 4rem;
 	padding-bottom: 2rem;
+
+	&.section--grey {
+		background-color: #ededed;
+	}
 	
 	@media (min-width: $grid-xs) {
 		padding: 5rem 0;

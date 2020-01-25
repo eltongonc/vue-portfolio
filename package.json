@@ -12,10 +12,12 @@
     "start": "node build/dev-server.js"
   },
   "dependencies": {
+    "alertify": "^0.3.0",
     "moment": "^2.22.2",
     "npm": "^6.11.0",
     "prerender-spa-plugin": "^3.4.0",
     "typed.js": "^2.0.2",
+    "validate.js": "^0.13.1",
     "vue": "^2.3.4",
     "vue-flickity": "^1.0.8",
     "vue-helmet": "^1.1.5",
